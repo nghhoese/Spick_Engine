@@ -2,11 +2,11 @@
 
 #include <SDL.h>
 
-class KeyFacade {
+class MouseFacade {
 private:
 
 
 public:
-	SDL_Event sdlEvent;
-	KeyFacade();
+	MouseFacade();
+
 };
