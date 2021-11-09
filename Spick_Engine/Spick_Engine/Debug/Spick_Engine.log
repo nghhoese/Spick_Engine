@@ -1,0 +1,11 @@
+﻿  Color.cpp
+  Engine.cpp
+  Time.cpp
+C:\Users\Gebruiker\source\repos\Spick_Engine\Spick_Engine\Time.cpp(25,121): warning C4244: 'return': conversion from '_Rep' to 'uint32_t', possible loss of data
+          with
+          [
+              _Rep=__int64
+          ]
+  Generating Code...
+     Creating library C:\Users\Gebruiker\source\repos\Spick_Engine\Debug\Spick_Engine.lib and object C:\Users\Gebruiker\source\repos\Spick_Engine\Debug\Spick_Engine.exp
+  Spick_Engine.vcxproj -> C:\Users\Gebruiker\source\repos\Spick_Engine\Debug\Spick_Engine.dll
