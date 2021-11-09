@@ -7,9 +7,9 @@
 #include "SpicHeader.hpp"
 #include "GameObject.hpp"
 
-class Camera;
-
 namespace spic {
+
+    class Camera;
 
     /**
      * @brief Class representing a scene which can be rendered by the Camera.
