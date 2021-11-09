@@ -96,6 +96,7 @@ namespace spic {
     private:
         std::string name;
         std::vector<std::shared_ptr<GameObject>> gameObjects;
+        std::vector<std::shared_ptr<Camera>> cameras;
     };
 
 }
