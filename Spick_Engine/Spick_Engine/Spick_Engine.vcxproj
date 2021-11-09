@@ -163,43 +163,54 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Animator.hpp" />
-    <ClInclude Include="AudioSource.hpp" />
-    <ClInclude Include="BehaviourScript.hpp" />
-    <ClInclude Include="BoxCollider.hpp" />
-    <ClInclude Include="Button.hpp" />
-    <ClInclude Include="Camera.hpp" />
-    <ClInclude Include="CircleCollider.hpp" />
-    <ClInclude Include="Collider.hpp" />
-    <ClInclude Include="Color.hpp" />
-    <ClInclude Include="Component.hpp" />
-    <ClInclude Include="Debug.hpp" />
-    <ClInclude Include="Engine.hpp" />
-    <ClInclude Include="GameObject.hpp" />
-    <ClInclude Include="GlobalLight.hpp" />
-    <ClInclude Include="IKeyListener.hpp" />
-    <ClInclude Include="Image.hpp" />
-    <ClInclude Include="IMouseListener.hpp" />
-    <ClInclude Include="Input.hpp" />
-    <ClInclude Include="InputField.hpp" />
-    <ClInclude Include="Light.hpp" />
-    <ClInclude Include="Point.hpp" />
-    <ClInclude Include="PointLight.hpp" />
-    <ClInclude Include="PolygonCollider.hpp" />
-    <ClInclude Include="RigidBody.hpp" />
-    <ClInclude Include="Scene.hpp" />
-    <ClInclude Include="Spic.hpp" />
-    <ClInclude Include="SpicHeader.hpp" />
-    <ClInclude Include="Sprite.hpp" />
-    <ClInclude Include="Text.hpp" />
-    <ClInclude Include="Time.hpp" />
-    <ClInclude Include="Transform.hpp" />
-    <ClInclude Include="UIObject.hpp" />
+    <ClInclude Include="API_Headers\Animator.hpp" />
+    <ClInclude Include="API_Headers\AudioSource.hpp" />
+    <ClInclude Include="API_Headers\BehaviourScript.hpp" />
+    <ClInclude Include="API_Headers\BoxCollider.hpp" />
+    <ClInclude Include="API_Headers\Button.hpp" />
+    <ClInclude Include="API_Headers\Camera.hpp" />
+    <ClInclude Include="API_Headers\CircleCollider.hpp" />
+    <ClInclude Include="API_Headers\Collider.hpp" />
+    <ClInclude Include="API_Headers\Color.hpp" />
+    <ClInclude Include="API_Headers\Component.hpp" />
+    <ClInclude Include="API_Headers\Debug.hpp" />
+    <ClInclude Include="API_Headers\Engine.hpp" />
+    <ClInclude Include="API_Headers\GameObject.hpp" />
+    <ClInclude Include="API_Headers\GlobalLight.hpp" />
+    <ClInclude Include="API_Headers\IKeyListener.hpp" />
+    <ClInclude Include="API_Headers\Image.hpp" />
+    <ClInclude Include="API_Headers\IMouseListener.hpp" />
+    <ClInclude Include="API_Headers\Input.hpp" />
+    <ClInclude Include="API_Headers\InputField.hpp" />
+    <ClInclude Include="API_Headers\Light.hpp" />
+    <ClInclude Include="API_Headers\Point.hpp" />
+    <ClInclude Include="API_Headers\PointLight.hpp" />
+    <ClInclude Include="API_Headers\PolygonCollider.hpp" />
+    <ClInclude Include="API_Headers\RigidBody.hpp" />
+    <ClInclude Include="API_Headers\Scene.hpp" />
+    <ClInclude Include="API_Headers\Spic.hpp" />
+    <ClInclude Include="API_Headers\SpicHeader.hpp" />
+    <ClInclude Include="API_Headers\Sprite.hpp" />
+    <ClInclude Include="API_Headers\Text.hpp" />
+    <ClInclude Include="API_Headers\Time.hpp" />
+    <ClInclude Include="API_Headers\Transform.hpp" />
+    <ClInclude Include="API_Headers\UIObject.hpp" />
+    <ClInclude Include="Controller_Headers\EngineController.hpp" />
+    <ClInclude Include="Facade_Headers\KeyFacade.hpp" />
+    <ClInclude Include="Facade_Headers\MouseFacade.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Color.cpp" />
-    <ClCompile Include="Engine.cpp" />
-    <ClCompile Include="Time.cpp" />
+    <ClCompile Include="API_Sources\Color.cpp" />
+    <ClCompile Include="API_Sources\Engine.cpp" />
+    <ClCompile Include="API_Sources\IKeyListener.cpp" />
+    <ClCompile Include="API_Sources\IMouseListener.cpp" />
+    <ClCompile Include="API_Sources\Time.cpp" />
+    <ClCompile Include="Controller_Sources\EngineController.cpp" />
+    <ClCompile Include="Facade_Sources\KeyFacade.cpp" />
+    <ClCompile Include="Facade_Sources\MouseFacade.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="API_Sources\Input.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
