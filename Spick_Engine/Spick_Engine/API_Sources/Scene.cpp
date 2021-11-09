@@ -56,5 +56,5 @@ SPIC_API std::vector<std::shared_ptr<T>> Scene::GetGameObjectsByType() const
 }
 
 SPIC_API void Scene::AddGameObject(std::shared_ptr<GameObject> gameObject) {
-
+    gameObjects.push_back(gameObject);
 }
