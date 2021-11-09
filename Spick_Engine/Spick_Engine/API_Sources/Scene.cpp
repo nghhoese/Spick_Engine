@@ -8,10 +8,6 @@ SPIC_API Scene::Scene(const std::string& name) {
 
 }
 
-const std::string& Scene::GetName() const {
-    return name; 
-}
-
 void Scene::Update() {
 
 }
