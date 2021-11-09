@@ -2,9 +2,10 @@
 
 using namespace spic;
 
-std::string Scene::name;
+
 
 SPIC_API Scene::Scene(const std::string& name) {
+    gameObjects = std::vector<std::shared_ptr<GameObject>>{};
 
 }
 

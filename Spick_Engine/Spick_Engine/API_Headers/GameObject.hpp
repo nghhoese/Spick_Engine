@@ -10,10 +10,10 @@
 #include "Transform.hpp"
 #include "Component.hpp"
 
-class Scene;
+
 
 namespace spic {
-
+    class Scene;
     /**
      * @brief Any object which should be represented on screen.
      */

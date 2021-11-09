@@ -95,7 +95,7 @@ namespace spic {
 
     private:
         std::string name;
-
+        std::vector<std::shared_ptr<GameObject>> gameObjects;
     };
 
 }
