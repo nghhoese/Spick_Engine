@@ -1,6 +1,5 @@
 #ifndef ENGINE_H_
 #define ENGINE_H_
-# define EXPORT __declspec(dllimport)
 #include <string>
 #include <vector>
 #include <memory>
@@ -17,7 +16,7 @@ namespace spic {
      */
     class Engine {
     public:
-        EXPORT static Engine& GetInstance();
+        SPIC_API static Engine& GetInstance();
         
         SPIC_API void Init() const;
 
