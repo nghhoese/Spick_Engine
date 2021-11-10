@@ -2,10 +2,6 @@
 
 using namespace spic;
 
-Color Camera::backgroundColor;
-double Camera::aspectWidth;
-double Camera::aspectHeight;
-
 Camera::Camera(const std::string& name) {
 
 }
