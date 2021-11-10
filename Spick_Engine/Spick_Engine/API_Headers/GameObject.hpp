@@ -39,7 +39,7 @@ namespace spic {
             /**
              * @brief Remove tag.
              */
-            SPIC_API const void RemoveTag(const std::string& tag);
+            SPIC_API const void RemoveTag(const std::string& tag) { remove(tags.begin(), tags.end(), tag); };
 
             /**
              * @brief Finds a GameObject by name and returns it.
