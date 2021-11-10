@@ -4,7 +4,7 @@ MouseFacade::MouseFacade() {
 
 }
 
-Input::MouseButton MouseFacade::pollEvent() {
+Input::MouseButton MouseFacade::PollEvent() {
     if (SDL_PollEvent(&sdlEvent) != 0)
     {
 		switch (sdlEvent.type)
@@ -21,4 +21,27 @@ Input::MouseButton MouseFacade::pollEvent() {
 				}
 		}
     }
+}
+
+std::tuple<int, int> MouseFacade::PollMousePosition() const
+{
+	int x, y;
+	SDL_GetMouseState(&x, &y);
+	return std::make_tuple(x, y);
+}
+
+bool MouseFacade::AnyKeyPressed()
+{
+	if (SDL_PollEvent(&sdlEvent) != 0)
+	{
+		if (sdlEvent.type != NULL) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+	else {
+		return false;
+	}
 }

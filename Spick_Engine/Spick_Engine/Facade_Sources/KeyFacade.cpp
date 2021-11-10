@@ -4,19 +4,19 @@ KeyFacade::KeyFacade() {
 
 }
 
-Input::KeyCode KeyFacade::pollEvent() {
+Input::KeyCode KeyFacade::PollEvent() {
 	if (SDL_PollEvent(&sdlEvent) != 0)
 	{
 		switch (sdlEvent.type) {
 		    case SDL_KEYDOWN:
-			    return translate_to_enum(sdlEvent);
+			    return TranslateToEnum(sdlEvent);
 		    default:
 			    return Input::KeyCode::ERROR_UNDEFINED;
 		}
 	}
 }
 
-Input::KeyCode KeyFacade::translate_to_enum(const SDL_Event& sdlEvent) const {
+Input::KeyCode KeyFacade::TranslateToEnum(const SDL_Event& sdlEvent) const {
     switch (sdlEvent.key.keysym.sym)
     {
         case SDLK_0:

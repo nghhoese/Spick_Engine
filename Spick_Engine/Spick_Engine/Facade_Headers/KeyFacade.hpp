@@ -9,6 +9,6 @@ private:
 	SDL_Event sdlEvent;
 public:
 	KeyFacade();
-	Input::KeyCode pollEvent();
-	Input::KeyCode translate_to_enum(const SDL_Event& sdlEvent) const;
+	Input::KeyCode PollEvent();
+	Input::KeyCode TranslateToEnum(const SDL_Event& sdlEvent) const;
 };
