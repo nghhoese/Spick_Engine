@@ -4,11 +4,11 @@
 #include <string>
 #include "SpicHeader.hpp"
 
-class GameObject;
+
 struct Transform;
 
 namespace spic {
-
+    class GameObject;//TODO: Check voor verdere ambiguous forward declarations.
     /**
      * @brief Base class for all components.
      */

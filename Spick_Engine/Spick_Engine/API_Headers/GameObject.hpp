@@ -238,7 +238,7 @@ namespace spic {
             Transform transform;
             std::shared_ptr<Scene> scene;
             std::shared_ptr<GameObject> parent;
-            std::vector<GameObject> children;
+            static std::vector<GameObject> children;
             std::vector<std::shared_ptr<spic::Component>> components;
     };
 

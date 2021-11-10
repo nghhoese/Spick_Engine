@@ -164,6 +164,38 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Animator.hpp" />
+    <ClInclude Include="API_Headers\Animator.hpp" />
+    <ClInclude Include="API_Headers\AudioSource.hpp" />
+    <ClInclude Include="API_Headers\BehaviourScript.hpp" />
+    <ClInclude Include="API_Headers\BoxCollider.hpp" />
+    <ClInclude Include="API_Headers\Button.hpp" />
+    <ClInclude Include="API_Headers\Camera.hpp" />
+    <ClInclude Include="API_Headers\CircleCollider.hpp" />
+    <ClInclude Include="API_Headers\Collider.hpp" />
+    <ClInclude Include="API_Headers\Color.hpp" />
+    <ClInclude Include="API_Headers\Component.hpp" />
+    <ClInclude Include="API_Headers\Debug.hpp" />
+    <ClInclude Include="API_Headers\Engine.hpp" />
+    <ClInclude Include="API_Headers\GameObject.hpp" />
+    <ClInclude Include="API_Headers\GlobalLight.hpp" />
+    <ClInclude Include="API_Headers\IKeyListener.hpp" />
+    <ClInclude Include="API_Headers\Image.hpp" />
+    <ClInclude Include="API_Headers\IMouseListener.hpp" />
+    <ClInclude Include="API_Headers\Input.hpp" />
+    <ClInclude Include="API_Headers\InputField.hpp" />
+    <ClInclude Include="API_Headers\Light.hpp" />
+    <ClInclude Include="API_Headers\Point.hpp" />
+    <ClInclude Include="API_Headers\PointLight.hpp" />
+    <ClInclude Include="API_Headers\PolygonCollider.hpp" />
+    <ClInclude Include="API_Headers\RigidBody.hpp" />
+    <ClInclude Include="API_Headers\Scene.hpp" />
+    <ClInclude Include="API_Headers\Spic.hpp" />
+    <ClInclude Include="API_Headers\SpicHeader.hpp" />
+    <ClInclude Include="API_Headers\Sprite.hpp" />
+    <ClInclude Include="API_Headers\Text.hpp" />
+    <ClInclude Include="API_Headers\Time.hpp" />
+    <ClInclude Include="API_Headers\Transform.hpp" />
+    <ClInclude Include="API_Headers\UIObject.hpp" />
     <ClInclude Include="AudioSource.hpp" />
     <ClInclude Include="BehaviourScript.hpp" />
     <ClInclude Include="BoxCollider.hpp" />
@@ -173,8 +205,10 @@
     <ClInclude Include="Collider.hpp" />
     <ClInclude Include="Color.hpp" />
     <ClInclude Include="Component.hpp" />
+    <ClInclude Include="Controller_Headers\EngineController.hpp" />
     <ClInclude Include="Debug.hpp" />
     <ClInclude Include="Engine.hpp" />
+    <ClInclude Include="Facade_Headers\KeyFacade.hpp" />
     <ClInclude Include="GameObject.hpp" />
     <ClInclude Include="GlobalLight.hpp" />
     <ClInclude Include="IKeyListener.hpp" />
@@ -197,9 +231,32 @@
     <ClInclude Include="UIObject.hpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="API_Sources\Color.cpp" />
+    <ClCompile Include="API_Sources\Engine.cpp" />
+    <ClCompile Include="API_Sources\GameObject.cpp" />
+    <ClCompile Include="API_Sources\Time.cpp" />
     <ClCompile Include="Color.cpp" />
+    <ClCompile Include="Controller_Sources\EngineController.cpp" />
     <ClCompile Include="Engine.cpp" />
+    <ClCompile Include="Facade_Sources\KeyFacade.cpp" />
     <ClCompile Include="Time.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Object Include="Debug\Color.obj" />
+    <Object Include="Debug\Engine.obj" />
+    <Object Include="Debug\Time.obj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Debug\Spick_Engine.Build.CppClean.log" />
+    <Text Include="Debug\Spick_Engine.log" />
+    <Text Include="Debug\Spick_Engine.vcxproj.FileListAbsolute.txt" />
+    <Text Include="Debug\vcpkg.applocal.log" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Debug\Spick_Engine.dll.recipe" />
+    <None Include="Debug\Spick_Engine.ilk" />
+    <None Include="Debug\vc142.idb" />
+    <None Include="Debug\vc142.pdb" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
