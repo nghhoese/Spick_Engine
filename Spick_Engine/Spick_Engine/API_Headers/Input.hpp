@@ -285,7 +285,7 @@ namespace spic {
         /**
          * @brief Returns the value of the virtual axis identified by axisName.
          */
-        double GetAxis();
+        double GetAxis(); //TODO: GetAxis() navragen reinout of je parameters mag toevoegen
 
         /**
          * @brief Returns true while the user holds down the key identified by keycode.

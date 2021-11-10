@@ -67,13 +67,13 @@ bool Input::GetKeyUp(KeyCode key) {
 }
 
 bool Input::GetMouseButton(MouseButton which) {
-
+	return mousefacade_ptr->GetMouseButton((int)which);
 }
 
 bool Input::GetMouseButtonDown(MouseButton which) {
-
+	return mousefacade_ptr->GetMouseButtonDown((int)which);
 }
 
 bool Input::GetMouseButtonUp(MouseButton which) {
-
+	return mousefacade_ptr->GetMouseButtonUp((int)which);
 }

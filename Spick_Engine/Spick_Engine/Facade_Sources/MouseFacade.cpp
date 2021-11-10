@@ -43,6 +43,8 @@ bool MouseFacade::PollContinousEvent()
 	}
 }
 
+
+
 std::tuple<int, int> MouseFacade::PollMousePosition() const
 {
 	int x, y;
@@ -64,4 +66,51 @@ bool MouseFacade::AnyKeyPressed()
 	else {
 		return false;
 	}
+}
+
+bool MouseFacade::GetMouseButton(int which)
+{
+	if (SDL_GetMouseState(NULL, NULL))
+	{
+		return SDL_BUTTON(which);
+	}
+	return false;
+}
+
+bool MouseFacade::GetMouseButtonDown(int which)
+{
+	if (SDL_PollEvent(&sdlEvent) != 0)
+	{
+		if (sdlEvent.type == SDL_MOUSEBUTTONDOWN)
+		{
+			if (sdlEvent.button.button == which)
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+		}
+	}
+	return false;
+}
+
+bool MouseFacade::GetMouseButtonUp(int which)
+{
+	if (SDL_PollEvent(&sdlEvent) != 0)
+	{
+		if (sdlEvent.type == SDL_MOUSEBUTTONUP)
+		{
+			if (sdlEvent.button.button == which)
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+		}
+	}
+	return false;
 }
