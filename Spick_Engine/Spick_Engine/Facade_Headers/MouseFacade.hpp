@@ -11,6 +11,7 @@ private:
 public:
 	MouseFacade();
 	Input::MouseButton PollEvent();
+	bool PollContinousEvent();
 	std::tuple<int, int> PollMousePosition() const;
 	bool AnyKeyPressed();
 };

@@ -10,11 +10,44 @@ Input::KeyCode KeyFacade::PollEvent() {
 		switch (sdlEvent.type) {
 		    case SDL_KEYDOWN:
 			    return TranslateToEnum(sdlEvent);
+            case SDL_KEYUP:
+                return TranslateToEnum(sdlEvent);
 		    default:
 			    return Input::KeyCode::ERROR_UNDEFINED;
 		}
 	}
 }
+
+bool KeyFacade::PollContinousEvent(const Input::KeyCode& key)
+{
+    int keyValue = (int)key;
+    if (SDL_GetKeyboardState(&keyValue))
+    {
+        if (keyValue == 1)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+}
+
+bool KeyFacade::PollContinousEvent()
+{
+    if (SDL_GetKeyboardState(NULL))
+    {
+        return true;
+    }
+   
+    return false;
+
+}
+
+
+
+
 
 Input::KeyCode KeyFacade::TranslateToEnum(const SDL_Event& sdlEvent) const {
     switch (sdlEvent.key.keysym.sym)

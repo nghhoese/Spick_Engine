@@ -7,12 +7,20 @@ using namespace spic;
 std::unique_ptr<KeyFacade> keyfacade_ptr = std::make_unique<KeyFacade>();
 std::unique_ptr<MouseFacade> mousefacade_ptr = std::make_unique<MouseFacade>();
 
-// !!!!!!!!!!!
 bool Input::AnyKey() {
-	return mousefacade_ptr->AnyKeyPressed();
+	bool keyboard = keyfacade_ptr->PollContinousEvent();
+	bool mouse = mousefacade_ptr->PollContinousEvent();
+
+	if (keyboard || mouse)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
 }
 
-// !!!!!!!!!!!
 bool Input::AnyKeyDown() {
 	return mousefacade_ptr->AnyKeyPressed();
 }
@@ -32,8 +40,12 @@ double Input::GetAxis() {
 }
 
 bool Input::GetKey(KeyCode key) {
+	return keyfacade_ptr->PollContinousEvent(key);
+}
+
+bool Input::GetKeyDown(KeyCode key) {
 	KeyCode keycode = keyfacade_ptr->PollEvent();
-	
+
 	if (key == keycode) {
 		return true;
 	}
@@ -42,11 +54,15 @@ bool Input::GetKey(KeyCode key) {
 	}
 }
 
-bool Input::GetKeyDown(KeyCode key) {
-
-}
-
 bool Input::GetKeyUp(KeyCode key) {
+	KeyCode keycode = keyfacade_ptr->PollEvent();
+
+	if (key == keycode) {
+		return true;
+	}
+	else {
+		return false;
+	}
 
 }
 

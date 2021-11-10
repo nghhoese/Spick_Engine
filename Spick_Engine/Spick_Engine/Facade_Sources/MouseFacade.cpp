@@ -23,6 +23,26 @@ Input::MouseButton MouseFacade::PollEvent() {
     }
 }
 
+bool MouseFacade::PollContinousEvent()
+{
+	if (SDL_GetMouseState(NULL, NULL))
+	{
+		if (SDL_BUTTON(1) != NULL)
+		{
+			return true;
+		}
+		else if (SDL_BUTTON(2) != NULL)
+		{
+			return true;
+		} 
+		else if(SDL_BUTTON(3) != NULL)
+		{
+			return true;
+		}
+		return false;
+	}
+}
+
 std::tuple<int, int> MouseFacade::PollMousePosition() const
 {
 	int x, y;
