@@ -208,7 +208,10 @@
     <ClInclude Include="Controller_Headers\EngineController.hpp" />
     <ClInclude Include="Debug.hpp" />
     <ClInclude Include="Engine.hpp" />
+    <ClInclude Include="Facade_Headers\CameraFacade.hpp" />
+    <ClInclude Include="Facade_Headers\Exceptions\GraphicsExceptions.hpp" />
     <ClInclude Include="Facade_Headers\KeyFacade.hpp" />
+    <ClInclude Include="Facade_Headers\SceneFacade.hpp" />
     <ClInclude Include="GameObject.hpp" />
     <ClInclude Include="GlobalLight.hpp" />
     <ClInclude Include="IKeyListener.hpp" />
@@ -231,14 +234,18 @@
     <ClInclude Include="UIObject.hpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="API_Sources\Camera.cpp" />
     <ClCompile Include="API_Sources\Color.cpp" />
     <ClCompile Include="API_Sources\Engine.cpp" />
     <ClCompile Include="API_Sources\GameObject.cpp" />
+    <ClCompile Include="API_Sources\Scene.cpp" />
     <ClCompile Include="API_Sources\Time.cpp" />
     <ClCompile Include="Color.cpp" />
     <ClCompile Include="Controller_Sources\EngineController.cpp" />
     <ClCompile Include="Engine.cpp" />
+    <ClCompile Include="Facade_Sources\CameraFacade.cpp" />
     <ClCompile Include="Facade_Sources\KeyFacade.cpp" />
+    <ClCompile Include="Facade_Sources\SceneFacade.cpp" />
     <ClCompile Include="Time.cpp" />
   </ItemGroup>
   <ItemGroup>

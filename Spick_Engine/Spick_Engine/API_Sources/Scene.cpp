@@ -69,11 +69,8 @@ SPIC_API const std::vector<std::shared_ptr<GameObject>> Scene::GetGameObjects() 
     return gameObjects;
 }
 
-template<class T>
-SPIC_API std::vector<std::shared_ptr<T>> Scene::GetGameObjectsByType() const{
-    // ... implementation here
-}
-
 SPIC_API void Scene::AddGameObject(std::shared_ptr<GameObject> gameObject) {
     gameObjects.push_back(gameObject);
 }
+
+// Template classes implementatie nog vullen in header file

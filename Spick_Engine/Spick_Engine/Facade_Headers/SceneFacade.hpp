@@ -1,12 +1,6 @@
 #pragma once
 #include <SDL.h>
-//#include <SDL_ttf.h>
 #include <SDL_image.h>
-//#include "../Models/Sprite.h"
-//#include "../Models/Text.h"
-//#include "../Adapters/FlipEnumAdapter.h"
-//#include <src/Time/Fps.h>
-//#include <src/Time/Timer.h>
 #include <tuple>
 #include <map>
 #include <iostream>
@@ -18,16 +12,6 @@ using namespace spic;
 
 class WindowFacade {
 private:
-	/**
-	* \brief Contains the fps of the Window
-	*/
-	//std::unique_ptr<Fps> _fps;
-
-	/**
-	* \brief Contains a timer object
-	*/
-	//std::shared_ptr<Timer> _timer;
-
 	/**
 	* \brief An instance of SDL_Window with a custom destructor
 	*/
@@ -81,26 +65,9 @@ public:
 	int create_window(const std::string& title, float height, float width);
 
 	/**
-	* \brief Creates a TextureFacade or adds an already created TextureFacade if Texture matches
-	*/
-	// Texture == Sprite?
-	//void create_texture(const std::shared_ptr<Texture> texture, const std::shared_ptr<Texture> matching_texture);
-
-	/**
 	* brief Destroys the SDL_Window
 	*/
 	void destroy();
-
-	/**
-	* \brief Updates the window with all the sprites in the given list
-	*/
-	// Texture == Sprite?
-	//void update_window(const std::vector<std::shared_ptr<Texture>> textures);
-
-	/**
-	* \brief Returns the fps of the Window
-	*/
-	int get_fps();
 
 	/**
 	* brief Updates camera position
@@ -121,9 +88,4 @@ public:
 	* brief Returns scene size
 	*/
 	std::tuple<float, float> get_scene_size() const;
-
-	/**
-	* \brief Returns the timer
-	*/
-	//const std::shared_ptr<Time> get_timer() const;
 };

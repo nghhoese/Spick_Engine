@@ -216,6 +216,15 @@
     <ClInclude Include="Facade_Headers\KeyFacade.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Facade_Headers\Exceptions\GraphicsExceptions.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Facade_Headers\CameraFacade.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Facade_Headers\SceneFacade.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Color.cpp">
@@ -243,6 +252,18 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="API_Sources\GameObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="API_Sources\Camera.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="API_Sources\Scene.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Facade_Sources\CameraFacade.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Facade_Sources\SceneFacade.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -35,22 +35,12 @@ int WindowFacade::create_window(const std::string& title, float height, float wi
 			throw Exceptions::SDLInitFailed();
 		}
 
-		//Initialize SDL_ttf -> text font
-		//if (TTF_Init() == -1)
-		//{
-		//	throw Exceptions::TTFInitFailed();
-		//}
-
 		_window.reset(SDL_CreateWindow(title.c_str(), SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, width, height, SDL_WINDOW_SHOWN));
 
 		if (_window == NULL) {
 			throw Exceptions::CannotCreateWindow();
 		}
 
-		// Animator of hier?
-		//_fps = std::make_unique<Fps>();
-		// ?
-		//_timer = std::make_shared<Timer>();
 		return 1;
 	}
 	catch (Exceptions::SDLInitFailed& e) {
@@ -70,19 +60,38 @@ int WindowFacade::create_window(const std::string& title, float height, float wi
 void WindowFacade::destroy() {
 	//Quit SDL subsystems
 	SDL_Quit();
-	//TTF_Quit(); text font
-}
-
-int WindowFacade::get_fps() {
-	//return _fps->get();
-	return 0;
 }
 
 void WindowFacade::set_camera_pos(float x, float y) {
+	float _scene_width = std::get<0>(_scene_size);
+	float _scene_height = std::get<1>(_scene_size);
+	if (x + _window_width < _scene_width && x >= 0) {
+
+		std::get<0>(_camera_pos) = x;
+	}
+	else if (x + _window_width > _scene_width) {
+		std::get<0>(_camera_pos) = _scene_width - _window_width;
+	}
+	else if (x < 0) {
+		std::get<0>(_camera_pos) = 0;
+	}
+
+	int converted_y = _scene_height - (_window_height + y);
+	if (converted_y + _window_height < _scene_height && converted_y >= 0) {
+		std::get<1>(_camera_pos) = converted_y;
+	}
+	else if (converted_y + _window_height > _scene_height) {
+		std::get<1>(_camera_pos) = _scene_height - _window_height;
+	}
+	else if (converted_y < 0) {
+		std::get<1>(_camera_pos) = 0;
+	}
 }
 
 std::tuple<float, float> WindowFacade::get_camera_pos() const {
-	return std::tuple<float, float>();
+	std::tuple<int, int> converted_camera_pos = _camera_pos;
+	std::get<1>(converted_camera_pos) = std::get<1>(_scene_size) - std::get<1>(converted_camera_pos) - _window_height;
+	return converted_camera_pos;
 }
 
 void WindowFacade::set_scene_size(float height, float width) {
@@ -94,5 +103,5 @@ void WindowFacade::set_scene_size(float height, float width) {
 }
 
 std::tuple<float, float> WindowFacade::get_scene_size() const {
-	return std::tuple<float, float>();
+	return _scene_size;
 }
