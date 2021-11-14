@@ -7,20 +7,35 @@ SPIC_API GameObject::GameObject(const std::string& name) {
 }
 
 std::shared_ptr<GameObject> GameObject::Find(const std::string& name) {
-	// werkt nog niet
-	std::shared_ptr<GameObject> found = (std::shared_ptr<GameObject>)std::find_if(children.begin(), children.end(), [name](std::shared_ptr<GameObject> const& i) {
-		return i.get() == name;
-		});
-	return found;
+	for (GameObject c : children) {
+		if (c.GetName() == name) {
+			return std::make_shared<GameObject>(c);;
+		}
+	}
+	return nullptr;
 }
 
 std::vector<std::shared_ptr<GameObject>> GameObject::FindGameObjectsWithTag(const std::string& tag) {
-
-
+	std::vector<std::shared_ptr<GameObject>> gameObjectsWithTag;
+	for (GameObject c : children) {
+		std::vector<std::string> gameobjectTags = c.GetTags();
+		if (std::find(gameobjectTags.begin(), gameobjectTags.end(), tag) != gameobjectTags.end())
+		{
+			gameObjectsWithTag.push_back(std::make_shared<GameObject>(c));
+		}
+	}
+	return gameObjectsWithTag;
 }
 
 std::shared_ptr<GameObject> GameObject::FindWithTag(const std::string& tag) {
-	
+	for (GameObject c : children) {
+		std::vector<std::string> gameobjectTags = c.GetTags();
+		if (std::find(gameobjectTags.begin(), gameobjectTags.end(), tag) != gameobjectTags.end())
+		{
+			return std::make_shared<GameObject>(c);
+		}
+	}
+	return nullptr;
 }	
 
 void GameObject::Destroy(std::shared_ptr<GameObject> obj) {

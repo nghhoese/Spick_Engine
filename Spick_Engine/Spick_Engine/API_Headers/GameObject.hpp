@@ -10,8 +10,6 @@
 #include "Transform.hpp"
 #include "Component.hpp"
 
-
-
 namespace spic {
     class Scene;
     /**
