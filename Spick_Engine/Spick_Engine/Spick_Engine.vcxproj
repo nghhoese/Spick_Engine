@@ -180,7 +180,6 @@
     <ClInclude Include="API_Headers\IKeyListener.hpp" />
     <ClInclude Include="API_Headers\Image.hpp" />
     <ClInclude Include="API_Headers\IMouseListener.hpp" />
-    <ClInclude Include="API_Headers\Input.hpp" />
     <ClInclude Include="API_Headers\InputField.hpp" />
     <ClInclude Include="API_Headers\Importation.hpp" />
     <ClInclude Include="API_Headers\KeyCode.hpp" />
@@ -212,9 +211,6 @@
     <ClCompile Include="Controller_Sources\EngineController.cpp" />
     <ClCompile Include="Facade_Sources\KeyFacade.cpp" />
     <ClCompile Include="Facade_Sources\MouseFacade.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="API_Sources\Input.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,7 +1,7 @@
 #pragma once
 
 #include <SDL.h>
-#include "../API_Headers/Input.hpp"
+#include "../API_Headers/MouseButton.hpp"
 #include <tuple>
 using namespace spic;
 

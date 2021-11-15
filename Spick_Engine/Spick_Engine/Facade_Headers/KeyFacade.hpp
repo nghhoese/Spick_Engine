@@ -1,8 +1,8 @@
 #pragma once
 
 #include <SDL.h>
-#include "../API_Headers/Input.hpp"
 #include <iostream>
+#include "../API_Headers/KeyCode.hpp"
 using namespace spic;
 
 class KeyFacade {

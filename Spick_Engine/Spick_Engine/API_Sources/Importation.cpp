@@ -1,4 +1,9 @@
 #include "..\API_Headers\Importation.hpp"
+#include "../Facade_Headers/KeyFacade.hpp"
+#include "../Facade_Headers/MouseFacade.hpp"
+
+std::unique_ptr<KeyFacade> keyfacade_ptr = std::make_unique<KeyFacade>();;
+std::unique_ptr<MouseFacade> mousefacade_ptr = std::make_unique<MouseFacade>();
 
 spic::Importation::Importation()
 {
@@ -6,19 +11,32 @@ spic::Importation::Importation()
 
 SPIC_API bool spic::Importation::AnyKey()
 {
-	return false;
+	bool keyboard = keyfacade_ptr->PollContinousEvent();
+	bool mouse = mousefacade_ptr->PollContinousEvent();
+
+	if (keyboard || mouse)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
 }
 
 SPIC_API bool spic::Importation::AnyKeyDown()
 {
-	return true;
+	return mousefacade_ptr->AnyKeyPressed();
 }
 
 SPIC_API const spic::Point spic::Importation::MousePosition()
 {
 	Point point;
-	point.x = 0;
-	point.y = 0;
+
+	std::tuple<int, int> coords = mousefacade_ptr->PollMousePosition();
+	point.x = std::get<0>(coords);
+	point.y = std::get<1>(coords);
+
 	return point;
 }
 
@@ -29,30 +47,44 @@ SPIC_API double spic::Importation::GetAxis()
 
 SPIC_API bool spic::Importation::GetKey(KeyCode key)
 {
-	return true;
+	return keyfacade_ptr->PollContinousEvent(key);
 }
 
 SPIC_API bool spic::Importation::GetKeyDown(KeyCode key)
 {
-	return true;
+	KeyCode keycode = keyfacade_ptr->PollEvent();
+
+	if (key == keycode) {
+		return true;
+	}
+	else {
+		return false;
+	}
 }
 
 SPIC_API bool spic::Importation::GetKeyUp(KeyCode key)
 {
-	return true;
+	KeyCode keycode = keyfacade_ptr->PollEvent();
+
+	if (key == keycode) {
+		return true;
+	}
+	else {
+		return false;
+	}
 }
 
 SPIC_API bool spic::Importation::GetMouseButton(MouseButton which)
 {
-	return true;
+	return mousefacade_ptr->GetMouseButton((int)which);
 }
 
 SPIC_API bool spic::Importation::GetMouseButtonDown(MouseButton which)
 {
-	return true;
+	return mousefacade_ptr->GetMouseButtonDown((int)which);
 }
 
 SPIC_API bool spic::Importation::GetMouseButtonUp(MouseButton which)
 {
-	return true;
+	return mousefacade_ptr->GetMouseButtonUp((int)which);
 }
