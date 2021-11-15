@@ -123,6 +123,15 @@
     <ClInclude Include="Facade_Headers\MouseFacade.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="API_Headers\Importation.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="API_Headers\KeyCode.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="API_Headers\MouseButton.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="API_Sources\Color.cpp">
@@ -147,6 +156,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Facade_Sources\MouseFacade.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="API_Sources\Importation.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
