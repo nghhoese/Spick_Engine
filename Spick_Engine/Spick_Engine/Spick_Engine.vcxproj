@@ -163,7 +163,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Animator.hpp" />
     <ClInclude Include="API_Headers\Animator.hpp" />
     <ClInclude Include="API_Headers\AudioSource.hpp" />
     <ClInclude Include="API_Headers\BehaviourScript.hpp" />
@@ -196,42 +195,11 @@
     <ClInclude Include="API_Headers\Time.hpp" />
     <ClInclude Include="API_Headers\Transform.hpp" />
     <ClInclude Include="API_Headers\UIObject.hpp" />
-    <ClInclude Include="AudioSource.hpp" />
-    <ClInclude Include="BehaviourScript.hpp" />
-    <ClInclude Include="BoxCollider.hpp" />
-    <ClInclude Include="Button.hpp" />
-    <ClInclude Include="Camera.hpp" />
-    <ClInclude Include="CircleCollider.hpp" />
-    <ClInclude Include="Collider.hpp" />
-    <ClInclude Include="Color.hpp" />
-    <ClInclude Include="Component.hpp" />
     <ClInclude Include="Controller_Headers\EngineController.hpp" />
-    <ClInclude Include="Debug.hpp" />
-    <ClInclude Include="Engine.hpp" />
     <ClInclude Include="Facade_Headers\CameraFacade.hpp" />
     <ClInclude Include="Facade_Headers\Exceptions\GraphicsExceptions.hpp" />
     <ClInclude Include="Facade_Headers\KeyFacade.hpp" />
     <ClInclude Include="Facade_Headers\SceneFacade.hpp" />
-    <ClInclude Include="GameObject.hpp" />
-    <ClInclude Include="GlobalLight.hpp" />
-    <ClInclude Include="IKeyListener.hpp" />
-    <ClInclude Include="Image.hpp" />
-    <ClInclude Include="IMouseListener.hpp" />
-    <ClInclude Include="Input.hpp" />
-    <ClInclude Include="InputField.hpp" />
-    <ClInclude Include="Light.hpp" />
-    <ClInclude Include="Point.hpp" />
-    <ClInclude Include="PointLight.hpp" />
-    <ClInclude Include="PolygonCollider.hpp" />
-    <ClInclude Include="RigidBody.hpp" />
-    <ClInclude Include="Scene.hpp" />
-    <ClInclude Include="Spic.hpp" />
-    <ClInclude Include="SpicHeader.hpp" />
-    <ClInclude Include="Sprite.hpp" />
-    <ClInclude Include="Text.hpp" />
-    <ClInclude Include="Time.hpp" />
-    <ClInclude Include="Transform.hpp" />
-    <ClInclude Include="UIObject.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="API_Sources\Camera.cpp" />
@@ -240,13 +208,9 @@
     <ClCompile Include="API_Sources\GameObject.cpp" />
     <ClCompile Include="API_Sources\Scene.cpp" />
     <ClCompile Include="API_Sources\Time.cpp" />
-    <ClCompile Include="Color.cpp" />
     <ClCompile Include="Controller_Sources\EngineController.cpp" />
-    <ClCompile Include="Engine.cpp" />
     <ClCompile Include="Facade_Sources\CameraFacade.cpp" />
-    <ClCompile Include="Facade_Sources\KeyFacade.cpp" />
     <ClCompile Include="Facade_Sources\SceneFacade.cpp" />
-    <ClCompile Include="Time.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Object Include="Debug\Color.obj" />

@@ -32,12 +32,12 @@ namespace spic {
             /**
              * @brief Add tag.
              */
-            SPIC_API const void AddTag(const std::string& tag) { tags.push_back(tag); }
+            const void AddTag(const std::string& tag) { tags.push_back(tag); }
 
             /**
              * @brief Remove tag.
              */
-            SPIC_API const void RemoveTag(const std::string& tag) { remove(tags.begin(), tags.end(), tag); };
+            const void RemoveTag(const std::string& tag) { remove(tags.begin(), tags.end(), tag); };
 
             /**
              * @brief Finds a GameObject by name and returns it.
@@ -100,7 +100,7 @@ namespace spic {
              *          Find()-functions possible.
              * @param name The name for the game object.
              */
-            SPIC_API GameObject(const std::string& name);
+           GameObject(const std::string& name);
 
             /**
              * @brief Does the object exist? TODO wat wordt hiermee bedoeld?

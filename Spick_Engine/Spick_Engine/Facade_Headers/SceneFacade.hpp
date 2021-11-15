@@ -8,84 +8,85 @@
 struct SDL_Window;
 struct SDL_Renderer;
 
-using namespace spic;
+namespace spic {
 
-class WindowFacade {
-private:
-	/**
-	* \brief An instance of SDL_Window with a custom destructor
-	*/
-	std::unique_ptr<SDL_Window, void(*)(SDL_Window*)> _window;
+	class WindowFacade {
+	private:
+		/**
+		* \brief An instance of SDL_Window with a custom destructor
+		*/
+		std::unique_ptr<SDL_Window, void(*)(SDL_Window*)> _window;
 
-	/**
-	* \brief An instance of SDL_Renderer with a custom destructor
-	*/
-	std::unique_ptr<SDL_Renderer, void(*)(SDL_Renderer*)> _renderer;
+		/**
+		* \brief An instance of SDL_Renderer with a custom destructor
+		*/
+		std::unique_ptr<SDL_Renderer, void(*)(SDL_Renderer*)> _renderer;
 
-	/**
-	* \brief The height of the Window
-	*/
-	float _window_height;
+		/**
+		* \brief The height of the Window
+		*/
+		float _window_height;
 
-	/**
-	* \brief The width of the Window
-	*/
-	float _window_width;
+		/**
+		* \brief The width of the Window
+		*/
+		float _window_width;
 
-	/**
-	* \brief The camera position of the Window
-	* The standard position of the camera is 0,0
-	* \return std::tuple<width, height>
-	*/
-	std::tuple<float, float> _camera_pos;
+		/**
+		* \brief The camera position of the Window
+		* The standard position of the camera is 0,0
+		* \return std::tuple<width, height>
+		*/
+		std::tuple<float, float> _camera_pos;
 
 
-	/**
-	* \brief The width and height of the Scene
-	* \return std::tuple<width, height>
-	*/
-	std::tuple<float, float> _scene_size;
+		/**
+		* \brief The width and height of the Scene
+		* \return std::tuple<width, height>
+		*/
+		std::tuple<float, float> _scene_size;
 
-public:
-	WindowFacade();
+	public:
+		WindowFacade();
 
-	/**
-	* \brief Creates the instance of SDL_Renderer
-	*/
-	int create_renderer();
+		/**
+		* \brief Creates the instance of SDL_Renderer
+		*/
+		int create_renderer();
 
-	/**
-	* \brief Returns the timer ticks
-	*/
-	uint32_t get_ticks();
+		/**
+		* \brief Returns the timer ticks
+		*/
+		uint32_t get_ticks();
 
-	/**
-	* \brief Creates the instance of SDL_Window
-	*/
-	int create_window(const std::string& title, float height, float width);
+		/**
+		* \brief Creates the instance of SDL_Window
+		*/
+		int create_window(const std::string& title, float height, float width);
 
-	/**
-	* brief Destroys the SDL_Window
-	*/
-	void destroy();
+		/**
+		* brief Destroys the SDL_Window
+		*/
+		void destroy();
 
-	/**
-	* brief Updates camera position
-	*/
-	void set_camera_pos(float x, float y);
+		/**
+		* brief Updates camera position
+		*/
+		void set_camera_pos(float x, float y);
 
-	/**
-	* brief Returns camera position
-	*/
-	std::tuple<float, float> get_camera_pos() const;
+		/**
+		* brief Returns camera position
+		*/
+		std::tuple<float, float> get_camera_pos() const;
 
-	/**
-	* brief Sets scene size
-	*/
-	void set_scene_size(float height, float width);
+		/**
+		* brief Sets scene size
+		*/
+		void set_scene_size(float height, float width);
 
-	/**
-	* brief Returns scene size
-	*/
-	std::tuple<float, float> get_scene_size() const;
-};
+		/**
+		* brief Returns scene size
+		*/
+		std::tuple<float, float> get_scene_size() const;
+	};
+}

@@ -1,15 +1,16 @@
 #include "../API_Headers/GameObject.hpp"
 
 using namespace spic;
-
-SPIC_API GameObject::GameObject(const std::string& name) {
+std::vector<GameObject> GameObject::children;
+GameObject::GameObject(const std::string& name) {
 	this->name = name;
+
 }
 
 std::shared_ptr<GameObject> GameObject::Find(const std::string& name) {
 	for (GameObject c : children) {
 		if (c.GetName() == name) {
-			return std::make_shared<GameObject>(c);;
+			return std::make_shared<GameObject>(c);
 		}
 	}
 	return nullptr;
@@ -46,9 +47,7 @@ void GameObject::Destroy(Component* obj) {
 
 }
 
-bool GameObject::IsActiveInWorld() const {
 
-}
 
 void GameObject::Update() {
 

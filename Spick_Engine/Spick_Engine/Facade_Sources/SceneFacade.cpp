@@ -1,6 +1,7 @@
 #include "../Facade_Headers/SceneFacade.hpp"
 #include "../Facade_Headers/Exceptions/GraphicsExceptions.hpp"
 
+using namespace spic;
 WindowFacade::WindowFacade() : _window(nullptr, SDL_DestroyWindow), _renderer(nullptr, SDL_DestroyRenderer) {}
 
 int WindowFacade::create_renderer() {
