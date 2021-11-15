@@ -1,11 +1,14 @@
 #include "../API_Headers/Input.hpp"
 #include "../Facade_Headers/KeyFacade.hpp"
 #include "../Facade_Headers/MouseFacade.hpp"
-#include <iostream>
 using namespace spic;
 
-std::unique_ptr<KeyFacade> keyfacade_ptr = std::make_unique<KeyFacade>();
+std::unique_ptr<KeyFacade> keyfacade_ptr = std::make_unique<KeyFacade>();;
 std::unique_ptr<MouseFacade> mousefacade_ptr = std::make_unique<MouseFacade>();
+
+Input::Input() {
+
+}
 
 bool Input::AnyKey() {
 	bool keyboard = keyfacade_ptr->PollContinousEvent();

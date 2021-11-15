@@ -1,6 +1,8 @@
 #ifndef COLOR_H_
 #define COLOR_H_
 
+#include "SpicHeader.hpp"
+
 namespace spic {
 
     /**
@@ -11,7 +13,7 @@ namespace spic {
             /**
              * @brief Default constructor representing a white color.
              */
-            Color();
+            SPIC_API Color();
 
             /**
              * @brief Constructor, accepting an rgb value and an alpha (transparency).
@@ -20,7 +22,7 @@ namespace spic {
              * @param blue The blue component, 0 ≤ b ≤ 1.
              * @param alpha The transparency component, 0 ≤ alpha ≤ 1.
              */
-            Color(double red, double green, double blue, double alpha);
+            SPIC_API Color(double red, double green, double blue, double alpha);
 
             /**
              * @brief One of the standard colors (read-only): white.

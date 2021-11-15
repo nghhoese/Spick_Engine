@@ -4,20 +4,20 @@ MouseFacade::MouseFacade() {
 
 }
 
-Input::MouseButton MouseFacade::PollEvent() {
+MouseButton MouseFacade::PollEvent() {
     if (SDL_PollEvent(&sdlEvent) != 0)
     {
 		switch (sdlEvent.type)
 		{
 			case SDL_MOUSEBUTTONDOWN:
 				if (sdlEvent.button.button == SDL_BUTTON_LEFT) {
-					return Input::MouseButton::LEFT;
+					return MouseButton::LEFT;
 				}
 				else if (sdlEvent.button.button == SDL_BUTTON_RIGHT) {
-					return Input::MouseButton::RIGHT;
+					return MouseButton::RIGHT;
 				}
 				else {
-					return Input::MouseButton::MIDDLE;
+					return MouseButton::MIDDLE;
 				}
 		}
     }

@@ -14,12 +14,12 @@ public:
 	/**
 	* @brief Returns KeyCode if any key is SDL_KEYDOWN or SDL_KEYUP
 	*/
-	Input::KeyCode PollEvent();
+	KeyCode PollEvent();
 
 	/**
 	* @brief Returns bool depending on key parameter if key is hold down.
 	*/
-	bool PollContinousEvent(const Input::KeyCode& key);
+	bool PollContinousEvent(const KeyCode& key);
 
 	/**
 	* @brief Returns bool depending on if key is hold down.
@@ -29,9 +29,6 @@ public:
 	/**
 	* @brief Returns KeyCode translated from SDL
 	*/
-	Input::KeyCode TranslateToEnum(const SDL_Event& sdlEvent) const;
-
-
-
+	KeyCode TranslateToEnum(const SDL_Event& sdlEvent) const;
 
 };

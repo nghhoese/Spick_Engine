@@ -14,7 +14,7 @@ public:
 	/**
 	* @brief Returns bool depending on if mouse is pressed down.
 	*/
-	Input::MouseButton PollEvent();
+	MouseButton PollEvent();
 
 	/**
 	* @brief Returns bool depending on if mouse is hold down.
