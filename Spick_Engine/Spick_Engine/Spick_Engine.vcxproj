@@ -91,6 +91,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <AdditionalIncludeDirectories>$(SolutionDir)External Libraries\SDL2\include;$(SolutionDir)External Libraries\SDL2_image\include;$(SolutionDir)External Libraries\box2d\include;$(SolutionDir)External Libraries\SDL2_ttf\include</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -111,6 +112,7 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <AdditionalIncludeDirectories>$(SolutionDir)External Libraries\SDL2\include;$(SolutionDir)External Libraries\SDL2_image\include;$(SolutionDir)External Libraries\box2d\include;$(SolutionDir)External Libraries\SDL2_ttf\include</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -131,6 +133,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <AdditionalIncludeDirectories>$(SolutionDir)External Libraries\SDL2\include;$(SolutionDir)External Libraries\SDL2_image\include;$(SolutionDir)External Libraries\box2d\include;$(SolutionDir)External Libraries\SDL2_ttf\include</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -151,6 +154,7 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <AdditionalIncludeDirectories>$(SolutionDir)External Libraries\SDL2\include;$(SolutionDir)External Libraries\SDL2_image\include;$(SolutionDir)External Libraries\box2d\include;$(SolutionDir)External Libraries\SDL2_ttf\include</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -200,7 +204,9 @@
     <ClInclude Include="Facade_Headers\Exceptions\GraphicsExceptions.hpp" />
     <ClInclude Include="Facade_Headers\ImageFacade.h" />
     <ClInclude Include="Facade_Headers\KeyFacade.hpp" />
+    <ClInclude Include="Facade_Headers\MouseFacade.hpp" />
     <ClInclude Include="Facade_Headers\SceneFacade.hpp" />
+    <ClInclude Include="Facade_Headers\Tileson\tileson.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="API_Sources\Camera.cpp" />
@@ -212,7 +218,10 @@
     <ClCompile Include="Controller_Sources\EngineController.cpp" />
     <ClCompile Include="Facade_Sources\CameraFacade.cpp" />
     <ClCompile Include="Facade_Sources\ImageFacade.cpp" />
+    <ClCompile Include="Facade_Sources\KeyFacade.cpp" />
+    <ClCompile Include="Facade_Sources\MouseFacade.cpp" />
     <ClCompile Include="Facade_Sources\SceneFacade.cpp" />
+    <ClCompile Include="Facade_Sources\TiledFacade.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Object Include="Debug\Color.obj" />

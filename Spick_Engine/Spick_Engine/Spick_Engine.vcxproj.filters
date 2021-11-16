@@ -132,6 +132,12 @@
     <ClInclude Include="Facade_Headers\ImageFacade.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Facade_Headers\MouseFacade.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Facade_Headers\Tileson\tileson.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="API_Sources\Color.cpp">
@@ -162,6 +168,15 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Facade_Sources\ImageFacade.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Facade_Sources\MouseFacade.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Facade_Sources\KeyFacade.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Facade_Sources\TiledFacade.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
