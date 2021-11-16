@@ -1,11 +1,11 @@
-#ifndef SCENE_H_
-#define SCENE_H_
+#pragma once
 
 #include <algorithm>
 #include <vector>
 #include <string>
 #include "SpicHeader.hpp"
 #include "GameObject.hpp"
+#include "../Facade_Headers/SceneFacade.hpp"
 
 namespace spic {
 
@@ -92,13 +92,12 @@ namespace spic {
              * @brief Add game object.
              */
             SPIC_API void AddGameObject(std::shared_ptr<GameObject> gameObject);
-
+            std::shared_ptr<WindowFacade> GetSceneFacade() { return sceneFacade; }
     private:
         std::string name;
         std::vector<std::shared_ptr<GameObject>> gameObjects;
         std::vector<std::shared_ptr<Camera>> cameras;
+        std::shared_ptr<WindowFacade> sceneFacade;
     };
 
 }
-
-#endif // SCENE_H_

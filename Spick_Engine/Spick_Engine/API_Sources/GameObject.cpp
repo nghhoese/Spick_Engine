@@ -7,6 +7,16 @@ GameObject::GameObject(const std::string& name) {
 
 }
 
+SPIC_API void GameObject::SetScene(std::shared_ptr<Scene> _scene)
+{
+	scene = _scene;
+}
+
+SPIC_API std::shared_ptr<Scene> GameObject::getScene()
+{
+	return scene;
+}
+
 std::shared_ptr<GameObject> GameObject::Find(const std::string& name) {
 	for (GameObject c : children) {
 		if (c.GetName() == name) {

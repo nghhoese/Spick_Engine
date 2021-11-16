@@ -1,12 +1,12 @@
 #include "../API_Headers/Scene.hpp"
-#include "../Facade_Headers/SceneFacade.hpp"
+
 
 using namespace spic;
 
 SPIC_API Scene::Scene(const std::string& name) {
     gameObjects = std::vector<std::shared_ptr<GameObject>>{};
     cameras = std::vector<std::shared_ptr<Camera>>{};
-    WindowFacade* sceneFacade = new WindowFacade();
+    sceneFacade = std::make_shared<WindowFacade>();
     sceneFacade->create_window("wollah",500,500);
 }
 

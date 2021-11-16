@@ -5,6 +5,9 @@
 #include "Component.hpp"
 #include "Color.hpp"
 #include <string>
+#include "../Facade_Headers/ImageFacade.hpp"
+#include "GameObject.hpp"
+#include "Scene.hpp"
 
 namespace spic {
 
@@ -147,7 +150,7 @@ namespace spic {
         /**
          * @brief Called every frame draw after update.
          */
-        void OnRender();
+        SPIC_API void OnRender();
 
         private:
             std::string sprite;
