@@ -17,6 +17,8 @@ namespace spic {
         SPIC_API ImageFacade(std::string path, int width,int height);
         void Createtexture(SDL_Renderer* renderer);
         void Render(SDL_Renderer* renderer);
+        void setPosition(int x, int y);
+        void setSize(int width, int height);
 
 
 

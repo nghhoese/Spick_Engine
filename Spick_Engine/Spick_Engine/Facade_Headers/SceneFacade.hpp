@@ -88,5 +88,7 @@ namespace spic {
 		* brief Returns scene size
 		*/
 		std::tuple<float, float> get_scene_size() const;
+		void ClearRender();
+		void Render();
 	};
 }

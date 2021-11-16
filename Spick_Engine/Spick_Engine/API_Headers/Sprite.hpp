@@ -13,12 +13,12 @@ namespace spic {
     /**
      * @brief A component representing a sprite (small image)
      */
-    class Sprite : public Component {
+    class SPIC_API Sprite : public Component {
     public:
         /**
          * @brief Constructor.
          */
-        SPIC_API Sprite();
+         Sprite();
 
         /**
          * @brief Get sprite.
@@ -148,7 +148,7 @@ namespace spic {
         /**
          * @brief Called every frame draw after update.
          */
-        SPIC_API void OnRender();
+         void OnRender();
 
     private:
         std::string sprite;

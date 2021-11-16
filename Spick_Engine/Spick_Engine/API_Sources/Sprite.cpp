@@ -18,7 +18,7 @@ void spic::Sprite::OnUpdate()
 
 void spic::Sprite::OnRender()
 {
-	ImageFacade* imageFacade = new ImageFacade("lol",50,50);
+	ImageFacade* imageFacade = new ImageFacade(sprite,100,100);
 	imageFacade->Createtexture(GetGameObject()->getScene()->GetSceneFacade()->_renderer.get());
 	imageFacade->Render(GetGameObject()->getScene()->GetSceneFacade()->_renderer.get());
 

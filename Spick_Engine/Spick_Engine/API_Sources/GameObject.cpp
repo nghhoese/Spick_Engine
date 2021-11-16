@@ -64,7 +64,9 @@ void GameObject::Update() {
 }
 
 void GameObject::Render() {
-
+	for (std::shared_ptr<Component> c : components) {
+		c->OnRender();
+	}
 }
 
 // Template classes implementatie nog vullen in header file
