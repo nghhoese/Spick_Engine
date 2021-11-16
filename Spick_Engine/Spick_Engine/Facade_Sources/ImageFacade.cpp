@@ -3,8 +3,8 @@
 #pragma warning(disable : 4996)
 spic::ImageFacade::ImageFacade(std::string path, int width, int height)
 {
-	destR.h = 50;
-	destR.w = 50;
+	destR.h = width;
+	destR.w = height;
 	_path = path;
 }
 
