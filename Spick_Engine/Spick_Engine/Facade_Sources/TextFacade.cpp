@@ -7,7 +7,7 @@
 using namespace spic;
 
 TextFacade::TextFacade(const std::string& path, const std::string& text, const Color& color, const float height, int opacity) :
-	TextureFacade(path, opacity), _text{ text }, _color{ color }, _height{ height } {}
+	ImageFacade(path, opacity), _text{ text }, _color{ color }, _height{ height } {}
 
 void TextFacade::create_texture(std::unique_ptr<SDL_Renderer, void(*)(SDL_Renderer*)>& renderer)
 {
