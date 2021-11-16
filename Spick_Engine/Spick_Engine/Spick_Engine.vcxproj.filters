@@ -69,6 +69,9 @@
     <ClInclude Include="API_Headers\IMouseListener.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="API_Headers\Input.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="API_Headers\InputField.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -117,25 +120,16 @@
     <ClInclude Include="Facade_Headers\KeyFacade.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Facade_Headers\MouseFacade.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="API_Headers\Importation.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="API_Headers\KeyCode.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="API_Headers\MouseButton.hpp">
+    <ClInclude Include="Facade_Headers\Exceptions\GraphicsExceptions.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Facade_Headers\CameraFacade.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Facade_Headers\ImageFacade.h">
+    <ClInclude Include="Facade_Headers\SceneFacade.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Facade_Headers\SceneFacade.hpp">
+    <ClInclude Include="Facade_Headers\ImageFacade.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -146,31 +140,16 @@
     <ClCompile Include="API_Sources\Engine.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="API_Sources\IKeyListener.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="API_Sources\IMouseListener.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="API_Sources\Time.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Controller_Sources\EngineController.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Facade_Sources\KeyFacade.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Facade_Sources\MouseFacade.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="API_Sources\Importation.cpp">
+    <ClCompile Include="API_Sources\GameObject.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="API_Sources\Camera.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="API_Sources\GameObject.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="API_Sources\Scene.cpp">
@@ -179,11 +158,28 @@
     <ClCompile Include="Facade_Sources\CameraFacade.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Facade_Sources\ImageFacade.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Facade_Sources\SceneFacade.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Facade_Sources\ImageFacade.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Object Include="Debug\Color.obj" />
+    <Object Include="Debug\Engine.obj" />
+    <Object Include="Debug\Time.obj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Debug\Spick_Engine.Build.CppClean.log" />
+    <Text Include="Debug\Spick_Engine.log" />
+    <Text Include="Debug\Spick_Engine.vcxproj.FileListAbsolute.txt" />
+    <Text Include="Debug\vcpkg.applocal.log" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Debug\Spick_Engine.dll.recipe" />
+    <None Include="Debug\Spick_Engine.ilk" />
+    <None Include="Debug\vc142.idb" />
+    <None Include="Debug\vc142.pdb" />
   </ItemGroup>
 </Project>
