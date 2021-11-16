@@ -36,6 +36,12 @@ int WindowFacade::create_window(const std::string& title, float height, float wi
 			throw Exceptions::SDLInitFailed();
 		}
 
+		//Initialize SDL_ttf
+		if (TTF_Init() == -1)
+		{
+			throw Exceptions::TTFInitFailed();
+		}
+
 		_window.reset(SDL_CreateWindow(title.c_str(), SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, width, height, SDL_WINDOW_SHOWN));
 
 		if (_window == NULL) {
@@ -61,6 +67,7 @@ int WindowFacade::create_window(const std::string& title, float height, float wi
 void WindowFacade::destroy() {
 	//Quit SDL subsystems
 	SDL_Quit();
+	TTF_Quit();
 }
 
 void WindowFacade::set_camera_pos(float x, float y) {

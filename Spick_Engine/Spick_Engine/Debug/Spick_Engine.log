@@ -17,11 +17,11 @@ C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Sources\Time.cpp(25,121): war
   CameraFacade.cpp
   ImageFacade.cpp
   SceneFacade.cpp
-C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\SceneFacade.cpp(39,106): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\SceneFacade.cpp(39,99): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\SceneFacade.cpp(80,18): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\SceneFacade.cpp(82,30): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\SceneFacade.cpp(94,99): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\SceneFacade.cpp(45,106): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\SceneFacade.cpp(45,99): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\SceneFacade.cpp(87,18): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\SceneFacade.cpp(89,30): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\SceneFacade.cpp(101,99): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.29.30133\include\tuple(170,47): warning C4244: 'initializing': conversion from 'const float' to '_Ty', possible loss of data
           with
           [
@@ -75,8 +75,8 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.
               _Tag=std::_Unpack_tuple_t,
               _Tpl=const std::tuple<float,float> &
           ]
-C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\SceneFacade.cpp(93): message : see reference to function template instantiation 'std::tuple<int,int>::tuple<float,float,0>(const std::tuple<float,float> &) noexcept' being compiled
-C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\SceneFacade.cpp(93): message : see reference to function template instantiation 'std::tuple<int,int>::tuple<float,float,0>(const std::tuple<float,float> &) noexcept' being compiled
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\SceneFacade.cpp(100): message : see reference to function template instantiation 'std::tuple<int,int>::tuple<float,float,0>(const std::tuple<float,float> &) noexcept' being compiled
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\SceneFacade.cpp(100): message : see reference to function template instantiation 'std::tuple<int,int>::tuple<float,float,0>(const std::tuple<float,float> &) noexcept' being compiled
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.29.30133\include\tuple(170,47): warning C4244: 'initializing': conversion from '_Ty' to '_Ty', possible loss of data
           with
           [
@@ -138,8 +138,8 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.
               _Tag=std::_Unpack_tuple_t,
               _Tpl=std::tuple<int,int>
           ]
-C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\SceneFacade.cpp(95): message : see reference to function template instantiation 'std::tuple<float,float>::tuple<int,int,0>(std::tuple<int,int> &&) noexcept' being compiled
-C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\SceneFacade.cpp(95): message : see reference to function template instantiation 'std::tuple<float,float>::tuple<int,int,0>(std::tuple<int,int> &&) noexcept' being compiled
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\SceneFacade.cpp(102): message : see reference to function template instantiation 'std::tuple<float,float>::tuple<int,int,0>(std::tuple<int,int> &&) noexcept' being compiled
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\SceneFacade.cpp(102): message : see reference to function template instantiation 'std::tuple<float,float>::tuple<int,int,0>(std::tuple<int,int> &&) noexcept' being compiled
   Generating Code...
 Debug\Color.obj : warning LNK4042: object specified more than once; extras ignored
 Debug\Engine.obj : warning LNK4042: object specified more than once; extras ignored
