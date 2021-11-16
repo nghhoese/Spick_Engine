@@ -20,11 +20,7 @@ int WindowFacade::create_renderer() {
 
 		SDL_SetRenderDrawColor(_renderer.get(), 255, 255, 255, 255);
 		SDL_SetRenderDrawBlendMode(_renderer.get(), SDL_BLENDMODE_BLEND);
-		SDL_Surface* tmpSurface = SDL_LoadBMP("C:\\Users\\Gebruiker\\Downloads\\player_sub-machinegun.bmp");
-		_texture = SDL_CreateTextureFromSurface(_renderer.get(), tmpSurface);
-		SDL_FreeSurface(tmpSurface);
-		SDL_RenderCopy(_renderer.get(), _texture, NULL, &destR);
-		SDL_RenderPresent(_renderer.get());
+
 		return 1;
 	}
 	catch (Exceptions::CannotCreateRenderer e) {
@@ -38,63 +34,35 @@ uint32_t WindowFacade::get_ticks() {
 }
 
 int WindowFacade::create_window(const std::string& title, float height, float width) {
-	//_window_height = height;
-	//_window_width = width;
-	//set_scene_size(height, width);
-	//try {
-	//	if (SDL_Init(SDL_INIT_VIDEO) < NULL) {
-	//		throw Exceptions::SDLInitFailed();
-	//	}
-
-	//	_window.reset(SDL_CreateWindow(title.c_str(), SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 500, 500, 0));
-
-	//	if (_window == NULL) {
-	//		throw Exceptions::CannotCreateWindow();
-	//	}
-
-	//	return 1;
-	//}
-	//catch (Exceptions::SDLInitFailed& e) {
-	//	std::cout << e.get() << std::endl;
-	//	return NULL;
-	//}
-	//catch (Exceptions::TTFInitFailed& e) {
-	//	std::cout << e.get() << std::endl;
-	//	return NULL;
-	//}
-	//catch (Exceptions::CannotCreateWindow& e) {
-	//	std::cout << e.get() << std::endl;
-	//	return NULL;
-	//}
-	int flags = 0;
-
-
-
-	if (SDL_Init(SDL_INIT_EVERYTHING) == 0)
-	{
-		window = SDL_CreateWindow("testgame", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 500, 500, flags);
-		renderer = SDL_CreateRenderer(window, -1, 0);
-		if (renderer)
-		{
-			SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
-			SDL_SetRenderDrawBlendMode(renderer, SDL_BLENDMODE_BLEND);
+	_window_height = height;
+	_window_width = width;
+	set_scene_size(height, width);
+	try {
+		if (SDL_Init(SDL_INIT_VIDEO) < NULL) {
+			throw Exceptions::SDLInitFailed();
 		}
 
+		_window.reset(SDL_CreateWindow(title.c_str(), SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 500, 500, 0));
 
+		if (_window == NULL) {
+			throw Exceptions::CannotCreateWindow();
+		}
+
+		return 1;
 	}
-	destR.h = 50;
-	destR.w = 50;
-
-	SDL_Surface* tmpSurface = SDL_LoadBMP("C:\\Users\\Gebruiker\\Downloads\\player_sub-machinegun.bmp");
-	PlayerTex = SDL_CreateTextureFromSurface(renderer, tmpSurface);
-	SDL_FreeSurface(tmpSurface);
-	SDL_RenderClear(renderer);
-	SDL_RenderCopy(renderer, PlayerTex, NULL, &destR);
-
-	SDL_RenderPresent(renderer);
-	while (true) {
-
+	catch (Exceptions::SDLInitFailed& e) {
+		std::cout << e.get() << std::endl;
+		return NULL;
 	}
+	catch (Exceptions::TTFInitFailed& e) {
+		std::cout << e.get() << std::endl;
+		return NULL;
+	}
+	catch (Exceptions::CannotCreateWindow& e) {
+		std::cout << e.get() << std::endl;
+		return NULL;
+	}
+	
 }
 
 void WindowFacade::destroy() {
