@@ -45,10 +45,6 @@ bool KeyFacade::PollContinousEvent()
 
 }
 
-
-
-
-
 KeyCode KeyFacade::TranslateToEnum(const SDL_Event& sdlEvent) const {
     switch (sdlEvent.key.keysym.sym)
     {
