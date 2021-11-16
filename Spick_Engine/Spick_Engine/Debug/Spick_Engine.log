@@ -1,4 +1,2 @@
-﻿  MouseFacade.cpp
-C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\MouseFacade.cpp(24): warning C4715: 'MouseFacade::PollEvent': not all control paths return a value
-C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\MouseFacade.cpp(44): warning C4715: 'MouseFacade::PollContinousEvent': not all control paths return a value
+﻿  Importation.cpp
   Spick_Engine.vcxproj -> C:\Spic\Spick_Engine\Spick_Engine\Debug\Spick_Engine.dll

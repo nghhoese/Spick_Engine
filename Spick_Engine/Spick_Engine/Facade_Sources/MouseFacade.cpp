@@ -25,25 +25,25 @@ MouseButton MouseFacade::PollEvent() {
 
 bool MouseFacade::PollContinousEvent()
 {
-	if (SDL_GetMouseState(NULL, NULL))
+	int x, y;
+	Uint32 buttons;
+
+	SDL_PumpEvents();  // make sure we have the latest mouse state.
+
+	buttons = SDL_GetMouseState(&x, &y);
+
+	if (buttons)
 	{
-		if (SDL_BUTTON(1) != NULL)
-		{
-			return true;
-		}
-		else if (SDL_BUTTON(2) != NULL)
-		{
-			return true;
-		} 
-		else if(SDL_BUTTON(3) != NULL)
+		if ((buttons & SDL_BUTTON_LMASK) != 0 || (buttons & SDL_BUTTON_RMASK) != 0 || (buttons & SDL_BUTTON_MMASK) != 0)
 		{
 			return true;
 		}
 		return false;
 	}
+	else {
+		return false;
+	}
 }
-
-
 
 std::tuple<int, int> MouseFacade::PollMousePosition() const
 {
@@ -60,16 +60,12 @@ bool MouseFacade::AnyKeyPressed()
 {
 	if (SDL_PollEvent(&sdlEvent) != 0)
 	{
-		if (sdlEvent.type != NULL) {
+		if (sdlEvent.type == SDL_MOUSEBUTTONDOWN)
+		{
 			return true;
 		}
-		else {
-			return false;
-		}
 	}
-	else {
-		return false;
-	}
+	return false;
 }
 
 bool MouseFacade::GetMouseButton(int which)
@@ -100,12 +96,15 @@ bool MouseFacade::GetMouseButtonDown(int which)
 	{
 		if (sdlEvent.type == SDL_MOUSEBUTTONDOWN)
 		{
-			if (sdlEvent.button.button == which)
+			if (which == 1 && sdlEvent.button.button == SDL_BUTTON_LEFT)
 			{
 				return true;
 			}
-			else
+			else if (which == 3 && sdlEvent.button.button == SDL_BUTTON_RIGHT)
 			{
+				return true;
+			}
+			else {
 				return false;
 			}
 		}
@@ -119,12 +118,15 @@ bool MouseFacade::GetMouseButtonUp(int which)
 	{
 		if (sdlEvent.type == SDL_MOUSEBUTTONUP)
 		{
-			if (sdlEvent.button.button == which)
+			if (which == 1 && sdlEvent.button.button == SDL_BUTTON_LEFT) 
 			{
 				return true;
 			}
-			else
+			else if (which == 3 && sdlEvent.button.button == SDL_BUTTON_RIGHT) 
 			{
+				return true;
+			}
+			else {
 				return false;
 			}
 		}
