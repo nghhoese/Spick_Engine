@@ -1,5 +1,4 @@
-#ifndef SPRITERENDERER_H_
-#define SPRITERENDERER_H_
+#pragma once
 
 #include "SpicHeader.hpp"
 #include "Component.hpp"
@@ -15,7 +14,6 @@ namespace spic {
      * @brief A component representing a sprite (small image)
      */
     class Sprite : public Component {
-
     public:
         /**
          * @brief Constructor.
@@ -152,19 +150,17 @@ namespace spic {
          */
         SPIC_API void OnRender();
 
-        private:
-            std::string sprite;
-            Color color;
-            bool flipX;
-            bool flipY;
-            int sortingLayer;
-            int orderInLayer;
-            int width;
-            int height;
-            int offsetX;
-            int offsetY;
-};
+    private:
+        std::string sprite;
+        Color color;
+        bool flipX;
+        bool flipY;
+        int sortingLayer;
+        int orderInLayer;
+        int width;
+        int height;
+        int offsetX;
+        int offsetY;
+    };
 
 }
-
-#endif // SPRITERENDERER_H_

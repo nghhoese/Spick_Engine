@@ -138,6 +138,9 @@
     <ClInclude Include="Facade_Headers\SceneFacade.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Facade_Headers\ImageFacade.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="API_Sources\Color.cpp">
@@ -183,6 +186,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Facade_Sources\SceneFacade.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="API_Sources\Sprite.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

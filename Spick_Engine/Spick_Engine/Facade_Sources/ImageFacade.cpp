@@ -10,7 +10,7 @@ spic::ImageFacade::ImageFacade(std::string path, int width, int height)
 
 void spic::ImageFacade::Createtexture(SDL_Renderer* renderer)
 {
-	SDL_Surface* tmpSurface = IMG_Load("C:\\Users\\Gebruiker\\Downloads\\player_sub-machinegun.png");
+	SDL_Surface* tmpSurface = IMG_Load("C:/Spic/player_sub-machinegun.png");
 	_texture = SDL_CreateTextureFromSurface(renderer, tmpSurface);
 	SDL_FreeSurface(tmpSurface);
 }
