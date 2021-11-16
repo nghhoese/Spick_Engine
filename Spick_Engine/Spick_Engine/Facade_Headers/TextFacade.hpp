@@ -1,5 +1,5 @@
 #pragma once
-#include "../Facade_Headers/ImageFacade.hpp"
+#include "../Facade_Headers/TextureFacade.hpp"
 #include "../API_Headers/Color.hpp"
 #include <stdio.h>
 #include <string>
@@ -10,7 +10,7 @@
 struct SDL_Renderer
 
 namespace spic {
-	class TextFacade : public ImageFacade {
+	class TextFacade : public TextureFacade {
 	private:
 		/**
 		* \brief The text of the TextFacade
