@@ -7,9 +7,9 @@
 #include "SpicHeader.hpp"
 #include "GameObject.hpp"
 
-class Camera;
-
 namespace spic {
+
+    class Camera;
 
     /**
      * @brief Class representing a scene which can be rendered by the Camera.
@@ -32,12 +32,12 @@ namespace spic {
             /**
              * @brief This function is called by the engine to update the scene on the engine.
              */
-            void Update();
+            SPIC_API void Update();
 
             /**
              * @brief This function is called by the engine to render the scene on the engine.
              */
-            void Render();
+            SPIC_API void Render();
 
             /**
              * @brief Add camera.
@@ -95,7 +95,8 @@ namespace spic {
 
     private:
         std::string name;
-
+        std::vector<std::shared_ptr<GameObject>> gameObjects;
+        std::vector<std::shared_ptr<Camera>> cameras;
     };
 
 }
