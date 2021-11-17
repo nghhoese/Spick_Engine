@@ -4,6 +4,7 @@
 
 spic::ImageFacade::ImageFacade()
 {
+	
 }
 
 void spic::ImageFacade::Createtexture(SDL_Renderer* renderer)

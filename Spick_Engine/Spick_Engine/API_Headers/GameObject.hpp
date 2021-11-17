@@ -231,6 +231,7 @@ namespace spic {
             void Render();
 
             SPIC_API const Transform* getTransform();
+            SPIC_API  void setTransform(Transform* _transform) { transform = *_transform; };
 
         private:
             std::string name;
