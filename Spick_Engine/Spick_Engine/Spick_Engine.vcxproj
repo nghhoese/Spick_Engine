@@ -203,6 +203,7 @@
     <ClInclude Include="Facade_Headers\CameraFacade.hpp" />
     <ClInclude Include="Facade_Headers\Exceptions\GraphicsExceptions.hpp" />
     <ClInclude Include="Facade_Headers\ImageFacade.h" />
+    <ClInclude Include="Facade_Headers\ImageFacade.hpp" />
     <ClInclude Include="Facade_Headers\KeyFacade.hpp" />
     <ClInclude Include="Facade_Headers\MouseFacade.hpp" />
     <ClInclude Include="Facade_Headers\SceneFacade.hpp" />
@@ -215,6 +216,7 @@
     <ClCompile Include="API_Sources\Engine.cpp" />
     <ClCompile Include="API_Sources\GameObject.cpp" />
     <ClCompile Include="API_Sources\Scene.cpp" />
+    <ClCompile Include="API_Sources\Sprite.cpp" />
     <ClCompile Include="API_Sources\Time.cpp" />
     <ClCompile Include="Controller_Sources\EngineController.cpp" />
     <ClCompile Include="Facade_Sources\CameraFacade.cpp" />

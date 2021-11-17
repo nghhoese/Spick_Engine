@@ -21,28 +21,49 @@ KeyCode KeyFacade::PollEvent() {
 bool KeyFacade::PollContinousEvent(const KeyCode& key)
 {
     int keyValue = (int)key;
-    if (SDL_GetKeyboardState(&keyValue))
+    SDL_PumpEvents();
+    const Uint8* state = SDL_GetKeyboardState(&keyValue);
+
+    SDL_Scancode code;
+    code = (SDL_Scancode)key;
+
+    if (state[code]){
+        return true;
+    }
+    else
     {
-        if (keyValue == 1)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        return false;
     }
 }
 
 bool KeyFacade::PollContinousEvent()
 {
-    if (SDL_GetKeyboardState(NULL))
-    {
-        return true;
-    }
-   
-    return false;
+    SDL_PumpEvents();
+    const Uint8* state = SDL_GetKeyboardState(NULL);
 
+    if (SDL_PollEvent(&sdlEvent) != 0) {
+        if (sdlEvent.type == SDL_KEYDOWN) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+    else {
+        return false;
+    }
+}
+
+bool KeyFacade::AnyKeyPressed()
+{
+    if (SDL_PollEvent(&sdlEvent) != 0)
+    {
+        if (sdlEvent.type == SDL_KEYDOWN)
+        {
+            return true;
+        }
+    }
+    return false;
 }
 
 KeyCode KeyFacade::TranslateToEnum(const SDL_Event& sdlEvent) const {

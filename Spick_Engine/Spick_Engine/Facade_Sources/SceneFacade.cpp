@@ -4,16 +4,22 @@
 using namespace spic;
 WindowFacade::WindowFacade() : _window(nullptr, SDL_DestroyWindow), _renderer(nullptr, SDL_DestroyRenderer) {}
 
+SDL_Texture* _texture;
+SDL_Window* window;
+SDL_Renderer* renderer;
+SDL_Texture* PlayerTex;
+SDL_Rect srcR, destR;
 int WindowFacade::create_renderer() {
 	try {
-		_renderer.reset(SDL_CreateRenderer(_window.get(), -1, SDL_RENDERER_ACCELERATED));
+		_renderer.reset(SDL_CreateRenderer(_window.get(), -1, 0));
 
 		if (_renderer == NULL)
 		{
 			throw Exceptions::CannotCreateRenderer();
 		}
 
-		SDL_SetRenderDrawColor(_renderer.get(), 0, 0, 0, 255);
+		SDL_SetRenderDrawColor(_renderer.get(), 255, 255, 255, 255);
+		SDL_SetRenderDrawBlendMode(_renderer.get(), SDL_BLENDMODE_BLEND);
 
 		return 1;
 	}
@@ -36,6 +42,7 @@ int WindowFacade::create_window(const std::string& title, float height, float wi
 			throw Exceptions::SDLInitFailed();
 		}
 
+<<<<<<< HEAD
 		//Initialize SDL_ttf
 		if (TTF_Init() == -1)
 		{
@@ -43,6 +50,9 @@ int WindowFacade::create_window(const std::string& title, float height, float wi
 		}
 
 		_window.reset(SDL_CreateWindow(title.c_str(), SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, width, height, SDL_WINDOW_SHOWN));
+=======
+		_window.reset(SDL_CreateWindow(title.c_str(), SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 500, 500, 0));
+>>>>>>> PlayerTest
 
 		if (_window == NULL) {
 			throw Exceptions::CannotCreateWindow();
@@ -62,6 +72,7 @@ int WindowFacade::create_window(const std::string& title, float height, float wi
 		std::cout << e.get() << std::endl;
 		return NULL;
 	}
+	
 }
 
 void WindowFacade::destroy() {
@@ -112,4 +123,61 @@ void WindowFacade::set_scene_size(float height, float width) {
 
 std::tuple<float, float> WindowFacade::get_scene_size() const {
 	return _scene_size;
+}
+
+void spic::WindowFacade::ClearRender()
+{
+	SDL_RenderClear(_renderer.get());
+}
+
+void spic::WindowFacade::Render()
+{
+	SDL_RenderPresent(_renderer.get());
+}
+
+int spic::WindowFacade::CalculateFPS()
+{
+	static const int NUM_SAMPLES = 10;
+	static float frameTimes[NUM_SAMPLES];
+	static int currentFrame = 0;
+
+	static float prevTicks = get_ticks();
+
+	float currentTicks;
+	currentTicks = get_ticks();
+
+	float frameTime = currentTicks - prevTicks;
+	frameTimes[currentFrame % NUM_SAMPLES] = frameTime;
+
+	prevTicks = currentTicks;
+
+	int count;
+
+	if (currentFrame < NUM_SAMPLES)
+	{
+		count = currentFrame;
+	}
+	else {
+		count = NUM_SAMPLES;
+	}
+
+	float frameTimeAvarage = 0;
+	for (int i = 0; i < count; i++)
+	{
+		frameTimeAvarage += frameTimes[i];
+	}
+
+	frameTimeAvarage /= count;
+	float fps = 0;
+	if (frameTimeAvarage > 0)
+	{
+		fps = 1000.0f / frameTimeAvarage;
+	}
+	else
+	{
+		fps = 60.0f;
+	}
+	currentFrame++;
+
+	return fps;
 }
