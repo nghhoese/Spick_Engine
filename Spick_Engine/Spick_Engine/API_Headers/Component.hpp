@@ -53,7 +53,7 @@ namespace spic {
              */
             bool active;
             GameObject* gameobject;
-            Transform& transform;
+            //Transform& transform;
             std::string name;
             std::string tag;
     };
