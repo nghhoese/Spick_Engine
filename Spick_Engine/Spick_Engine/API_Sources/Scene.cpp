@@ -67,6 +67,9 @@ SPIC_API const std::vector<std::shared_ptr<GameObject>> Scene::GetGameObjects() 
 
 SPIC_API void Scene::AddGameObject(std::shared_ptr<GameObject> gameObject) {
     gameObjects.push_back(gameObject);
+    std::shared_ptr<Scene> scene = std::make_shared<Scene>("");
+    scene.reset(this);
+    gameObject->SetScene(scene);
 }
 
 // Template classes implementatie nog vullen in header file

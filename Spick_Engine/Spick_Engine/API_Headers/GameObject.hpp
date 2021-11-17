@@ -133,6 +133,7 @@ namespace spic {
             template<class T>
             void AddComponent(std::shared_ptr<T> component) {
                 components.push_back(component);
+                component->SetGameObject(this);
             }
 
             /**
