@@ -93,6 +93,12 @@ namespace spic {
              */
             SPIC_API void AddGameObject(std::shared_ptr<GameObject> gameObject);
             std::shared_ptr<WindowFacade> GetSceneFacade() { return sceneFacade; }
+
+            /**
+            * @brief Returns the timer ticks.
+            */
+            SPIC_API float CalculateFPS();
+
     private:
         std::string name;
         std::vector<std::shared_ptr<GameObject>> gameObjects;

@@ -60,6 +60,11 @@ namespace spic {
 		uint32_t get_ticks();
 
 		/**
+		* \brief Returns the timer ticks
+		*/
+		float CalculateFPS();
+
+		/**
 		* \brief Creates the instance of SDL_Window
 		*/
 		int create_window(const std::string& title, float height, float width);
@@ -90,5 +95,10 @@ namespace spic {
 		std::tuple<float, float> get_scene_size() const;
 		void ClearRender();
 		void Render();
+
+		/**
+		* brief Returns scene size
+		*/
+		int fps;
 	};
 }

@@ -74,4 +74,15 @@ SPIC_API void Scene::AddGameObject(std::shared_ptr<GameObject> gameObject) {
     gameObjects.push_back(gameObject);
 }
 
+SPIC_API float spic::Scene::CalculateFPS()
+{
+    return sceneFacade->CalculateFPS();
+}
+
+
+
+
+
+
+
 // Template classes implementatie nog vullen in header file
