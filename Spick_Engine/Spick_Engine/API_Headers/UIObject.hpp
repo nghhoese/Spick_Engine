@@ -11,6 +11,8 @@ namespace spic {
     class UIObject : public GameObject {
 
     public:
+
+        SPIC_API UIObject();
         /**
          * @brief Get width.
          * @return width.
@@ -31,8 +33,9 @@ namespace spic {
         /**
          * @brief Set height.
          */
-        void SetWidth(double height) { this->height = height; }
-
+        void setHeight(double height) { this->height = height; }
+        virtual void Render();
+        void OnRender();
     private:
         double width;
         double height;

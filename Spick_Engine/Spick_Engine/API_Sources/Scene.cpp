@@ -1,4 +1,6 @@
 #include "../API_Headers/Scene.hpp"
+#include "../API_Headers/UIObject.hpp"
+#include "../API_Headers/Text.hpp"
 
 
 using namespace spic;
@@ -21,8 +23,10 @@ void Scene::Update() {
 void Scene::Render() {
     sceneFacade->ClearRender();
     for (std::shared_ptr<GameObject> x : gameObjects) {
-
         x->Render();
+    }
+    for (std::shared_ptr<UIObject> u : uiObjects) {
+        u->Render();
     }
     sceneFacade->Render();
 }
@@ -72,6 +76,16 @@ SPIC_API const std::vector<std::shared_ptr<GameObject>> Scene::GetGameObjects() 
 
 SPIC_API void Scene::AddGameObject(std::shared_ptr<GameObject> gameObject) {
     gameObjects.push_back(gameObject);
+    std::shared_ptr<Scene> scene = std::make_shared<Scene>("");
+    scene.reset(this);
+    gameObject->SetScene(scene);
+}
+
+SPIC_API void Scene::AddUiObject(std::shared_ptr<UIObject> uiObject) {
+    uiObjects.push_back(uiObject);
+    std::shared_ptr<Scene> scene = std::make_shared<Scene>("");
+    scene.reset(this);
+    uiObject->SetScene(scene);
 }
 
 // Template classes implementatie nog vullen in header file

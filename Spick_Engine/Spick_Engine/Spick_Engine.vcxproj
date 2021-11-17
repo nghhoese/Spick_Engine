@@ -96,7 +96,7 @@
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
-      <AdditionalLibraryDirectories>$(SolutionDir)External Libraries\box2d\lib;$(SolutionDir)External Libraries\SDL2\lib\x86;$(SolutionDir)External Libraries\SDL2_ttf\lib\x86</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)External Libraries\box2d\lib;$(SolutionDir)External Libraries\SDL2\lib\x86;$(SolutionDir)External Libraries\SDL2_ttf\lib\x86;$(SolutionDir)External Libraries\SDL2_image\lib\x86</AdditionalLibraryDirectories>
       <AdditionalDependencies>SDL2.lib;SDL2_image.lib;box2d.lib;SDL2_ttf.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -118,7 +118,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
-      <AdditionalLibraryDirectories>$(SolutionDir)External Libraries\box2d\lib;$(SolutionDir)External Libraries\SDL2\lib\x86;$(SolutionDir)External Libraries\SDL2_ttf\lib\x86</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)External Libraries\box2d\lib;$(SolutionDir)External Libraries\SDL2\lib\x86;$(SolutionDir)External Libraries\SDL2_ttf\lib\x86;$(SolutionDir)External Libraries\SDL2_image\lib\x86</AdditionalLibraryDirectories>
       <AdditionalDependencies>SDL2.lib;SDL2_image.lib;box2d.lib;SDL2_ttf.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -136,7 +136,7 @@
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
-      <AdditionalLibraryDirectories>$(SolutionDir)External Libraries\box2d\lib;$(SolutionDir)External Libraries\SDL2\lib\x86;$(SolutionDir)External Libraries\SDL2_ttf\lib\x86</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)External Libraries\box2d\lib;$(SolutionDir)External Libraries\SDL2\lib\x86;$(SolutionDir)External Libraries\SDL2_ttf\lib\x86;$(SolutionDir)External Libraries\SDL2_image\lib\x86</AdditionalLibraryDirectories>
       <AdditionalDependencies>SDL2.lib;SDL2_image.lib;box2d.lib;SDL2_ttf.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -158,7 +158,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
-      <AdditionalLibraryDirectories>$(SolutionDir)External Libraries\box2d\lib;$(SolutionDir)External Libraries\SDL2\lib\x86;$(SolutionDir)External Libraries\SDL2_ttf\lib\x86</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)External Libraries\box2d\lib;$(SolutionDir)External Libraries\SDL2\lib\x86;$(SolutionDir)External Libraries\SDL2_ttf\lib\x86;$(SolutionDir)External Libraries\SDL2_image\lib\x86</AdditionalLibraryDirectories>
       <AdditionalDependencies>SDL2.lib;SDL2_image.lib;box2d.lib;SDL2_ttf.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -180,9 +180,12 @@
     <ClInclude Include="API_Headers\IKeyListener.hpp" />
     <ClInclude Include="API_Headers\Image.hpp" />
     <ClInclude Include="API_Headers\IMouseListener.hpp" />
+    <ClInclude Include="API_Headers\Importation.hpp" />
     <ClInclude Include="API_Headers\Input.hpp" />
     <ClInclude Include="API_Headers\InputField.hpp" />
+    <ClInclude Include="API_Headers\KeyCode.hpp" />
     <ClInclude Include="API_Headers\Light.hpp" />
+    <ClInclude Include="API_Headers\MouseButton.hpp" />
     <ClInclude Include="API_Headers\Point.hpp" />
     <ClInclude Include="API_Headers\PointLight.hpp" />
     <ClInclude Include="API_Headers\PolygonCollider.hpp" />
@@ -201,6 +204,7 @@
     <ClInclude Include="Facade_Headers\ImageFacade.h" />
     <ClInclude Include="Facade_Headers\ImageFacade.hpp" />
     <ClInclude Include="Facade_Headers\KeyFacade.hpp" />
+    <ClInclude Include="Facade_Headers\MouseFacade.hpp" />
     <ClInclude Include="Facade_Headers\SceneFacade.hpp" />
     <ClInclude Include="Facade_Headers\TextFacade.hpp" />
   </ItemGroup>
@@ -209,18 +213,32 @@
     <ClCompile Include="API_Sources\Color.cpp" />
     <ClCompile Include="API_Sources\Engine.cpp" />
     <ClCompile Include="API_Sources\GameObject.cpp" />
+    <ClCompile Include="API_Sources\IKeyListener.cpp" />
+    <ClCompile Include="API_Sources\IMouseListener.cpp" />
+    <ClCompile Include="API_Sources\Importation.cpp" />
     <ClCompile Include="API_Sources\Scene.cpp" />
     <ClCompile Include="API_Sources\Sprite.cpp" />
+    <ClCompile Include="API_Sources\Text.cpp" />
     <ClCompile Include="API_Sources\Time.cpp" />
+    <ClCompile Include="API_Sources\UIObject.cpp" />
     <ClCompile Include="Controller_Sources\EngineController.cpp" />
     <ClCompile Include="Facade_Sources\CameraFacade.cpp" />
     <ClCompile Include="Facade_Sources\ImageFacade.cpp" />
+    <ClCompile Include="Facade_Sources\KeyFacade.cpp" />
+    <ClCompile Include="Facade_Sources\MouseFacade.cpp" />
     <ClCompile Include="Facade_Sources\SceneFacade.cpp" />
     <ClCompile Include="Facade_Sources\TextFacade.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <Object Include="Debug\Camera.obj" />
+    <Object Include="Debug\CameraFacade.obj" />
     <Object Include="Debug\Color.obj" />
     <Object Include="Debug\Engine.obj" />
+    <Object Include="Debug\EngineController.obj" />
+    <Object Include="Debug\GameObject.obj" />
+    <Object Include="Debug\ImageFacade.obj" />
+    <Object Include="Debug\Scene.obj" />
+    <Object Include="Debug\SceneFacade.obj" />
     <Object Include="Debug\Time.obj" />
   </ItemGroup>
   <ItemGroup>

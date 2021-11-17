@@ -6,6 +6,7 @@
 #include "SpicHeader.hpp"
 #include "GameObject.hpp"
 #include "../Facade_Headers/SceneFacade.hpp"
+#include "UIObject.hpp"
 
 namespace spic {
 
@@ -38,6 +39,11 @@ namespace spic {
              * @brief This function is called by the engine to render the scene on the engine.
              */
             SPIC_API void Render();
+
+            /**
+             * @brief This function is called by the engine to render the scene's UIOBjects on the engine.
+             */
+            SPIC_API void RenderUIObject();
 
             /**
              * @brief Add camera.
@@ -93,11 +99,14 @@ namespace spic {
              */
             SPIC_API void AddGameObject(std::shared_ptr<GameObject> gameObject);
             std::shared_ptr<WindowFacade> GetSceneFacade() { return sceneFacade; }
+
+            SPIC_API void AddUiObject(std::shared_ptr<UIObject> uiObject);
     private:
         std::string name;
         std::vector<std::shared_ptr<GameObject>> gameObjects;
         std::vector<std::shared_ptr<Camera>> cameras;
         std::shared_ptr<WindowFacade> sceneFacade;
+        std::vector<std::shared_ptr<UIObject>> uiObjects;
     };
 
 }

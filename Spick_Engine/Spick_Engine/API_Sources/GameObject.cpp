@@ -7,6 +7,10 @@ GameObject::GameObject(const std::string& name) {
 
 }
 
+spic::GameObject::GameObject()
+{
+}
+
 SPIC_API void GameObject::SetScene(std::shared_ptr<Scene> _scene)
 {
 	scene = _scene;

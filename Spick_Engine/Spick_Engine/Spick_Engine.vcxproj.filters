@@ -138,6 +138,18 @@
     <ClInclude Include="Facade_Headers\ImageFacade.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="API_Headers\Importation.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="API_Headers\KeyCode.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="API_Headers\MouseButton.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Facade_Headers\MouseFacade.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="API_Sources\Color.cpp">
@@ -176,6 +188,27 @@
     <ClCompile Include="API_Sources\Sprite.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="API_Sources\IKeyListener.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="API_Sources\IMouseListener.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="API_Sources\Importation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Facade_Sources\KeyFacade.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Facade_Sources\MouseFacade.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="API_Sources\Text.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="API_Sources\UIObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Image Include="assets\nazipiloot.png">
@@ -186,6 +219,13 @@
     <Object Include="Debug\Color.obj" />
     <Object Include="Debug\Engine.obj" />
     <Object Include="Debug\Time.obj" />
+    <Object Include="Debug\Camera.obj" />
+    <Object Include="Debug\CameraFacade.obj" />
+    <Object Include="Debug\EngineController.obj" />
+    <Object Include="Debug\GameObject.obj" />
+    <Object Include="Debug\ImageFacade.obj" />
+    <Object Include="Debug\Scene.obj" />
+    <Object Include="Debug\SceneFacade.obj" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="Debug\Spick_Engine.Build.CppClean.log" />

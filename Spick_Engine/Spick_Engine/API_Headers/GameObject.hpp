@@ -16,6 +16,7 @@ namespace spic {
      */
     class GameObject {
         public:
+            SPIC_API GameObject();
             SPIC_API void SetScene(std::shared_ptr<Scene> _scene);
             SPIC_API std::shared_ptr<Scene> getScene();
             /**

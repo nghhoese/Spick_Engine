@@ -4,6 +4,8 @@
 #include "UIObject.hpp"
 #include "Color.hpp"
 #include <string>
+#include "Scene.hpp"
+#include "../Facade_Headers/TextFacade.hpp"
 
 namespace spic {
 
@@ -22,6 +24,8 @@ namespace spic {
     class Text : public UIObject {
 
     public:
+
+        SPIC_API Text();
         /**
          * @brief Get text.
          * @return text.
@@ -76,6 +80,9 @@ namespace spic {
          * @brief Set color.
          */
         void SetColor(const Color& color) { this->color = color; }
+
+        void OnRender();
+        void Render();
 
     private:
         std::string text;
