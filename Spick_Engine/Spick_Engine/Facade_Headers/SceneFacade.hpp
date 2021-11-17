@@ -90,5 +90,7 @@ namespace spic {
 		std::tuple<float, float> get_scene_size() const;
 		void ClearRender();
 		void Render();
+
+		int CalculateFPS();
 	};
 }

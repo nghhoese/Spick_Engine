@@ -93,6 +93,8 @@ namespace spic {
              */
             SPIC_API void AddGameObject(std::shared_ptr<GameObject> gameObject);
             std::shared_ptr<WindowFacade> GetSceneFacade() { return sceneFacade; }
+            
+            SPIC_API int CalculateFPS();
     private:
         std::string name;
         std::vector<std::shared_ptr<GameObject>> gameObjects;

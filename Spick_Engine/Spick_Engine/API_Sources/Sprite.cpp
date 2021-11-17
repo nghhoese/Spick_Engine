@@ -4,7 +4,7 @@ std::unique_ptr<spic::ImageFacade> imageFacade = std::make_unique<spic::ImageFac
 
 spic::Sprite::Sprite()
 {
-	imageFacade->setSize(50, 50);
+	imageFacade->setSize(50, 60);
 	imageFacade->setRotation(0);
 }
 
