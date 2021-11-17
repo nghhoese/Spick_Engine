@@ -1,13 +1,12 @@
 #include "../API_Headers/Scene.hpp"
 
-
 using namespace spic;
 
 SPIC_API Scene::Scene(const std::string& name) {
     gameObjects = std::vector<std::shared_ptr<GameObject>>{};
     cameras = std::vector<std::shared_ptr<Camera>>{};
     sceneFacade = std::make_shared<WindowFacade>();
-    sceneFacade->create_window("wollah",500,500);
+    sceneFacade->create_window("Game",500,500);
     sceneFacade->create_renderer();
 
 }
@@ -38,10 +37,6 @@ void Scene::SetActiveCamera(const Camera& camera) {
 void Scene::SetActiveCamera(const std::string& cameraName) {
 
 }
-
-
-
-
 
 SPIC_API std::vector<std::shared_ptr<GameObject>> Scene::GetGameObjectsByName(const std::string& gameObjectName) {
     std::vector<std::shared_ptr<GameObject>> objects = std::vector<std::shared_ptr<GameObject>>{};

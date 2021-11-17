@@ -14,14 +14,12 @@ namespace spic {
         /**
          * @brief Default constructor representing a white color.
          */
-        SPIC_API ImageFacade(std::string path, int width,int height);
+        SPIC_API ImageFacade();
         void Createtexture(SDL_Renderer* renderer);
         void Render(SDL_Renderer* renderer);
         void setPosition(int x, int y);
         void setSize(int width, int height);
-
-
-
+        void setPath(std::string path);
     private:
         SDL_Texture* _texture;
         SDL_Rect srcR, destR;

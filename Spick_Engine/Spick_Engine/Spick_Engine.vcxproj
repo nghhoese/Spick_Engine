@@ -223,9 +223,6 @@
     <ClCompile Include="Facade_Sources\MouseFacade.cpp" />
     <ClCompile Include="Facade_Sources\SceneFacade.cpp" />
   </ItemGroup>
-  <ItemGroup>
-    <Image Include="assets\nazipiloot.png" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

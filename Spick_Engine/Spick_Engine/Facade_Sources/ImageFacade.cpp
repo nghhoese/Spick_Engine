@@ -1,11 +1,9 @@
 #include "..\Facade_Headers\ImageFacade.hpp"
 #include <SDL_image.h>
 #pragma warning(disable : 4996)
-spic::ImageFacade::ImageFacade(std::string path, int width, int height)
+
+spic::ImageFacade::ImageFacade()
 {
-	destR.h = width;
-	destR.w = height;
-	_path = path;
 }
 
 void spic::ImageFacade::Createtexture(SDL_Renderer* renderer)
@@ -19,10 +17,7 @@ void spic::ImageFacade::Createtexture(SDL_Renderer* renderer)
 
 void spic::ImageFacade::Render(SDL_Renderer* renderer)
 {
-
 	SDL_RenderCopy(renderer, _texture, NULL, &destR);
-
-
 }
 
 void spic::ImageFacade::setPosition(int x, int y)
@@ -35,4 +30,9 @@ void spic::ImageFacade::setSize(int width, int height)
 {
 	destR.h = height;
 	destR.w = width;
+}
+
+void spic::ImageFacade::setPath(std::string path)
+{
+	_path = path;
 }
