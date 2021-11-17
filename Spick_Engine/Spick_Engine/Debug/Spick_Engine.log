@@ -147,8 +147,8 @@ C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Headers\Tileson\tileson.hp
   Generating Code...
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\MouseFacade.cpp(24): warning C4715: 'MouseFacade::PollEvent': not all control paths return a value
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\MouseFacade.cpp(44): warning C4715: 'MouseFacade::PollContinousEvent': not all control paths return a value
-C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\KeyFacade.cpp(35): warning C4715: 'KeyFacade::PollContinousEvent': not all control paths return a value
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\KeyFacade.cpp(19): warning C4715: 'KeyFacade::PollEvent': not all control paths return a value
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\KeyFacade.cpp(35): warning C4715: 'KeyFacade::PollContinousEvent': not all control paths return a value
 Debug\Color.obj : warning LNK4042: object specified more than once; extras ignored
 Debug\Engine.obj : warning LNK4042: object specified more than once; extras ignored
 Debug\Time.obj : warning LNK4042: object specified more than once; extras ignored

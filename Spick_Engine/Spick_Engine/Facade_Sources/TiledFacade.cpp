@@ -3,6 +3,8 @@
 
 using namespace spic;
 
+TiledFacade::TiledFacade() {}
+
 std::pair<std::vector<std::pair<int, std::vector<std::vector<int>>>>, std::vector<std::vector<std::pair<std::string, std::any>>>> TiledFacade::Read(const std::filesystem::path& path)
 {
     tson::Tileson parser;
