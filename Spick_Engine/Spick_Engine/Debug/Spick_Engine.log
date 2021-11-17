@@ -145,8 +145,8 @@ C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\SceneFacade.cpp(10
   TiledFacade.cpp
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Headers\Tileson\tileson.hpp(2694,27): warning C4244: 'argument': conversion from 'std::streamoff' to 'const unsigned int', possible loss of data
   Generating Code...
-C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\MouseFacade.cpp(44): warning C4715: 'MouseFacade::PollContinousEvent': not all control paths return a value
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\MouseFacade.cpp(24): warning C4715: 'MouseFacade::PollEvent': not all control paths return a value
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\MouseFacade.cpp(44): warning C4715: 'MouseFacade::PollContinousEvent': not all control paths return a value
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\KeyFacade.cpp(35): warning C4715: 'KeyFacade::PollContinousEvent': not all control paths return a value
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\KeyFacade.cpp(19): warning C4715: 'KeyFacade::PollEvent': not all control paths return a value
 Debug\Color.obj : warning LNK4042: object specified more than once; extras ignored

@@ -138,6 +138,9 @@
     <ClInclude Include="Facade_Headers\Tileson\tileson.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Facade_Headers\TiledFacade.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="API_Sources\Color.cpp">

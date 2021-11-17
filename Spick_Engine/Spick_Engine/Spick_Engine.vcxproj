@@ -206,6 +206,7 @@
     <ClInclude Include="Facade_Headers\KeyFacade.hpp" />
     <ClInclude Include="Facade_Headers\MouseFacade.hpp" />
     <ClInclude Include="Facade_Headers\SceneFacade.hpp" />
+    <ClInclude Include="Facade_Headers\TiledFacade.hpp" />
     <ClInclude Include="Facade_Headers\Tileson\tileson.hpp" />
   </ItemGroup>
   <ItemGroup>
