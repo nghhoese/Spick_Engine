@@ -33,8 +33,23 @@ uint32_t WindowFacade::get_ticks() {
 	return SDL_GetTicks();
 }
 
-float spic::WindowFacade::CalculateFPS()
+long spic::WindowFacade::CalculateFPS()
 {
+	//static float frames = 0;
+	//float currentFPS = 0;
+	//long lastTime = get_ticks();
+	//long timer = get_ticks();
+
+	//_frames++;
+	//if (get_ticks() - timer > 1000)
+	//{
+		//timer += 1000;
+		//currentFPS = _frames;
+		//_frames = 0;
+		//return currentFPS;
+	//}
+
+
 	static const int NUM_SAMPLES = 10;
 	static float frameTimes[NUM_SAMPLES];
 	static int currentFrame = 0;
@@ -77,13 +92,8 @@ float spic::WindowFacade::CalculateFPS()
 	}
 	currentFrame++;
 
-	static int frameCounter = 0;
-	frameCounter++;
-	//if (frameCounter == 50)
-	//{
-		//frameCounter = 0;
-		return fps;
-	//}
+	return fps;
+
 }
 
 int WindowFacade::create_window(const std::string& title, float height, float width) {

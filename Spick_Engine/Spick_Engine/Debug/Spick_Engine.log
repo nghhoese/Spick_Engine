@@ -1,10 +1,33 @@
-<<<<<<< HEAD
-﻿  SceneFacade.cpp
-C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\SceneFacade.cpp(42,25): warning C4244: 'initializing': conversion from 'uint32_t' to 'float', possible loss of data
-C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\SceneFacade.cpp(45,26): warning C4244: '=': conversion from 'uint32_t' to 'float', possible loss of data
-C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\SceneFacade.cpp(140,18): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\SceneFacade.cpp(142,30): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\SceneFacade.cpp(154,99): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+﻿  Camera.cpp
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\GameObject.hpp(41,60): warning C4834: discarding return value of function with 'nodiscard' attribute
+  Color.cpp
+  Engine.cpp
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\GameObject.hpp(41,60): warning C4834: discarding return value of function with 'nodiscard' attribute
+  GameObject.cpp
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\GameObject.hpp(41,60): warning C4834: discarding return value of function with 'nodiscard' attribute
+  IKeyListener.cpp
+  IMouseListener.cpp
+  Importation.cpp
+  Scene.cpp
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\GameObject.hpp(41,60): warning C4834: discarding return value of function with 'nodiscard' attribute
+  Time.cpp
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Sources\Time.cpp(25,121): warning C4244: 'return': conversion from '_Rep' to 'uint32_t', possible loss of data
+          with
+          [
+              _Rep=__int64
+          ]
+  EngineController.cpp
+  CameraFacade.cpp
+  ImageFacade.cpp
+  KeyFacade.cpp
+  MouseFacade.cpp
+  SceneFacade.cpp
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\SceneFacade.cpp(57,25): warning C4244: 'initializing': conversion from 'uint32_t' to 'float', possible loss of data
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\SceneFacade.cpp(60,26): warning C4244: '=': conversion from 'uint32_t' to 'float', possible loss of data
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\SceneFacade.cpp(95,9): warning C4244: 'return': conversion from 'float' to 'long', possible loss of data
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\SceneFacade.cpp(150,18): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\SceneFacade.cpp(152,30): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\SceneFacade.cpp(164,99): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\tuple(170,47): warning C4244: 'initializing': conversion from 'const float' to '_Ty', possible loss of data
           with
           [
@@ -58,8 +81,8 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.2
               _Tag=std::_Unpack_tuple_t,
               _Tpl=const std::tuple<float,float> &
           ]
-C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\SceneFacade.cpp(153): message : see reference to function template instantiation 'std::tuple<int,int>::tuple<float,float,0>(const std::tuple<float,float> &) noexcept' being compiled
-C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\SceneFacade.cpp(153): message : see reference to function template instantiation 'std::tuple<int,int>::tuple<float,float,0>(const std::tuple<float,float> &) noexcept' being compiled
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\SceneFacade.cpp(163): message : see reference to function template instantiation 'std::tuple<int,int>::tuple<float,float,0>(const std::tuple<float,float> &) noexcept' being compiled
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\SceneFacade.cpp(163): message : see reference to function template instantiation 'std::tuple<int,int>::tuple<float,float,0>(const std::tuple<float,float> &) noexcept' being compiled
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\tuple(170,47): warning C4244: 'initializing': conversion from '_Ty' to '_Ty', possible loss of data
           with
           [
@@ -121,9 +144,10 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.2
               _Tag=std::_Unpack_tuple_t,
               _Tpl=std::tuple<int,int>
           ]
-C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\SceneFacade.cpp(155): message : see reference to function template instantiation 'std::tuple<float,float>::tuple<int,int,0>(std::tuple<int,int> &&) noexcept' being compiled
-C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\SceneFacade.cpp(155): message : see reference to function template instantiation 'std::tuple<float,float>::tuple<int,int,0>(std::tuple<int,int> &&) noexcept' being compiled
-=======
-﻿  ImageFacade.cpp
->>>>>>> PlayerTest
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\SceneFacade.cpp(165): message : see reference to function template instantiation 'std::tuple<float,float>::tuple<int,int,0>(std::tuple<int,int> &&) noexcept' being compiled
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\SceneFacade.cpp(165): message : see reference to function template instantiation 'std::tuple<float,float>::tuple<int,int,0>(std::tuple<int,int> &&) noexcept' being compiled
+  Generating Code...
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\MouseFacade.cpp(24): warning C4715: 'MouseFacade::PollEvent': not all control paths return a value
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\KeyFacade.cpp(19): warning C4715: 'KeyFacade::PollEvent': not all control paths return a value
+     Creating library C:\Spic\Spick_Engine\Spick_Engine\Debug\Spick_Engine.lib and object C:\Spic\Spick_Engine\Spick_Engine\Debug\Spick_Engine.exp
   Spick_Engine.vcxproj -> C:\Spic\Spick_Engine\Spick_Engine\Debug\Spick_Engine.dll

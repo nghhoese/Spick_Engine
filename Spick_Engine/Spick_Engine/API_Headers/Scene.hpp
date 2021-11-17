@@ -97,7 +97,9 @@ namespace spic {
             /**
             * @brief Returns the timer ticks.
             */
-            SPIC_API float CalculateFPS();
+            SPIC_API long CalculateFPS();
+
+            SPIC_API long GetTicks();
 
     private:
         std::string name;

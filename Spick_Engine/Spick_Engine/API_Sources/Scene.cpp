@@ -65,17 +65,25 @@ SPIC_API const std::vector<std::shared_ptr<GameObject>> Scene::GetGameObjects() 
     return gameObjects;
 }
 
-SPIC_API void Scene::AddGameObject(std::shared_ptr<GameObject> gameObject) {
+SPIC_API void Scene::AddGameObject(std::shared_ptr<GameObject> gameObject)
+{
     gameObjects.push_back(gameObject);
     std::shared_ptr<Scene> scene = std::make_shared<Scene>("");
     scene.reset(this);
     gameObject->SetScene(scene);
 }
 
-SPIC_API float spic::Scene::CalculateFPS()
+SPIC_API long spic::Scene::CalculateFPS()
 {
     return sceneFacade->CalculateFPS();
 }
+
+SPIC_API long spic::Scene::GetTicks()
+{
+    return sceneFacade->get_ticks();
+}
+
+
 
 
 

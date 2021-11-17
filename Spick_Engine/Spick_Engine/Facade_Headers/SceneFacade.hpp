@@ -46,6 +46,9 @@ namespace spic {
 		*/
 		std::tuple<float, float> _scene_size;
 
+
+		long _frames = 0;
+
 	public:
 		WindowFacade();
 		std::unique_ptr<SDL_Renderer, void(*)(SDL_Renderer*)> _renderer;
@@ -62,7 +65,7 @@ namespace spic {
 		/**
 		* \brief Returns the timer ticks
 		*/
-		float CalculateFPS();
+		long CalculateFPS();
 
 		/**
 		* \brief Creates the instance of SDL_Window
@@ -95,10 +98,5 @@ namespace spic {
 		std::tuple<float, float> get_scene_size() const;
 		void ClearRender();
 		void Render();
-
-		/**
-		* brief Returns scene size
-		*/
-		int fps;
 	};
 }
