@@ -11,9 +11,10 @@ void spic::ImageFacade::Createtexture(SDL_Renderer* renderer)
 {
 	char* a = new char[_path.size() + 1];
 	strcpy(a, _path.c_str());
-	SDL_Surface* tmpSurface = SDL_LoadBMP(a);
+	tmpSurface = SDL_LoadBMP(a);
 	_texture = SDL_CreateTextureFromSurface(renderer, tmpSurface);
 	SDL_FreeSurface(tmpSurface);
+	delete[] a;
 }
 
 void spic::ImageFacade::Render(SDL_Renderer* renderer)
