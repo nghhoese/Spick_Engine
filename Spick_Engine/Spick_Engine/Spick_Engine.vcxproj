@@ -201,6 +201,7 @@
     <ClInclude Include="Facade_Headers\ImageFacade.h" />
     <ClInclude Include="Facade_Headers\KeyFacade.hpp" />
     <ClInclude Include="Facade_Headers\SceneFacade.hpp" />
+    <ClInclude Include="Facade_Headers\TextFacade.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="API_Sources\Camera.cpp" />
@@ -213,6 +214,7 @@
     <ClCompile Include="Facade_Sources\CameraFacade.cpp" />
     <ClCompile Include="Facade_Sources\ImageFacade.cpp" />
     <ClCompile Include="Facade_Sources\SceneFacade.cpp" />
+    <ClCompile Include="Facade_Sources\TextFacade.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Object Include="Debug\Color.obj" />
