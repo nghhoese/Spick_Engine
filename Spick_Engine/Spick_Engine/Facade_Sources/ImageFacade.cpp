@@ -20,6 +20,9 @@ void spic::ImageFacade::Createtexture(SDL_Renderer* renderer)
 void spic::ImageFacade::Render(SDL_Renderer* renderer)
 {
 	//SDL_RenderCopy(renderer, _texture, NULL, &destR);
+	if (this->rotation < -361) {
+		this->rotation = 0;
+	}
 	SDL_RenderCopyEx(renderer, _texture, NULL, &destR, this->rotation, NULL, SDL_FLIP_NONE);
 	SDL_DestroyTexture(_texture);
 
