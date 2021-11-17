@@ -151,6 +151,7 @@ namespace spic {
          void OnRender();
 
     private:
+        Transform transform;
         std::string sprite;
         Color color;
         bool flipX;

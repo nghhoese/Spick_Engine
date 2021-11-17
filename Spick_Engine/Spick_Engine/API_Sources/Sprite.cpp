@@ -18,7 +18,7 @@ void spic::Sprite::OnStart()
 
 void spic::Sprite::OnUpdate()
 {
-	Transform transform = *GetGameObject()->getTransform();
+	transform = *GetGameObject()->getTransform();
 	imageFacade->setPosition(transform.position.x, transform.position.y);
 	imageFacade->setRotation(transform.rotation);
 }
