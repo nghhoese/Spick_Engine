@@ -1,23 +1,24 @@
-#ifndef SPRITERENDERER_H_
-#define SPRITERENDERER_H_
+#pragma once
 
 #include "SpicHeader.hpp"
 #include "Component.hpp"
 #include "Color.hpp"
 #include <string>
+#include "../Facade_Headers/ImageFacade.hpp"
+#include "GameObject.hpp"
+#include "Scene.hpp"
 
 namespace spic {
 
     /**
      * @brief A component representing a sprite (small image)
      */
-    class Sprite : public Component {
-
+    class SPIC_API Sprite : public Component {
     public:
         /**
          * @brief Constructor.
          */
-        SPIC_API Sprite();
+         Sprite();
 
         /**
          * @brief Get sprite.
@@ -147,21 +148,19 @@ namespace spic {
         /**
          * @brief Called every frame draw after update.
          */
-        void OnRender();
+         void OnRender();
 
-        private:
-            std::string sprite;
-            Color color;
-            bool flipX;
-            bool flipY;
-            int sortingLayer;
-            int orderInLayer;
-            int width;
-            int height;
-            int offsetX;
-            int offsetY;
-};
+    private:
+        std::string sprite;
+        Color color;
+        bool flipX;
+        bool flipY;
+        int sortingLayer;
+        int orderInLayer;
+        int width;
+        int height;
+        int offsetX;
+        int offsetY;
+    };
 
 }
-
-#endif // SPRITERENDERER_H_

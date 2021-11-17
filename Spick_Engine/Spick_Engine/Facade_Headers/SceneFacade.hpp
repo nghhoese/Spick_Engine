@@ -21,7 +21,7 @@ namespace spic {
 		/**
 		* \brief An instance of SDL_Renderer with a custom destructor
 		*/
-		std::unique_ptr<SDL_Renderer, void(*)(SDL_Renderer*)> _renderer;
+		
 
 		/**
 		* \brief The height of the Window
@@ -49,7 +49,7 @@ namespace spic {
 
 	public:
 		WindowFacade();
-
+		std::unique_ptr<SDL_Renderer, void(*)(SDL_Renderer*)> _renderer;
 		/**
 		* \brief Creates the instance of SDL_Renderer
 		*/
@@ -89,5 +89,7 @@ namespace spic {
 		* brief Returns scene size
 		*/
 		std::tuple<float, float> get_scene_size() const;
+		void ClearRender();
+		void Render();
 	};
 }

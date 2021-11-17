@@ -7,6 +7,26 @@ C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\GameObject.hpp(40,60)
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\GameObject.hpp(40,60): warning C4834: discarding return value of function with 'nodiscard' attribute
   Scene.cpp
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\GameObject.hpp(40,60): warning C4834: discarding return value of function with 'nodiscard' attribute
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\GameObject.hpp(41,60): warning C4834: discarding return value of function with 'nodiscard' attribute
+  Color.cpp
+  Engine.cpp
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\GameObject.hpp(41,60): warning C4834: discarding return value of function with 'nodiscard' attribute
+  GameObject.cpp
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\GameObject.hpp(41,60): warning C4834: discarding return value of function with 'nodiscard' attribute
+  IKeyListener.cpp
+  IMouseListener.cpp
+  Importation.cpp
+  Scene.cpp
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\GameObject.hpp(41,60): warning C4834: discarding return value of function with 'nodiscard' attribute
+  Sprite.cpp
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\GameObject.hpp(41,60): warning C4834: discarding return value of function with 'nodiscard' attribute
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Sprite.hpp(16,46): warning C4275: non dll-interface class 'spic::Component' used as base for dll-interface class 'spic::Sprite'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Component.hpp(15): message : see declaration of 'spic::Component'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Sprite.hpp(16): message : see declaration of 'spic::Sprite'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Sprite.hpp(154,21): warning C4251: 'spic::Sprite::sprite': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'spic::Sprite'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.29.30133\include\xstring(4905): message : see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Sprite.hpp(155,15): warning C4251: 'spic::Sprite::color': class 'spic::Color' needs to have dll-interface to be used by clients of class 'spic::Sprite'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Color.hpp(11): message : see declaration of 'spic::Color'
   Time.cpp
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Sources\Time.cpp(25,121): warning C4244: 'return': conversion from '_Rep' to 'uint32_t', possible loss of data
           with
@@ -19,6 +39,9 @@ C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Sources\Time.cpp(25,121): war
   SceneFacade.cpp
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\SceneFacade.cpp(45,106): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\SceneFacade.cpp(45,99): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  KeyFacade.cpp
+  MouseFacade.cpp
+  SceneFacade.cpp
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\SceneFacade.cpp(87,18): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\SceneFacade.cpp(89,30): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\SceneFacade.cpp(101,99): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
@@ -144,5 +167,7 @@ C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\SceneFacade.cpp(10
 Debug\Color.obj : warning LNK4042: object specified more than once; extras ignored
 Debug\Engine.obj : warning LNK4042: object specified more than once; extras ignored
 Debug\Time.obj : warning LNK4042: object specified more than once; extras ignored
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\MouseFacade.cpp(24): warning C4715: 'MouseFacade::PollEvent': not all control paths return a value
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\KeyFacade.cpp(19): warning C4715: 'KeyFacade::PollEvent': not all control paths return a value
      Creating library C:\Spic\Spick_Engine\Spick_Engine\Debug\Spick_Engine.lib and object C:\Spic\Spick_Engine\Spick_Engine\Debug\Spick_Engine.exp
   Spick_Engine.vcxproj -> C:\Spic\Spick_Engine\Spick_Engine\Debug\Spick_Engine.dll

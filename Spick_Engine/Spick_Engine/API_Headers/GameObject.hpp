@@ -1,5 +1,4 @@
-#ifndef GAMEOBJECT_H_
-#define GAMEOBJECT_H_
+#pragma once
 
 #include <string>
 #include <vector>
@@ -17,6 +16,8 @@ namespace spic {
      */
     class GameObject {
         public:
+            SPIC_API void SetScene(std::shared_ptr<Scene> _scene);
+            SPIC_API std::shared_ptr<Scene> getScene();
             /**
              * @brief Get name.
              * @return name.
@@ -100,7 +101,7 @@ namespace spic {
              *          Find()-functions possible.
              * @param name The name for the game object.
              */
-           GameObject(const std::string& name);
+            SPIC_API GameObject(const std::string& name);
 
             /**
              * @brief Does the object exist? TODO wat wordt hiermee bedoeld?
@@ -131,7 +132,7 @@ namespace spic {
              */
             template<class T>
             void AddComponent(std::shared_ptr<T> component) {
-                // ... implementation here
+                components.push_back(component);
             }
 
             /**
@@ -228,6 +229,7 @@ namespace spic {
              */
             void Render();
 
+
         private:
             std::string name;
             std::vector<std::string> tags;
@@ -242,4 +244,3 @@ namespace spic {
 
 }
 
-#endif // GAMEOBJECT_H_

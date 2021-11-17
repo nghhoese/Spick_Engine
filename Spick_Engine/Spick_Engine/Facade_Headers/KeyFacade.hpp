@@ -27,6 +27,11 @@ public:
 	bool PollContinousEvent();
 
 	/**
+	* @brief Returns true if any key is pressed
+	*/
+	bool AnyKeyPressed();
+
+	/**
 	* @brief Returns KeyCode translated from SDL
 	*/
 	KeyCode TranslateToEnum(const SDL_Event& sdlEvent) const;

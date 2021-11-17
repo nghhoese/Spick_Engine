@@ -199,6 +199,7 @@
     <ClInclude Include="Facade_Headers\CameraFacade.hpp" />
     <ClInclude Include="Facade_Headers\Exceptions\GraphicsExceptions.hpp" />
     <ClInclude Include="Facade_Headers\ImageFacade.h" />
+    <ClInclude Include="Facade_Headers\ImageFacade.hpp" />
     <ClInclude Include="Facade_Headers\KeyFacade.hpp" />
     <ClInclude Include="Facade_Headers\SceneFacade.hpp" />
     <ClInclude Include="Facade_Headers\TextFacade.hpp" />
@@ -209,6 +210,7 @@
     <ClCompile Include="API_Sources\Engine.cpp" />
     <ClCompile Include="API_Sources\GameObject.cpp" />
     <ClCompile Include="API_Sources\Scene.cpp" />
+    <ClCompile Include="API_Sources\Sprite.cpp" />
     <ClCompile Include="API_Sources\Time.cpp" />
     <ClCompile Include="Controller_Sources\EngineController.cpp" />
     <ClCompile Include="Facade_Sources\CameraFacade.cpp" />
@@ -232,6 +234,9 @@
     <None Include="Debug\Spick_Engine.ilk" />
     <None Include="Debug\vc142.idb" />
     <None Include="Debug\vc142.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="assets\nazipiloot.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

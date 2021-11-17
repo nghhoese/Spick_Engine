@@ -1,19 +1,26 @@
+
 #include "../Facade_Headers/SceneFacade.hpp"
 #include "../Facade_Headers/Exceptions/GraphicsExceptions.hpp"
 
 using namespace spic;
 WindowFacade::WindowFacade() : _window(nullptr, SDL_DestroyWindow), _renderer(nullptr, SDL_DestroyRenderer) {}
 
+SDL_Texture* _texture;
+SDL_Window* window;
+SDL_Renderer* renderer;
+SDL_Texture* PlayerTex;
+SDL_Rect srcR, destR;
 int WindowFacade::create_renderer() {
 	try {
-		_renderer.reset(SDL_CreateRenderer(_window.get(), -1, SDL_RENDERER_ACCELERATED));
+		_renderer.reset(SDL_CreateRenderer(_window.get(), -1, 0));
 
 		if (_renderer == NULL)
 		{
 			throw Exceptions::CannotCreateRenderer();
 		}
 
-		SDL_SetRenderDrawColor(_renderer.get(), 0, 0, 0, 255);
+		SDL_SetRenderDrawColor(_renderer.get(), 255, 255, 255, 255);
+		SDL_SetRenderDrawBlendMode(_renderer.get(), SDL_BLENDMODE_BLEND);
 
 		return 1;
 	}
@@ -42,7 +49,8 @@ int WindowFacade::create_window(const std::string& title, float height, float wi
 			throw Exceptions::TTFInitFailed();
 		}
 
-		_window.reset(SDL_CreateWindow(title.c_str(), SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, width, height, SDL_WINDOW_SHOWN));
+		//_window.reset(SDL_CreateWindow(title.c_str(), SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, width, height, SDL_WINDOW_SHOWN));
+		_window.reset(SDL_CreateWindow(title.c_str(), SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 500, 500, 0));
 
 		if (_window == NULL) {
 			throw Exceptions::CannotCreateWindow();
@@ -62,6 +70,7 @@ int WindowFacade::create_window(const std::string& title, float height, float wi
 		std::cout << e.get() << std::endl;
 		return NULL;
 	}
+	
 }
 
 void WindowFacade::destroy() {
@@ -112,4 +121,14 @@ void WindowFacade::set_scene_size(float height, float width) {
 
 std::tuple<float, float> WindowFacade::get_scene_size() const {
 	return _scene_size;
+}
+
+void spic::WindowFacade::ClearRender()
+{
+	SDL_RenderClear(_renderer.get());
+}
+
+void spic::WindowFacade::Render()
+{
+	SDL_RenderPresent(_renderer.get());
 }

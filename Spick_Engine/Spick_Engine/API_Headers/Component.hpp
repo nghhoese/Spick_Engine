@@ -44,13 +44,15 @@ namespace spic {
              * @brief Called every frame draw after update.
              */
             SPIC_API virtual void OnRender() = 0;
+            void SetGameObject(GameObject* _gameObject) { gameobject = _gameObject; }
+            GameObject* GetGameObject() { return gameobject; }
 
         private:
             /**
              * @brief Active status.
              */
             bool active;
-            //GameObject& gameobject;
+            GameObject* gameobject;
             //Transform& transform;
             std::string name;
             std::string tag;
