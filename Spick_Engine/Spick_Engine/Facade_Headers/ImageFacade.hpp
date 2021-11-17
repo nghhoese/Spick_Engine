@@ -20,9 +20,11 @@ namespace spic {
         void setPosition(int x, int y);
         void setSize(int width, int height);
         void setPath(std::string path);
+        void setRotation(double rotation);
     private:
         SDL_Texture* _texture;
         SDL_Rect srcR, destR;
+        double rotation;
         std::string _path;
     };
 
