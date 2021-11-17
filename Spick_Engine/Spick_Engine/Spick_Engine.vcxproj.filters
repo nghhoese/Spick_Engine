@@ -191,5 +191,11 @@
     <ClCompile Include="Facade_Sources\SceneFacade.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+<<<<<<< HEAD
+=======
+    <ClCompile Include="API_Sources\Sprite.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+>>>>>>> PlayerTest
   </ItemGroup>
 </Project>
