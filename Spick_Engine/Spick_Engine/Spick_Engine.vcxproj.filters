@@ -243,4 +243,8 @@
     <None Include="Debug\vc142.idb" />
     <None Include="Debug\vc142.pdb" />
   </ItemGroup>
+  <ItemGroup>
+    <Font Include="Fonts\Capsmall.ttf" />
+    <Font Include="Fonts\TopSecret.ttf" />
+  </ItemGroup>
 </Project>
