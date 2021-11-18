@@ -21,11 +21,13 @@ namespace spic {
         void setSize(int width, int height);
         void setPath(std::string path);
         void setRotation(double rotation);
+        void setScale(double scale);
     private:
         SDL_Surface* tmpSurface;
         SDL_Texture* _texture;
         SDL_Rect srcR, destR;
         double rotation;
+        double scale = 1;
         std::string _path;
     };
 

@@ -4,8 +4,8 @@ std::unique_ptr<spic::ImageFacade> imageFacade = std::make_unique<spic::ImageFac
 
 spic::Sprite::Sprite()
 {
-	imageFacade->setSize(50, 60);
-	imageFacade->setRotation(0);
+	imageFacade->setScale(1);
+	imageFacade->setRotation(1);
 }
 
 void spic::Sprite::OnAwake()
@@ -21,6 +21,8 @@ void spic::Sprite::OnUpdate()
 	transform = *GetGameObject()->getTransform();
 	imageFacade->setPosition(transform.position.x, transform.position.y);
 	imageFacade->setRotation(transform.rotation);
+	imageFacade->setScale(transform.scale);
+	
 }
 
 void spic::Sprite::OnRender()

@@ -8,25 +8,25 @@ class Collider;
 
 namespace spic {
 
-    class BehaviourScript : public Component {
+    class SPIC_API BehaviourScript : public Component {
         public:
             /**
              * @brief Sent when another object enters a trigger collider
              *        attached to this object (2D physics only).
              */
-            SPIC_API virtual void OnTriggerEnter2D(const Collider& collider) = 0;
+            virtual void OnTriggerEnter2D(const Collider& collider) = 0;
 
             /**
              * @brief Sent when another object leaves a trigger collider
              *        attached to this object (2D physics only).
              */
-            SPIC_API virtual void OnTriggerExit2D(const Collider& collider) = 0;
+            virtual void OnTriggerExit2D(const Collider& collider) = 0;
 
             /**
              * @brief Sent each frame where another object is within a trigger
              *        collider attached to this object (2D physics only).
              */
-            SPIC_API virtual void OnTriggerStay2D(const Collider& collider) = 0;
+            virtual void OnTriggerStay2D(const Collider& collider) = 0;
     };
 
 }

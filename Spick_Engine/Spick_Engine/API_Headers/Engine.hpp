@@ -16,6 +16,7 @@ namespace spic {
      */
     class Engine {
     public:
+        SPIC_API Engine();
         SPIC_API static Engine& GetInstance();
         
         SPIC_API void Init() const;
@@ -80,14 +81,29 @@ namespace spic {
          */
         SPIC_API std::shared_ptr<spic::Scene> GetSceneByName(const std::string& sceneName);
 
+        /**
+        * @brief Return current FPS.
+        */
+        SPIC_API int GetFPS();
+
     private:
         static Engine instance;
-
+        bool running;
+        bool playing;
         /**
          * @brief Constructor.
          * @details This is the constructor for the Engine object
          */
-        Engine();
+        
+        std::vector<Scene*> scenes;
+        Scene* activeScene;
+
+        int _fps = 0;
+        Time time;
+        int frames = 0;
+        long timer;
+        long lastTime;
+        void CalculateFPS();
     };
 
 }
