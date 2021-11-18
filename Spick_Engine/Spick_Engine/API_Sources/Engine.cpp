@@ -9,23 +9,14 @@ SPIC_API void spic::Engine::StartGameLoop()
 {
 	running = true;
 	playing = true;
-	int frames = 0;
-	long lastTime = time.GetTicks();
-	long timer = time.GetTicks();
+	frames = 0;
+	lastTime = time.GetTicks();
+	timer = time.GetTicks();
 
 	while (running) {
 		if (playing) {
 			activeScene->Render();
-
-			frames++;
-			if (time.GetTicks() - timer > 1000)
-			{
-				timer += 1000;
-				_fps = frames;
-				std::cout << "fps: " + _fps << "   \r";
-				frames = 0;
-			}
-
+			CalculateFPS();
 		}
 	}
 }
@@ -51,6 +42,13 @@ SPIC_API int spic::Engine::GetFPS()
 
 void spic::Engine::CalculateFPS()
 {
-
+	frames++;
+	if (time.GetTicks() - timer > 1000)
+	{
+		timer += 1000;
+		_fps = frames;
+		std::cout << "fps: " << _fps << "   \r";
+		frames = 0;
+	}
 }
 

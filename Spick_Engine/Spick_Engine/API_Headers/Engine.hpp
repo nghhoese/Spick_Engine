@@ -100,6 +100,9 @@ namespace spic {
 
         int _fps = 0;
         Time time;
+        int frames = 0;
+        long timer;
+        long lastTime;
         void CalculateFPS();
     };
 
