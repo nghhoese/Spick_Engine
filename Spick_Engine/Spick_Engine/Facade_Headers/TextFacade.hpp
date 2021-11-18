@@ -17,7 +17,7 @@ namespace spic {
 		void Render(SDL_Renderer* renderer);
 		void Createtexture(SDL_Renderer* renderer);
 		void setPosition(int x, int y);
-		
+		void setValues(std::string& text, std::string& font, int& size, Color& color, int& x, int& y);
 
 	private:  
 		TTF_Font* _font;

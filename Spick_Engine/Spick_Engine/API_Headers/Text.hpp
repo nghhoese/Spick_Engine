@@ -91,6 +91,7 @@ namespace spic {
         Color _color;
         int _x;
         int _y;
+        std::unique_ptr<spic::TextFacade> textFacade;
 
     };
 

@@ -236,10 +236,19 @@
     <Object Include="Debug\Engine.obj" />
     <Object Include="Debug\EngineController.obj" />
     <Object Include="Debug\GameObject.obj" />
+    <Object Include="Debug\IKeyListener.obj" />
     <Object Include="Debug\ImageFacade.obj" />
+    <Object Include="Debug\IMouseListener.obj" />
+    <Object Include="Debug\Importation.obj" />
+    <Object Include="Debug\KeyFacade.obj" />
+    <Object Include="Debug\MouseFacade.obj" />
     <Object Include="Debug\Scene.obj" />
     <Object Include="Debug\SceneFacade.obj" />
+    <Object Include="Debug\Sprite.obj" />
+    <Object Include="Debug\Text.obj" />
+    <Object Include="Debug\TextFacade.obj" />
     <Object Include="Debug\Time.obj" />
+    <Object Include="Debug\UIObject.obj" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="Debug\Spick_Engine.Build.CppClean.log" />

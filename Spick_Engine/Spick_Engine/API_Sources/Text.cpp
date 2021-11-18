@@ -7,10 +7,11 @@ SPIC_API spic::Text::Text(const std::string& text, const std::string& font, cons
 	_color = color;
 	_x = x;
 	_y = y;
+	textFacade = std::make_unique<spic::TextFacade>(_text, _font, _size, _color, _x, _y);
 }
 
 void spic::Text::Render() {
-	TextFacade* textFacade = new TextFacade(_text, _font, _size, _color, _x, _y);
+	textFacade->setValues(_text, _font, _size, _color, _x, _y);
 	textFacade->Createtexture(getScene()->GetSceneFacade()->_renderer.get());
 	textFacade->Render(getScene()->GetSceneFacade()->_renderer.get());
 }
