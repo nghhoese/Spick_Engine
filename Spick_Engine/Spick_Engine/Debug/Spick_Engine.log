@@ -19,8 +19,8 @@ C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Sprite.hpp(155,21): w
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\xstring(4905): message : see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Sprite.hpp(156,15): warning C4251: 'spic::Sprite::color': class 'spic::Color' needs to have dll-interface to be used by clients of class 'spic::Sprite'
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Color.hpp(11): message : see declaration of 'spic::Color'
-C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Sources\Sprite.cpp(24,67): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Sources\Sprite.cpp(24,45): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Sources\Sprite.cpp(22,67): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Sources\Sprite.cpp(22,45): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
   Time.cpp
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Sources\Time.cpp(25,121): warning C4244: 'return': conversion from '_Rep' to 'uint32_t', possible loss of data
           with
