@@ -81,6 +81,11 @@ namespace spic {
          */
         SPIC_API std::shared_ptr<spic::Scene> GetSceneByName(const std::string& sceneName);
 
+        /**
+        * @brief Return current FPS.
+        */
+        SPIC_API int GetFPS();
+
     private:
         static Engine instance;
         bool running;
@@ -92,6 +97,10 @@ namespace spic {
         
         std::vector<Scene*> scenes;
         Scene* activeScene;
+
+        int _fps = 0;
+        Time time;
+        void CalculateFPS();
     };
 
 }
