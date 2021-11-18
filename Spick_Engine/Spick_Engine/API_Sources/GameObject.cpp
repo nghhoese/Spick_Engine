@@ -61,16 +61,20 @@ void GameObject::Destroy(Component* obj) {
 
 }
 
-
-
 void GameObject::Update() {
 
 }
 
 void GameObject::Render() {
 	for (std::shared_ptr<Component> c : components) {
+		c->OnUpdate();
 		c->OnRender();
 	}
+}
+
+SPIC_API const spic::Transform* spic::GameObject::getTransform()
+{
+	return &transform;
 }
 
 // Template classes implementatie nog vullen in header file

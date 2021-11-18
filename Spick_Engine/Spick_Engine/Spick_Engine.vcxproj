@@ -253,9 +253,6 @@
     <None Include="Debug\vc142.idb" />
     <None Include="Debug\vc142.pdb" />
   </ItemGroup>
-  <ItemGroup>
-    <Image Include="assets\nazipiloot.png" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
