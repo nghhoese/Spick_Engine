@@ -72,7 +72,11 @@ namespace spic {
              */
             static const Color& black()   { return _black; }
             // ... more standard colors here
-
+            
+            const double& GetR() const { return r; }
+            const double& GetG() const { return g; }
+            const double& GetB() const { return b; }
+            const double& GetA() const { return a; }
         private:
             double r;
             double g;

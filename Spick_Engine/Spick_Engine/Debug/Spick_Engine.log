@@ -21,7 +21,6 @@ C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Sprite.hpp(155,15): w
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Color.hpp(11): message : see declaration of 'spic::Color'
   Text.cpp
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\GameObject.hpp(42,60): warning C4834: discarding return value of function with 'nodiscard' attribute
-C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Sources\Text.cpp(16,51): warning C4129: 'C': unrecognized character escape sequence
   Time.cpp
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Sources\Time.cpp(25,121): warning C4244: 'return': conversion from '_Rep' to 'uint32_t', possible loss of data
           with
@@ -158,6 +157,10 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\SceneFacade.cpp(111): message : see reference to function template instantiation 'std::tuple<float,float>::tuple<int,int,0>(std::tuple<int,int> &&) noexcept' being compiled
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\SceneFacade.cpp(111): message : see reference to function template instantiation 'std::tuple<float,float>::tuple<int,int,0>(std::tuple<int,int> &&) noexcept' being compiled
   TextFacade.cpp
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\TextFacade.cpp(7,26): warning C4244: '=': conversion from 'double' to 'Uint8', possible loss of data
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\TextFacade.cpp(8,26): warning C4244: '=': conversion from 'double' to 'Uint8', possible loss of data
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\TextFacade.cpp(9,26): warning C4244: '=': conversion from 'double' to 'Uint8', possible loss of data
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\TextFacade.cpp(10,26): warning C4244: '=': conversion from 'double' to 'Uint8', possible loss of data
   Generating Code...
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\MouseFacade.cpp(24): warning C4715: 'MouseFacade::PollEvent': not all control paths return a value
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\KeyFacade.cpp(19): warning C4715: 'KeyFacade::PollEvent': not all control paths return a value

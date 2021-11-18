@@ -99,14 +99,11 @@ namespace spic {
              */
             SPIC_API void AddGameObject(std::shared_ptr<GameObject> gameObject);
             std::shared_ptr<WindowFacade> GetSceneFacade() { return sceneFacade; }
-
-            SPIC_API void AddUiObject(std::shared_ptr<UIObject> uiObject);
     private:
         std::string name;
         std::vector<std::shared_ptr<GameObject>> gameObjects;
         std::vector<std::shared_ptr<Camera>> cameras;
         std::shared_ptr<WindowFacade> sceneFacade;
-        std::vector<std::shared_ptr<UIObject>> uiObjects;
     };
 
 }

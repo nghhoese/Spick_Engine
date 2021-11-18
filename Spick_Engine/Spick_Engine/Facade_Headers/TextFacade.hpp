@@ -4,6 +4,7 @@
 #include <SDL_ttf.h>
 #include <string>
 #include "../API_Headers/SpicHeader.hpp"
+#include "../API_Headers/Color.hpp"
 
 namespace spic {
 
@@ -12,7 +13,7 @@ namespace spic {
 	 */
 	class TextFacade {
 	public:
-		SPIC_API TextFacade(std::string text, std::string fontPath);
+		SPIC_API TextFacade(std::string text, std::string font, int size, Color color, int x, int y);
 		void Render(SDL_Renderer* renderer);
 		void Createtexture(SDL_Renderer* renderer);
 		void setPosition(int x, int y);
@@ -23,6 +24,9 @@ namespace spic {
 		std::string _text;
 		SDL_Texture* _texture;
 		SDL_Rect destRectangle;
+		SDL_Color _color;
+		int _x;
+		int _y;
 
 	};
 }

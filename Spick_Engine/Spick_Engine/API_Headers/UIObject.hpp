@@ -35,7 +35,6 @@ namespace spic {
          */
         void setHeight(double height) { this->height = height; }
         virtual void Render();
-        void OnRender();
     private:
         double width;
         double height;

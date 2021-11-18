@@ -228,7 +228,7 @@ namespace spic {
             /**
              * @brief This function is called by the engine to render the scene on the engine.
              */
-            void Render();
+            virtual void Render();
 
 
         private:

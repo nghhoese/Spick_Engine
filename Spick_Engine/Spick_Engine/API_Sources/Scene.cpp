@@ -25,9 +25,6 @@ void Scene::Render() {
     for (std::shared_ptr<GameObject> x : gameObjects) {
         x->Render();
     }
-    for (std::shared_ptr<UIObject> u : uiObjects) {
-        u->Render();
-    }
     sceneFacade->Render();
 }
 
@@ -79,13 +76,6 @@ SPIC_API void Scene::AddGameObject(std::shared_ptr<GameObject> gameObject) {
     std::shared_ptr<Scene> scene = std::make_shared<Scene>("");
     scene.reset(this);
     gameObject->SetScene(scene);
-}
-
-SPIC_API void Scene::AddUiObject(std::shared_ptr<UIObject> uiObject) {
-    uiObjects.push_back(uiObject);
-    std::shared_ptr<Scene> scene = std::make_shared<Scene>("");
-    scene.reset(this);
-    uiObject->SetScene(scene);
 }
 
 // Template classes implementatie nog vullen in header file
