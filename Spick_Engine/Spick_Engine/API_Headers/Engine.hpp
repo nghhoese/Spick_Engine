@@ -16,6 +16,7 @@ namespace spic {
      */
     class Engine {
     public:
+        SPIC_API Engine();
         SPIC_API static Engine& GetInstance();
         
         SPIC_API void Init() const;
@@ -82,12 +83,15 @@ namespace spic {
 
     private:
         static Engine instance;
-
+        bool running;
+        bool playing;
         /**
          * @brief Constructor.
          * @details This is the constructor for the Engine object
          */
-        Engine();
+        
+        std::vector<Scene*> scenes;
+        Scene* activeScene;
     };
 
 }

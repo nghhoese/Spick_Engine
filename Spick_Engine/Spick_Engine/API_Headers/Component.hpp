@@ -28,22 +28,22 @@ namespace spic {
             /**
             * @brief Called when component is created even if component is disabled. View as constructor.
             */
-            SPIC_API virtual void OnAwake() = 0;
+             virtual void OnAwake() = 0;
 
             /**
              * @brief Called right before first frame draw.
              */
-            SPIC_API virtual void OnStart() = 0;
+            virtual void OnStart() = 0;
 
             /**
              * @brief Called every frame draw.
              */
-            SPIC_API virtual void OnUpdate() = 0;
+            virtual void OnUpdate() = 0;
 
             /**
              * @brief Called every frame draw after update.
              */
-            SPIC_API virtual void OnRender() = 0;
+            virtual void OnRender() = 0;
             void SetGameObject(GameObject* _gameObject) { gameobject = _gameObject; }
             GameObject* GetGameObject() { return gameobject; }
 
