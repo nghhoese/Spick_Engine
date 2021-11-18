@@ -8,7 +8,7 @@ SPIC_API Scene::Scene(const std::string& name) {
     gameObjects = std::vector<std::shared_ptr<GameObject>>{};
     cameras = std::vector<std::shared_ptr<Camera>>{};
     sceneFacade = std::make_shared<WindowFacade>();
-    sceneFacade->create_window("Game",500,500);
+    sceneFacade->create_window("Game",1500,1000);
     sceneFacade->create_renderer();
 
 }

@@ -1,11 +1,11 @@
 c:\spic\spick_engine\spick_engine\spick_engine\debug\vc142.pdb
 c:\spic\spick_engine\spick_engine\spick_engine\debug\vc142.idb
-c:\spic\spick_engine\spick_engine\spick_engine\debug\textfacade.obj
 c:\spic\spick_engine\spick_engine\spick_engine\debug\scenefacade.obj
 c:\spic\spick_engine\spick_engine\spick_engine\debug\mousefacade.obj
 c:\spic\spick_engine\spick_engine\spick_engine\debug\keyfacade.obj
 c:\spic\spick_engine\spick_engine\spick_engine\debug\imagefacade.obj
 c:\spic\spick_engine\spick_engine\spick_engine\debug\camerafacade.obj
+c:\spic\spick_engine\spick_engine\spick_engine\debug\buttonfacade.obj
 c:\spic\spick_engine\spick_engine\spick_engine\debug\enginecontroller.obj
 c:\spic\spick_engine\spick_engine\spick_engine\debug\uiobject.obj
 c:\spic\spick_engine\spick_engine\spick_engine\debug\time.obj
@@ -19,6 +19,8 @@ c:\spic\spick_engine\spick_engine\spick_engine\debug\gameobject.obj
 c:\spic\spick_engine\spick_engine\spick_engine\debug\engine.obj
 c:\spic\spick_engine\spick_engine\spick_engine\debug\color.obj
 c:\spic\spick_engine\spick_engine\spick_engine\debug\camera.obj
+c:\spic\spick_engine\spick_engine\spick_engine\debug\button.obj
+c:\spic\spick_engine\spick_engine\spick_engine\debug\textfacade.obj
 c:\spic\spick_engine\spick_engine\spick_engine\debug\spick_engine.ilk
 c:\spic\spick_engine\spick_engine\debug\spick_engine.dll
 c:\spic\spick_engine\spick_engine\debug\spick_engine.pdb
