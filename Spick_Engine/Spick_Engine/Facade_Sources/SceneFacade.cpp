@@ -48,7 +48,7 @@ int WindowFacade::create_window(const std::string& title, float height, float wi
 			throw Exceptions::TTFInitFailed();
 		}
 
-		_window.reset(SDL_CreateWindow(title.c_str(), SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 500, 500, 0));
+		_window.reset(SDL_CreateWindow(title.c_str(), SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 1600, 800, 0));
 
 		if (_window == NULL) {
 			throw Exceptions::CannotCreateWindow();
