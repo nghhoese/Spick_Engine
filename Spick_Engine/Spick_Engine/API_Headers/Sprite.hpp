@@ -149,6 +149,7 @@ namespace spic {
          * @brief Called every frame draw after update.
          */
          void OnRender();
+         void setStill(bool still) { this->still = still; }
 
     private:
         Transform transform;
@@ -162,6 +163,9 @@ namespace spic {
         int height;
         int offsetX;
         int offsetY;
+        bool still = true;
+        bool rendered = false;
+        std::unique_ptr<spic::ImageFacade> imageFacade;
     };
 
 }
