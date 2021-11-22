@@ -10,6 +10,7 @@ spic::ImageFacade::ImageFacade()
 
 void spic::ImageFacade::Createtexture(SDL_Renderer* renderer)
 {
+	SDL_DestroyTexture(_texture);
 	char* a = new char[_path.size() + 1];
 	strcpy(a, _path.c_str());
 	tmpSurface = IMG_Load(a);
@@ -35,7 +36,7 @@ void spic::ImageFacade::Render(SDL_Renderer* renderer)
 		destR.h = size.y * scale;
 	}
 	SDL_RenderCopyEx(renderer, _texture, NULL, &destR, this->rotation, NULL, SDL_FLIP_NONE);
-	SDL_DestroyTexture(_texture);
+	
 
 
 }

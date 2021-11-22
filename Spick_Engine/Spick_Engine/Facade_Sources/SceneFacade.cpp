@@ -19,7 +19,7 @@ int WindowFacade::create_renderer() {
 			throw Exceptions::CannotCreateRenderer();
 		}
 
-		SDL_SetRenderDrawColor(_renderer.get(), 255, 255, 255, 255);
+		SDL_SetRenderDrawColor(_renderer.get(), 0, 0, 0, 255);
 		SDL_SetRenderDrawBlendMode(_renderer.get(), SDL_BLENDMODE_BLEND);
 
 		return 1;
@@ -49,8 +49,7 @@ int WindowFacade::create_window(const std::string& title, float height, float wi
 			throw Exceptions::TTFInitFailed();
 		}
 
-		//_window.reset(SDL_CreateWindow(title.c_str(), SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, width, height, SDL_WINDOW_SHOWN));
-		_window.reset(SDL_CreateWindow(title.c_str(), SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 800, 600, 0));
+		_window.reset(SDL_CreateWindow(title.c_str(), SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, width, height, 0));
 
 		if (_window == NULL) {
 			throw Exceptions::CannotCreateWindow();
