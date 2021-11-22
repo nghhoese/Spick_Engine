@@ -1,9 +1,10 @@
 #include "..\API_Headers\Sprite.hpp"
 
-std::unique_ptr<spic::ImageFacade> imageFacade = std::make_unique<spic::ImageFacade>();
+ 
 
 spic::Sprite::Sprite()
 {
+	imageFacade = std::make_unique<spic::ImageFacade>();
 	imageFacade->setScale(1);
 	imageFacade->setRotation(1);
 }
@@ -27,7 +28,11 @@ void spic::Sprite::OnUpdate()
 
 void spic::Sprite::OnRender()
 {
-	imageFacade->setPath(sprite);
-	imageFacade->Createtexture(GetGameObject()->getScene()->GetSceneFacade()->_renderer.get());
+	if (!rendered) {
+		rendered = true;
+		imageFacade->setPath(sprite);
+
+		imageFacade->Createtexture(GetGameObject()->getScene()->GetSceneFacade()->_renderer.get());
+	}
 	imageFacade->Render(GetGameObject()->getScene()->GetSceneFacade()->_renderer.get());
 }
