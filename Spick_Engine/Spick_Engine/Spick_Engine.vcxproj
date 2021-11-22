@@ -222,7 +222,7 @@
     <ClInclude Include="Facade_Headers\ImageFacade.hpp" />
     <ClInclude Include="Facade_Headers\KeyFacade.hpp" />
     <ClInclude Include="Facade_Headers\MouseFacade.hpp" />
-    <ClInclude Include="Facade_Headers\Rectangle\Rectangle.hpp" />
+    <ClInclude Include="API_Headers\Rectangle.hpp" />
     <ClInclude Include="Facade_Headers\SceneFacade.hpp" />
     <ClInclude Include="Facade_Headers\TextFacade.hpp" />
     <ClInclude Include="Facade_Headers\TiledFacade.hpp" />

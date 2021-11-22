@@ -1,13 +1,13 @@
 #include "../Facade_Headers/CameraFacade.hpp"
 
-void CameraFacade::createRectangle(const int& width, const int& height)
+void CameraFacade::createRectangle(const double& x, const double& y, const double& width, const double& height)
 {
-	this->camera = { 0, 0, width, height };
+	this->camera = { (int)x, (int)y, (int)width, (int)height };
 }
 
-const Rectangle& CameraFacade::getRectangle()
+const spic::Rectangle& CameraFacade::getRectangle()
 {
-	Rectangle rectangle;
+	spic::Rectangle rectangle;
 
 	rectangle.x = this->camera.x;
 	rectangle.y = this->camera.y;

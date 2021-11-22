@@ -2,9 +2,23 @@
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\GameObject.hpp(42,60): warning C4834: discarding return value of function with 'nodiscard' attribute
   Camera.cpp
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\GameObject.hpp(42,60): warning C4834: discarding return value of function with 'nodiscard' attribute
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Camera.hpp(14,47): warning C4275: non dll-interface class 'spic::GameObject' used as base for dll-interface class 'spic::Camera'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\GameObject.hpp(17): message : see declaration of 'spic::GameObject'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Camera.hpp(14): message : see declaration of 'spic::Camera'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Camera.hpp(34,25): warning C4251: 'spic::Camera::name': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'spic::Camera'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.29.30133\include\xstring(4905): message : see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Camera.hpp(35,19): warning C4251: 'spic::Camera::backgroundColor': class 'spic::Color' needs to have dll-interface to be used by clients of class 'spic::Camera'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Color.hpp(11): message : see declaration of 'spic::Color'
   Color.cpp
   Engine.cpp
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\GameObject.hpp(42,60): warning C4834: discarding return value of function with 'nodiscard' attribute
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Camera.hpp(14,47): warning C4275: non dll-interface class 'spic::GameObject' used as base for dll-interface class 'spic::Camera'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\GameObject.hpp(17): message : see declaration of 'spic::GameObject'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Camera.hpp(14): message : see declaration of 'spic::Camera'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Camera.hpp(34,25): warning C4251: 'spic::Camera::name': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'spic::Camera'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.29.30133\include\xstring(4905): message : see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Camera.hpp(35,19): warning C4251: 'spic::Camera::backgroundColor': class 'spic::Color' needs to have dll-interface to be used by clients of class 'spic::Camera'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Color.hpp(11): message : see declaration of 'spic::Color'
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Sources\Engine.cpp(62,19): warning C4244: 'initializing': conversion from 'uint32_t' to 'float', possible loss of data
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Sources\Engine.cpp(65,20): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
   GameObject.cpp

@@ -5,14 +5,23 @@ using namespace spic;
 
 std::unique_ptr<CameraFacade> cameraFacade_ptr = std::make_unique<CameraFacade>();
 
-void spic::Camera::createRectangle(const int& aspectWidth, const int& aspectHeight)
+spic::Camera::Camera(const std::string& name)
 {
-	cameraFacade_ptr->createRectangle(aspectWidth, aspectHeight);
+	this->name = name;
+}
+
+void spic::Camera::createRectangle()
+{
+	cameraFacade_ptr->createRectangle(this->x, this->y, this->aspectWidth, this->aspectHeight);
 }
 
 const Rectangle& spic::Camera::getRectangle()
 {
 	return cameraFacade_ptr->getRectangle();
+}
+
+void spic::Camera::Render()
+{
 }
 
 void spic::Camera::setAspectWidth(const int& aspectWidth)
@@ -43,4 +52,24 @@ void spic::Camera::setColor(const Color& color)
 const Color& spic::Camera::getColor()
 {
 	return this->backgroundColor;
+}
+
+void spic::Camera::setX(const int& x)
+{
+	this->x = x;
+}
+
+const double& spic::Camera::getX()
+{
+	return this->x;
+}
+
+void spic::Camera::setY(const int& aspectWidth)
+{
+	this->y = y;
+}
+
+const double& spic::Camera::getY()
+{
+	return this->y;
 }
