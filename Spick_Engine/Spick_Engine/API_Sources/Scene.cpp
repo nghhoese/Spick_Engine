@@ -73,9 +73,9 @@ SPIC_API void Scene::AddGameObject(std::shared_ptr<GameObject> gameObject) {
     gameObject->SetScene(scene);
 }
 
-SPIC_API void spic::Scene::SetDelay(const int ms) const
+void spic::Scene::SetDelay(const int ms) const
 {
-    SDL_Delay(ms);
+    sceneFacade->SetDelay(ms);
 }
 
 

@@ -92,6 +92,9 @@ namespace spic {
 		void ClearRender();
 		void Render();
 
-		int CalculateFPS();
+		/**
+		* @brief Set delay to limit the gamespeed to specific maxFPS
+		*/
+		void SetDelay(const int ms);
 	};
 }

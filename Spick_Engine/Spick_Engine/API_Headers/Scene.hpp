@@ -103,7 +103,7 @@ namespace spic {
             /**
              * @brief Set delay to limit the gamespeed to specific maxFPS
              */
-            SPIC_API void SetDelay(const int ms) const;
+            void SetDelay(const int ms) const;
 
     private:
         std::string name;
