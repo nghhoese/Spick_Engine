@@ -1,12 +1,12 @@
 #include "..\API_Headers\Sprite.hpp"
 
- 
 
 spic::Sprite::Sprite()
 {
 	imageFacade = std::make_unique<spic::ImageFacade>();
 	imageFacade->setScale(1);
 	imageFacade->setRotation(1);
+	
 }
 
 void spic::Sprite::OnAwake()
@@ -32,7 +32,7 @@ void spic::Sprite::OnRender()
 		rendered = true;
 		imageFacade->setPath(sprite);
 
-		imageFacade->Createtexture(GetGameObject()->getScene()->GetSceneFacade()->_renderer.get());
+		imageFacade->Createtexture();
 	}
-	imageFacade->Render(GetGameObject()->getScene()->GetSceneFacade()->_renderer.get());
+	imageFacade->Render();
 }

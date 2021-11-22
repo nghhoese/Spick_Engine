@@ -3,13 +3,15 @@
 #include "../Facade_Headers/Exceptions/GraphicsExceptions.hpp"
 
 using namespace spic;
-WindowFacade::WindowFacade() : _window(nullptr, SDL_DestroyWindow), _renderer(nullptr, SDL_DestroyRenderer) {}
+static WindowFacade* instance;
 
-SDL_Texture* _texture;
-SDL_Window* window;
-SDL_Renderer* renderer;
-SDL_Texture* PlayerTex;
-SDL_Rect srcR, destR;
+WindowFacade* spic::WindowFacade::GetInstance()
+{
+	if (!instance)
+		instance = new WindowFacade;
+	return instance;
+}
+
 int WindowFacade::create_renderer() {
 	try {
 		_renderer.reset(SDL_CreateRenderer(_window.get(), -1, 0));
@@ -50,7 +52,7 @@ int WindowFacade::create_window(const std::string& title, float height, float wi
 		}
 
 		_window.reset(SDL_CreateWindow(title.c_str(), SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, width, height, 0));
-		SDL_SetWindowFullscreen(_window.get(),1);
+		SDL_SetWindowFullscreen(_window.get(),0);
 
 
 		if (_window == NULL) {

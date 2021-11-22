@@ -8,18 +8,18 @@ spic::ImageFacade::ImageFacade()
 	
 }
 
-void spic::ImageFacade::Createtexture(SDL_Renderer* renderer)
+void spic::ImageFacade::Createtexture()
 {
 	SDL_DestroyTexture(_texture);
 	char* a = new char[_path.size() + 1];
 	strcpy(a, _path.c_str());
 	tmpSurface = IMG_Load(a);
-	_texture = SDL_CreateTextureFromSurface(renderer, tmpSurface);
+	_texture = SDL_CreateTextureFromSurface(spic::WindowFacade::GetInstance()->_renderer.get(), tmpSurface);
 	SDL_FreeSurface(tmpSurface);
 	delete[] a;
 }
 
-void spic::ImageFacade::Render(SDL_Renderer* renderer)
+void spic::ImageFacade::Render()
 {
 	//SDL_RenderCopy(renderer, _texture, NULL, &destR);
 	if (this->rotation < -361) {
@@ -35,7 +35,7 @@ void spic::ImageFacade::Render(SDL_Renderer* renderer)
 		destR.w = size.x * scale;
 		destR.h = size.y * scale;
 	}
-	SDL_RenderCopyEx(renderer, _texture, NULL, &destR, this->rotation, NULL, SDL_FLIP_NONE);
+	SDL_RenderCopyEx(spic::WindowFacade::GetInstance()->_renderer.get(), _texture, NULL, &destR, this->rotation, NULL, SDL_FLIP_NONE);
 	
 
 

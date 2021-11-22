@@ -5,6 +5,7 @@
 #include "Color.hpp"
 #include <string>
 #include "../Facade_Headers/ImageFacade.hpp"
+#include "../Facade_Headers/SceneFacade.hpp"
 #include "GameObject.hpp"
 #include "Scene.hpp"
 

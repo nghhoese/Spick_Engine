@@ -7,9 +7,8 @@ using namespace spic;
 SPIC_API Scene::Scene(const std::string& name) {
     gameObjects = std::vector<std::shared_ptr<GameObject>>{};
     cameras = std::vector<std::shared_ptr<Camera>>{};
-    sceneFacade = std::make_shared<WindowFacade>();
-    sceneFacade->create_window("Game",1000,1500);
-    sceneFacade->create_renderer();
+
+
 
 }
 
@@ -20,11 +19,11 @@ void Scene::Update() {
 }
 
 void Scene::Render() {
-    sceneFacade->ClearRender();
+    spic::WindowFacade::GetInstance()->ClearRender();
     for (std::shared_ptr<GameObject> x : gameObjects) {
         x->Render();
     }
-    sceneFacade->Render();
+    spic::WindowFacade::GetInstance()->Render();
 }
 
 void Scene::AddCamera(const Camera& camera) {

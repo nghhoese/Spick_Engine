@@ -1,8 +1,20 @@
 #include "../API_Headers/Engine.hpp"
 
+
+
 spic::Engine::Engine() {
 	running = false;
 	playing = false;
+}
+
+
+
+
+SPIC_API void spic::Engine::CreateNewWindow(const std::string& windowName)
+{
+	
+	spic::WindowFacade::GetInstance()->create_window("yolo",800,800);
+	spic::WindowFacade::GetInstance()->create_renderer();
 }
 
 SPIC_API void spic::Engine::StartGameLoop()

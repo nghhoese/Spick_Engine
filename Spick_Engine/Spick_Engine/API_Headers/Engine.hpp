@@ -8,6 +8,7 @@
 #include "Scene.hpp"
 #include "Camera.hpp"
 #include "Time.hpp"
+#include "../Facade_Headers/SceneFacade.hpp"
 
 namespace spic {
 
@@ -15,14 +16,15 @@ namespace spic {
      * @brief Any object which should be represented on screen.
      */
     class Engine {
+        
     public:
-        SPIC_API Engine();
-        SPIC_API static Engine& GetInstance();
+
         
         SPIC_API void Init() const;
+        SPIC_API Engine();
 
-        SPIC_API void CreateNewWindow(const std::string& windowName) const;
-
+        SPIC_API void CreateNewWindow(const std::string& windowName);
+        
         /**
          * @brief Add a Camera.
          * @details This function places a pointer to the Camera in
@@ -55,10 +57,10 @@ namespace spic {
          * @param newTimeScale Double describing the timescale. 0 for pause and 1 for normal speed or inbetween for slowmotion and bigger than 1 for superspeed.
         */
         void SetGameLoopTimeScale(double newTimeScale);
-
         /**
          * @brief Add scene.
          */
+
         SPIC_API void AddScene(std::shared_ptr<spic::Scene> scene);
 
         /**
@@ -87,14 +89,14 @@ namespace spic {
         SPIC_API int GetFPS();
 
     private:
-        static Engine instance;
-        bool running;
-        bool playing;
+   
+        bool running = false;
+        bool playing = false;
         /**
          * @brief Constructor.
          * @details This is the constructor for the Engine object
          */
-        
+      
         std::vector<Scene*> scenes;
         Scene* activeScene;
 
