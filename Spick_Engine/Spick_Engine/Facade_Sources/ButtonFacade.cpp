@@ -41,7 +41,7 @@ void spic::ButtonFacade::handle_events() {
 
         if ((point.x > box.x) && (point.x < box.x + box.w) && (point.y > box.y) && (point.y < box.y + box.h))
         {
-            std::cout << "clicked" << std::endl;
+            std::cout << "dooi" << std::endl;
         }
     }
 

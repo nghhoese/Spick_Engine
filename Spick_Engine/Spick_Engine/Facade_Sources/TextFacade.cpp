@@ -3,7 +3,7 @@
 spic::TextFacade::TextFacade(std::string text, std::string font, int size, Color color, int x, int y) {
 	std::string fp = "Fonts/" + font + ".ttf";
 	_font = TTF_OpenFont(fp.c_str(), size);
-	_text = text;
+	_text = "Banaan";
 	_color.r = color.GetR() * 255;
 	_color.g = color.GetG() * 255;
 	_color.b = color.GetB() * 255;
