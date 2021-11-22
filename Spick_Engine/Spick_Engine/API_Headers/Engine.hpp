@@ -104,7 +104,7 @@ namespace spic {
         Scene* activeScene;
 
         int _fps = 0;
-        int _maxFPS;
+        int _maxFPS = 1000;
         int _startTicks;
         Time time;
         int frames = 0;
