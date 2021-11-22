@@ -73,9 +73,13 @@ SPIC_API void Scene::AddGameObject(std::shared_ptr<GameObject> gameObject) {
     gameObject->SetScene(scene);
 }
 
-SPIC_API int spic::Scene::CalculateFPS()
+SPIC_API void spic::Scene::SetDelay(const int ms) const
 {
-    return sceneFacade->CalculateFPS();
+    SDL_Delay(ms);
 }
+
+
+
+
 
 // Template classes implementatie nog vullen in header file

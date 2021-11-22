@@ -100,7 +100,11 @@ namespace spic {
             SPIC_API void AddGameObject(std::shared_ptr<GameObject> gameObject);
             std::shared_ptr<WindowFacade> GetSceneFacade() { return sceneFacade; }
             
-            SPIC_API int CalculateFPS();
+            /**
+             * @brief Set delay to limit the gamespeed to specific maxFPS
+             */
+            SPIC_API void SetDelay(const int ms) const;
+
     private:
         std::string name;
         std::vector<std::shared_ptr<GameObject>> gameObjects;
