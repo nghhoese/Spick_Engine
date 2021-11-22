@@ -34,3 +34,13 @@ const double& spic::Camera::getAspectHeight()
 {
 	return this->aspectHeight;
 }
+
+void spic::Camera::setColor(const Color& color)
+{
+	this->backgroundColor = color;
+}
+
+const Color& spic::Camera::getColor()
+{
+	return this->backgroundColor;
+}

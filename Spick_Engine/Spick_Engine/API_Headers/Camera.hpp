@@ -21,6 +21,8 @@ namespace spic {
         const double& getAspectWidth();
         void setAspectHeight(const int& aspectHeight);
         const double& getAspectHeight();
+        void setColor(const Color& color);
+        const Color& getColor();
 
         private:
             Color backgroundColor;
