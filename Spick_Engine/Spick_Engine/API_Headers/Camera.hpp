@@ -3,6 +3,7 @@
 
 #include "GameObject.hpp"
 #include "Color.hpp"
+#include "../Facade_Headers/Rectangle/Rectangle.hpp"
 
 namespace spic {
 
@@ -12,6 +13,14 @@ namespace spic {
     class Camera : public GameObject {
     public:
         Camera(const std::string& name);
+
+        void createRectangle(const int& aspectWidth, const int& aspectHeight);
+        const Rectangle& getRectangle();
+
+        void setAspectWidth(const int& aspectWidth);
+        const double& getAspectWidth();
+        void setAspectHeight(const int& aspectHeight);
+        const double& getAspectHeight();
 
         private:
             Color backgroundColor;
