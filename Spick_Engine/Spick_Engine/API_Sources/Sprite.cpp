@@ -21,7 +21,7 @@ void spic::Sprite::OnUpdate()
 {
 	transform = *GetGameObject()->getTransform();
 	if (player) {
-		imageFacade->setPosition(transform.position.x, transform.position.y);
+		imageFacade->setPosition(transform.position.x - GetGameObject()->getScene()->GetActiveCamera()->getX(), transform.position.y - GetGameObject()->getScene()->GetActiveCamera()->getY());
 	}
 	else {
 		int x, y, w, h;
