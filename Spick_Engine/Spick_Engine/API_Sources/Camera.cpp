@@ -8,16 +8,29 @@ std::unique_ptr<CameraFacade> cameraFacade_ptr = std::make_unique<CameraFacade>(
 spic::Camera::Camera(const std::string& name)
 {
 	this->name = name;
+	camera = new Rectangle();
 }
 
-void spic::Camera::createRectangle()
+void spic::Camera::CreateCamera()
 {
-	cameraFacade_ptr->createRectangle(this->x, this->y, this->aspectWidth, this->aspectHeight);
+	cameraFacade_ptr->CreateRectangle(this->x, this->y, this->aspectWidth, this->aspectHeight);
+	SetCamera();
 }
 
-const Rectangle& spic::Camera::getRectangle()
+void spic::Camera::SetCamera()
 {
-	return cameraFacade_ptr->getRectangle();
+	cameraFacade_ptr->ConvertSDLToRectangle(this->camera);
+}
+
+Rectangle* spic::Camera::GetCamera()
+{
+	return this->camera;
+}
+
+void spic::Camera::UpdateCamera()
+{
+	cameraFacade_ptr->UpdateCamera(this->x, this->y);
+	SetCamera();
 }
 
 void spic::Camera::Render()
@@ -54,7 +67,7 @@ const Color& spic::Camera::getColor()
 	return this->backgroundColor;
 }
 
-void spic::Camera::setX(const int& x)
+void spic::Camera::setX(const double& x)
 {
 	this->x = x;
 }
@@ -64,7 +77,7 @@ const double& spic::Camera::getX()
 	return this->x;
 }
 
-void spic::Camera::setY(const int& aspectWidth)
+void spic::Camera::setY(const double& y)
 {
 	this->y = y;
 }

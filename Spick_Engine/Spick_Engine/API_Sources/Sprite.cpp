@@ -36,3 +36,8 @@ void spic::Sprite::OnRender()
 	}
 	imageFacade->Render(GetGameObject()->getScene()->GetSceneFacade()->_renderer.get());
 }
+
+void spic::Sprite::SetPlayerBool(bool value)
+{
+	this->player = value;
+}

@@ -4,8 +4,11 @@
 #include "../API_Headers/Rectangle.hpp"
 
 class CameraFacade {
+private:
+	
 public:
-	SDL_Rect camera;
-	void createRectangle(const double& x, const double& y, const double& width, const double& height);
-	const spic::Rectangle& getRectangle();
+	SDL_Rect sdl_rectangle;
+	void CreateRectangle(const double& x, const double& y, const double& width, const double& height);
+	void ConvertSDLToRectangle(spic::Rectangle* rectangle);
+	void UpdateCamera(const double& x, const double& y);
 };

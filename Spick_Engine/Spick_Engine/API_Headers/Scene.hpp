@@ -49,27 +49,27 @@ namespace spic {
             /**
              * @brief Add camera.
              */
-            void AddCamera(const Camera& camera);
+            SPIC_API void AddCamera(const Camera& camera);
 
             /**
              * @brief Set active camera to use for update and rendering.
              */
-            void SetActiveCamera(const Camera& camera);
+            SPIC_API void SetActiveCamera(const Camera& camera);
 
             /**
              * @brief Set active camera to use for update and rendering.
              */
-            void SetActiveCamera(const std::string& cameraName);
+            SPIC_API void SetActiveCamera(const std::string& cameraName);
 
             /**
              * @brief Get active camera to use for update and rendering.
              */
-            Camera& GetActiveCamera() const;
+            SPIC_API std::shared_ptr<Camera> GetActiveCamera() const;
 
             /**
              * @brief Get camera by name.
              */
-            Camera& GetCameraByName(const std::string& cameraName) const;
+            SPIC_API Camera& GetCameraByName(const std::string& cameraName) const;
 
             /**
              * @brief Get game objects by name.

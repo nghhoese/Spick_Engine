@@ -15,8 +15,10 @@ namespace spic {
     public:
         Camera(const std::string& name);
 
-        void createRectangle();
-        const Rectangle& getRectangle();
+        void CreateCamera();
+        void SetCamera();
+        Rectangle* GetCamera();
+        void UpdateCamera();
         void Render();
 
         void setAspectWidth(const int& aspectWidth);
@@ -25,20 +27,21 @@ namespace spic {
         const double& getAspectHeight();
         void setColor(const Color& color);
         const Color& getColor();
-        void setX(const int& x);
+        void setX(const double& x);
         const double& getX();
-        void setY(const int& aspectWidth);
+        void setY(const double& y);
         const double& getY();
         void setCameraName(const std::string& name);
         const std::string& getCameraName();
 
-        private:
-            std::string name;
-            Color backgroundColor;
-            double x;
-            double y;
-            double aspectWidth;
-            double aspectHeight;
+    private:
+        Rectangle* camera;
+        std::string name;
+        Color backgroundColor;
+        double x;
+        double y;
+        double aspectWidth;
+        double aspectHeight;
     };
 }
 

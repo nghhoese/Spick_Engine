@@ -1,18 +1,22 @@
 #include "../Facade_Headers/CameraFacade.hpp"
 
-void CameraFacade::createRectangle(const double& x, const double& y, const double& width, const double& height)
+void CameraFacade::CreateRectangle(const double& x, const double& y, const double& width, const double& height)
 {
-	this->camera = { (int)x, (int)y, (int)width, (int)height };
+	this->sdl_rectangle = { (int)x, (int)y, (int)width, (int)height };
 }
 
-const spic::Rectangle& CameraFacade::getRectangle()
+void CameraFacade::ConvertSDLToRectangle(spic::Rectangle* rectangle)
 {
-	spic::Rectangle rectangle;
+	rectangle->x = this->sdl_rectangle.x;
+	rectangle->y = this->sdl_rectangle.y;
+	rectangle->width = this->sdl_rectangle.w;
+	rectangle->height = this->sdl_rectangle.h;
 
-	rectangle.x = this->camera.x;
-	rectangle.y = this->camera.y;
-	rectangle.width = this->camera.w;
-	rectangle.height = this->camera.h;
-
-	return rectangle;
 }
+
+void CameraFacade::UpdateCamera(const double& x, const double& y)
+{
+	this->sdl_rectangle.x = x;
+	this->sdl_rectangle.y = y;
+}
+
