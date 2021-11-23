@@ -3,6 +3,7 @@
 spic::Engine::Engine() {
 	running = false;
 	playing = false;
+	tiledFacade = std::make_shared<TiledFacade>();
 }
 
 SPIC_API void spic::Engine::StartGameLoop()
@@ -38,6 +39,11 @@ SPIC_API void spic::Engine::SetActiveScene(std::shared_ptr<spic::Scene> scene)
 SPIC_API int spic::Engine::GetFPS()
 {
 	return _fps;
+}
+
+SPIC_API std::pair<std::vector<std::pair<int, std::vector<std::vector<int>>>>, std::vector<std::vector<std::pair<std::string, std::any>>>> spic::Engine::GetLevel(const std::filesystem::path& path)
+{
+	return tiledFacade->Read(path);
 }
 
 void spic::Engine::CalculateFPS()

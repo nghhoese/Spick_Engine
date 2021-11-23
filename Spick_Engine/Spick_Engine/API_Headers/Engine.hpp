@@ -4,10 +4,13 @@
 #include <vector>
 #include <memory>
 #include <thread>
+#include <any>
+#include <filesystem>
 #include "SpicHeader.hpp"
 #include "Scene.hpp"
 #include "Camera.hpp"
 #include "Time.hpp"
+#include "../Facade_Headers/TiledFacade.hpp"
 
 namespace spic {
 
@@ -86,6 +89,11 @@ namespace spic {
         */
         SPIC_API int GetFPS();
 
+        /**
+        * @brief Returns Tiled map data.
+        */
+        SPIC_API std::pair<std::vector<std::pair<int, std::vector<std::vector<int>>>>, std::vector<std::vector<std::pair<std::string, std::any>>>> GetLevel(const std::filesystem::path& path);
+
     private:
         static Engine instance;
         bool running;
@@ -97,6 +105,7 @@ namespace spic {
         
         std::vector<Scene*> scenes;
         Scene* activeScene;
+        std::shared_ptr<TiledFacade> tiledFacade;
 
         int _fps = 0;
         Time time;
