@@ -88,6 +88,11 @@ namespace spic {
         */
         SPIC_API int GetFPS();
 
+        /**
+        * @brief Set max FPS
+        */
+        SPIC_API void SetMaxFPS(const int maxfps);
+
     private:
    
         bool running = false;
@@ -101,6 +106,8 @@ namespace spic {
         Scene* activeScene;
 
         int _fps = 0;
+        int _maxFPS = 1000;
+        int _startTicks;
         Time time;
         int frames = 0;
         long timer;

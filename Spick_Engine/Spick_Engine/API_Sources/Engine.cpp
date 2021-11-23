@@ -27,6 +27,8 @@ SPIC_API void spic::Engine::StartGameLoop()
 
 	while (running) {
 		if (playing) {
+			// Used for frame time measuring
+			_startTicks = time.GetTicks();
 			activeScene->Render();
 			CalculateFPS();
 		}
@@ -52,6 +54,11 @@ SPIC_API int spic::Engine::GetFPS()
 	return _fps;
 }
 
+SPIC_API void spic::Engine::SetMaxFPS(const int maxFPS)
+{
+	_maxFPS = maxFPS;
+}
+
 void spic::Engine::CalculateFPS()
 {
 	frames++;
@@ -62,5 +69,14 @@ void spic::Engine::CalculateFPS()
 		std::cout << "fps: " << _fps << "   \r";
 		frames = 0;
 	}
+
+	// Limit the FPS to the max FPS
+	float frameTicks = time.GetTicks() - _startTicks;
+	if (1000 / _maxFPS > frameTicks)
+	{
+		int milliseconds = 1000 / _maxFPS - frameTicks;
+		activeScene->SetDelay(milliseconds);
+	}
+
 }
 
