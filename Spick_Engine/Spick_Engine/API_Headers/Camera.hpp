@@ -29,6 +29,8 @@ namespace spic {
         const double& getX();
         void setY(const int& aspectWidth);
         const double& getY();
+        void setCameraName(const std::string& name);
+        const std::string& getCameraName();
 
         private:
             std::string name;

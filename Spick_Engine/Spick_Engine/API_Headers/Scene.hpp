@@ -5,6 +5,7 @@
 #include <string>
 #include "SpicHeader.hpp"
 #include "GameObject.hpp"
+#include "Camera.hpp"
 #include "../Facade_Headers/SceneFacade.hpp"
 #include "UIObject.hpp"
 
@@ -110,6 +111,7 @@ namespace spic {
         std::vector<std::shared_ptr<GameObject>> gameObjects;
         std::vector<std::shared_ptr<Camera>> cameras;
         std::shared_ptr<WindowFacade> sceneFacade;
+        std::shared_ptr<Camera> activeCamera;
     };
 
 }

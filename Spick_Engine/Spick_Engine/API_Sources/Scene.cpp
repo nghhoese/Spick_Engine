@@ -28,15 +28,25 @@ void Scene::Render() {
 }
 
 void Scene::AddCamera(const Camera& camera) {
-   
+    std::shared_ptr<Camera> camera_ptr = std::make_shared<Camera>(camera);
+    this->cameras.push_back(camera_ptr);
 }
 
 void Scene::SetActiveCamera(const Camera& camera) {
-
+    std::shared_ptr<Camera> camera_ptr = std::make_shared<Camera>(camera);
+    for (std::shared_ptr<Camera> c : cameras) {
+        if (*c == *camera_ptr) {
+            this->activeCamera = c;
+        }
+    }
 }
 
 void Scene::SetActiveCamera(const std::string& cameraName) {
-
+    for (std::shared_ptr<Camera> c : cameras) {
+        if (c.get()->getCameraName() == cameraName) {
+            this->activeCamera = c;
+        }
+    }
 }
 
 SPIC_API std::vector<std::shared_ptr<GameObject>> Scene::GetGameObjectsByName(const std::string& gameObjectName) {

@@ -73,3 +73,13 @@ const double& spic::Camera::getY()
 {
 	return this->y;
 }
+
+void spic::Camera::setCameraName(const std::string& name)
+{
+	this->name = name;
+}
+
+const std::string& spic::Camera::getCameraName()
+{
+	return this->name;
+}
