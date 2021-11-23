@@ -5,6 +5,7 @@
 spic::Engine::Engine() {
 	running = false;
 	playing = false;
+	tiledFacade = std::make_shared<TiledFacade>();
 }
 
 
@@ -57,6 +58,11 @@ SPIC_API int spic::Engine::GetFPS()
 SPIC_API void spic::Engine::SetMaxFPS(const int maxFPS)
 {
 	_maxFPS = maxFPS;
+}
+
+SPIC_API std::pair<std::vector<std::pair<int, std::vector<std::vector<int>>>>, std::vector<std::vector<std::pair<std::string, std::any>>>> spic::Engine::GetLevel(const std::filesystem::path& path)
+{
+	return tiledFacade->Read(path);
 }
 
 void spic::Engine::CalculateFPS()
