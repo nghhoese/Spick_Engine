@@ -5,6 +5,7 @@
 #include <string>
 #include "SpicHeader.hpp"
 #include "GameObject.hpp"
+#include "Camera.hpp"
 #include "../Facade_Headers/SceneFacade.hpp"
 #include "UIObject.hpp"
 
@@ -48,27 +49,27 @@ namespace spic {
             /**
              * @brief Add camera.
              */
-            void AddCamera(const Camera& camera);
+            SPIC_API void AddCamera(const Camera& camera);
 
             /**
              * @brief Set active camera to use for update and rendering.
              */
-            void SetActiveCamera(const Camera& camera);
+            SPIC_API void SetActiveCamera(const Camera& camera);
 
             /**
              * @brief Set active camera to use for update and rendering.
              */
-            void SetActiveCamera(const std::string& cameraName);
+            SPIC_API void SetActiveCamera(const std::string& cameraName);
 
             /**
              * @brief Get active camera to use for update and rendering.
              */
-            Camera& GetActiveCamera() const;
+            SPIC_API std::shared_ptr<Camera> GetActiveCamera() const;
 
             /**
              * @brief Get camera by name.
              */
-            Camera& GetCameraByName(const std::string& cameraName) const;
+            SPIC_API Camera& GetCameraByName(const std::string& cameraName) const;
 
             /**
              * @brief Get game objects by name.
@@ -103,12 +104,18 @@ namespace spic {
             SPIC_API int CalculateFPS();
 
             void CreateWindow();
+            /**
+             * @brief Set delay to limit the gamespeed to specific maxFPS
+             */
+            void SetDelay(const int ms) const;
+
     private:
         std::string name;
         std::vector<std::shared_ptr<GameObject>> gameObjects;
         std::vector<std::shared_ptr<Camera>> cameras;
         std::shared_ptr<WindowFacade> sceneFacade;
         
+        std::shared_ptr<Camera> activeCamera;
     };
 
 }

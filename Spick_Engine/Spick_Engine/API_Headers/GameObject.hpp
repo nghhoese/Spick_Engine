@@ -246,7 +246,7 @@ namespace spic {
             /**
              * @brief This function is called by the engine to render the scene on the engine.
              */
-            virtual void Render();
+            SPIC_API virtual void Render();
 
             SPIC_API const Transform* getTransform();
             SPIC_API  void setTransform(Transform* _transform) { transform = *_transform; };

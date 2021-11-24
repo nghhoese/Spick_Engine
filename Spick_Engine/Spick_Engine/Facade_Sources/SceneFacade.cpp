@@ -3,13 +3,15 @@
 #include "../Facade_Headers/Exceptions/GraphicsExceptions.hpp"
 
 using namespace spic;
-WindowFacade::WindowFacade() : _window(nullptr, SDL_DestroyWindow), _renderer(nullptr, SDL_DestroyRenderer) {}
+static WindowFacade* instance;
 
-SDL_Texture* _texture;
-SDL_Window* window;
-SDL_Renderer* renderer;
-SDL_Texture* PlayerTex;
-SDL_Rect srcR, destR;
+WindowFacade* spic::WindowFacade::GetInstance()
+{
+	if (!instance)
+		instance = new WindowFacade;
+	return instance;
+}
+
 int WindowFacade::create_renderer() {
 	try {
 		_renderer.reset(SDL_CreateRenderer(_window.get(), -1, 0));
@@ -50,6 +52,8 @@ int WindowFacade::create_window(const std::string& title, float height, float wi
 		}
 
 		_window.reset(SDL_CreateWindow(title.c_str(), SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, width, height, 0));
+		SDL_SetWindowFullscreen(_window.get(),0);
+
 
 		if (_window == NULL) {
 			throw Exceptions::CannotCreateWindow();
@@ -132,49 +136,7 @@ void spic::WindowFacade::Render()
 	SDL_RenderPresent(_renderer.get());
 }
 
-int spic::WindowFacade::CalculateFPS()
+void spic::WindowFacade::SetDelay(const int ms)
 {
-	static const int NUM_SAMPLES = 10;
-	static float frameTimes[NUM_SAMPLES];
-	static int currentFrame = 0;
-
-	static float prevTicks = get_ticks();
-
-	float currentTicks;
-	currentTicks = get_ticks();
-
-	float frameTime = currentTicks - prevTicks;
-	frameTimes[currentFrame % NUM_SAMPLES] = frameTime;
-
-	prevTicks = currentTicks;
-
-	int count;
-
-	if (currentFrame < NUM_SAMPLES)
-	{
-		count = currentFrame;
-	}
-	else {
-		count = NUM_SAMPLES;
-	}
-
-	float frameTimeAvarage = 0;
-	for (int i = 0; i < count; i++)
-	{
-		frameTimeAvarage += frameTimes[i];
-	}
-
-	frameTimeAvarage /= count;
-	float fps = 0;
-	if (frameTimeAvarage > 0)
-	{
-		fps = 1000.0f / frameTimeAvarage;
-	}
-	else
-	{
-		fps = 60.0f;
-	}
-	currentFrame++;
-
-	return fps;
+	SDL_Delay(ms);
 }

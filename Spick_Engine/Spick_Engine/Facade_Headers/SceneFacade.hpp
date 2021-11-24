@@ -46,13 +46,15 @@ namespace spic {
 		* \return std::tuple<width, height>
 		*/
 		std::tuple<float, float> _scene_size;
+		WindowFacade() : _window(nullptr, SDL_DestroyWindow), _renderer(nullptr, SDL_DestroyRenderer) {};
 
 	public:
-		WindowFacade();
+		
 		std::unique_ptr<SDL_Renderer, void(*)(SDL_Renderer*)> _renderer;
 		/**
 		* \brief Creates the instance of SDL_Renderer
 		*/
+		static WindowFacade* GetInstance();
 		int create_renderer();
 
 		/**
@@ -92,6 +94,9 @@ namespace spic {
 		void ClearRender();
 		void Render();
 
-		int CalculateFPS();
+		/**
+		* @brief Set delay to limit the gamespeed to specific maxFPS
+		*/
+		void SetDelay(const int ms);
 	};
 }

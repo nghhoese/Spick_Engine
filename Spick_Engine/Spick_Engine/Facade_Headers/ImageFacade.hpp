@@ -1,6 +1,7 @@
 #pragma once
 
 #include "../API_Headers/SpicHeader.hpp"
+#include "SceneFacade.hpp"
 #include <string>
 #include <SDL.h>
 
@@ -15,8 +16,8 @@ namespace spic {
          * @brief Default constructor representing a white color.
          */
         SPIC_API ImageFacade();
-        void Createtexture(SDL_Renderer* renderer);
-        void Render(SDL_Renderer* renderer);
+        void Createtexture();
+        void Render();
         void setPosition(int x, int y);
         void setSize(int width, int height);
         void setPath(std::string path);

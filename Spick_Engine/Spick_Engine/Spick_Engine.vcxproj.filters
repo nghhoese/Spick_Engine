@@ -93,6 +93,7 @@
     <ClInclude Include="Facade_Headers\TextFacade.hpp" />
     <ClInclude Include="Facade_Headers\TiledFacade.hpp" />
     <ClInclude Include="Facade_Headers\Tileson\tileson.hpp" />
+    <ClInclude Include="API_Headers\Rectangle.hpp" />
   </ItemGroup>
   <ItemGroup>
     <Font Include="Fonts\Capsmall.ttf" />
