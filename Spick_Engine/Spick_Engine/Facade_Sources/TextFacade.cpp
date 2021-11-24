@@ -18,12 +18,11 @@ void spic::TextFacade::Createtexture(SDL_Renderer* renderer) {
 	destRectangle.x = _x;
 	destRectangle.y = _y;
 	SDL_QueryTexture(_texture, NULL, NULL, &destRectangle.w, &destRectangle.h);
-	SDL_FreeSurface(textSurface);
 }
 
 void spic::TextFacade::Render(SDL_Renderer* renderer) {
 	SDL_RenderCopy(renderer, _texture, NULL, &destRectangle);
-	SDL_DestroyTexture(_texture);
+	//SDL_DestroyTexture(_texture);
 	TTF_CloseFont(_font);
 }
 
