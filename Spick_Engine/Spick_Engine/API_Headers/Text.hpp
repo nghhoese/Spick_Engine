@@ -35,7 +35,9 @@ namespace spic {
         /**
          * @brief Set text.
          */
-        void SetText(const std::string& text) { this->_text = text; }
+        void SetText(const std::string& text) {
+            this->_text = text; this->rendered = false;
+        }
 
         /**
          * @brief Get font.
