@@ -30,12 +30,14 @@ namespace spic {
          * @brief Get text.
          * @return text.
          */
-        const std::string& GetText() const { return _text; }
+        SPIC_API const std::string& GetText() const { return _text; }
 
         /**
          * @brief Set text.
          */
-        void SetText(const std::string& text) { this->_text = text; }
+        SPIC_API void SetText(const std::string& text) {
+            this->_text = text; this->rendered = false;
+        }
 
         /**
          * @brief Get font.
@@ -82,7 +84,6 @@ namespace spic {
         void SetColor(const Color& color) { this->_color = color; }
 
         void Render();
-
     private:
         std::string _text;
         std::string _font;

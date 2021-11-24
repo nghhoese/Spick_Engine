@@ -61,7 +61,7 @@ namespace spic {
              * @param tag The tag to find.
              * @return Pointer to GameObject, or nullptr if not found.
              */
-            static std::shared_ptr<GameObject> FindWithTag(const std::string& tag);
+            SPIC_API static std::shared_ptr<GameObject> FindWithTag(const std::string& tag);
 
             /**
              * @brief Returns the first active loaded object of Type type.
