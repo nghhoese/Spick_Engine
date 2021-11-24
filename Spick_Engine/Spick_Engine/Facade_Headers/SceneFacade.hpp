@@ -46,10 +46,10 @@ namespace spic {
 		* \return std::tuple<width, height>
 		*/
 		std::tuple<float, float> _scene_size;
-		WindowFacade() : _window(nullptr, SDL_DestroyWindow), _renderer(nullptr, SDL_DestroyRenderer) {};
+		
 
 	public:
-		
+		WindowFacade() : _window(nullptr, SDL_DestroyWindow), _renderer(nullptr, SDL_DestroyRenderer) {};
 		std::unique_ptr<SDL_Renderer, void(*)(SDL_Renderer*)> _renderer;
 		/**
 		* \brief Creates the instance of SDL_Renderer
