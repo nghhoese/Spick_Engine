@@ -4,12 +4,18 @@
 
 using namespace spic;
 
-SPIC_API Scene::Scene(const std::string& name) {
+SPIC_API Scene::Scene(const std::string& scenename) {
     gameObjects = std::vector<std::shared_ptr<GameObject>>{};
     cameras = std::vector<std::shared_ptr<Camera>>{};
+    sceneFacade = std::make_shared<WindowFacade>();
+    name = scenename;
+}
 
 
 
+void Scene::CreateWindow() {
+    sceneFacade->create_window("Game", 1000, 1500);
+    sceneFacade->create_renderer();
 }
 
 void Scene::Update() {

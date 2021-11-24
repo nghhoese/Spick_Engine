@@ -11,7 +11,17 @@ SPIC_API spic::Text::Text(const std::string& text, const std::string& font, cons
 }
 
 void spic::Text::Render() {
+<<<<<<< HEAD
 	textFacade->setValues(_text, _font, _size, _color, _x, _y);
 	textFacade->Createtexture(spic::WindowFacade::GetInstance()->_renderer.get());
 	textFacade->Render(spic::WindowFacade::GetInstance()->_renderer.get());
+=======
+	if (!rendered) {
+		rendered = true;
+		textFacade->setValues(_text, _font, _size, _color, _x, _y);
+		textFacade->Createtexture(getScene()->GetSceneFacade()->_renderer.get());
+		textFacade->Render(getScene()->GetSceneFacade()->_renderer.get());
+	}
+	
+>>>>>>> origin/merge-buttons-develop
 }

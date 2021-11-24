@@ -23,7 +23,7 @@ namespace spic {
              * @brief Constructor.
              * @param name The name for the scene.
              */
-            SPIC_API Scene(const std::string& name);
+            SPIC_API Scene(const std::string& scenename);
 
             /**
              * @brief Get name.
@@ -101,6 +101,9 @@ namespace spic {
             SPIC_API void AddGameObject(std::shared_ptr<GameObject> gameObject);
             std::shared_ptr<WindowFacade> GetSceneFacade() { return sceneFacade; }
             
+            SPIC_API int CalculateFPS();
+
+            void CreateWindow();
             /**
              * @brief Set delay to limit the gamespeed to specific maxFPS
              */
@@ -111,6 +114,7 @@ namespace spic {
         std::vector<std::shared_ptr<GameObject>> gameObjects;
         std::vector<std::shared_ptr<Camera>> cameras;
         std::shared_ptr<WindowFacade> sceneFacade;
+        
         std::shared_ptr<Camera> activeCamera;
     };
 
