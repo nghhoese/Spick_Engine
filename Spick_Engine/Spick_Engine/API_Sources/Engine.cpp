@@ -33,38 +33,14 @@ SPIC_API void spic::Engine::StartGameLoop()
 
 SPIC_API void spic::Engine::AddScene(std::shared_ptr<spic::Scene> scene)
 {
-	scenes.push_back(scene);
+	scenes.push_back(scene.get());
 }
 
 SPIC_API void spic::Engine::SetActiveScene(std::shared_ptr<spic::Scene> scene)
 {
-	for (std::shared_ptr<Scene> s : scenes) {
-		if (s == scene) {
+	for (Scene* s : scenes) {
+		if (s == scene.get()) {
 			activeScene = s;
-			activeScene->CreateWindow();
-			return;
-		}
-	}
-
-}
-
-SPIC_API std::shared_ptr<spic::Scene> spic::Engine::GetSceneByName(const std::string& sceneName)
-{
-	for (std::shared_ptr<Scene> s : scenes) {
-		if (s->GetName() == sceneName) {
-			return s;
-		}
-	}
-	return nullptr;
-}
-
-SPIC_API void spic::Engine::SetActiveScene(const std::string& sceneName)
-{
-	for (std::shared_ptr<Scene> s : scenes) {
-		if (s->GetName() == sceneName) {
-			activeScene = s;
-			activeScene->CreateWindow();
-			return;
 		}
 	}
 }

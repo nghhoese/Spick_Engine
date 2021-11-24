@@ -1,4 +1,4 @@
-#include "../Facade_Headers/ButtonFacade.hpp"
+#include "..\Facade_Headers\ButtonFacade.hpp"
 #include "../API_Headers/Point.hpp"
 #pragma warning(disable : 4996)
 
@@ -41,7 +41,7 @@ void spic::ButtonFacade::handle_events() {
 
         if ((point.x > box.x) && (point.x < box.x + box.w) && (point.y > box.y) && (point.y < box.y + box.h))
         {
-            clicked = true;
+            std::cout << "clicked" << std::endl;
         }
     }
 

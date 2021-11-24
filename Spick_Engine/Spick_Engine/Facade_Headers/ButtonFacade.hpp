@@ -22,7 +22,6 @@ namespace spic {
 		void Render(SDL_Renderer* renderer);
 		void handle_events();
 		void CreateTexture(SDL_Renderer* renderer);
-		bool clicked = false;
 	private:
 		SDL_Rect box;
 		SDL_Rect* clip;

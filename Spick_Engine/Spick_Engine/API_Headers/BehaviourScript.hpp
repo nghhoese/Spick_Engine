@@ -27,7 +27,6 @@ namespace spic {
              *        collider attached to this object (2D physics only).
              */
             virtual void OnTriggerStay2D(const Collider& collider) = 0;
-
     };
 
 }

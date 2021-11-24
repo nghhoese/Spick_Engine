@@ -26,17 +26,6 @@ namespace spic {
             void Active(bool flag) { active = flag; }
 
             /**
-             * @brief Getter for component name.
-             * @return string with name.
-             */
-            std::string Name() const { return name; }
-
-            /**
-             * @brief Setter for component name.
-             */
-            void Name(std::string newName) { name = newName; }
-
-            /**
             * @brief Called when component is created even if component is disabled. View as constructor.
             */
              virtual void OnAwake() = 0;

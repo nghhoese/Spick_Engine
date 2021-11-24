@@ -92,7 +92,6 @@ namespace spic {
         int _x;
         int _y;
         std::unique_ptr<spic::TextFacade> textFacade;
-        bool rendered = false;
 
     };
 
