@@ -55,7 +55,7 @@ namespace spic {
              * @param tag The tag to find.
              * @return std::vector of GameObject pointers. No ownership.
              */
-            static std::vector<std::shared_ptr<GameObject>> FindGameObjectsWithTag(const std::string& tag);
+            SPIC_API std::vector<std::shared_ptr<GameObject>> FindGameObjectsWithTag(const std::string& tag);
 
             /**
              * @brief Returns one active GameObject tagged tag. Returns nullptr if no GameObject was found.
