@@ -241,7 +241,7 @@ namespace spic {
             //SPIC_API const Dijkstra* getDijkstra();
             //SPIC_API void SetDijkstra(Dijkstra* _dijkstra) { dijkstra = *_dijkstra; };
 
-            SPIC_API const BFS* getBFS();
+            SPIC_API const std::shared_ptr<BFS> getBFS();
             //SPIC_API void setBFS();
 
         private:
@@ -254,8 +254,7 @@ namespace spic {
             std::shared_ptr<GameObject> parent;
             static std::vector<GameObject> children;
             std::vector<std::shared_ptr<spic::Component>> components;
-            //Dijkstra dijkstra;
-            BFS* bfs;
+            std::shared_ptr<BFS> bfs;
     };
 
 }

@@ -76,9 +76,9 @@ SPIC_API const spic::Transform* spic::GameObject::getTransform()
 {
 	return &transform;
 }
-SPIC_API const BFS* spic::GameObject::getBFS()
+SPIC_API const std::shared_ptr<BFS> spic::GameObject::getBFS()
 {
-	return new BFS();
+	return std::make_shared<BFS>();
 }
 //SPIC_API void spic::GameObject::setBFS()
 //{

@@ -44,6 +44,7 @@
     <ClCompile Include="Facade_Sources\SceneFacade.cpp" />
     <ClCompile Include="Facade_Sources\TextFacade.cpp" />
     <ClCompile Include="Facade_Sources\TiledFacade.cpp" />
+    <ClCompile Include="Controller_Sources\BFS.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="API_Headers\Animator.hpp" />
@@ -94,6 +95,7 @@
     <ClInclude Include="Facade_Headers\TiledFacade.hpp" />
     <ClInclude Include="Facade_Headers\Tileson\tileson.hpp" />
     <ClInclude Include="API_Headers\Rectangle.hpp" />
+    <ClInclude Include="Controller_Headers\BFS.hpp" />
   </ItemGroup>
   <ItemGroup>
     <Font Include="Fonts\Capsmall.ttf" />

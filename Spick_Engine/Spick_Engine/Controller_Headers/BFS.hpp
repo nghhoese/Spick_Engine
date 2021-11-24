@@ -10,13 +10,13 @@ namespace spic
 {
 	class BFS
 	{
-		std::vector<std::vector<struct spic::Point, struct spic::Point>> Edge;
-		std::vector<unsigned char> visited;
+		//std::vector<std::vector<int, int>> Edge;
+		//std::vector<unsigned char> visited;
 	public:
 		
 		BFS();
-		SPIC_API void AddEdge(struct spic::Point node, struct spic::Point neighbour);
-		SPIC_API void Search(int start);
+		SPIC_API void AddEdge(Point node, Point neighbour);
+		SPIC_API void Search(Point start);
 
 	private:
 	};
