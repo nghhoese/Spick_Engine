@@ -31,8 +31,23 @@ SPIC_API void spic::Engine::SetActiveScene(std::shared_ptr<spic::Scene> scene)
 	for (Scene* s : scenes) {
 		if (s == scene.get()) {
 			activeScene = s;
+			activeScene->CreateWindow();
+			delete[] s;
+			return;
 		}
 	}
+
+}
+
+SPIC_API std::shared_ptr<spic::Scene> spic::Engine::GetSceneByName(const std::string& sceneName)
+{
+	for (Scene* s : scenes) {
+		if (s->GetName() == sceneName) {
+			std::shared_ptr<spic::Scene> scene(s);
+			return scene;
+		}
+	}
+	return nullptr;
 }
 
 SPIC_API int spic::Engine::GetFPS()

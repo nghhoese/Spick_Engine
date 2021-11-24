@@ -1,264 +1,102 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
-    </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
-    <Filter Include="Header Files\API">
-      <UniqueIdentifier>{d5f653ed-0280-4914-97aa-8b49d8d057b7}</UniqueIdentifier>
-    </Filter>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="API_Headers\Animator.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="API_Headers\AudioSource.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="API_Headers\BehaviourScript.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="API_Headers\BoxCollider.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="API_Headers\Button.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="API_Headers\Camera.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="API_Headers\CircleCollider.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="API_Headers\Collider.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="API_Headers\Color.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="API_Headers\Component.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="API_Headers\Debug.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="API_Headers\Engine.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="API_Headers\GameObject.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="API_Headers\GlobalLight.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="API_Headers\IKeyListener.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="API_Headers\Image.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="API_Headers\IMouseListener.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="API_Headers\Input.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="API_Headers\InputField.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="API_Headers\Light.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="API_Headers\Point.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="API_Headers\PointLight.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="API_Headers\PolygonCollider.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="API_Headers\RigidBody.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="API_Headers\Scene.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="API_Headers\Spic.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="API_Headers\SpicHeader.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="API_Headers\Sprite.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="API_Headers\Text.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="API_Headers\Time.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="API_Headers\Transform.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="API_Headers\UIObject.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Controller_Headers\EngineController.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Facade_Headers\KeyFacade.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Facade_Headers\Exceptions\GraphicsExceptions.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Facade_Headers\CameraFacade.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Facade_Headers\SceneFacade.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Facade_Headers\ImageFacade.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Facade_Headers\TextFacade.hpp">
-    <ClInclude Include="Facade_Headers\MouseFacade.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Facade_Headers\Tileson\tileson.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Facade_Headers\TiledFacade.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Facade_Headers\ImageFacade.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="API_Headers\Importation.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="API_Headers\KeyCode.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="API_Headers\MouseButton.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Facade_Headers\MouseFacade.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Facade_Headers\ButtonFacade.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="API_Sources\Color.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="API_Sources\Engine.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="API_Sources\Time.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Controller_Sources\EngineController.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="API_Sources\GameObject.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="API_Sources\Camera.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="API_Sources\Scene.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Facade_Sources\CameraFacade.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Facade_Sources\SceneFacade.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Facade_Sources\ImageFacade.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Facade_Sources\TextFacade.cpp">
-    <ClCompile Include="Facade_Sources\MouseFacade.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Facade_Sources\KeyFacade.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Facade_Sources\TiledFacade.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="API_Sources\Sprite.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="API_Sources\IKeyListener.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="API_Sources\IMouseListener.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="API_Sources\Importation.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Facade_Sources\KeyFacade.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Facade_Sources\MouseFacade.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="API_Sources\Text.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="API_Sources\UIObject.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="API_Sources\Button.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Facade_Sources\ButtonFacade.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <Object Include="Debug\Color.obj" />
-    <Object Include="Debug\Engine.obj" />
-    <Object Include="Debug\Time.obj" />
     <Object Include="Debug\Camera.obj" />
     <Object Include="Debug\CameraFacade.obj" />
+    <Object Include="Debug\Color.obj" />
+    <Object Include="Debug\Engine.obj" />
     <Object Include="Debug\EngineController.obj" />
     <Object Include="Debug\GameObject.obj" />
-    <Object Include="Debug\ImageFacade.obj" />
-    <Object Include="Debug\Scene.obj" />
-    <Object Include="Debug\SceneFacade.obj" />
     <Object Include="Debug\IKeyListener.obj" />
-    <Object Include="Debug\Importation.obj" />
+    <Object Include="Debug\ImageFacade.obj" />
     <Object Include="Debug\IMouseListener.obj" />
+    <Object Include="Debug\Importation.obj" />
     <Object Include="Debug\KeyFacade.obj" />
     <Object Include="Debug\MouseFacade.obj" />
+    <Object Include="Debug\Scene.obj" />
+    <Object Include="Debug\SceneFacade.obj" />
     <Object Include="Debug\Sprite.obj" />
     <Object Include="Debug\Text.obj" />
     <Object Include="Debug\TextFacade.obj" />
+    <Object Include="Debug\Time.obj" />
     <Object Include="Debug\UIObject.obj" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="Debug\Spick_Engine.Build.CppClean.log" />
-    <Text Include="Debug\Spick_Engine.log" />
-    <Text Include="Debug\Spick_Engine.vcxproj.FileListAbsolute.txt" />
-    <Text Include="Debug\vcpkg.applocal.log" />
+    <ClCompile Include="API_Sources\Button.cpp" />
+    <ClCompile Include="API_Sources\Camera.cpp" />
+    <ClCompile Include="API_Sources\Color.cpp" />
+    <ClCompile Include="API_Sources\Engine.cpp" />
+    <ClCompile Include="API_Sources\GameObject.cpp" />
+    <ClCompile Include="API_Sources\IKeyListener.cpp" />
+    <ClCompile Include="API_Sources\IMouseListener.cpp" />
+    <ClCompile Include="API_Sources\Importation.cpp" />
+    <ClCompile Include="API_Sources\Scene.cpp" />
+    <ClCompile Include="API_Sources\Sprite.cpp" />
+    <ClCompile Include="API_Sources\Text.cpp" />
+    <ClCompile Include="API_Sources\Time.cpp" />
+    <ClCompile Include="API_Sources\UIObject.cpp" />
+    <ClCompile Include="Controller_Sources\EngineController.cpp" />
+    <ClCompile Include="Facade_Sources\ButtonFacade.cpp" />
+    <ClCompile Include="Facade_Sources\CameraFacade.cpp" />
+    <ClCompile Include="Facade_Sources\ImageFacade.cpp" />
+    <ClCompile Include="Facade_Sources\KeyFacade.cpp" />
+    <ClCompile Include="Facade_Sources\MouseFacade.cpp" />
+    <ClCompile Include="Facade_Sources\SceneFacade.cpp" />
+    <ClCompile Include="Facade_Sources\TextFacade.cpp" />
+    <ClCompile Include="Facade_Sources\TiledFacade.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="API_Headers\Animator.hpp" />
+    <ClInclude Include="API_Headers\AudioSource.hpp" />
+    <ClInclude Include="API_Headers\BehaviourScript.hpp" />
+    <ClInclude Include="API_Headers\BoxCollider.hpp" />
+    <ClInclude Include="API_Headers\Button.hpp" />
+    <ClInclude Include="API_Headers\Camera.hpp" />
+    <ClInclude Include="API_Headers\CircleCollider.hpp" />
+    <ClInclude Include="API_Headers\Collider.hpp" />
+    <ClInclude Include="API_Headers\Color.hpp" />
+    <ClInclude Include="API_Headers\Component.hpp" />
+    <ClInclude Include="API_Headers\Debug.hpp" />
+    <ClInclude Include="API_Headers\Engine.hpp" />
+    <ClInclude Include="API_Headers\GameObject.hpp" />
+    <ClInclude Include="API_Headers\GlobalLight.hpp" />
+    <ClInclude Include="API_Headers\IKeyListener.hpp" />
+    <ClInclude Include="API_Headers\Image.hpp" />
+    <ClInclude Include="API_Headers\IMouseListener.hpp" />
+    <ClInclude Include="API_Headers\Importation.hpp" />
+    <ClInclude Include="API_Headers\Input.hpp" />
+    <ClInclude Include="API_Headers\InputField.hpp" />
+    <ClInclude Include="API_Headers\KeyCode.hpp" />
+    <ClInclude Include="API_Headers\Light.hpp" />
+    <ClInclude Include="API_Headers\MouseButton.hpp" />
+    <ClInclude Include="API_Headers\Point.hpp" />
+    <ClInclude Include="API_Headers\PointLight.hpp" />
+    <ClInclude Include="API_Headers\PolygonCollider.hpp" />
+    <ClInclude Include="API_Headers\RigidBody.hpp" />
+    <ClInclude Include="API_Headers\Scene.hpp" />
+    <ClInclude Include="API_Headers\Spic.hpp" />
+    <ClInclude Include="API_Headers\SpicHeader.hpp" />
+    <ClInclude Include="API_Headers\Sprite.hpp" />
+    <ClInclude Include="API_Headers\Text.hpp" />
+    <ClInclude Include="API_Headers\Time.hpp" />
+    <ClInclude Include="API_Headers\Transform.hpp" />
+    <ClInclude Include="API_Headers\UIObject.hpp" />
+    <ClInclude Include="Controller_Headers\EngineController.hpp" />
+    <ClInclude Include="Facade_Headers\ButtonFacade.hpp" />
+    <ClInclude Include="Facade_Headers\CameraFacade.hpp" />
+    <ClInclude Include="Facade_Headers\Exceptions\GraphicsExceptions.hpp" />
+    <ClInclude Include="Facade_Headers\ImageFacade.h" />
+    <ClInclude Include="Facade_Headers\ImageFacade.hpp" />
+    <ClInclude Include="Facade_Headers\KeyFacade.hpp" />
+    <ClInclude Include="Facade_Headers\MouseFacade.hpp" />
+    <ClInclude Include="Facade_Headers\SceneFacade.hpp" />
+    <ClInclude Include="Facade_Headers\TextFacade.hpp" />
+    <ClInclude Include="Facade_Headers\TiledFacade.hpp" />
+    <ClInclude Include="Facade_Headers\Tileson\tileson.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="Fonts\Capsmall.ttf" />
+    <Font Include="Fonts\TopSecret.ttf" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Debug\Spick_Engine.dll.recipe" />
@@ -267,7 +105,9 @@
     <None Include="Debug\vc142.pdb" />
   </ItemGroup>
   <ItemGroup>
-    <Font Include="Fonts\Capsmall.ttf" />
-    <Font Include="Fonts\TopSecret.ttf" />
+    <Text Include="Debug\Spick_Engine.Build.CppClean.log" />
+    <Text Include="Debug\Spick_Engine.log" />
+    <Text Include="Debug\Spick_Engine.vcxproj.FileListAbsolute.txt" />
+    <Text Include="Debug\vcpkg.applocal.log" />
   </ItemGroup>
 </Project>
