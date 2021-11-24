@@ -11,6 +11,7 @@ c:\spic\spick_engine\spick_engine\spick_engine\debug\uiobject.obj
 c:\spic\spick_engine\spick_engine\spick_engine\debug\time.obj
 c:\spic\spick_engine\spick_engine\spick_engine\debug\text.obj
 c:\spic\spick_engine\spick_engine\spick_engine\debug\sprite.obj
+c:\spic\spick_engine\spick_engine\spick_engine\debug\scene.obj
 c:\spic\spick_engine\spick_engine\spick_engine\debug\importation.obj
 c:\spic\spick_engine\spick_engine\spick_engine\debug\imouselistener.obj
 c:\spic\spick_engine\spick_engine\spick_engine\debug\ikeylistener.obj
@@ -21,7 +22,6 @@ c:\spic\spick_engine\spick_engine\spick_engine\debug\camera.obj
 c:\spic\spick_engine\spick_engine\spick_engine\debug\button.obj
 c:\spic\spick_engine\spick_engine\spick_engine\debug\tiledfacade.obj
 c:\spic\spick_engine\spick_engine\spick_engine\debug\textfacade.obj
-c:\spic\spick_engine\spick_engine\spick_engine\debug\scene.obj
 c:\spic\spick_engine\spick_engine\spick_engine\debug\spick_engine.ilk
 c:\spic\spick_engine\spick_engine\debug\spick_engine.dll
 c:\spic\spick_engine\spick_engine\debug\spick_engine.pdb

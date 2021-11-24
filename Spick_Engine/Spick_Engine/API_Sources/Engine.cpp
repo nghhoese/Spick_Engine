@@ -1,15 +1,10 @@
 #include "../API_Headers/Engine.hpp"
 
-
-
 spic::Engine::Engine() {
 	running = false;
 	playing = false;
 	tiledFacade = std::make_shared<TiledFacade>();
 }
-
-
-
 
 SPIC_API void spic::Engine::CreateNewWindow(const std::string& windowName)
 {
