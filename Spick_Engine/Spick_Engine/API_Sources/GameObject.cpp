@@ -76,5 +76,18 @@ SPIC_API const spic::Transform* spic::GameObject::getTransform()
 {
 	return &transform;
 }
+SPIC_API const BFS* spic::GameObject::getBFS()
+{
+	return new BFS();
+}
+//SPIC_API void spic::GameObject::setBFS()
+//{
+//	this->bfs = new BFS();
+//}
+//
+//SPIC_API const Dijkstra* spic::GameObject::getDijkstra()
+//{
+//	return &dijkstra;
+//}
 
 // Template classes implementatie nog vullen in header file

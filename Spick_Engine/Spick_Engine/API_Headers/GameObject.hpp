@@ -8,6 +8,7 @@
 #include "SpicHeader.hpp"
 #include "Transform.hpp"
 #include "Component.hpp"
+#include "../Controller_Headers/BFS.hpp"
 
 namespace spic {
     class Scene;
@@ -232,7 +233,16 @@ namespace spic {
             SPIC_API virtual void Render();
 
             SPIC_API const Transform* getTransform();
-            SPIC_API  void setTransform(Transform* _transform) { transform = *_transform; };
+            SPIC_API void setTransform(Transform* _transform) { transform = *_transform; };
+
+            /**
+            * @brief Pathfinding between two objects.
+            */
+            //SPIC_API const Dijkstra* getDijkstra();
+            //SPIC_API void SetDijkstra(Dijkstra* _dijkstra) { dijkstra = *_dijkstra; };
+
+            SPIC_API const BFS* getBFS();
+            //SPIC_API void setBFS();
 
         private:
             std::string name;
@@ -244,6 +254,8 @@ namespace spic {
             std::shared_ptr<GameObject> parent;
             static std::vector<GameObject> children;
             std::vector<std::shared_ptr<spic::Component>> components;
+            //Dijkstra dijkstra;
+            BFS* bfs;
     };
 
 }
