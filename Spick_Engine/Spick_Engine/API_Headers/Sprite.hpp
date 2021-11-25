@@ -5,6 +5,7 @@
 #include "Color.hpp"
 #include <string>
 #include "../Facade_Headers/ImageFacade.hpp"
+#include "../Facade_Headers/SceneFacade.hpp"
 #include "GameObject.hpp"
 #include "Scene.hpp"
 
@@ -151,6 +152,8 @@ namespace spic {
          void OnRender();
          void setStill(bool still) { this->still = still; }
 
+         void SetPlayerBool(bool value);
+
     private:
         Transform transform;
         std::string sprite;
@@ -165,6 +168,7 @@ namespace spic {
         int offsetY;
         bool still = true;
         bool rendered = false;
+        bool player = false;
         std::unique_ptr<spic::ImageFacade> imageFacade;
     };
 

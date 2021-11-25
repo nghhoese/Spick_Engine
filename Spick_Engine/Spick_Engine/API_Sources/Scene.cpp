@@ -24,23 +24,47 @@ void Scene::Update() {
 }
 
 void Scene::Render() {
-    sceneFacade->ClearRender();
+    spic::WindowFacade::GetInstance()->ClearRender();
     for (std::shared_ptr<GameObject> x : gameObjects) {
         x->Render();
     }
-    sceneFacade->Render();
+    spic::WindowFacade::GetInstance()->Render();
 }
 
-void Scene::AddCamera(const Camera& camera) {
-   
+SPIC_API void Scene::AddCamera(const Camera& camera) {
+    std::shared_ptr<Camera> camera_ptr = std::make_shared<Camera>(camera);
+    this->cameras.push_back(camera_ptr);
 }
 
-void Scene::SetActiveCamera(const Camera& camera) {
-
+SPIC_API void Scene::SetActiveCamera(const Camera& camera) {
+    std::shared_ptr<Camera> camera_ptr = std::make_shared<Camera>(camera);
+    for (std::shared_ptr<Camera> c : cameras) {
+        if (c.get() == camera_ptr.get()) {
+            this->activeCamera = c;
+        }
+    }
 }
 
-void Scene::SetActiveCamera(const std::string& cameraName) {
+SPIC_API void Scene::SetActiveCamera(const std::string& cameraName) {
+    for (std::shared_ptr<Camera> c : cameras) {
+        if (c.get()->getCameraName() == cameraName) {
+            this->activeCamera = c;
+        }
+    }
+}
 
+SPIC_API std::shared_ptr<Camera> spic::Scene::GetActiveCamera() const
+{
+    return this->activeCamera;
+}
+
+SPIC_API Camera& spic::Scene::GetCameraByName(const std::string& cameraName) const
+{
+    for (std::shared_ptr<Camera> c : cameras) {
+        if (c.get()->getCameraName() == cameraName) {
+            return *c;
+        }
+    }
 }
 
 SPIC_API std::vector<std::shared_ptr<GameObject>> Scene::GetGameObjectsByName(const std::string& gameObjectName) {
@@ -77,9 +101,13 @@ SPIC_API void Scene::AddGameObject(std::shared_ptr<GameObject> gameObject) {
     gameObject->SetScene(scene);
 }
 
-SPIC_API int spic::Scene::CalculateFPS()
+void spic::Scene::SetDelay(const int ms) const
 {
-    return sceneFacade->CalculateFPS();
+    sceneFacade->SetDelay(ms);
 }
+
+
+
+
 
 // Template classes implementatie nog vullen in header file
