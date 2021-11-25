@@ -35,7 +35,8 @@ namespace spic {
         /**
          * @brief Set text.
          */
-        void SetText(const std::string& text) { this->_text = text; }
+        void SetText(const std::string& text) { this->_text = text; rendered = false;
+        }
 
         /**
          * @brief Get font.
@@ -46,7 +47,8 @@ namespace spic {
         /**
          * @brief Set font.
          */
-        void SetFont(const std::string& font) { this->_font = font; }
+        void SetFont(const std::string& font) { this->_font = font; rendered = false;
+        }
 
         /**
          * @brief Get size.
@@ -57,7 +59,8 @@ namespace spic {
         /**
          * @brief Set size.
          */
-        void SetSize(int size) { this->_size = size; }
+        void SetSize(int size) { this->_size = size; rendered = false;
+        }
 
         /**
          * @brief Get alignment.
@@ -68,7 +71,8 @@ namespace spic {
         /**
          * @brief Set alignment.
          */
-        void SetAlignment(const Alignment& alignment) { this->_alignment = alignment; }
+        void SetAlignment(const Alignment& alignment) { this->_alignment = alignment; rendered = false;
+        }
 
         /**
          * @brief Get color.
@@ -79,7 +83,7 @@ namespace spic {
         /**
          * @brief Set color.
          */
-        void SetColor(const Color& color) { this->_color = color; }
+        void SetColor(const Color& color) { this->_color = color; rendered = false; }
 
         void Render();
 
@@ -92,6 +96,7 @@ namespace spic {
         int _x;
         int _y;
         std::unique_ptr<spic::TextFacade> textFacade;
+        bool rendered = false;
 
     };
 

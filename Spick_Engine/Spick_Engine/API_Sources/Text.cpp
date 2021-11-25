@@ -11,7 +11,10 @@ SPIC_API spic::Text::Text(const std::string& text, const std::string& font, cons
 }
 
 void spic::Text::Render() {
-	textFacade->setValues(_text, _font, _size, _color, _x, _y);
-	textFacade->Createtexture(getScene()->GetSceneFacade()->_renderer.get());
-	textFacade->Render(getScene()->GetSceneFacade()->_renderer.get());
+	if (true) {
+		rendered = true;
+		textFacade->setValues(_text, _font, _size, _color, _x, _y);
+		textFacade->Createtexture(getScene()->GetSceneFacade()->_renderer.get());
+		textFacade->Render(getScene()->GetSceneFacade()->_renderer.get());
+	}
 }
