@@ -280,6 +280,8 @@
     <Text Include="Debug\vcpkg.applocal.log" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\..\..\..\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.29.30133\include\any" />
+    <None Include="..\..\..\..\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.29.30133\include\filesystem" />
     <None Include="Debug\Spick_Engine.dll.recipe" />
     <None Include="Debug\Spick_Engine.ilk" />
     <None Include="Debug\vc142.idb" />

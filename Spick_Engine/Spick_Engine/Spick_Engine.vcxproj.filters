@@ -104,6 +104,8 @@
     <None Include="Debug\Spick_Engine.ilk" />
     <None Include="Debug\vc142.idb" />
     <None Include="Debug\vc142.pdb" />
+    <None Include="..\..\..\..\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.29.30133\include\any" />
+    <None Include="..\..\..\..\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.29.30133\include\filesystem" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="Debug\Spick_Engine.Build.CppClean.log" />
