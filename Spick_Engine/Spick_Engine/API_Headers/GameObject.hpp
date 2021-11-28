@@ -207,7 +207,7 @@ namespace spic {
             *        a valid subclass of Component.
             * @return Pointer to Component instance.
             */
-            std::shared_ptr<spic::Component> GetComponentByName(const std::string& name);
+            SPIC_API std::shared_ptr<spic::Component> GetComponentByName(const std::string& name);
 
             /**
              * @brief Activates/Deactivates the GameObject, depending on the given true or false value.
