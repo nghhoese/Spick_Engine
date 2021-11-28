@@ -29,7 +29,7 @@ void spic::ButtonFacade::Render() {
 
     SDL_RenderCopy(spic::WindowFacade::GetInstance()->_renderer.get(), _texture, NULL, &box);
     spic::ButtonFacade::handle_events();
-    SDL_DestroyTexture(_texture);
+    //SDL_DestroyTexture(_texture);
 }
 
 void spic::ButtonFacade::handle_events() {

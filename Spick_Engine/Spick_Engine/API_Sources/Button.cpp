@@ -11,7 +11,6 @@ void spic::Button::Render() {
 		rendered = true;
 		buttonFacade->CreateTexture();
 	}
-	buttonFacade->Render();
 	if (buttonFacade->clicked) {
 		buttonFacade->clicked = false;
 
@@ -20,4 +19,5 @@ void spic::Button::Render() {
 			script->OnClick();
 		}
 	}
+	buttonFacade->Render();
 }
