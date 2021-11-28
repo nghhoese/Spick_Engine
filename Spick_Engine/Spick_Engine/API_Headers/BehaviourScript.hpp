@@ -27,6 +27,12 @@ namespace spic {
              *        collider attached to this object (2D physics only).
              */
             virtual void OnTriggerStay2D(const Collider& collider) = 0;
+    
+
+            /**
+             * @brief the action that has te be performed when a click event takes place
+             */
+            virtual void OnClick() = 0;
     };
 
 }

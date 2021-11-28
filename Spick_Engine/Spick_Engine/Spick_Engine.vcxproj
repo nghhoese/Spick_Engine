@@ -229,6 +229,7 @@
     <ClInclude Include="Facade_Headers\Tileson\tileson.hpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="API_Headers\Component.cpp" />
     <ClCompile Include="API_Sources\Button.cpp" />
     <ClCompile Include="API_Sources\Camera.cpp" />
     <ClCompile Include="API_Sources\Color.cpp" />

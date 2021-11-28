@@ -77,4 +77,15 @@ SPIC_API const spic::Transform* spic::GameObject::getTransform()
 	return &transform;
 }
 
+std::shared_ptr<spic::Component> GameObject::GetComponentByName(const std::string& name) {
+	for (std::shared_ptr<Component> c : components) {
+		std::string cName = c->Name();
+		if (cName == name)
+		{
+			return c;
+		}
+	}
+	return nullptr;
+}
+
 // Template classes implementatie nog vullen in header file

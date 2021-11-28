@@ -12,48 +12,49 @@ namespace spic {
      * @brief Instances of this class are clickable user interface items.
      */
     class Button : public UIObject {
-        public:
-            
-            SPIC_API Button(const std::string& asset, const int& x, const int& y, const int& h, const int& w);
-            /**
-             * @brief Get interactable.
-             * @return true if interactable, false otherwise.
-             */
-            bool GetInteractable() const { return interactable; }
+    public:
 
-            /**
-             * @brief Set interactable.
-             */
-            void SetInteractable(bool interactable) { this->interactable = interactable; }
+        SPIC_API Button(const std::string& asset, const int& x, const int& y, const int& h, const int& w, const std::string& behaviourscript);
+        /**
+         * @brief Get interactable.
+         * @return true if interactable, false otherwise.
+         */
+        bool GetInteractable() const { return interactable; }
 
-            /**
-             * @brief This function is called when the button is clicked, which
-             *        will trigger a call to the registered onClick member.
-             */
-            void Click();
+        /**
+         * @brief Set interactable.
+         */
+        void SetInteractable(bool interactable) { this->interactable = interactable; }
 
-            /**
-             * @brief Register the onClick handler to be used when the button is clicked.
-             * @param callback The function to register, usually a lambda. But this can be
-             *        any kind of callable.
-             */
-            void OnClick(std::function<void()> callback) { onClick = callback; }
+        /**
+         * @brief This function is called when the button is clicked, which
+         *        will trigger a call to the registered onClick member.
+         */
+        void Click();
 
-            
+        /**
+         * @brief Register the onClick handler to be used when the button is clicked.
+         * @param callback The function to register, usually a lambda. But this can be
+         *        any kind of callable.
+         */
+        void OnClick(std::function<void()> callback) { onClick = callback; }
 
-            void Render();
 
-        private:
-            /**
-             * @brief When false, the button will not react to clicks.
-             */
-            bool interactable;
 
-            /**
-             * @brief The registered click handler.
-             */
-            std::function<void()> onClick;
-            std::unique_ptr<spic::ButtonFacade> buttonFacade;
+        void Render();
+
+    private:
+        /**
+         * @brief When false, the button will not react to clicks.
+         */
+        bool interactable;
+
+        /**
+         * @brief The registered click handler.
+         */
+        std::function<void()> onClick;
+        std::unique_ptr<spic::ButtonFacade> buttonFacade;
+        std::string _behaviourscript;
     };
 
 }

@@ -110,8 +110,8 @@ namespace spic {
          * @details This is the constructor for the Engine object
          */
       
-        std::vector<Scene*> scenes;
-        Scene* activeScene;
+        std::vector<std::shared_ptr<Scene>> scenes;
+        std::shared_ptr<Scene> activeScene;
         std::shared_ptr<TiledFacade> tiledFacade;
 
         int _fps = 0;
