@@ -7,7 +7,7 @@ using namespace spic;
 SPIC_API Scene::Scene(const std::string& name) {
     gameObjects = std::vector<std::shared_ptr<GameObject>>{};
     cameras = std::vector<std::shared_ptr<Camera>>{};
-
+    this->name = name;
 
 
 }

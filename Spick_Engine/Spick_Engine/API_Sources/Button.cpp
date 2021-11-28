@@ -7,15 +7,17 @@ SPIC_API spic::Button::Button(const std::string& asset, const int& x, const int&
 }
 
 void spic::Button::Render() {
-	buttonFacade->CreateTexture(getScene()->GetSceneFacade()->_renderer.get());
-	buttonFacade->Render(getScene()->GetSceneFacade()->_renderer.get());
+	if (!rendered) {
+		rendered = true;
+		buttonFacade->CreateTexture();
+	}
+	buttonFacade->Render();
 	if (buttonFacade->clicked) {
 		buttonFacade->clicked = false;
 
 		std::shared_ptr<spic::Component> script = GetComponentByName(_behaviourscript);
-		std::shared_ptr<spic::BehaviourScript> bscript = std::shared_ptr<spic::BehaviourScript>(dynamic_cast<BehaviourScript*>(script.get()));
-		if (bscript != nullptr) {
-			bscript->OnClick();
+		if (script != nullptr) {
+			script->OnClick();
 		}
 	}
 }

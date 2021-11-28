@@ -39,8 +39,6 @@ namespace spic {
          */
         void OnClick(std::function<void()> callback) { onClick = callback; }
 
-
-
         void Render();
 
     private:
@@ -48,7 +46,7 @@ namespace spic {
          * @brief When false, the button will not react to clicks.
          */
         bool interactable;
-
+        bool rendered = false;
         /**
          * @brief The registered click handler.
          */

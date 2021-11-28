@@ -1,5 +1,6 @@
 #include "..\Facade_Headers\ButtonFacade.hpp"
 #include "../API_Headers/Point.hpp"
+#include "..\Facade_Headers\ImageFacade.hpp"
 #pragma warning(disable : 4996)
 
 std::unique_ptr<MouseFacade> mousefacade_ptr2 = std::make_unique<MouseFacade>();;
@@ -13,20 +14,20 @@ spic::ButtonFacade::ButtonFacade(int x, int y, int w, int h, std::string asset) 
     bool mouse = mousefacade_ptr2->PollContinousEvent();
 }
 
-void spic::ButtonFacade::CreateTexture(SDL_Renderer* renderer) {
+void spic::ButtonFacade::CreateTexture() {
     std::string _path = _asset;
     char* a = new char[_path.size() + 1];
     strcpy(a, _path.c_str());
     SDL_Surface* tmpSurface = IMG_Load(a);
-    _texture = SDL_CreateTextureFromSurface(renderer, tmpSurface);
+    _texture = SDL_CreateTextureFromSurface(spic::WindowFacade::GetInstance()->_renderer.get(), tmpSurface);
     SDL_FreeSurface(tmpSurface);
     delete[] a;
 }
 
-void spic::ButtonFacade::Render(SDL_Renderer* renderer) {
+void spic::ButtonFacade::Render() {
 
 
-    SDL_RenderCopy(renderer, _texture, NULL, &box);
+    SDL_RenderCopy(spic::WindowFacade::GetInstance()->_renderer.get(), _texture, NULL, &box);
     spic::ButtonFacade::handle_events();
     SDL_DestroyTexture(_texture);
 }

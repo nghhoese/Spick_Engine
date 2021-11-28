@@ -44,7 +44,6 @@
     <ClCompile Include="Facade_Sources\SceneFacade.cpp" />
     <ClCompile Include="Facade_Sources\TextFacade.cpp" />
     <ClCompile Include="Facade_Sources\TiledFacade.cpp" />
-    <ClCompile Include="API_Headers\Component.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="API_Headers\Animator.hpp" />

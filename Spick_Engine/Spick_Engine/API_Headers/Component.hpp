@@ -55,8 +55,10 @@ namespace spic {
              * @brief Called every frame draw after update.
              */
             virtual void OnRender() = 0;
+            virtual void OnClick() = 0;
             void SetGameObject(GameObject* _gameObject) { gameobject = _gameObject; }
             GameObject* GetGameObject() { return gameobject; }
+
 
         private:
             /**

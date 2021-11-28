@@ -45,6 +45,7 @@ namespace spic {
              *        last will remain shown.
              */
             void Stop();
+            void OnClick() = 0;
 
         private:
             /**

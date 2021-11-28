@@ -1,4 +1,5 @@
 #include "../API_Headers/GameObject.hpp"
+#include "../API_Headers/BehaviourScript.hpp"
 
 using namespace spic;
 std::vector<GameObject> GameObject::children;

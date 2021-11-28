@@ -8,6 +8,7 @@
 #include "SpicHeader.hpp"
 #include "Transform.hpp"
 #include "Component.hpp"
+#include "BehaviourScript.hpp"
 
 namespace spic {
     class Scene;

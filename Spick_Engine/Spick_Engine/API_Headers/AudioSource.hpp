@@ -86,6 +86,7 @@ namespace spic {
              * @brief Call this method to stop playing audio.
              */
             void Stop();
+            void OnClick() = 0;
 
         private:
             /**

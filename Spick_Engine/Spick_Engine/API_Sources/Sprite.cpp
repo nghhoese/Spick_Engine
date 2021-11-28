@@ -71,3 +71,7 @@ void spic::Sprite::SetPlayerBool(bool value)
 {
 	this->player = value;
 }
+
+void spic::Sprite::OnClick() {
+
+}

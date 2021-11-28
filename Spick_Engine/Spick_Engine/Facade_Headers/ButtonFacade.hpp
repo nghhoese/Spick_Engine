@@ -19,9 +19,9 @@ namespace spic {
 	class ButtonFacade {
 	public:
 		SPIC_API ButtonFacade(int x, int y, int w, int h, std::string asset);
-		void Render(SDL_Renderer* renderer);
+		void Render();
 		void handle_events();
-		void CreateTexture(SDL_Renderer* renderer);
+		void CreateTexture();
 		bool clicked = false;
 	private:
 		SDL_Rect box;

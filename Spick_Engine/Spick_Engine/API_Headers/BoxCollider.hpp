@@ -33,6 +33,7 @@ namespace spic {
              * @param newHeight The desired height
              */
             void Height(double newHeight) { height = newHeight; }
+            void OnClick() = 0;
 
         private:
             double width;

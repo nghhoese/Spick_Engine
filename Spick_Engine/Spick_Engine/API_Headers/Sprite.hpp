@@ -151,6 +151,7 @@ namespace spic {
          */
          void OnRender();
          void setStill(bool still) { this->still = still; }
+         void OnClick();
 
          void SetPlayerBool(bool value);
 

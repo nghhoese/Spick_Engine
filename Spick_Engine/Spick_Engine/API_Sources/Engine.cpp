@@ -86,7 +86,6 @@ SPIC_API void spic::Engine::SetActiveScene(const std::string& sceneName)
 	for (std::shared_ptr<Scene> s : scenes) {
 		if (s->GetName() == sceneName) {
 			activeScene = s;
-			return;
 		}
 	}
 }
