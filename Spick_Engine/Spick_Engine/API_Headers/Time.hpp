@@ -5,6 +5,7 @@
 #include <ctime>
 #include <ratio>
 #include <chrono>
+#include "SpicHeader.hpp"
 
 namespace spic {
 
@@ -16,7 +17,7 @@ namespace spic {
             /**
              * @brief The interval in seconds from the last frame to the current one (Read Only)
              */
-            static double DeltaTime();
+            SPIC_API float DeltaTime();
 
             /**
              * @brief The scale at which time passes.
@@ -44,11 +45,17 @@ namespace spic {
              */
             static uint32_t GetTicks();
 
+            SPIC_API void SetDeltaTime(float time) { deltaTime = time; }
+            SPIC_API float GetDeltaTime() { return deltaTime; }
+
+            SPIC_API float CalculateDeltaTime();
+
         private:
-            static double deltaTime;
+            float deltaTime;
             static double timeScale;
             static std::chrono::steady_clock::time_point applicationStart;
             static uint32_t frameStart;
+            float m_lastTime = 0.0f;
     };
 }
 
