@@ -1,69 +1,87 @@
-﻿  Component.cpp
+﻿  BoxCollider.cpp
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\BoxCollider.hpp(12,50): warning C4275: non dll-interface class 'spic::Collider' used as base for dll-interface class 'spic::BoxCollider'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Collider.hpp(11): message : see declaration of 'spic::Collider'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\BoxCollider.hpp(12): message : see declaration of 'spic::BoxCollider'
   Button.cpp
-C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\GameObject.hpp(42,60): warning C4834: discarding return value of function with 'nodiscard' attribute
-C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Camera.hpp(14,47): warning C4275: non dll-interface class 'spic::GameObject' used as base for dll-interface class 'spic::Camera'
-C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\GameObject.hpp(17): message : see declaration of 'spic::GameObject'
-C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Camera.hpp(14): message : see declaration of 'spic::Camera'
-C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Camera.hpp(39,21): warning C4251: 'spic::Camera::name': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'spic::Camera'
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.29.30133\include\xstring(4905): message : see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
-C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Camera.hpp(40,15): warning C4251: 'spic::Camera::backgroundColor': class 'spic::Color' needs to have dll-interface to be used by clients of class 'spic::Camera'
-C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Color.hpp(11): message : see declaration of 'spic::Color'
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\BehaviourScript.hpp(11,55): warning C4275: non dll-interface class 'spic::Component' used as base for dll-interface class 'spic::BehaviourScript'
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Component.hpp(15): message : see declaration of 'spic::Component'
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\BehaviourScript.hpp(11): message : see declaration of 'spic::BehaviourScript'
-  Camera.cpp
-C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\GameObject.hpp(42,60): warning C4834: discarding return value of function with 'nodiscard' attribute
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\GameObject.hpp(43,60): warning C4834: discarding return value of function with 'nodiscard' attribute
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Camera.hpp(14,47): warning C4275: non dll-interface class 'spic::GameObject' used as base for dll-interface class 'spic::Camera'
-C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\GameObject.hpp(17): message : see declaration of 'spic::GameObject'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\GameObject.hpp(18): message : see declaration of 'spic::GameObject'
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Camera.hpp(14): message : see declaration of 'spic::Camera'
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Camera.hpp(39,21): warning C4251: 'spic::Camera::name': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'spic::Camera'
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.29.30133\include\xstring(4905): message : see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\xstring(4905): message : see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Camera.hpp(40,15): warning C4251: 'spic::Camera::backgroundColor': class 'spic::Color' needs to have dll-interface to be used by clients of class 'spic::Camera'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Color.hpp(11): message : see declaration of 'spic::Color'
+  Camera.cpp
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\BehaviourScript.hpp(11,55): warning C4275: non dll-interface class 'spic::Component' used as base for dll-interface class 'spic::BehaviourScript'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Component.hpp(15): message : see declaration of 'spic::Component'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\BehaviourScript.hpp(11): message : see declaration of 'spic::BehaviourScript'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\GameObject.hpp(43,60): warning C4834: discarding return value of function with 'nodiscard' attribute
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Camera.hpp(14,47): warning C4275: non dll-interface class 'spic::GameObject' used as base for dll-interface class 'spic::Camera'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\GameObject.hpp(18): message : see declaration of 'spic::GameObject'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Camera.hpp(14): message : see declaration of 'spic::Camera'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Camera.hpp(39,21): warning C4251: 'spic::Camera::name': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'spic::Camera'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\xstring(4905): message : see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Camera.hpp(40,15): warning C4251: 'spic::Camera::backgroundColor': class 'spic::Color' needs to have dll-interface to be used by clients of class 'spic::Camera'
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Color.hpp(11): message : see declaration of 'spic::Color'
   Color.cpp
   Engine.cpp
-C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\GameObject.hpp(42,60): warning C4834: discarding return value of function with 'nodiscard' attribute
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\BehaviourScript.hpp(11,55): warning C4275: non dll-interface class 'spic::Component' used as base for dll-interface class 'spic::BehaviourScript'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Component.hpp(15): message : see declaration of 'spic::Component'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\BehaviourScript.hpp(11): message : see declaration of 'spic::BehaviourScript'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\GameObject.hpp(43,60): warning C4834: discarding return value of function with 'nodiscard' attribute
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Camera.hpp(14,47): warning C4275: non dll-interface class 'spic::GameObject' used as base for dll-interface class 'spic::Camera'
-C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\GameObject.hpp(17): message : see declaration of 'spic::GameObject'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\GameObject.hpp(18): message : see declaration of 'spic::GameObject'
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Camera.hpp(14): message : see declaration of 'spic::Camera'
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Camera.hpp(39,21): warning C4251: 'spic::Camera::name': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'spic::Camera'
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.29.30133\include\xstring(4905): message : see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\xstring(4905): message : see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Camera.hpp(40,15): warning C4251: 'spic::Camera::backgroundColor': class 'spic::Color' needs to have dll-interface to be used by clients of class 'spic::Camera'
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Color.hpp(11): message : see declaration of 'spic::Color'
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Sources\Engine.cpp(75,19): warning C4244: 'initializing': conversion from 'uint32_t' to 'float', possible loss of data
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Sources\Engine.cpp(78,20): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
   GameObject.cpp
-C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\GameObject.hpp(42,60): warning C4834: discarding return value of function with 'nodiscard' attribute
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\BehaviourScript.hpp(11,55): warning C4275: non dll-interface class 'spic::Component' used as base for dll-interface class 'spic::BehaviourScript'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Component.hpp(15): message : see declaration of 'spic::Component'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\BehaviourScript.hpp(11): message : see declaration of 'spic::BehaviourScript'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\GameObject.hpp(43,60): warning C4834: discarding return value of function with 'nodiscard' attribute
   IKeyListener.cpp
   IMouseListener.cpp
   Importation.cpp
   Scene.cpp
-C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\GameObject.hpp(42,60): warning C4834: discarding return value of function with 'nodiscard' attribute
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\BehaviourScript.hpp(11,55): warning C4275: non dll-interface class 'spic::Component' used as base for dll-interface class 'spic::BehaviourScript'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Component.hpp(15): message : see declaration of 'spic::Component'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\BehaviourScript.hpp(11): message : see declaration of 'spic::BehaviourScript'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\GameObject.hpp(43,60): warning C4834: discarding return value of function with 'nodiscard' attribute
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Camera.hpp(14,47): warning C4275: non dll-interface class 'spic::GameObject' used as base for dll-interface class 'spic::Camera'
-C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\GameObject.hpp(17): message : see declaration of 'spic::GameObject'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\GameObject.hpp(18): message : see declaration of 'spic::GameObject'
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Camera.hpp(14): message : see declaration of 'spic::Camera'
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Camera.hpp(39,21): warning C4251: 'spic::Camera::name': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'spic::Camera'
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.29.30133\include\xstring(4905): message : see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\xstring(4905): message : see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Camera.hpp(40,15): warning C4251: 'spic::Camera::backgroundColor': class 'spic::Color' needs to have dll-interface to be used by clients of class 'spic::Camera'
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Color.hpp(11): message : see declaration of 'spic::Color'
   Sprite.cpp
-C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\GameObject.hpp(42,60): warning C4834: discarding return value of function with 'nodiscard' attribute
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\BehaviourScript.hpp(11,55): warning C4275: non dll-interface class 'spic::Component' used as base for dll-interface class 'spic::BehaviourScript'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Component.hpp(15): message : see declaration of 'spic::Component'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\BehaviourScript.hpp(11): message : see declaration of 'spic::BehaviourScript'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\GameObject.hpp(43,60): warning C4834: discarding return value of function with 'nodiscard' attribute
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Camera.hpp(14,47): warning C4275: non dll-interface class 'spic::GameObject' used as base for dll-interface class 'spic::Camera'
-C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\GameObject.hpp(17): message : see declaration of 'spic::GameObject'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\GameObject.hpp(18): message : see declaration of 'spic::GameObject'
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Camera.hpp(14): message : see declaration of 'spic::Camera'
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Camera.hpp(39,21): warning C4251: 'spic::Camera::name': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'spic::Camera'
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.29.30133\include\xstring(4905): message : see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\xstring(4905): message : see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Camera.hpp(40,15): warning C4251: 'spic::Camera::backgroundColor': class 'spic::Color' needs to have dll-interface to be used by clients of class 'spic::Camera'
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Color.hpp(11): message : see declaration of 'spic::Color'
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Sprite.hpp(17,46): warning C4275: non dll-interface class 'spic::Component' used as base for dll-interface class 'spic::Sprite'
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Component.hpp(15): message : see declaration of 'spic::Component'
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Sprite.hpp(17): message : see declaration of 'spic::Sprite'
-C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Sprite.hpp(159,21): warning C4251: 'spic::Sprite::sprite': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'spic::Sprite'
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.29.30133\include\xstring(4905): message : see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
-C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Sprite.hpp(160,15): warning C4251: 'spic::Sprite::color': class 'spic::Color' needs to have dll-interface to be used by clients of class 'spic::Sprite'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Sprite.hpp(160,21): warning C4251: 'spic::Sprite::sprite': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'spic::Sprite'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\xstring(4905): message : see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Sprite.hpp(161,15): warning C4251: 'spic::Sprite::color': class 'spic::Color' needs to have dll-interface to be used by clients of class 'spic::Sprite'
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Color.hpp(11): message : see declaration of 'spic::Color'
-C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Sprite.hpp(172,44): warning C4251: 'spic::Sprite::imageFacade': class 'std::unique_ptr<spic::ImageFacade,std::default_delete<spic::ImageFacade>>' needs to have dll-interface to be used by clients of class 'spic::Sprite'
-C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Sprite.hpp(172): message : see declaration of 'std::unique_ptr<spic::ImageFacade,std::default_delete<spic::ImageFacade>>'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Sprite.hpp(173,44): warning C4251: 'spic::Sprite::imageFacade': class 'std::unique_ptr<spic::ImageFacade,std::default_delete<spic::ImageFacade>>' needs to have dll-interface to be used by clients of class 'spic::Sprite'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Sprite.hpp(173): message : see declaration of 'std::unique_ptr<spic::ImageFacade,std::default_delete<spic::ImageFacade>>'
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Sources\Sprite.cpp(25,129): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Sources\Sprite.cpp(25,50): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Sources\Sprite.cpp(29,60): warning C4244: '=': conversion from 'const double' to 'int', possible loss of data
@@ -75,12 +93,15 @@ C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Sources\Sprite.cpp(47,50): wa
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Sources\Sprite.cpp(51,68): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Sources\Sprite.cpp(51,46): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
   Text.cpp
-C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\GameObject.hpp(42,60): warning C4834: discarding return value of function with 'nodiscard' attribute
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\BehaviourScript.hpp(11,55): warning C4275: non dll-interface class 'spic::Component' used as base for dll-interface class 'spic::BehaviourScript'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Component.hpp(15): message : see declaration of 'spic::Component'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\BehaviourScript.hpp(11): message : see declaration of 'spic::BehaviourScript'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\GameObject.hpp(43,60): warning C4834: discarding return value of function with 'nodiscard' attribute
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Camera.hpp(14,47): warning C4275: non dll-interface class 'spic::GameObject' used as base for dll-interface class 'spic::Camera'
-C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\GameObject.hpp(17): message : see declaration of 'spic::GameObject'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\GameObject.hpp(18): message : see declaration of 'spic::GameObject'
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Camera.hpp(14): message : see declaration of 'spic::Camera'
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Camera.hpp(39,21): warning C4251: 'spic::Camera::name': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'spic::Camera'
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.29.30133\include\xstring(4905): message : see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\xstring(4905): message : see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Camera.hpp(40,15): warning C4251: 'spic::Camera::backgroundColor': class 'spic::Color' needs to have dll-interface to be used by clients of class 'spic::Camera'
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Color.hpp(11): message : see declaration of 'spic::Color'
   Time.cpp
@@ -90,7 +111,10 @@ C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Sources\Time.cpp(25,121): war
               _Rep=__int64
           ]
   UIObject.cpp
-C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\GameObject.hpp(42,60): warning C4834: discarding return value of function with 'nodiscard' attribute
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\BehaviourScript.hpp(11,55): warning C4275: non dll-interface class 'spic::Component' used as base for dll-interface class 'spic::BehaviourScript'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Component.hpp(15): message : see declaration of 'spic::Component'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\BehaviourScript.hpp(11): message : see declaration of 'spic::BehaviourScript'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\GameObject.hpp(43,60): warning C4834: discarding return value of function with 'nodiscard' attribute
   EngineController.cpp
   ButtonFacade.cpp
   CameraFacade.cpp
@@ -112,54 +136,54 @@ C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\SceneFacade.cpp(54
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\SceneFacade.cpp(99,18): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\SceneFacade.cpp(101,30): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\SceneFacade.cpp(113,99): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.29.30133\include\tuple(170,47): warning C4244: 'initializing': conversion from 'const float' to '_Ty', possible loss of data
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\tuple(170,47): warning C4244: 'initializing': conversion from 'const float' to '_Ty', possible loss of data
           with
           [
               _Ty=int
           ]
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.29.30133\include\tuple(258): message : see reference to function template instantiation 'std::_Tuple_val<_This>::_Tuple_val<const float&>(_Other)' being compiled
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\tuple(258): message : see reference to function template instantiation 'std::_Tuple_val<_This>::_Tuple_val<const float&>(_Other)' being compiled
           with
           [
               _This=int,
               _Other=const float &
           ]
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.29.30133\include\tuple(258): message : see reference to function template instantiation 'std::_Tuple_val<_This>::_Tuple_val<const float&>(_Other)' being compiled
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\tuple(258): message : see reference to function template instantiation 'std::_Tuple_val<_This>::_Tuple_val<const float&>(_Other)' being compiled
           with
           [
               _This=int,
               _Other=const float &
           ]
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.29.30133\include\tuple(878): message : see reference to function template instantiation 'std::tuple<int,int>::tuple<std::_Exact_args_t,const float&,const float&,0>(_Tag,_This2,const float &)' being compiled
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\tuple(878): message : see reference to function template instantiation 'std::tuple<int,int>::tuple<std::_Exact_args_t,const float&,const float&,0>(_Tag,_This2,const float &)' being compiled
           with
           [
               _Tag=std::_Exact_args_t,
               _This2=const float &
           ]
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.29.30133\include\tuple(878): message : see reference to function template instantiation 'std::tuple<int,int>::tuple<std::_Exact_args_t,const float&,const float&,0>(_Tag,_This2,const float &)' being compiled
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\tuple(878): message : see reference to function template instantiation 'std::tuple<int,int>::tuple<std::_Exact_args_t,const float&,const float&,0>(_Tag,_This2,const float &)' being compiled
           with
           [
               _Tag=std::_Exact_args_t,
               _This2=const float &
           ]
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.29.30133\include\tuple(265): message : see reference to function template instantiation 'std::tuple<int,int>::tuple<std::_Unpack_tuple_t,const std::tuple<float,float>&,0,1,0>(_Tag,_Tpl,std::integer_sequence<size_t,0,1>)' being compiled
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\tuple(265): message : see reference to function template instantiation 'std::tuple<int,int>::tuple<std::_Unpack_tuple_t,const std::tuple<float,float>&,0,1,0>(_Tag,_Tpl,std::integer_sequence<size_t,0,1>)' being compiled
           with
           [
               _Tag=std::_Unpack_tuple_t,
               _Tpl=const std::tuple<float,float> &
           ]
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.29.30133\include\tuple(265): message : see reference to function template instantiation 'std::tuple<int,int>::tuple<std::_Unpack_tuple_t,const std::tuple<float,float>&,0,1,0>(_Tag,_Tpl,std::integer_sequence<size_t,0,1>)' being compiled
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\tuple(265): message : see reference to function template instantiation 'std::tuple<int,int>::tuple<std::_Unpack_tuple_t,const std::tuple<float,float>&,0,1,0>(_Tag,_Tpl,std::integer_sequence<size_t,0,1>)' being compiled
           with
           [
               _Tag=std::_Unpack_tuple_t,
               _Tpl=const std::tuple<float,float> &
           ]
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.29.30133\include\tuple(369): message : see reference to function template instantiation 'std::tuple<int,int>::tuple<std::_Unpack_tuple_t,const std::tuple<float,float>&,0>(_Tag,_Tpl)' being compiled
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\tuple(369): message : see reference to function template instantiation 'std::tuple<int,int>::tuple<std::_Unpack_tuple_t,const std::tuple<float,float>&,0>(_Tag,_Tpl)' being compiled
           with
           [
               _Tag=std::_Unpack_tuple_t,
               _Tpl=const std::tuple<float,float> &
           ]
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.29.30133\include\tuple(369): message : see reference to function template instantiation 'std::tuple<int,int>::tuple<std::_Unpack_tuple_t,const std::tuple<float,float>&,0>(_Tag,_Tpl)' being compiled
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\tuple(369): message : see reference to function template instantiation 'std::tuple<int,int>::tuple<std::_Unpack_tuple_t,const std::tuple<float,float>&,0>(_Tag,_Tpl)' being compiled
           with
           [
               _Tag=std::_Unpack_tuple_t,
@@ -167,7 +191,7 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.
           ]
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\SceneFacade.cpp(112): message : see reference to function template instantiation 'std::tuple<int,int>::tuple<float,float,0>(const std::tuple<float,float> &) noexcept' being compiled
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\SceneFacade.cpp(112): message : see reference to function template instantiation 'std::tuple<int,int>::tuple<float,float,0>(const std::tuple<float,float> &) noexcept' being compiled
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.29.30133\include\tuple(170,47): warning C4244: 'initializing': conversion from '_Ty' to '_Ty', possible loss of data
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\tuple(170,47): warning C4244: 'initializing': conversion from '_Ty' to '_Ty', possible loss of data
           with
           [
               _Ty=int
@@ -176,53 +200,53 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.
           [
               _Ty=float
           ]
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.29.30133\include\tuple(258): message : see reference to function template instantiation 'std::_Tuple_val<_This>::_Tuple_val<_Ty>(_Other &&)' being compiled
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\tuple(258): message : see reference to function template instantiation 'std::_Tuple_val<_This>::_Tuple_val<_Ty>(_Other &&)' being compiled
           with
           [
               _This=float,
               _Ty=int,
               _Other=int
           ]
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.29.30133\include\tuple(258): message : see reference to function template instantiation 'std::_Tuple_val<_This>::_Tuple_val<_Ty>(_Other &&)' being compiled
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\tuple(258): message : see reference to function template instantiation 'std::_Tuple_val<_This>::_Tuple_val<_Ty>(_Other &&)' being compiled
           with
           [
               _This=float,
               _Ty=int,
               _Other=int
           ]
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.29.30133\include\tuple(878): message : see reference to function template instantiation 'std::tuple<float,float>::tuple<std::_Exact_args_t,int,int,0>(_Tag,_This2 &&,int &&)' being compiled
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\tuple(878): message : see reference to function template instantiation 'std::tuple<float,float>::tuple<std::_Exact_args_t,int,int,0>(_Tag,_This2 &&,int &&)' being compiled
           with
           [
               _Tag=std::_Exact_args_t,
               _This2=int
           ]
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.29.30133\include\tuple(878): message : see reference to function template instantiation 'std::tuple<float,float>::tuple<std::_Exact_args_t,int,int,0>(_Tag,_This2 &&,int &&)' being compiled
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\tuple(878): message : see reference to function template instantiation 'std::tuple<float,float>::tuple<std::_Exact_args_t,int,int,0>(_Tag,_This2 &&,int &&)' being compiled
           with
           [
               _Tag=std::_Exact_args_t,
               _This2=int
           ]
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.29.30133\include\tuple(265): message : see reference to function template instantiation 'std::tuple<float,float>::tuple<std::_Unpack_tuple_t,_Ty,0,1,0>(_Tag,_Tpl &&,std::integer_sequence<size_t,0,1>)' being compiled
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\tuple(265): message : see reference to function template instantiation 'std::tuple<float,float>::tuple<std::_Unpack_tuple_t,_Ty,0,1,0>(_Tag,_Tpl &&,std::integer_sequence<size_t,0,1>)' being compiled
           with
           [
               _Ty=std::tuple<int,int>,
               _Tag=std::_Unpack_tuple_t,
               _Tpl=std::tuple<int,int>
           ]
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.29.30133\include\tuple(265): message : see reference to function template instantiation 'std::tuple<float,float>::tuple<std::_Unpack_tuple_t,_Ty,0,1,0>(_Tag,_Tpl &&,std::integer_sequence<size_t,0,1>)' being compiled
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\tuple(265): message : see reference to function template instantiation 'std::tuple<float,float>::tuple<std::_Unpack_tuple_t,_Ty,0,1,0>(_Tag,_Tpl &&,std::integer_sequence<size_t,0,1>)' being compiled
           with
           [
               _Ty=std::tuple<int,int>,
               _Tag=std::_Unpack_tuple_t,
               _Tpl=std::tuple<int,int>
           ]
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.29.30133\include\tuple(392): message : see reference to function template instantiation 'std::tuple<float,float>::tuple<std::_Unpack_tuple_t,std::tuple<int,int>,0>(_Tag,_Tpl &&)' being compiled
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\tuple(392): message : see reference to function template instantiation 'std::tuple<float,float>::tuple<std::_Unpack_tuple_t,std::tuple<int,int>,0>(_Tag,_Tpl &&)' being compiled
           with
           [
               _Tag=std::_Unpack_tuple_t,
               _Tpl=std::tuple<int,int>
           ]
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.29.30133\include\tuple(392): message : see reference to function template instantiation 'std::tuple<float,float>::tuple<std::_Unpack_tuple_t,std::tuple<int,int>,0>(_Tag,_Tpl &&)' being compiled
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\tuple(392): message : see reference to function template instantiation 'std::tuple<float,float>::tuple<std::_Unpack_tuple_t,std::tuple<int,int>,0>(_Tag,_Tpl &&)' being compiled
           with
           [
               _Tag=std::_Unpack_tuple_t,

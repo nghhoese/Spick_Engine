@@ -144,8 +144,12 @@ namespace spic {
              * @return Pointer to Component instance.
              */
             template<class T>
-            std::shared_ptr<Component> GetComponent() const {
-                // ... implementation here
+            std::shared_ptr<T> GetComponent() const {
+                for (auto c : components) {
+                    if (std::shared_ptr<T> ptr = std::dynamic_pointer_cast<T>(c))
+                        return ptr;
+                }
+                return nullptr;
             }
 
             /**
