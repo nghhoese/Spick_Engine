@@ -1,5 +1,6 @@
 #include "../API_Headers/Engine.hpp"
 
+
 spic::Engine::Engine() {
 	running = false;
 	playing = false;
@@ -15,20 +16,52 @@ SPIC_API void spic::Engine::CreateNewWindow(const std::string& windowName)
 
 SPIC_API void spic::Engine::StartGameLoop()
 {
+	using namespace std::this_thread;     // sleep_for, sleep_until
+	using namespace std::chrono_literals; // ns, us, ms, s, h, etc.
+	using std::chrono::system_clock;
 	running = true;
 	playing = true;
 	frames = 0;
 	lastTime = time.GetTicks();
 	timer = time.GetTicks();
+	float accumulatedDelta = 0;
+
 
 	while (running) {
-		if (playing) {
-			// Used for frame time measuring
-			_startTicks = time.GetTicks();
-			activeScene->Render();
-			CalculateFPS();
+		m_lastTime = time.CalculateDeltaTime();
+		accumulatedDelta += m_lastTime;
+		TargetFrameRate = 17;
+		TimeScale = 1;//time.TimeScale();
+		if (TimeScale == 0) {
+			playing = false;
+		}
+		else if (TimeScale < 1 && TimeScale > 0) {
+			playing = true;
+			TargetFrameRate = TargetFrameRate + ((10*(1 - TimeScale))*TargetFrameRate);
+		}
+		else if (TimeScale == 1) {
+			playing = true;
+		}
+		else if (TimeScale > 1) {
+			playing = true;
+			TargetFrameRate = TargetFrameRate - (TargetFrameRate * (TimeScale - 1));
+		}
+		if (accumulatedDelta >= TargetFrameRate)
+		{
+			accumulatedDelta -= TargetFrameRate;
+			if (playing) {
+				// Used for frame time measuring
+				_startTicks = time.GetTicks();
+				activeScene->Render();
+				CalculateFPS();
+			}
 		}
 	}
+}
+
+SPIC_API void spic::Engine::SetGameLoopTimeScale(double newTimeScale)
+{
+	time.TimeScale(newTimeScale);
 }
 
 SPIC_API void spic::Engine::AddScene(std::shared_ptr<spic::Scene> scene)

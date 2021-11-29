@@ -78,7 +78,7 @@ SPIC_API const spic::Transform* spic::GameObject::getTransform()
 	return &transform;
 }
 
-std::shared_ptr<spic::Component> GameObject::GetComponentByName(const std::string& name) {
+SPIC_API std::shared_ptr<spic::Component> GameObject::GetComponentByName(const std::string& name) {
 	for (std::shared_ptr<Component> c : components) {
 		std::string cName = c->Name();
 		if (cName == name)
