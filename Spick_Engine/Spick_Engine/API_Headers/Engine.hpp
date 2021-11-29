@@ -12,6 +12,9 @@
 #include "Time.hpp"
 #include "../Facade_Headers/SceneFacade.hpp"
 #include "../Facade_Headers/TiledFacade.hpp"
+#include <chrono>
+#include <thread>
+
 
 namespace spic {
 
@@ -59,7 +62,7 @@ namespace spic {
         * @details This function will change the timescale of the Gameloop in the Time class.
          * @param newTimeScale Double describing the timescale. 0 for pause and 1 for normal speed or inbetween for slowmotion and bigger than 1 for superspeed.
         */
-        void SetGameLoopTimeScale(double newTimeScale);
+        SPIC_API void SetGameLoopTimeScale(double newTimeScale);
         /**
          * @brief Add scene.
          */
@@ -122,6 +125,7 @@ namespace spic {
         long timer;
         long lastTime;
         void CalculateFPS();
+        float m_lastTime;
     };
 
 }

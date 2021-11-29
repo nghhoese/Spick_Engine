@@ -1,5 +1,6 @@
 #include "../API_Headers/Engine.hpp"
 
+
 spic::Engine::Engine() {
 	running = false;
 	playing = false;
@@ -15,20 +16,37 @@ SPIC_API void spic::Engine::CreateNewWindow(const std::string& windowName)
 
 SPIC_API void spic::Engine::StartGameLoop()
 {
+	using namespace std::this_thread;     // sleep_for, sleep_until
+	using namespace std::chrono_literals; // ns, us, ms, s, h, etc.
+	using std::chrono::system_clock;
 	running = true;
 	playing = true;
 	frames = 0;
 	lastTime = time.GetTicks();
 	timer = time.GetTicks();
+	float accumulatedDelta = 0;
+	m_lastTime = time.CalculateDeltaTime();
+
 
 	while (running) {
-		if (playing) {
-			// Used for frame time measuring
-			_startTicks = time.GetTicks();
-			activeScene->Render();
-			CalculateFPS();
+		accumulatedDelta += m_lastTime;
+		if (accumulatedDelta >= (60))
+		{
+			accumulatedDelta -= 60;
+			time.SetDeltaTime(60);
+			if (playing) {
+				// Used for frame time measuring
+				_startTicks = time.GetTicks();
+				activeScene->Render();
+				CalculateFPS();
+			}
 		}
 	}
+}
+
+SPIC_API void spic::Engine::SetGameLoopTimeScale(double newTimeScale)
+{
+	time.TimeScale(newTimeScale);
 }
 
 SPIC_API void spic::Engine::AddScene(std::shared_ptr<spic::Scene> scene)
