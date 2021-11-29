@@ -25,15 +25,30 @@ SPIC_API void spic::Engine::StartGameLoop()
 	lastTime = time.GetTicks();
 	timer = time.GetTicks();
 	float accumulatedDelta = 0;
-	m_lastTime = time.CalculateDeltaTime();
 
 
 	while (running) {
+		m_lastTime = time.CalculateDeltaTime();
 		accumulatedDelta += m_lastTime;
-		if (accumulatedDelta >= (60))
+		TargetFrameRate = 17;
+		TimeScale = 1;//time.TimeScale();
+		if (TimeScale == 0) {
+			playing = false;
+		}
+		else if (TimeScale < 1 && TimeScale > 0) {
+			playing = true;
+			TargetFrameRate = TargetFrameRate + ((10*(1 - TimeScale))*TargetFrameRate);
+		}
+		else if (TimeScale == 1) {
+			playing = true;
+		}
+		else if (TimeScale > 1) {
+			playing = true;
+			TargetFrameRate = TargetFrameRate - (TargetFrameRate * (TimeScale - 1));
+		}
+		if (accumulatedDelta >= TargetFrameRate)
 		{
-			accumulatedDelta -= 60;
-			time.SetDeltaTime(60);
+			accumulatedDelta -= TargetFrameRate;
 			if (playing) {
 				// Used for frame time measuring
 				_startTicks = time.GetTicks();

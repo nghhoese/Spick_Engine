@@ -103,7 +103,8 @@ namespace spic {
         * @brief Returns Tiled map data.
         */
         SPIC_API std::pair<std::vector<std::pair<int, std::vector<std::vector<int>>>>, std::vector<std::vector<std::pair<std::string, std::any>>>> GetLevel(const std::filesystem::path& path);
-
+        float TimeScale;
+        float TargetFrameRate;
     private:
    
         bool running = false;
