@@ -10,12 +10,21 @@ KeyCode KeyFacade::PollEvent() {
 		switch (sdlEvent.type) {
 		    case SDL_KEYDOWN:
 			    return TranslateToEnum(sdlEvent);
-            case SDL_KEYUP:
-                return TranslateToEnum(sdlEvent);
 		    default:
 			    return KeyCode::ERROR_UNDEFINED;
 		}
 	}
+}
+KeyCode KeyFacade::PollEvent1() {
+    if (SDL_PollEvent(&sdlEvent) != 0)
+    {
+        switch (sdlEvent.type) {
+        case SDL_KEYUP:
+            return TranslateToEnum(sdlEvent);
+        default:
+            return KeyCode::ERROR_UNDEFINED;
+        }
+    }
 }
 
 bool KeyFacade::PollContinousEvent(const KeyCode& key)

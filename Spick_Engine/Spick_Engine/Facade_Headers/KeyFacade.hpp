@@ -15,6 +15,7 @@ public:
 	* @brief Returns KeyCode if any key is SDL_KEYDOWN or SDL_KEYUP
 	*/
 	KeyCode PollEvent();
+	KeyCode PollEvent1();
 
 	/**
 	* @brief Returns bool depending on key parameter if key is hold down.
