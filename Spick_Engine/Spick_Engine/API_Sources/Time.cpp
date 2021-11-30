@@ -7,7 +7,7 @@ double Time::timeScale {1.0};
 std::chrono::steady_clock::time_point Time::applicationStart = std::chrono::steady_clock::now();
 uint32_t Time::frameStart {0};
 
-float Time::DeltaTime() {
+SPIC_API float Time::DeltaTime() {
 	return deltaTime;
 }
 
@@ -15,7 +15,9 @@ double Time::TimeScale() {
 	return Time::timeScale;
 }
 
-void Time::TimeScale(double newTimeScale) {}
+SPIC_API void Time::TimeScale(double newTimeScale) {
+	Time::timeScale = newTimeScale;
+}
 
 void Time::SetFrameStart(uint32_t newFrameStart) {
 	Time::frameStart = newFrameStart;

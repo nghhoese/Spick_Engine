@@ -23,13 +23,13 @@ namespace spic {
              * @brief The scale at which time passes.
              * @return time scale value
              */
-            static double TimeScale();
+            SPIC_API static double TimeScale();
 
             /**
              * @brief The scale at which time passes.
              * @param The new value for the time scale.
              */
-            static void TimeScale(double newTimeScale);
+            SPIC_API static void TimeScale(double newTimeScale);
 
             /**
              * @brief The scale at which time passes.
