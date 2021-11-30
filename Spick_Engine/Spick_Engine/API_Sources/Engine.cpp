@@ -65,11 +65,9 @@ SPIC_API void spic::Engine::StartGameLoop()
 		if (RenderAccumulatedDelta >= RenderTargetFrameRate)
 		{
 			RenderAccumulatedDelta -= RenderTargetFrameRate;
-			if (playing) {
-				_startTicks = time.GetTicks();
-				activeScene->Render();
-				CalculateFPS();
-			}
+			_startTicks = time.GetTicks();
+			activeScene->Render();
+			CalculateFPS();
 		}
 	}
 }
