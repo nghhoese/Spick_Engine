@@ -60,7 +60,7 @@ SPIC_API void spic::Engine::StartGameLoop()
 
 		//check render
 		m_lastTime = time.CalculateDeltaTime();
-		float RenderTargetFrameRate = 2;
+		float RenderTargetFrameRate = 0.5;
 		RenderAccumulatedDelta += m_lastTime;
 		if (RenderAccumulatedDelta >= RenderTargetFrameRate)
 		{
