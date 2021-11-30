@@ -18,8 +18,10 @@ namespace spic {
 		void Createtexture(SDL_Renderer* renderer);
 		void setPosition(int x, int y);
 		void setValues(std::string& text, std::string& font, int& size, Color& color, int& x, int& y);
-
+		void DeleteTexture();
+		void FreeSurface(SDL_Surface* textSurface);
 	private:  
+		SDL_Surface* textSurface;
 		TTF_Font* _font;
 		std::string _text;
 		SDL_Texture* _texture;
