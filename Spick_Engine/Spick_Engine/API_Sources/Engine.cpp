@@ -25,13 +25,15 @@ SPIC_API void spic::Engine::StartGameLoop()
 	lastTime = time.GetTicks();
 	timer = time.GetTicks();
 	float accumulatedDelta = 0;
+	float RenderAccumulatedDelta = 0;
 
 
 	while (running) {
 		m_lastTime = time.CalculateDeltaTime();
 		accumulatedDelta += m_lastTime;
-		TargetFrameRate = 17;
-		TimeScale = 1;//time.TimeScale();
+		float TargetFrameRate = 17;
+		//timescale tickrate
+		TimeScale = time.TimeScale();
 		if (TimeScale == 0) {
 			playing = false;
 		}
@@ -46,11 +48,24 @@ SPIC_API void spic::Engine::StartGameLoop()
 			playing = true;
 			TargetFrameRate = TargetFrameRate - (TargetFrameRate * (TimeScale - 1));
 		}
+
+		//check update
 		if (accumulatedDelta >= TargetFrameRate)
 		{
 			accumulatedDelta -= TargetFrameRate;
 			if (playing) {
-				// Used for frame time measuring
+				activeScene->Update();
+			}
+		}
+
+		//check render
+		m_lastTime = time.CalculateDeltaTime();
+		float RenderTargetFrameRate = 2;
+		RenderAccumulatedDelta += m_lastTime;
+		if (RenderAccumulatedDelta >= RenderTargetFrameRate)
+		{
+			RenderAccumulatedDelta -= RenderTargetFrameRate;
+			if (playing) {
 				_startTicks = time.GetTicks();
 				activeScene->Render();
 				CalculateFPS();

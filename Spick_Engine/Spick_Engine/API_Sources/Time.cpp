@@ -3,7 +3,7 @@
 using namespace spic;
 
 
-double Time::timeScale {0.0};
+double Time::timeScale {1.0};
 std::chrono::steady_clock::time_point Time::applicationStart = std::chrono::steady_clock::now();
 uint32_t Time::frameStart {0};
 

@@ -234,14 +234,14 @@ namespace spic {
             bool IsActiveInWorld() const;
 
             /**
-             * @brief This function is called by the engine to update the scene on the engine.
-             */
-            void Update();
-
-            /**
              * @brief This function is called by the engine to render the scene on the engine.
              */
             SPIC_API virtual void Render();
+            
+            /**
+             * @brief This function is called by the engine to update the scene on the engine.
+             */
+            SPIC_API virtual void Update();
 
             SPIC_API const Transform* getTransform();
             SPIC_API  void setTransform(Transform* _transform) { transform = *_transform; };
