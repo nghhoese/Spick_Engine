@@ -45,6 +45,18 @@ SPIC_API void spic::Engine::SetActiveScene(std::shared_ptr<spic::Scene> scene)
 	}
 }
 
+SPIC_API std::shared_ptr<spic::Scene> spic::Engine::GetSceneByName(const std::string& sceneName)
+{
+	for (std::shared_ptr<Scene> s : scenes) {
+		std::string sName = s->GetName();
+		if (sName == sceneName)
+		{
+			return s;
+		}
+	}
+	return nullptr;
+}
+
 SPIC_API int spic::Engine::GetFPS()
 {
 	return _fps;
@@ -88,5 +100,13 @@ SPIC_API void spic::Engine::SetActiveScene(const std::string& sceneName)
 			activeScene = s;
 		}
 	}
+}
+
+SPIC_API bool spic::Engine::getGameOver() {
+	return gameOver;
+}
+
+SPIC_API void spic::Engine::setGameOver(bool gameOverBool) {
+	gameOver = gameOverBool;
 }
 
