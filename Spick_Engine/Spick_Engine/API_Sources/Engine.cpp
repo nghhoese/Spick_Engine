@@ -10,7 +10,7 @@ spic::Engine::Engine() {
 SPIC_API void spic::Engine::CreateNewWindow(const std::string& windowName)
 {
 	
-	spic::WindowFacade::GetInstance()->create_window("yolo",1000,1000);
+	spic::WindowFacade::GetInstance()->create_window("Tactical stealth",1000,1000);
 	spic::WindowFacade::GetInstance()->create_renderer();
 }
 
