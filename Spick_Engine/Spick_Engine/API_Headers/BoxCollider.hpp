@@ -3,13 +3,15 @@
 
 #include "Collider.hpp"
 
+
 namespace spic {
 
     /**
      * @brief A collider which represents a rectangular collision area.
      */
-    class BoxCollider : public Collider {
+    class SPIC_API BoxCollider : public Collider {
         public:
+            BoxCollider();
             /**
              * @brief The collider's width
              * @return The current width
@@ -33,11 +35,28 @@ namespace spic {
              * @param newHeight The desired height
              */
             void Height(double newHeight) { height = newHeight; }
-            void OnClick() = 0;
+            void OnAwake();
 
+            /**
+             * @brief Called right before first frame draw.
+             */
+            void OnStart();
+
+            /**
+             * @brief Called every frame draw.
+             */
+            void OnUpdate();
+
+            /**
+             * @brief Called every frame draw after update.
+             */
+            void OnRender();
+            void OnClick();
+           
         private:
             double width;
             double height;
+
     };
 
 }

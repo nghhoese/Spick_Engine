@@ -74,7 +74,7 @@ SPIC_API bool spic::Importation::GetKeyDown(KeyCode key) // getest
 
 SPIC_API bool spic::Importation::GetKeyUp(KeyCode key) // getest
 {
-	KeyCode keycode = keyfacade_ptr->PollEvent();
+	KeyCode keycode = keyfacade_ptr->PollEvent1();
 
 	if (key == keycode) {
 		return true;
