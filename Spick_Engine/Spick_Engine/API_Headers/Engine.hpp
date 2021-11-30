@@ -24,7 +24,6 @@ namespace spic {
     class Engine {
         
     public:
-
         
         SPIC_API void Init() const;
         SPIC_API Engine();
@@ -103,16 +102,17 @@ namespace spic {
         * @brief Returns Tiled map data.
         */
         SPIC_API std::pair<std::vector<std::pair<int, std::vector<std::vector<int>>>>, std::vector<std::vector<std::pair<std::string, std::any>>>> GetLevel(const std::filesystem::path& path);
+
+        SPIC_API bool getGameOver();
+
+        SPIC_API void setGameOver(const bool jeoma);
+
         float TimeScale;
         float TargetFrameRate;
     private:
    
         bool running = false;
         bool playing = false;
-        /**
-         * @brief Constructor.
-         * @details This is the constructor for the Engine object
-         */
       
         std::vector<std::shared_ptr<Scene>> scenes;
         std::shared_ptr<Scene> activeScene;
@@ -126,6 +126,8 @@ namespace spic {
         long timer;
         long lastTime;
         void CalculateFPS();
+
+        bool gameOver = false;
         float m_lastTime;
     };
 

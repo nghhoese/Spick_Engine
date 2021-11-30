@@ -13,6 +13,7 @@ SPIC_API spic::Text::Text(const std::string& text, const std::string& font, cons
 void spic::Text::Render() {
 	textFacade->setValues(_text, _font, _size, _color, _x, _y);
 	if (!rendered) {
+		textFacade->DeleteTexture();
 		textFacade->Createtexture(spic::WindowFacade::GetInstance()->_renderer.get());
 		rendered = true;
 	}

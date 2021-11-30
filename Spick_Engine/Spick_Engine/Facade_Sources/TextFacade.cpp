@@ -13,16 +13,17 @@ spic::TextFacade::TextFacade(std::string text, std::string font, int size, Color
 }
 
 void spic::TextFacade::Createtexture(SDL_Renderer* renderer) {
-	SDL_Surface* textSurface = TTF_RenderText_Solid(_font, _text.c_str(), _color);
+	SDL_DestroyTexture(_texture);
+	textSurface = TTF_RenderText_Solid(_font, _text.c_str(), _color);
 	_texture = SDL_CreateTextureFromSurface(renderer, textSurface);
 	destRectangle.x = _x;
 	destRectangle.y = _y;
 	SDL_QueryTexture(_texture, NULL, NULL, &destRectangle.w, &destRectangle.h);
+	FreeSurface(textSurface);
 }
 
 void spic::TextFacade::Render(SDL_Renderer* renderer) {
 	SDL_RenderCopy(renderer, _texture, NULL, &destRectangle);
-	//SDL_DestroyTexture(_texture);
 	TTF_CloseFont(_font);
 }
 
@@ -36,4 +37,14 @@ void spic::TextFacade::setValues(std::string& text, std::string& font, int& size
 	_color.a = color.GetA() * 255;
 	_x = x;
 	_y = y;
+}
+
+void spic::TextFacade::DeleteTexture()
+{
+	SDL_DestroyTexture(_texture);
+}
+
+void spic::TextFacade::FreeSurface(SDL_Surface* textSurface)
+{
+	SDL_FreeSurface(textSurface);
 }
