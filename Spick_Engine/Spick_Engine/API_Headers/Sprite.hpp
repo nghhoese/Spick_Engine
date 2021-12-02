@@ -30,7 +30,7 @@ namespace spic {
         /**
          * @brief Set sprite.
          */
-        void SetSprite(const std::string& sprite) { this->sprite = sprite; }
+        void SetSprite(const std::string& sprite);
 
         /**
          * @brief Get color.

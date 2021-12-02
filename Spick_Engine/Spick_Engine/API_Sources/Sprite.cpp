@@ -9,6 +9,14 @@ spic::Sprite::Sprite()
 	
 }
 
+void spic::Sprite::SetSprite(const std::string& sprite)
+{
+	this->sprite = sprite;
+	imageFacade->setPath(sprite);
+	rendered = true;
+	imageFacade->Createtexture();
+}
+
 void spic::Sprite::OnAwake()
 {
 }
