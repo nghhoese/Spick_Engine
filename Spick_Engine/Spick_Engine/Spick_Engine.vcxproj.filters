@@ -5,7 +5,6 @@
     <Object Include="Debug\CameraFacade.obj" />
     <Object Include="Debug\Color.obj" />
     <Object Include="Debug\Engine.obj" />
-    <Object Include="Debug\EngineController.obj" />
     <Object Include="Debug\GameObject.obj" />
     <Object Include="Debug\IKeyListener.obj" />
     <Object Include="Debug\ImageFacade.obj" />
@@ -35,7 +34,6 @@
     <ClCompile Include="API_Sources\Text.cpp" />
     <ClCompile Include="API_Sources\Time.cpp" />
     <ClCompile Include="API_Sources\UIObject.cpp" />
-    <ClCompile Include="Controller_Sources\EngineController.cpp" />
     <ClCompile Include="Facade_Sources\ButtonFacade.cpp" />
     <ClCompile Include="Facade_Sources\CameraFacade.cpp" />
     <ClCompile Include="Facade_Sources\ImageFacade.cpp" />
@@ -82,7 +80,6 @@
     <ClInclude Include="API_Headers\Time.hpp" />
     <ClInclude Include="API_Headers\Transform.hpp" />
     <ClInclude Include="API_Headers\UIObject.hpp" />
-    <ClInclude Include="Controller_Headers\EngineController.hpp" />
     <ClInclude Include="Facade_Headers\ButtonFacade.hpp" />
     <ClInclude Include="Facade_Headers\CameraFacade.hpp" />
     <ClInclude Include="Facade_Headers\Exceptions\GraphicsExceptions.hpp" />
