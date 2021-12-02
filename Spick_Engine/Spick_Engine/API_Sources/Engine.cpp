@@ -125,7 +125,6 @@ void spic::Engine::CalculateFPS()
 	{
 		timer += 1000;
 		_fps = frames;
-		std::cout << "fps: " << _fps << "   \r";
 		frames = 0;
 	}
 
