@@ -1,7 +1,15 @@
-#ifndef BOXCOLLIDER_H_
-#define BOXCOLLIDER_H_
+#pragma once
 
+#include "SpicHeader.hpp"
+#include "Component.hpp"
+#include "Color.hpp"
+#include <string>
+#include "../Facade_Headers/ImageFacade.hpp"
+#include "../Facade_Headers/SceneFacade.hpp"
+#include "GameObject.hpp"
+#include "Scene.hpp"
 #include "Collider.hpp"
+#include "../Facade_Headers/RectangleFacade.hpp"
 
 
 namespace spic {
@@ -35,6 +43,7 @@ namespace spic {
              * @param newHeight The desired height
              */
             void Height(double newHeight) { height = newHeight; }
+            void ShowBoxBool(bool newHeight) { showBox = newHeight; }
             void OnAwake();
 
             /**
@@ -52,13 +61,17 @@ namespace spic {
              */
             void OnRender();
             void OnClick();
+            void SetPlayerBool(bool value) { player = value;  }
            
         private:
             double width;
             double height;
+            bool showBox = false;
+            bool player = false;
+            std::unique_ptr<spic::RectangleFacade> rectangleFacade;
 
     };
 
 }
 
-#endif // BOXCOLLIDER_H_
+

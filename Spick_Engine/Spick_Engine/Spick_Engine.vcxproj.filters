@@ -43,6 +43,8 @@
     <ClCompile Include="Facade_Sources\TextFacade.cpp" />
     <ClCompile Include="Facade_Sources\TiledFacade.cpp" />
     <ClCompile Include="API_Sources\BoxCollider.cpp" />
+    <ClCompile Include="Facade_Sources\RectangleFacade.cpp" />
+    <ClCompile Include="API_Sources\Collision.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="API_Headers\Animator.hpp" />
@@ -92,6 +94,8 @@
     <ClInclude Include="Facade_Headers\TiledFacade.hpp" />
     <ClInclude Include="Facade_Headers\Tileson\tileson.hpp" />
     <ClInclude Include="API_Headers\Rectangle.hpp" />
+    <ClInclude Include="Facade_Headers\RectangleFacade.hpp" />
+    <ClInclude Include="API_Headers\Collision.hpp" />
   </ItemGroup>
   <ItemGroup>
     <Font Include="Fonts\Capsmall.ttf" />

@@ -214,6 +214,7 @@
     <ClInclude Include="API_Headers\Time.hpp" />
     <ClInclude Include="API_Headers\Transform.hpp" />
     <ClInclude Include="API_Headers\UIObject.hpp" />
+    <ClInclude Include="API_Headers\Collision.hpp" />
     <ClInclude Include="Facade_Headers\ButtonFacade.hpp" />
     <ClInclude Include="Facade_Headers\CameraFacade.hpp" />
     <ClInclude Include="Facade_Headers\Exceptions\GraphicsExceptions.hpp" />
@@ -226,6 +227,7 @@
     <ClInclude Include="Facade_Headers\TextFacade.hpp" />
     <ClInclude Include="Facade_Headers\TiledFacade.hpp" />
     <ClInclude Include="Facade_Headers\Tileson\tileson.hpp" />
+    <ClInclude Include="Facade_Headers\RectangleFacade.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="API_Sources\BoxCollider.cpp" />
@@ -242,6 +244,7 @@
     <ClCompile Include="API_Sources\Text.cpp" />
     <ClCompile Include="API_Sources\Time.cpp" />
     <ClCompile Include="API_Sources\UIObject.cpp" />
+    <ClCompile Include="API_Sources\Collision.cpp" />
     <ClCompile Include="Facade_Sources\ButtonFacade.cpp" />
     <ClCompile Include="Facade_Sources\CameraFacade.cpp" />
     <ClCompile Include="Facade_Sources\ImageFacade.cpp" />
@@ -250,6 +253,7 @@
     <ClCompile Include="Facade_Sources\SceneFacade.cpp" />
     <ClCompile Include="Facade_Sources\TextFacade.cpp" />
     <ClCompile Include="Facade_Sources\TiledFacade.cpp" />
+    <ClCompile Include="Facade_Sources\RectangleFacade.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Object Include="Debug\Camera.obj" />
