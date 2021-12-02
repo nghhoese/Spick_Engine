@@ -98,3 +98,11 @@ SPIC_API bool spic::Importation::GetMouseButtonUp(MouseButton which) // getest
 {
 	return mousefacade_ptr->GetMouseButtonUp((int)which);
 }
+
+SPIC_API Point spic::Importation::GetMousePosition() {
+	Point point;
+	std::tuple<int, int> coords = mousefacade_ptr->PollMousePosition();
+	point.x = std::get<0>(coords);
+	point.y = std::get<1>(coords);
+	return point;
+}
