@@ -14,7 +14,7 @@ namespace spic {
     class Button : public UIObject {
     public:
 
-        SPIC_API Button(const std::string& asset, const int& x, const int& y, const int& h, const int& w, const std::string& behaviourscript);
+        SPIC_API Button(const std::string& asset, const int& x, const int& y, const int& w, const int& h, const std::string& behaviourscript);
         /**
          * @brief Get interactable.
          * @return true if interactable, false otherwise.

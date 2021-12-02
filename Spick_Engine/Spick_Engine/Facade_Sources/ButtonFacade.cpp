@@ -3,15 +3,13 @@
 #include "..\Facade_Headers\ImageFacade.hpp"
 #pragma warning(disable : 4996)
 
-std::unique_ptr<MouseFacade> mousefacade_ptr2 = std::make_unique<MouseFacade>();;
-
 spic::ButtonFacade::ButtonFacade(int x, int y, int w, int h, std::string asset) {
     box.x = x;
     box.y = y;
     box.w = w;
     box.h = h;
     _asset = "assets/" + asset + ".jpg";
-    bool mouse = mousefacade_ptr2->PollContinousEvent();
+    this->input = new spic::Importation();
 }
 
 void spic::ButtonFacade::CreateTexture() {
@@ -33,19 +31,12 @@ void spic::ButtonFacade::Render() {
 }
 
 void spic::ButtonFacade::handle_events() {
-    if (mousefacade_ptr2->GetMouseButtonDown(1)) {
-    Point point;
-
-        std::tuple<int, int> coords = mousefacade_ptr2->PollMousePosition();
-        point.x = std::get<0>(coords);
-        point.y = std::get<1>(coords);
+    if (input->GetMouseButton(LEFT)) {
+    Point point = input->GetMousePosition();
 
         if ((point.x > box.x) && (point.x < box.x + box.w) && (point.y > box.y) && (point.y < box.y + box.h))
         {
             clicked = true;
         }
     }
-
-    
-
 }

@@ -28,5 +28,7 @@ namespace spic {
 		SDL_Rect* clip;
 		SDL_Texture* _texture;
 		std::string _asset;
+		spic::Importation* input;
+		spic::MouseButton LEFT = spic::MouseButton::LEFT;
 	};
 }

@@ -64,6 +64,8 @@ namespace spic {
         * @brief Returns true during the frame the user releases the given mouse button.
         */
         SPIC_API bool GetMouseButtonUp(MouseButton which);
+
+        SPIC_API Point GetMousePosition();
        
     private:
         

@@ -1,7 +1,7 @@
 #include "..\API_Headers\Button.hpp"
 #include "../API_Headers/BehaviourScript.hpp"
 
-SPIC_API spic::Button::Button(const std::string& asset, const int& x, const int& y, const int& h, const int& w, const std::string& behaviourscript) {
+SPIC_API spic::Button::Button(const std::string& asset, const int& x, const int& y, const int& w, const int& h, const std::string& behaviourscript) {
 	buttonFacade = std::make_unique<spic::ButtonFacade>(x, y, w, h, asset);
 	_behaviourscript = behaviourscript;
 }
