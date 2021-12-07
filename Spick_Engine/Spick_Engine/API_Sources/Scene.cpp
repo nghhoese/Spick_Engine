@@ -16,16 +16,29 @@ void spic::Scene::CheckCollisions()
 {
     for (std::shared_ptr<GameObject> x : gameObjects) {
         x->GetComponent <spic::BehaviourScript>();
-        std::shared_ptr<spic::BehaviourScript> script = std::dynamic_pointer_cast<spic::BehaviourScript>( x->GetComponent <spic::BehaviourScript>());
+        std::shared_ptr<spic::BehaviourScript> script = std::dynamic_pointer_cast<spic::BehaviourScript>(x->GetComponent <spic::BehaviourScript>());
         if (script != nullptr) {
             std::shared_ptr<spic::BoxCollider> collider = Collision::AABB(x.get(),"");
             if (collider != nullptr) {
-                std::shared_ptr<GameObject> ptr (collider->GetGameObject());
-                script->OnTriggerStay2D(ptr);
+
+               script->OnTriggerStay2D(collider->GetGameObject());
             }
 
         }
 
+    }
+}
+SPIC_API void spic::Scene::DeleteGameObject(std::shared_ptr<GameObject> obj)
+{
+
+    for (std::shared_ptr<GameObject> c : gameObjects) {
+        if (c.get() == obj.get()) {
+            for (std::shared_ptr<Component> c1 : obj->GetComponents()) {
+                c1.reset();
+            }
+            remove(gameObjects.begin(), gameObjects.end(), obj);
+            obj.reset();
+        }
     }
 }
 void Scene::Update() {

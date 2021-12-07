@@ -1,6 +1,6 @@
 #ifndef BEHAVIOURSCRIPT_H_
 #define BEHAVIOURSCRIPT_H_
-
+#include <memory>;
 #include "SpicHeader.hpp"
 #include "Component.hpp"
 
@@ -26,7 +26,7 @@ namespace spic {
              * @brief Sent each frame where another object is within a trigger
              *        collider attached to this object (2D physics only).
              */
-            virtual void OnTriggerStay2D(std::shared_ptr<GameObject> collider) = 0;
+            virtual void OnTriggerStay2D(GameObject* collider) = 0;
     
 
             /**

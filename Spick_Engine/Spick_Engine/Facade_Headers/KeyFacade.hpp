@@ -21,11 +21,13 @@ public:
 	* @brief Returns bool depending on key parameter if key is hold down.
 	*/
 	bool PollContinousEvent(const KeyCode& key);
+	bool PollContinousEvent1(const KeyCode& key);
 
 	/**
 	* @brief Returns bool depending on if key is hold down.
 	*/
 	bool PollContinousEvent();
+
 
 	/**
 	* @brief Returns true if any key is pressed

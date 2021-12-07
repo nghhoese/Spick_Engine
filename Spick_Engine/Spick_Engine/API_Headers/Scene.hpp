@@ -36,6 +36,7 @@ namespace spic {
              */
             SPIC_API void Update();
             SPIC_API void CheckCollisions();
+            SPIC_API void DeleteGameObject(std::shared_ptr<GameObject> obj);
 
             /**
              * @brief This function is called by the engine to render the scene on the engine.

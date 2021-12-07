@@ -59,6 +59,10 @@ SPIC_API bool spic::Importation::GetKey(KeyCode key) // Getest
 {
 	return keyfacade_ptr->PollContinousEvent(key);
 }
+SPIC_API bool spic::Importation::GetKey1(KeyCode key) // Getest
+{
+	return keyfacade_ptr->PollContinousEvent1(key);
+}
 
 SPIC_API bool spic::Importation::GetKeyDown(KeyCode key) // getest
 {

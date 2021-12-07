@@ -62,6 +62,25 @@ bool KeyFacade::PollContinousEvent()
         return false;
     }
 }
+bool KeyFacade::PollContinousEvent1(const KeyCode& key)
+{
+    int keyValue = (int)key;
+    SDL_PumpEvents();
+    const Uint8* state = SDL_GetKeyboardState(&keyValue);
+    SDL_Scancode code;
+    code = (SDL_Scancode)key;
+    if (SDL_PollEvent(&sdlEvent) != 0) {
+        if (sdlEvent.type == SDL_KEYUP && state[code]) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+    else {
+        return false;
+    }
+}
 
 bool KeyFacade::AnyKeyPressed()
 {

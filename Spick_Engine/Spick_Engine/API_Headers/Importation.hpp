@@ -39,6 +39,7 @@ namespace spic {
         * @brief Returns true while the user holds down the key identified by keycode.
         */
         SPIC_API bool GetKey(KeyCode key);
+        SPIC_API bool GetKey1(KeyCode key);
 
         /**
         * @brief Returns true during the frame the user starts pressing down the key identified by keycode.

@@ -4,17 +4,17 @@
 
 std::shared_ptr<spic::BoxCollider> Collision::AABB(spic::GameObject* obj1, std::string tag)
 {
-   
+
     std::shared_ptr<spic::BoxCollider> collider = std::dynamic_pointer_cast<spic::BoxCollider>(obj1->GetComponent <spic::BoxCollider>());
     if (collider != nullptr) {
         int obj1ColliderWidth = collider->Width();
         int obj1ColliderHeight = collider->Height();
         int obj2ColliderWidth = 1;
         int obj2ColliderHeight = 1;
-        for (std::shared_ptr<spic::GameObject> obj2 : obj1->getScene().get()->GetGameObjects()) {
-            
-                std::shared_ptr<spic::BoxCollider> collider2 = std::dynamic_pointer_cast<spic::BoxCollider>(obj2->GetComponent <spic::BoxCollider>());
-                if (collider2 != nullptr) {
+        for (std::shared_ptr<spic::GameObject> obj2 : obj1->getScene().get()->GetGameObjectsByTag(tag)) {
+
+            std::shared_ptr<spic::BoxCollider> collider2 = std::dynamic_pointer_cast<spic::BoxCollider>(obj2->GetComponent <spic::BoxCollider>());
+            if (collider2 != nullptr) {
                 obj2ColliderWidth = collider2->Width();
                 obj2ColliderHeight = collider2->Height();
                 if (obj1->getTransform()->position.x + obj1ColliderWidth >= obj2->getTransform()->position.x &&

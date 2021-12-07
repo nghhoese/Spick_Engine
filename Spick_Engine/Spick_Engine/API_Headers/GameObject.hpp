@@ -181,7 +181,10 @@ namespace spic {
              */
             template<class T>
             std::vector<std::shared_ptr<spic::Component>> GetComponents() const {
-                // ... implementation here
+                return components;
+            }
+            std::vector<std::shared_ptr<spic::Component>> GetComponents() {
+                return components;
             }
 
             /**
