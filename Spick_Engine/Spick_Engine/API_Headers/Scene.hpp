@@ -35,6 +35,7 @@ namespace spic {
              * @brief This function is called by the engine to update the scene on the engine.
              */
             SPIC_API void Update();
+            SPIC_API void CheckCollisions();
 
             /**
              * @brief This function is called by the engine to render the scene on the engine.

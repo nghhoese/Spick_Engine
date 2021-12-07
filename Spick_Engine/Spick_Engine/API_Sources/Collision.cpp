@@ -11,7 +11,7 @@ std::shared_ptr<spic::BoxCollider> Collision::AABB(spic::GameObject* obj1, std::
         int obj1ColliderHeight = collider->Height();
         int obj2ColliderWidth = 1;
         int obj2ColliderHeight = 1;
-        for (std::shared_ptr<spic::GameObject> obj2 : obj1->getScene().get()->GetGameObjectsByTag(tag)) {
+        for (std::shared_ptr<spic::GameObject> obj2 : obj1->getScene().get()->GetGameObjects()) {
             
                 std::shared_ptr<spic::BoxCollider> collider2 = std::dynamic_pointer_cast<spic::BoxCollider>(obj2->GetComponent <spic::BoxCollider>());
                 if (collider2 != nullptr) {

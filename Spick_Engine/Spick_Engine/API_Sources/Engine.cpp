@@ -67,6 +67,7 @@ SPIC_API void spic::Engine::StartGameLoop()
 			RenderAccumulatedDelta -= RenderTargetFrameRate;
 			_startTicks = time.GetTicks();
 			activeScene->Render();
+			activeScene->CheckCollisions();
 			CalculateFPS();
 		}
 	}

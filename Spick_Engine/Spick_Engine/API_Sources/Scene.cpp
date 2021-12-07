@@ -1,6 +1,7 @@
 #include "../API_Headers/Scene.hpp"
 #include "../API_Headers/UIObject.hpp"
 #include "../API_Headers/Text.hpp"
+#include "../API_Headers/Collision.hpp"
 
 using namespace spic;
 
@@ -11,7 +12,22 @@ SPIC_API Scene::Scene(const std::string& name) {
 
 
 }
+void spic::Scene::CheckCollisions()
+{
+    for (std::shared_ptr<GameObject> x : gameObjects) {
+        x->GetComponent <spic::BehaviourScript>();
+        std::shared_ptr<spic::BehaviourScript> script = std::dynamic_pointer_cast<spic::BehaviourScript>( x->GetComponent <spic::BehaviourScript>());
+        if (script != nullptr) {
+            std::shared_ptr<spic::BoxCollider> collider = Collision::AABB(x.get(),"");
+            if (collider != nullptr) {
+                std::shared_ptr<GameObject> ptr (collider->GetGameObject());
+                script->OnTriggerStay2D(ptr);
+            }
 
+        }
+
+    }
+}
 void Scene::Update() {
     for (std::shared_ptr<GameObject> x : gameObjects) {
         x->Update();
