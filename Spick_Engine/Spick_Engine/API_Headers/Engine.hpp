@@ -119,7 +119,7 @@ namespace spic {
         std::shared_ptr<TiledFacade> tiledFacade;
 
         int _fps = 0;
-        int _maxFPS = 100;
+        int _maxFPS = 1000;
         int _startTicks;
         Time time;
         int frames = 0;

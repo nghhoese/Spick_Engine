@@ -11,20 +11,23 @@ std::shared_ptr<spic::BoxCollider> Collision::AABB(spic::GameObject* obj1, std::
         int obj1ColliderHeight = collider->Height();
         int obj2ColliderWidth = 1;
         int obj2ColliderHeight = 1;
+        auto tranform = obj1->getTransform();
         for (std::shared_ptr<spic::GameObject> obj2 : obj1->getScene().get()->GetGameObjectsByTag(tag)) {
-            
-                std::shared_ptr<spic::BoxCollider> collider2 = std::dynamic_pointer_cast<spic::BoxCollider>(obj2->GetComponent <spic::BoxCollider>());
-                if (collider2 != nullptr) {
-                obj2ColliderWidth = collider2->Width();
-                obj2ColliderHeight = collider2->Height();
-                if (obj1->getTransform()->position.x + obj1ColliderWidth >= obj2->getTransform()->position.x &&
-                    obj2->getTransform()->position.x + obj2ColliderWidth >= obj1->getTransform()->position.x &&
-                    obj1->getTransform()->position.y + obj1ColliderWidth >= obj2->getTransform()->position.y &&
-                    obj2->getTransform()->position.y + obj2ColliderHeight >= obj1->getTransform()->position.y
-                    ) {
-                    return collider2;
+                        std::shared_ptr<spic::BoxCollider> collider2 = std::dynamic_pointer_cast<spic::BoxCollider>(obj2->GetComponent <spic::BoxCollider>());
+                        if (collider2 != nullptr) {
+                            obj2ColliderWidth = collider2->Width();
+                            obj2ColliderHeight = collider2->Height();
+                            auto tranform2 = obj2->getTransform();
+                            if (tranform->position.x + obj1ColliderWidth >= tranform2->position.x &&
+                                tranform2->position.x + obj2ColliderWidth >= tranform->position.x &&
+                                tranform->position.y + obj1ColliderWidth >= tranform2->position.y &&
+                                tranform2->position.y + obj2ColliderHeight >= tranform->position.y
+                                ) {
+                                return collider2;
+                            }                                         
                 }
-            }
+            
+
         }
     }
 

@@ -90,15 +90,15 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(SolutionDir)External Libraries\SDL2\include;$(SolutionDir)External Libraries\SDL2_image\include;$(SolutionDir)External Libraries\box2d\include;$(SolutionDir)External Libraries\SDL2_ttf\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)External Libraries\SDL2\include;$(SolutionDir)External Libraries\SDL2_image\include;$(SolutionDir)External Libraries\box2d\include;$(SolutionDir)External Libraries\SDL2_ttf\include;$(SolutionDir)External Libraries\SDL2_mixer\include</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
-      <AdditionalLibraryDirectories>$(SolutionDir)External Libraries\box2d\lib;$(SolutionDir)External Libraries\SDL2\lib\x86;$(SolutionDir)External Libraries\SDL2_ttf\lib\x86;$(SolutionDir)External Libraries\SDL2_image\lib\x86</AdditionalLibraryDirectories>
-      <AdditionalDependencies>SDL2.lib;SDL2_image.lib;box2d.lib;SDL2_ttf.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)External Libraries\box2d\lib;$(SolutionDir)External Libraries\SDL2\lib\x86;$(SolutionDir)External Libraries\SDL2_ttf\lib\x86;$(SolutionDir)External Libraries\SDL2_image\lib\x86;$(SolutionDir)External Libraries\SDL2_mixer\lib\x86</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;SDL2_image.lib;box2d.lib;SDL2_ttf.lib;SDL2_mixer.lib</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
       <Command>xcopy /y/d "$(OutDir)Spick_Engine.dll" "$(SolutionDir)..\..\Spick_Game\Spick_Game\Debug"</Command>
@@ -114,7 +114,7 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(SolutionDir)External Libraries\SDL2\include;$(SolutionDir)External Libraries\SDL2_image\include;$(SolutionDir)External Libraries\box2d\include;$(SolutionDir)External Libraries\SDL2_ttf\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)External Libraries\SDL2\include;$(SolutionDir)External Libraries\SDL2_image\include;$(SolutionDir)External Libraries\box2d\include;$(SolutionDir)External Libraries\SDL2_ttf\include;$(SolutionDir)External Libraries\SDL2_mixer\include</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -123,8 +123,8 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
-      <AdditionalLibraryDirectories>$(SolutionDir)External Libraries\box2d\lib;$(SolutionDir)External Libraries\SDL2\lib\x86;$(SolutionDir)External Libraries\SDL2_ttf\lib\x86;$(SolutionDir)External Libraries\SDL2_image\lib\x86</AdditionalLibraryDirectories>
-      <AdditionalDependencies>SDL2.lib;SDL2_image.lib;box2d.lib;SDL2_ttf.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)External Libraries\box2d\lib;$(SolutionDir)External Libraries\SDL2\lib\x86;$(SolutionDir)External Libraries\SDL2_ttf\lib\x86;$(SolutionDir)External Libraries\SDL2_image\lib\x86;$(SolutionDir)External Libraries\SDL2_mixer\lib\x86</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;SDL2_image.lib;box2d.lib;SDL2_ttf.lib;SDL2_mixer.lib</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
       <Command>xcopy /y/d "$(OutDir)Spick_Engine.dll" "$(SolutionDir)..\..\Spick_Game\Spick_Game\Debug"</Command>
@@ -138,15 +138,15 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(SolutionDir)External Libraries\SDL2\include;$(SolutionDir)External Libraries\SDL2_image\include;$(SolutionDir)External Libraries\box2d\include;$(SolutionDir)External Libraries\SDL2_ttf\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)External Libraries\SDL2\include;$(SolutionDir)External Libraries\SDL2_image\include;$(SolutionDir)External Libraries\box2d\include;$(SolutionDir)External Libraries\SDL2_ttf\include;$(SolutionDir)External Libraries\SDL2_mixer\include</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
-      <AdditionalLibraryDirectories>$(SolutionDir)External Libraries\box2d\lib;$(SolutionDir)External Libraries\SDL2\lib\x86;$(SolutionDir)External Libraries\SDL2_ttf\lib\x86;$(SolutionDir)External Libraries\SDL2_image\lib\x86</AdditionalLibraryDirectories>
-      <AdditionalDependencies>SDL2.lib;SDL2_image.lib;box2d.lib;SDL2_ttf.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)External Libraries\box2d\lib;$(SolutionDir)External Libraries\SDL2\lib\x86;$(SolutionDir)External Libraries\SDL2_ttf\lib\x86;$(SolutionDir)External Libraries\SDL2_image\lib\x86;$(SolutionDir)External Libraries\SDL2_mixer\lib\x86</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;SDL2_image.lib;box2d.lib;SDL2_ttf.lib;SDL2_mixer.lib</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
       <Command>xcopy /y/d "$(OutDir)Spick_Engine.dll" "$(SolutionDir)..\..\Spick_Game\Spick_Game\Debug"</Command>
@@ -162,7 +162,7 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(SolutionDir)External Libraries\SDL2\include;$(SolutionDir)External Libraries\SDL2_image\include;$(SolutionDir)External Libraries\box2d\include;$(SolutionDir)External Libraries\SDL2_ttf\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)External Libraries\SDL2\include;$(SolutionDir)External Libraries\SDL2_image\include;$(SolutionDir)External Libraries\box2d\include;$(SolutionDir)External Libraries\SDL2_ttf\include;$(SolutionDir)External Libraries\SDL2_mixer\include</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -171,8 +171,8 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
-      <AdditionalLibraryDirectories>$(SolutionDir)External Libraries\box2d\lib;$(SolutionDir)External Libraries\SDL2\lib\x86;$(SolutionDir)External Libraries\SDL2_ttf\lib\x86;$(SolutionDir)External Libraries\SDL2_image\lib\x86</AdditionalLibraryDirectories>
-      <AdditionalDependencies>SDL2.lib;SDL2_image.lib;box2d.lib;SDL2_ttf.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)External Libraries\box2d\lib;$(SolutionDir)External Libraries\SDL2\lib\x86;$(SolutionDir)External Libraries\SDL2_ttf\lib\x86;$(SolutionDir)External Libraries\SDL2_image\lib\x86;$(SolutionDir)External Libraries\SDL2_mixer\lib\x86</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;SDL2_image.lib;box2d.lib;SDL2_ttf.lib;SDL2_mixer.lib</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
       <Command>xcopy /y/d "$(OutDir)Spick_Engine.dll" "$(SolutionDir)..\..\Spick_Game\Spick_Game\Debug"</Command>
