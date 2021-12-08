@@ -106,6 +106,7 @@
     <None Include="Debug\Spick_Engine.ilk" />
     <None Include="Debug\vc142.idb" />
     <None Include="Debug\vc142.pdb" />
+    <None Include="cpp.hint" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="Debug\Spick_Engine.Build.CppClean.log" />
