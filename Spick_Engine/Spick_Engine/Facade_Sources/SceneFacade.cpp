@@ -45,7 +45,7 @@ int WindowFacade::create_window(const std::string& title, float height, float wi
 			throw Exceptions::SDLInitFailed();
 		}
 		Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT,2,2048);
-
+		Mix_VolumeMusic(50);
 		
 		//Initialize SDL_ttf
 		if (TTF_Init() == -1)
