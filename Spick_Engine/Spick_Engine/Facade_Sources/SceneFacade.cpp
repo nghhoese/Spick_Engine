@@ -45,8 +45,8 @@ int WindowFacade::create_window(const std::string& title, float height, float wi
 			throw Exceptions::SDLInitFailed();
 		}
 		Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT,2,2048);
-		Mix_Music* bgMusic = Mix_LoadMUS("assets/Erika.mp3");
-		Mix_PlayMusic(bgMusic,-1);
+
+		
 		//Initialize SDL_ttf
 		if (TTF_Init() == -1)
 		{
@@ -80,6 +80,7 @@ int WindowFacade::create_window(const std::string& title, float height, float wi
 
 void WindowFacade::destroy() {
 	//Quit SDL subsystems
+	Mix_Quit();
 	SDL_Quit();
 	TTF_Quit();
 }
