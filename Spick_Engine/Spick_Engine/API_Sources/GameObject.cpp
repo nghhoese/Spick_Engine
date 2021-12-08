@@ -90,4 +90,18 @@ SPIC_API std::shared_ptr<spic::Component> GameObject::GetComponentByName(const s
 	return nullptr;
 }
 
+SPIC_API void GameObject::AddScene(std::shared_ptr<Scene> _scene)
+{
+	this->scenes.push_back(_scene);
+}
+
+SPIC_API void GameObject::SetActiveScene(std::shared_ptr<spic::Scene> scene)
+{
+	for (std::shared_ptr<Scene> s : scenes) {
+		if (s == scene) {
+			scene = s;
+		}
+	}
+}
+
 // Template classes implementatie nog vullen in header file

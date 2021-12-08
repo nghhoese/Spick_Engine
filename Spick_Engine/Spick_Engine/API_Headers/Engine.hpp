@@ -105,7 +105,11 @@ namespace spic {
 
         SPIC_API bool getGameOver();
 
-        SPIC_API void setGameOver(const bool jeoma);
+        SPIC_API void setGameOver(bool gameOverBool);
+
+        SPIC_API const int getCurrentLevel();
+
+        SPIC_API void setCurrentLevel(int currentLevelNumber);
 
         float TimeScale;
         float TargetFrameRate;
@@ -128,6 +132,7 @@ namespace spic {
         void CalculateFPS();
 
         bool gameOver = false;
+        int currentLevel = 1;
         float m_lastTime;
     };
 

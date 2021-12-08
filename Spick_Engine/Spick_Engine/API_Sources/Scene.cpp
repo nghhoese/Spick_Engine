@@ -90,7 +90,8 @@ SPIC_API void Scene::AddGameObject(std::shared_ptr<GameObject> gameObject) {
     gameObjects.push_back(gameObject);
     std::shared_ptr<Scene> scene;
     scene.reset(this);
-    gameObject->SetScene(scene);
+    gameObject->AddScene(scene);
+    gameObject->SetActiveScene(scene);
 }
 
 void spic::Scene::SetDelay(const int ms) const
@@ -98,7 +99,11 @@ void spic::Scene::SetDelay(const int ms) const
     sceneFacade->SetDelay(ms);
 }
 
-
+SPIC_API std::shared_ptr<GameObject> Scene::SwitchGameObjectToScene(std::shared_ptr<GameObject> gameObject) {
+    remove(gameObjects.begin(), gameObjects.end(), gameObject);
+    //gameObject->SetScene(nullptr);
+    return gameObject;
+}
 
 
 

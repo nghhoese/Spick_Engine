@@ -106,6 +106,8 @@ namespace spic {
              */
             void SetDelay(const int ms) const;
 
+            SPIC_API std::shared_ptr<GameObject> SwitchGameObjectToScene(std::shared_ptr<GameObject> gameObject);
+
     private:
         std::string name;
         std::vector<std::shared_ptr<GameObject>> gameObjects;

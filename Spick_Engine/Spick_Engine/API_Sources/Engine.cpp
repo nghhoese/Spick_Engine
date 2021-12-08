@@ -155,3 +155,12 @@ SPIC_API void spic::Engine::setGameOver(bool gameOverBool) {
 	gameOver = gameOverBool;
 }
 
+SPIC_API const int spic::Engine::getCurrentLevel()
+{
+	return currentLevel;
+}
+
+SPIC_API void spic::Engine::setCurrentLevel(int currentLevelNumber) {
+	currentLevel = currentLevelNumber;
+}
+

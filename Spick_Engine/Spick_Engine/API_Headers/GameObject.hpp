@@ -244,7 +244,10 @@ namespace spic {
             SPIC_API virtual void Update();
 
             SPIC_API const Transform* getTransform();
-            SPIC_API  void setTransform(Transform* _transform) { transform = *_transform; };
+            SPIC_API void setTransform(Transform* _transform) { transform = *_transform; };
+
+            SPIC_API void AddScene(std::shared_ptr<Scene> _scene);
+            SPIC_API void SetActiveScene(std::shared_ptr<spic::Scene> scene);
 
         private:
             std::string name;
@@ -256,6 +259,7 @@ namespace spic {
             std::shared_ptr<GameObject> parent;
             static std::vector<GameObject> children;
             std::vector<std::shared_ptr<spic::Component>> components;
+            std::vector<std::shared_ptr<Scene>> scenes;
     };
 
 }
