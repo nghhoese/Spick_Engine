@@ -164,3 +164,11 @@ SPIC_API void spic::Engine::setCurrentLevel(int currentLevelNumber) {
 	currentLevel = currentLevelNumber;
 }
 
+SPIC_API bool spic::Engine::getCheatsEnabled() {
+	return cheatsEnabled;
+}
+
+SPIC_API void spic::Engine::setCheatsEnabled(bool cheatsBool) {
+	cheatsEnabled = cheatsBool;
+}
+

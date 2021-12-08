@@ -111,6 +111,10 @@ namespace spic {
 
         SPIC_API void setCurrentLevel(int currentLevelNumber);
 
+        SPIC_API bool getCheatsEnabled();
+
+        SPIC_API void setCheatsEnabled(bool cheatsBool);
+
         float TimeScale;
         float TargetFrameRate;
     private:
@@ -132,6 +136,7 @@ namespace spic {
         void CalculateFPS();
 
         bool gameOver = false;
+        bool cheatsEnabled = false;
         int currentLevel = 1;
         float m_lastTime;
     };
