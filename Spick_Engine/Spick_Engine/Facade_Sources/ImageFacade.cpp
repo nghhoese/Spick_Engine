@@ -67,3 +67,23 @@ void spic::ImageFacade::setScale(double scale)
 {
 	this->scale = scale;
 }
+
+const Rectangle& spic::ImageFacade::GetRectangle()
+{
+	Rectangle rectangle;
+	rectangle.x = srcR.x;
+	rectangle.y = srcR.y;
+	rectangle.width = srcR.w;
+	rectangle.height = srcR.h;
+	return rectangle;
+}
+
+void spic::ImageFacade::SetRectangle(const Rectangle& rec)
+{
+	this->srcR.x = rec.x;
+	this->srcR.y = rec.y;
+	this->srcR.w = rec.width;
+	this->srcR.h = rec.height;
+}
+
+

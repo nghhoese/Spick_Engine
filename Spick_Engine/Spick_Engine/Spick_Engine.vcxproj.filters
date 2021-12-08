@@ -45,6 +45,8 @@
     <ClCompile Include="API_Sources\BoxCollider.cpp" />
     <ClCompile Include="Facade_Sources\RectangleFacade.cpp" />
     <ClCompile Include="API_Sources\Collision.cpp" />
+    <ClCompile Include="API_Sources\Animator.cpp" />
+    <ClCompile Include="Facade_Sources\AnimatorFacade.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="API_Headers\Animator.hpp" />
@@ -96,6 +98,7 @@
     <ClInclude Include="API_Headers\Rectangle.hpp" />
     <ClInclude Include="Facade_Headers\RectangleFacade.hpp" />
     <ClInclude Include="API_Headers\Collision.hpp" />
+    <ClInclude Include="Facade_Headers\AnimatorFacade.hpp" />
   </ItemGroup>
   <ItemGroup>
     <Font Include="Fonts\Capsmall.ttf" />

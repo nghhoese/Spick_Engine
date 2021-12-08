@@ -8,6 +8,7 @@
 #include "../Facade_Headers/SceneFacade.hpp"
 #include "GameObject.hpp"
 #include "Scene.hpp"
+#include "Rectangle.hpp"
 
 namespace spic {
 
@@ -154,7 +155,8 @@ namespace spic {
          void OnClick();
 
          void SetPlayerBool(bool value);
-
+         const Rectangle& GetRectangle();
+         void SetRectangle(const Rectangle& rectangle);
     private:
         Transform transform;
         std::string sprite;

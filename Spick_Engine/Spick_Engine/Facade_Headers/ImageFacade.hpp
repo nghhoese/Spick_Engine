@@ -4,6 +4,7 @@
 #include "SceneFacade.hpp"
 #include <string>
 #include <SDL.h>
+#include "../API_Headers/Rectangle.hpp"
 
 namespace spic {
 
@@ -23,6 +24,8 @@ namespace spic {
         void setPath(std::string path);
         void setRotation(double rotation);
         void setScale(double scale);
+        const Rectangle& GetRectangle();
+        void SetRectangle(const Rectangle& rec);
     private:
         SDL_Surface* tmpSurface;
         SDL_Texture* _texture;

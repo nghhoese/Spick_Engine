@@ -1,6 +1,5 @@
 #include "..\API_Headers\Sprite.hpp"
 
-
 spic::Sprite::Sprite()
 {
 	imageFacade = std::make_unique<spic::ImageFacade>();
@@ -78,6 +77,16 @@ void spic::Sprite::OnRender()
 void spic::Sprite::SetPlayerBool(bool value)
 {
 	this->player = value;
+}
+
+const Rectangle& spic::Sprite::GetRectangle()
+{
+	return imageFacade->GetRectangle();
+}
+
+void spic::Sprite::SetRectangle(const Rectangle& rectangle)
+{
+	imageFacade->SetRectangle(rectangle);
 }
 
 void spic::Sprite::OnClick() {

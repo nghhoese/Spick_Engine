@@ -1,8 +1,9 @@
-#ifndef ANIMATOR_H_
-#define ANIMATOR_H_
+#pragma once
 
 #include "Component.hpp"
+#include "SpicHeader.hpp"
 #include "Sprite.hpp"
+#include "../Facade_Headers/AnimatorFacade.hpp"
 #include <vector>
 
 namespace spic {
@@ -10,8 +11,9 @@ namespace spic {
     /**
      * @brief A component which can play animated sequences of sprites.
      */
-    class Animator : public Component {
+    class SPIC_API Animator : public Component {
         public:
+            Animator();
             /**
              * @brief Get fps.
              * @return fps.
@@ -19,20 +21,31 @@ namespace spic {
             const int GetFps() const { return fps; }
 
             /**
-             * @brief Set fps.
+             * @brief Set amountOfSprites.
              */
             void SetFps(int fps) { this->fps = fps; }
+
+            /**
+             * @brief Get amountOfSprites.
+             * @return amountOfSprites.
+             */
+            const int GetAmountOfSprites() const { return amountOfSprites; }
+
+            /**
+             * @brief Set fps.
+             */
+            void SetAmountOfSprites(int amountOfSprites) { this->amountOfSprites = amountOfSprites, animatorFacade->setAmountOfSprites(amountOfSprites); }
 
             /**
              * @brief Get sprites.
              * @return sprites.
              */
-            const std::vector<Sprite>& GetSprites() const { return sprites; }
+            const std::vector<std::shared_ptr<Sprite>>& GetSprites() const { return sprites; }
 
             /**
              * @brief Set sprites.
              */
-            void SetSprites(const std::vector<Sprite>& sprites) { this->sprites = sprites; }
+            void SetSprites(const std::vector<std::shared_ptr<Sprite>>& sprites) { this->sprites = sprites; }
 
             /**
              * @brief Start playing the image sequence.
@@ -52,9 +65,13 @@ namespace spic {
              * @brief frames per second (playing speed)
              */
             int fps;
-            std::vector<Sprite> sprites;
+            /**
+             * @brief sprites per spritesheet
+            */
+            int amountOfSprites; 
+            bool looping;
+            std::vector<std::shared_ptr<Sprite>> sprites;
+            std::unique_ptr<spic::AnimatorFacade> animatorFacade;
     };
 
 }
-
-#endif // ANIMATOR_H_
