@@ -81,7 +81,7 @@ namespace spic {
         /**
          * @brief Get active scene to use for update and rendering.
          */
-        SPIC_API std::shared_ptr<spic::Scene> GetActiveScene();
+        SPIC_API std::shared_ptr<spic::Scene> GetActiveScene() { return this->activeScene; };
 
         /**
          * @brief Get scene by name.

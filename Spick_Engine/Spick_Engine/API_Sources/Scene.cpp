@@ -98,6 +98,10 @@ void spic::Scene::SetDelay(const int ms) const
     sceneFacade->SetDelay(ms);
 }
 
+SPIC_API void spic::Scene::Quit() {
+    sceneFacade->destroy();
+}
+
 
 
 

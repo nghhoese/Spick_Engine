@@ -106,6 +106,11 @@ namespace spic {
              */
             void SetDelay(const int ms) const;
 
+            /**
+             * @brief Call to quit application
+             */
+
+            SPIC_API void Quit();
     private:
         std::string name;
         std::vector<std::shared_ptr<GameObject>> gameObjects;
