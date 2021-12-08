@@ -41,10 +41,12 @@ int WindowFacade::create_window(const std::string& title, float height, float wi
 	_window_width = width;
 	set_scene_size(height, width);
 	try {
-		if (SDL_Init(SDL_INIT_VIDEO) < NULL) {
+		if (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_AUDIO) < NULL) {
 			throw Exceptions::SDLInitFailed();
 		}
-
+		Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT,2,2048);
+		Mix_Music* bgMusic = Mix_LoadMUS("assets/Erika.mp3");
+		Mix_PlayMusic(bgMusic,-1);
 		//Initialize SDL_ttf
 		if (TTF_Init() == -1)
 		{

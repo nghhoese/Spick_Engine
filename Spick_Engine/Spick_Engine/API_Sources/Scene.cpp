@@ -75,12 +75,9 @@ SPIC_API std::vector<std::shared_ptr<GameObject>> Scene::GetGameObjectsByName(co
 SPIC_API std::vector<std::shared_ptr<GameObject>> Scene::GetGameObjectsByTag(const std::string& gameObjectTag) {
     std::vector<std::shared_ptr<GameObject>> objects = std::vector<std::shared_ptr<GameObject>>{};
     for (std::shared_ptr<GameObject> x : gameObjects) {
-        for (std::string tag : x->GetTags()) {
-            if (gameObjectTag == tag) {
+            if (std::count(x->GetTags().begin(), x->GetTags().end(), gameObjectTag)) {
                 objects.push_back(x);
-            }
-        }
-
+            }    
     }
     return objects;
 }
