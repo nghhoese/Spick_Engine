@@ -98,8 +98,8 @@ SPIC_API void GameObject::AddScene(std::shared_ptr<Scene> _scene)
 SPIC_API void GameObject::SetActiveScene(std::shared_ptr<spic::Scene> scene)
 {
 	for (std::shared_ptr<Scene> s : scenes) {
-		if (s == scene) {
-			scene = s;
+		if (s.get() == scene.get()) {
+			this->scene = s;
 		}
 	}
 }
