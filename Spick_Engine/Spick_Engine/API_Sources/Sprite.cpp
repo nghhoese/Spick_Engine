@@ -79,7 +79,7 @@ void spic::Sprite::SetPlayerBool(bool value)
 	this->player = value;
 }
 
-const Rectangle& spic::Sprite::GetRectangle()
+const spic::Rectangle& spic::Sprite::GetRectangle()
 {
 	return imageFacade->GetRectangle();
 }
