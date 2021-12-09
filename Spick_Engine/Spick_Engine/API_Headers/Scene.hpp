@@ -108,6 +108,12 @@ namespace spic {
 
             SPIC_API std::shared_ptr<GameObject> SwitchGameObjectToScene(std::shared_ptr<GameObject> gameObject);
 
+            /**
+             * @brief Call to quit application
+             */
+
+            SPIC_API void Quit();
+
     private:
         std::string name;
         std::vector<std::shared_ptr<GameObject>> gameObjects;

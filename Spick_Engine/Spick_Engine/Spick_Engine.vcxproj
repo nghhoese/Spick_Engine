@@ -228,8 +228,10 @@
     <ClInclude Include="Facade_Headers\TiledFacade.hpp" />
     <ClInclude Include="Facade_Headers\Tileson\tileson.hpp" />
     <ClInclude Include="Facade_Headers\RectangleFacade.hpp" />
+    <ClInclude Include="Facade_Headers\SoundFacade.hpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="API_Sources\AudioSource.cpp" />
     <ClCompile Include="API_Sources\BoxCollider.cpp" />
     <ClCompile Include="API_Sources\Button.cpp" />
     <ClCompile Include="API_Sources\Camera.cpp" />
@@ -254,6 +256,7 @@
     <ClCompile Include="Facade_Sources\TextFacade.cpp" />
     <ClCompile Include="Facade_Sources\TiledFacade.cpp" />
     <ClCompile Include="Facade_Sources\RectangleFacade.cpp" />
+    <ClCompile Include="Facade_Sources\SoundFacade.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Object Include="Debug\Camera.obj" />

@@ -45,8 +45,8 @@ int WindowFacade::create_window(const std::string& title, float height, float wi
 			throw Exceptions::SDLInitFailed();
 		}
 		Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT,2,2048);
-		Mix_Music* bgMusic = Mix_LoadMUS("assets/Erika.mp3");
-		Mix_PlayMusic(bgMusic,-1);
+		Mix_VolumeMusic(50);
+		
 		//Initialize SDL_ttf
 		if (TTF_Init() == -1)
 		{
@@ -54,7 +54,7 @@ int WindowFacade::create_window(const std::string& title, float height, float wi
 		}
 
 		_window.reset(SDL_CreateWindow(title.c_str(), SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, width, height, 0));
-		SDL_SetWindowFullscreen(_window.get(), SDL_WINDOW_FULLSCREEN_DESKTOP);
+		SDL_SetWindowFullscreen(_window.get(), 0);
 
 
 		if (_window == NULL) {
@@ -80,6 +80,7 @@ int WindowFacade::create_window(const std::string& title, float height, float wi
 
 void WindowFacade::destroy() {
 	//Quit SDL subsystems
+	Mix_Quit();
 	SDL_Quit();
 	TTF_Quit();
 }

@@ -101,10 +101,11 @@ void spic::Scene::SetDelay(const int ms) const
 
 SPIC_API std::shared_ptr<GameObject> Scene::SwitchGameObjectToScene(std::shared_ptr<GameObject> gameObject) {
     remove(gameObjects.begin(), gameObjects.end(), gameObject);
-    //gameObject->SetScene(nullptr);
     return gameObject;
 }
 
-
+SPIC_API void spic::Scene::Quit() {
+    sceneFacade->destroy();
+}
 
 // Template classes implementatie nog vullen in header file
