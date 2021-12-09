@@ -4,9 +4,9 @@
 #include "SpicHeader.hpp"
 #include "Component.hpp"
 
-class Collider;
-
 namespace spic {
+
+    class Collider;
 
     class SPIC_API BehaviourScript : public Component {
         public:

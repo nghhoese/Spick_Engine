@@ -27,6 +27,11 @@ namespace spic {
             const std::string& GetName() const { return name; }
 
             /**
+             * @brief Set name.
+             */
+            const void SetName(const std::string& newName) { name = newName; }
+
+            /**
              * @brief Get tag.
              * @return tag.
              */
