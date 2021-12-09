@@ -16,12 +16,13 @@ Uint32 spic::AnimatorFacade::GetSeconds()
 
 Uint32 spic::AnimatorFacade::Getsprite()
 {
-	return (GetSeconds() % getAmountOfSprites());
+	Uint32 value = (GetSeconds() % getAmountOfSprites());
+	return value;
 }
 
 void spic::AnimatorFacade::ReplaceSprite(std::shared_ptr<Sprite> sprite)
 {
-	SDL_Rect srcrect = { Getsprite() * sprite->GetWidth(), 0, sprite->GetWidth(), (sprite->GetWidth() * 2) };
+	SDL_Rect srcrect = { Getsprite() * 32, 0, 32, 64 };
 	Rectangle rectangle = sprite->GetRectangle();
 	rectangle.x = srcrect.x;
 	rectangle.y = srcrect.y;

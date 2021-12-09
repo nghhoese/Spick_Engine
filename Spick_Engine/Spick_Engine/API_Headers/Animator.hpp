@@ -58,7 +58,26 @@ namespace spic {
              *        last will remain shown.
              */
             void Stop();
-            void OnClick() = 0;
+
+
+            void OnClick();
+
+            void OnAwake();
+
+            /**
+             * @brief Called right before first frame draw.
+             */
+            void OnStart();
+
+            /**
+             * @brief Called every frame draw.
+             */
+            void OnUpdate();
+
+            /**
+             * @brief Called every frame draw after update.
+             */
+            void OnRender();
 
         private:
             /**

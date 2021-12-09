@@ -71,19 +71,20 @@ void spic::ImageFacade::setScale(double scale)
 const spic::Rectangle& spic::ImageFacade::GetRectangle()
 {
 	Rectangle rectangle;
-	rectangle.x = srcR.x;
-	rectangle.y = srcR.y;
-	rectangle.width = srcR.w;
-	rectangle.height = srcR.h;
+	rectangle.x = destR.x;
+	rectangle.y = destR.y;
+	rectangle.width = destR.w;
+	rectangle.height = destR.h;
 	return rectangle;
 }
 
 void spic::ImageFacade::SetRectangle(const Rectangle& rec)
 {
-	this->srcR.x = rec.x;
-	this->srcR.y = rec.y;
-	this->srcR.w = rec.width;
-	this->srcR.h = rec.height;
+	this->destR.x = rec.x;
+	this->destR.y = rec.y;
+	this->destR.w = rec.width;
+	this->destR.h = rec.height;
+	SDL_RenderCopyEx(spic::WindowFacade::GetInstance()->_renderer.get(), _texture, NULL, &destR, this->rotation, NULL, SDL_FLIP_NONE);
 }
 
 

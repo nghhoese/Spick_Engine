@@ -22,10 +22,29 @@ C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Sprite.hpp(175): mess
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Animator.hpp(14,48): warning C4275: non dll-interface class 'spic::Component' used as base for dll-interface class 'spic::Animator'
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Component.hpp(15): message : see declaration of 'spic::Component'
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Animator.hpp(14): message : see declaration of 'spic::Animator'
-C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Animator.hpp(73,50): warning C4251: 'spic::Animator::sprites': class 'std::vector<std::shared_ptr<spic::Sprite>,std::allocator<std::shared_ptr<spic::Sprite>>>' needs to have dll-interface to be used by clients of class 'spic::Animator'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Animator.hpp(92,50): warning C4251: 'spic::Animator::sprites': class 'std::vector<std::shared_ptr<spic::Sprite>,std::allocator<std::shared_ptr<spic::Sprite>>>' needs to have dll-interface to be used by clients of class 'spic::Animator'
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Animator.hpp(43): message : see declaration of 'std::vector<std::shared_ptr<spic::Sprite>,std::allocator<std::shared_ptr<spic::Sprite>>>'
-C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Animator.hpp(74,51): warning C4251: 'spic::Animator::animatorFacade': class 'std::unique_ptr<spic::AnimatorFacade,std::default_delete<spic::AnimatorFacade>>' needs to have dll-interface to be used by clients of class 'spic::Animator'
-C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Animator.hpp(74): message : see declaration of 'std::unique_ptr<spic::AnimatorFacade,std::default_delete<spic::AnimatorFacade>>'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Animator.hpp(93,51): warning C4251: 'spic::Animator::animatorFacade': class 'std::unique_ptr<spic::AnimatorFacade,std::default_delete<spic::AnimatorFacade>>' needs to have dll-interface to be used by clients of class 'spic::Animator'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Animator.hpp(93): message : see declaration of 'std::unique_ptr<spic::AnimatorFacade,std::default_delete<spic::AnimatorFacade>>'
+  AudioSource.cpp
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\BehaviourScript.hpp(11,55): warning C4275: non dll-interface class 'spic::Component' used as base for dll-interface class 'spic::BehaviourScript'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Component.hpp(15): message : see declaration of 'spic::Component'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\BehaviourScript.hpp(11): message : see declaration of 'spic::BehaviourScript'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\GameObject.hpp(43,60): warning C4834: discarding return value of function with 'nodiscard' attribute
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Camera.hpp(14,47): warning C4275: non dll-interface class 'spic::GameObject' used as base for dll-interface class 'spic::Camera'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\GameObject.hpp(18): message : see declaration of 'spic::GameObject'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Camera.hpp(14): message : see declaration of 'spic::Camera'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Camera.hpp(39,21): warning C4251: 'spic::Camera::name': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'spic::Camera'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.29.30133\include\xstring(4905): message : see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Camera.hpp(40,15): warning C4251: 'spic::Camera::backgroundColor': class 'spic::Color' needs to have dll-interface to be used by clients of class 'spic::Camera'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Color.hpp(11): message : see declaration of 'spic::Color'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\AudioSource.hpp(20,51): warning C4275: non dll-interface class 'spic::Component' used as base for dll-interface class 'spic::AudioSource'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Component.hpp(15): message : see declaration of 'spic::Component'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\AudioSource.hpp(20): message : see declaration of 'spic::AudioSource'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\AudioSource.hpp(120,25): warning C4251: 'spic::AudioSource::audioClip': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'spic::AudioSource'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.29.30133\include\xstring(4905): message : see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\AudioSource.hpp(146,48): warning C4251: 'spic::AudioSource::soundFacade': class 'std::unique_ptr<spic::SoundFacade,std::default_delete<spic::SoundFacade>>' needs to have dll-interface to be used by clients of class 'spic::AudioSource'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\AudioSource.hpp(146): message : see declaration of 'std::unique_ptr<spic::SoundFacade,std::default_delete<spic::SoundFacade>>'
   BoxCollider.cpp
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\BehaviourScript.hpp(11,55): warning C4275: non dll-interface class 'spic::Component' used as base for dll-interface class 'spic::BehaviourScript'
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Component.hpp(15): message : see declaration of 'spic::Component'
@@ -211,26 +230,25 @@ C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Sprite.hpp(163,15): w
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Color.hpp(11): message : see declaration of 'spic::Color'
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Sprite.hpp(175,44): warning C4251: 'spic::Sprite::imageFacade': class 'std::unique_ptr<spic::ImageFacade,std::default_delete<spic::ImageFacade>>' needs to have dll-interface to be used by clients of class 'spic::Sprite'
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Sprite.hpp(175): message : see declaration of 'std::unique_ptr<spic::ImageFacade,std::default_delete<spic::ImageFacade>>'
-C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\AnimatorFacade.cpp(24,35): warning C4838: conversion from 'Uint32' to 'int' requires a narrowing conversion
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\AnimatorFacade.cpp(25,35): warning C4838: conversion from 'Uint32' to 'int' requires a narrowing conversion
   ButtonFacade.cpp
   CameraFacade.cpp
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\CameraFacade.cpp(19,26): warning C4244: '=': conversion from 'const double' to 'int', possible loss of data
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\CameraFacade.cpp(20,26): warning C4244: '=': conversion from 'const double' to 'int', possible loss of data
+  Generating Code...
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Sources\Scene.cpp(63): warning C4715: 'spic::Scene::GetCameraByName': not all control paths return a value
+  Compiling...
   ImageFacade.cpp
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\ImageFacade.cpp(35,20): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\ImageFacade.cpp(36,20): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-  Generating Code...
-C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\ImageFacade.cpp(78): warning C4172: returning address of local variable or temporary: rectangle
-C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Sources\Scene.cpp(63): warning C4715: 'spic::Scene::GetCameraByName': not all control paths return a value
-  Compiling...
   KeyFacade.cpp
   MouseFacade.cpp
   SceneFacade.cpp
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\SceneFacade.cpp(56,104): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\SceneFacade.cpp(56,97): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\SceneFacade.cpp(101,18): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\SceneFacade.cpp(103,30): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\SceneFacade.cpp(115,99): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\SceneFacade.cpp(102,18): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\SceneFacade.cpp(104,30): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\SceneFacade.cpp(116,99): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.29.30133\include\tuple(170,47): warning C4244: 'initializing': conversion from 'const float' to '_Ty', possible loss of data
           with
           [
@@ -284,8 +302,8 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.
               _Tag=std::_Unpack_tuple_t,
               _Tpl=const std::tuple<float,float> &
           ]
-C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\SceneFacade.cpp(114): message : see reference to function template instantiation 'std::tuple<int,int>::tuple<float,float,0>(const std::tuple<float,float> &) noexcept' being compiled
-C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\SceneFacade.cpp(114): message : see reference to function template instantiation 'std::tuple<int,int>::tuple<float,float,0>(const std::tuple<float,float> &) noexcept' being compiled
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\SceneFacade.cpp(115): message : see reference to function template instantiation 'std::tuple<int,int>::tuple<float,float,0>(const std::tuple<float,float> &) noexcept' being compiled
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\SceneFacade.cpp(115): message : see reference to function template instantiation 'std::tuple<int,int>::tuple<float,float,0>(const std::tuple<float,float> &) noexcept' being compiled
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.29.30133\include\tuple(170,47): warning C4244: 'initializing': conversion from '_Ty' to '_Ty', possible loss of data
           with
           [
@@ -347,8 +365,8 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.
               _Tag=std::_Unpack_tuple_t,
               _Tpl=std::tuple<int,int>
           ]
-C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\SceneFacade.cpp(116): message : see reference to function template instantiation 'std::tuple<float,float>::tuple<int,int,0>(std::tuple<int,int> &&) noexcept' being compiled
-C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\SceneFacade.cpp(116): message : see reference to function template instantiation 'std::tuple<float,float>::tuple<int,int,0>(std::tuple<int,int> &&) noexcept' being compiled
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\SceneFacade.cpp(117): message : see reference to function template instantiation 'std::tuple<float,float>::tuple<int,int,0>(std::tuple<int,int> &&) noexcept' being compiled
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\SceneFacade.cpp(117): message : see reference to function template instantiation 'std::tuple<float,float>::tuple<int,int,0>(std::tuple<int,int> &&) noexcept' being compiled
   TextFacade.cpp
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\TextFacade.cpp(7,26): warning C4244: '=': conversion from 'double' to 'Uint8', possible loss of data
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\TextFacade.cpp(8,26): warning C4244: '=': conversion from 'double' to 'Uint8', possible loss of data
@@ -361,10 +379,12 @@ C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\TextFacade.cpp(37,
   TiledFacade.cpp
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Headers\Tileson\tileson.hpp(2694,27): warning C4244: 'argument': conversion from 'std::streamoff' to 'const unsigned int', possible loss of data
   RectangleFacade.cpp
+  SoundFacade.cpp
   Generating Code...
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\MouseFacade.cpp(24): warning C4715: 'MouseFacade::PollEvent': not all control paths return a value
-C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\KeyFacade.cpp(17): warning C4715: 'KeyFacade::PollEvent': not all control paths return a value
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\KeyFacade.cpp(28): warning C4715: 'KeyFacade::PollEvent1': not all control paths return a value
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\KeyFacade.cpp(17): warning C4715: 'KeyFacade::PollEvent': not all control paths return a value
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\ImageFacade.cpp(78): warning C4172: returning address of local variable or temporary: rectangle
 Debug\Camera.obj : warning LNK4042: object specified more than once; extras ignored
 Debug\CameraFacade.obj : warning LNK4042: object specified more than once; extras ignored
 Debug\Color.obj : warning LNK4042: object specified more than once; extras ignored

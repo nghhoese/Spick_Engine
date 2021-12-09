@@ -20,3 +20,23 @@ void spic::Animator::Stop()
 {
 	this->looping = false;
 }
+
+void spic::Animator::OnClick() {
+
+}
+
+void spic::Animator::OnAwake()
+{
+}
+
+void spic::Animator::OnStart()
+{
+}
+
+void spic::Animator::OnUpdate()
+{
+}
+
+void spic::Animator::OnRender()
+{
+}
