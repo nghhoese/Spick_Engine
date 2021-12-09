@@ -5,7 +5,7 @@ void CameraFacade::CreateRectangle(const double& x, const double& y, const doubl
 	this->sdl_rectangle = { (int)x, (int)y, (int)width, (int)height };
 }
 
-void CameraFacade::ConvertSDLToRectangle(spic::Rectangle* rectangle)
+void CameraFacade::ConvertToRectangle(spic::Rectangle* rectangle)
 {
 	rectangle->x = this->sdl_rectangle.x;
 	rectangle->y = this->sdl_rectangle.y;

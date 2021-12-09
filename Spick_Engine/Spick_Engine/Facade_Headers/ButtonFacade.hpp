@@ -25,10 +25,9 @@ namespace spic {
 		bool clicked = false;
 	private:
 		SDL_Rect box;
-		SDL_Rect* clip;
 		SDL_Texture* _texture;
 		std::string _asset;
-		spic::Importation* input;
+		std::unique_ptr<Importation> input;
 		spic::MouseButton LEFT = spic::MouseButton::LEFT;
 	};
 }

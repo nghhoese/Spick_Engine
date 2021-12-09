@@ -19,7 +19,7 @@ void spic::Camera::CreateCamera()
 
 void spic::Camera::SetCamera()
 {
-	cameraFacade_ptr->ConvertSDLToRectangle(this->camera);
+	cameraFacade_ptr->ConvertToRectangle(this->camera);
 }
 
 Rectangle* spic::Camera::GetCamera()
