@@ -285,6 +285,7 @@
     <Text Include="Debug\vcpkg.applocal.log" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="cpp.hint" />
     <None Include="Debug\Spick_Engine.dll.recipe" />
     <None Include="Debug\Spick_Engine.ilk" />
     <None Include="Debug\vc142.idb" />

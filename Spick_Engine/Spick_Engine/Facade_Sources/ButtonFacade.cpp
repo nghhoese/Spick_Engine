@@ -9,7 +9,7 @@ spic::ButtonFacade::ButtonFacade(int x, int y, int w, int h, std::string asset) 
     box.w = w;
     box.h = h;
     _asset = "assets/" + asset + ".jpg";
-    this->input = new spic::Importation();
+    this->input = std::make_unique<Importation>();
 }
 
 void spic::ButtonFacade::CreateTexture() {
@@ -23,11 +23,9 @@ void spic::ButtonFacade::CreateTexture() {
 }
 
 void spic::ButtonFacade::Render() {
-
-
     SDL_RenderCopy(spic::WindowFacade::GetInstance()->_renderer.get(), _texture, NULL, &box);
     spic::ButtonFacade::handle_events();
-    //SDL_DestroyTexture(_texture);
+    //    SDL_DestroyTexture(_texture);
 }
 
 void spic::ButtonFacade::handle_events() {
