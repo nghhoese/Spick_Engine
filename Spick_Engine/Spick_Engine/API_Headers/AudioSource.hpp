@@ -1,16 +1,25 @@
-#ifndef AUDIOSOURCE_H_
-#define AUDIOSOURCE_H_
+#pragma once
 
+#include "SpicHeader.hpp"
+#include "Component.hpp"
+#include "Color.hpp"
+#include <string>
+#include "../Facade_Headers/ImageFacade.hpp"
+#include "../Facade_Headers/SceneFacade.hpp"
+#include "GameObject.hpp"
+#include "Scene.hpp"
 #include "Component.hpp"
 #include <string>
-
+#include <memory>
+#include "../Facade_Headers/SoundFacade.hpp"
 namespace spic {
 
     /**
      * @brief Component which can play audio.
      */
-    class AudioSource : public Component {
+    class SPIC_API AudioSource : public Component {
         public:
+            AudioSource();
             /**
              * @brief Getter for audio clip.
              * @return audio clip.
@@ -86,7 +95,23 @@ namespace spic {
              * @brief Call this method to stop playing audio.
              */
             void Stop();
-            void OnClick() = 0;
+            void OnClick();
+            void OnAwake();
+
+            /**
+             * @brief Called right before first frame draw.
+             */
+            void OnStart();
+
+            /**
+             * @brief Called every frame draw.
+             */
+            void OnUpdate();
+
+            /**
+             * @brief Called every frame draw after update.
+             */
+            void OnRender();
 
         private:
             /**
@@ -118,8 +143,9 @@ namespace spic {
             * @brief is music.
             */
             bool isMusic;
+            std::unique_ptr<spic::SoundFacade> soundFacade;
     };
 
 }
 
-#endif // AUDIOSOURCE_H_
+

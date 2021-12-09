@@ -41,10 +41,12 @@ int WindowFacade::create_window(const std::string& title, float height, float wi
 	_window_width = width;
 	set_scene_size(height, width);
 	try {
-		if (SDL_Init(SDL_INIT_VIDEO) < NULL) {
+		if (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_AUDIO) < NULL) {
 			throw Exceptions::SDLInitFailed();
 		}
-
+		Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT,2,2048);
+		Mix_VolumeMusic(50);
+		
 		//Initialize SDL_ttf
 		if (TTF_Init() == -1)
 		{
@@ -52,7 +54,7 @@ int WindowFacade::create_window(const std::string& title, float height, float wi
 		}
 
 		_window.reset(SDL_CreateWindow(title.c_str(), SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, width, height, 0));
-		SDL_SetWindowFullscreen(_window.get(),0);
+		SDL_SetWindowFullscreen(_window.get(), 0);
 
 
 		if (_window == NULL) {
@@ -78,6 +80,7 @@ int WindowFacade::create_window(const std::string& title, float height, float wi
 
 void WindowFacade::destroy() {
 	//Quit SDL subsystems
+	Mix_Quit();
 	SDL_Quit();
 	TTF_Quit();
 }

@@ -81,7 +81,7 @@ namespace spic {
         /**
          * @brief Get active scene to use for update and rendering.
          */
-        SPIC_API std::shared_ptr<spic::Scene> GetActiveScene();
+        SPIC_API std::shared_ptr<spic::Scene> GetActiveScene() { return this->activeScene; };
 
         /**
          * @brief Get scene by name.
@@ -119,7 +119,7 @@ namespace spic {
         std::shared_ptr<TiledFacade> tiledFacade;
 
         int _fps = 0;
-        int _maxFPS = 100;
+        int _maxFPS = 1000;
         int _startTicks;
         Time time;
         int frames = 0;
