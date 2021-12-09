@@ -28,7 +28,7 @@ namespace spic {
         SPIC_API void Init() const;
         SPIC_API Engine();
 
-        SPIC_API void CreateNewWindow(const std::string& windowName);
+        SPIC_API void CreateNewWindow(const std::string& windowName, int width, int height);
         
         /**
          * @brief Add a Camera.
@@ -106,6 +106,10 @@ namespace spic {
         SPIC_API bool getGameOver();
 
         SPIC_API void setGameOver(const bool jeoma);
+        /**
+        * @brief Ends the gameloop
+        */
+        SPIC_API void EndGameLoop();
 
         float TimeScale;
         float TargetFrameRate;
