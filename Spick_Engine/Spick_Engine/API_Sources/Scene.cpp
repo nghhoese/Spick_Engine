@@ -14,14 +14,20 @@ SPIC_API Scene::Scene(const std::string& name) {
 
 void Scene::Update() {
     for (std::shared_ptr<GameObject> x : gameObjects) {
-        x->Update();
+        if (x->IsActiveSelf()) {
+            x->Update();
+        }
+        
     }
 }
 
 void Scene::Render() {
     spic::WindowFacade::GetInstance()->ClearRender();
     for (std::shared_ptr<GameObject> x : gameObjects) {
-        x->Render();
+        if (x->IsActiveSelf()) {
+            x->Render();
+        }
+        
     }
     spic::WindowFacade::GetInstance()->Render();
 }
