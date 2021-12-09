@@ -7,10 +7,9 @@ spic::Engine::Engine() {
 	tiledFacade = std::make_shared<TiledFacade>();
 }
 
-SPIC_API void spic::Engine::CreateNewWindow(const std::string& windowName)
+SPIC_API void spic::Engine::CreateNewWindow(const std::string& windowName, int width, int height)
 {
-	
-	spic::WindowFacade::GetInstance()->create_window("Tactical stealth",1000,1000);
+	spic::WindowFacade::GetInstance()->create_window(windowName, height, width);
 	spic::WindowFacade::GetInstance()->create_renderer();
 }
 
@@ -153,5 +152,10 @@ SPIC_API bool spic::Engine::getGameOver() {
 
 SPIC_API void spic::Engine::setGameOver(bool gameOverBool) {
 	gameOver = gameOverBool;
+}
+
+SPIC_API void spic::Engine::EndGameLoop() {
+	running = false;
+	playing = false;
 }
 
