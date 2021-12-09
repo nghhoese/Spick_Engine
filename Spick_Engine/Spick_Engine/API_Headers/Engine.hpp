@@ -107,7 +107,7 @@ namespace spic {
 
         SPIC_API void setGameOver(bool gameOverBool);
 
-        SPIC_API const int getCurrentLevel();
+        SPIC_API int getCurrentLevel();
 
         SPIC_API void setCurrentLevel(int currentLevelNumber);
 
@@ -119,7 +119,6 @@ namespace spic {
 
         SPIC_API void setIsInLevelTransition(bool transitionBool);
 
-        SPIC_API void setGameOver(const bool jeoma);
         /**
         * @brief Ends the gameloop
         */
