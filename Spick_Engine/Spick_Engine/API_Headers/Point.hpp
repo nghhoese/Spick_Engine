@@ -16,18 +16,18 @@ namespace spic {
         double x;
         double y;
 
-        void Sub(Point num) { x -= num.x; y -= num.y; };
-        void Sub(int num) { x -= num; y -= num; };
+        void Sub(Point num) { x = x - (num.x); y = y - (num.y); };
+        void Sub(int num) { x = x - (num); y = y - (num); };
         void Sub(Point point1, Point point2) {
             x = (point1.x - point2.x);
             y = (point1.y - point2.y);
         };
 
-        void Mult(Point scalair) { x *= scalair.x; y *= scalair.y; };
-        void Mult(int scalair) { x *= scalair; y *= scalair; };
+        void Mult(Point scalair) { x = scalair.x * x; y = scalair.y * y; };
+        void Mult(int scalair) { x = scalair * x; y = scalair * y; };
 
-        void Add(Point num) { x += num.x; y += num.y; };
-        void Add(int num) { x += num; y += num; };
+        void Add(Point num) { x = x + (num.x); y = y + (num.y); };
+        void Add(int num) { x = x + (num); y = y + (num); };
 
         double Mag() {
             return sqrt(x * x + y * y);
@@ -44,11 +44,8 @@ namespace spic {
         }
 
         void Limit(double max) {
-            auto normalized = Normalize();
-            auto magnitude = Mag();
-            normalized.Mult((magnitude - max));
-            x = normalized.x;
-            y = normalized.y;
+            x = x / max;
+            y = y / max;
         }
 
         Point Normalize() {
