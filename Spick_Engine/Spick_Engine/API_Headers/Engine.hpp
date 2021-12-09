@@ -115,6 +115,10 @@ namespace spic {
 
         SPIC_API void setCheatsEnabled(bool cheatsBool);
 
+        SPIC_API bool getIsInLevelTransition();
+
+        SPIC_API void setIsInLevelTransition(bool transitionBool);
+
         float TimeScale;
         float TargetFrameRate;
     private:
@@ -137,6 +141,7 @@ namespace spic {
 
         bool gameOver = false;
         bool cheatsEnabled = false;
+        bool isInLevelTransition = false;
         int currentLevel = 1;
         float m_lastTime;
     };

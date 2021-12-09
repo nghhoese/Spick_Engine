@@ -172,3 +172,13 @@ SPIC_API void spic::Engine::setCheatsEnabled(bool cheatsBool) {
 	cheatsEnabled = cheatsBool;
 }
 
+SPIC_API bool spic::Engine::getIsInLevelTransition()
+{
+	return isInLevelTransition;
+}
+
+SPIC_API void spic::Engine::setIsInLevelTransition(bool transitionBool)
+{
+	isInLevelTransition = transitionBool;
+}
+
