@@ -47,6 +47,7 @@
     <ClCompile Include="API_Sources\Collision.cpp" />
     <ClCompile Include="Facade_Sources\SoundFacade.cpp" />
     <ClCompile Include="API_Sources\AudioSource.cpp" />
+    <ClCompile Include="API_Sources\Animator.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="API_Headers\Animator.hpp" />

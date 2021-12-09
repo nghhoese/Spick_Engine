@@ -231,6 +231,7 @@
     <ClInclude Include="Facade_Headers\SoundFacade.hpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="API_Sources\Animator.cpp" />
     <ClCompile Include="API_Sources\AudioSource.cpp" />
     <ClCompile Include="API_Sources\BoxCollider.cpp" />
     <ClCompile Include="API_Sources\Button.cpp" />

@@ -9,6 +9,7 @@ void spic::AudioSource::Play(bool looping)
 {
 	soundFacade->setPath(audioClip);
 	if (isMusic) {
+		isPlaying = true;
 		soundFacade->CreateMusic();
 		soundFacade->PlayMusic();
 	}
@@ -20,16 +21,19 @@ void spic::AudioSource::Play(bool looping)
 
 void spic::AudioSource::Pause()
 {
+	isPlaying = false;
 	soundFacade->PauseMusic();
 }
 
 void spic::AudioSource::UnPause()
 {
+	isPlaying = true;
 	soundFacade->PlayMusic();
 }
 
 void spic::AudioSource::Stop()
 {
+	isPlaying = false;
 	soundFacade->StopMusic();
 }
 void spic::AudioSource::OnClick() {

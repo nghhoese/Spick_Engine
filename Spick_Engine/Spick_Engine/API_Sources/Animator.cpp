@@ -1,0 +1,65 @@
+
+#include "../API_Headers/Animator.hpp"
+
+spic::Animator::Animator()
+{
+	imageFacade = std::make_unique<spic::ImageFacade>();
+	imageFacade->setScale(1);
+	imageFacade->setRotation(1);
+	spriteIndex = 0;
+	ticks = 0;
+	fps = 0;
+}
+
+void spic::Animator::Play(bool looping)
+{
+	spriteIndex = 0;
+	running = true;
+	GetGameObject()->GetComponent<Sprite>()->DestroyImage();
+}
+
+void spic::Animator::Stop()
+{
+	running = false;
+	spriteIndex = 0;
+	GetGameObject()->GetComponent<Sprite>()->SetRendered(false);
+	for (std::shared_ptr<Sprite> s : sprites) {
+		s->DestroyImage();
+	}
+}
+
+void spic::Animator::OnClick()
+{
+}
+void spic::Animator::OnAwake()
+{
+}
+void spic::Animator::OnRender()
+{
+}
+void spic::Animator::OnStart()
+{
+}
+void spic::Animator::OnUpdate()
+{
+	if (!sprites.empty()) {
+		if (running) {
+			ticks++;
+			sprites[spriteIndex]->OnRender();
+			sprites[spriteIndex]->OnUpdate();
+			if (ticks > fps) {
+				ticks = 0;
+				if (spriteIndex < (sprites.size() - 1)) {
+					auto u = sprites;
+					spriteIndex++;
+				}
+				else {
+					spriteIndex = 0;
+				}
+
+			}
+		}
+	}
+
+}
+

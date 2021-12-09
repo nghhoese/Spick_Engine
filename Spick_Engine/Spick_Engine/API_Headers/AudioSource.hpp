@@ -97,6 +97,7 @@ namespace spic {
             void Stop();
             void OnClick();
             void OnAwake();
+            bool GetPlaying() { return this->isPlaying; };
 
             /**
              * @brief Called right before first frame draw.
@@ -138,7 +139,7 @@ namespace spic {
             * @brief Playback position in seconds.
             */
             int time;
-
+            bool isPlaying = false;
             /**
             * @brief is music.
             */

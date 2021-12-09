@@ -23,6 +23,7 @@ namespace spic {
         void setPath(std::string path);
         void setRotation(double rotation);
         void setScale(double scale);
+        void DestroyImage();
     private:
         SDL_Surface* tmpSurface;
         SDL_Texture* _texture;

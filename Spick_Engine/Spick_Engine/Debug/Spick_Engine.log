@@ -1,4 +1,33 @@
-﻿  AudioSource.cpp
+﻿  Animator.cpp
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\BehaviourScript.hpp(11,55): warning C4275: non dll-interface class 'spic::Component' used as base for dll-interface class 'spic::BehaviourScript'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Component.hpp(15): message : see declaration of 'spic::Component'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\BehaviourScript.hpp(11): message : see declaration of 'spic::BehaviourScript'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\GameObject.hpp(43,60): warning C4834: discarding return value of function with 'nodiscard' attribute
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Camera.hpp(14,47): warning C4275: non dll-interface class 'spic::GameObject' used as base for dll-interface class 'spic::Camera'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\GameObject.hpp(18): message : see declaration of 'spic::GameObject'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Camera.hpp(14): message : see declaration of 'spic::Camera'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Camera.hpp(39,21): warning C4251: 'spic::Camera::name': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'spic::Camera'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\xstring(4905): message : see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Camera.hpp(40,15): warning C4251: 'spic::Camera::backgroundColor': class 'spic::Color' needs to have dll-interface to be used by clients of class 'spic::Camera'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Color.hpp(11): message : see declaration of 'spic::Color'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Sprite.hpp(17,46): warning C4275: non dll-interface class 'spic::Component' used as base for dll-interface class 'spic::Sprite'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Component.hpp(15): message : see declaration of 'spic::Component'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Sprite.hpp(17): message : see declaration of 'spic::Sprite'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Sprite.hpp(162,21): warning C4251: 'spic::Sprite::sprite': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'spic::Sprite'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\xstring(4905): message : see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Sprite.hpp(163,15): warning C4251: 'spic::Sprite::color': class 'spic::Color' needs to have dll-interface to be used by clients of class 'spic::Sprite'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Color.hpp(11): message : see declaration of 'spic::Color'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Sprite.hpp(175,44): warning C4251: 'spic::Sprite::imageFacade': class 'std::unique_ptr<spic::ImageFacade,std::default_delete<spic::ImageFacade>>' needs to have dll-interface to be used by clients of class 'spic::Sprite'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Sprite.hpp(175): message : see declaration of 'std::unique_ptr<spic::ImageFacade,std::default_delete<spic::ImageFacade>>'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Animator.hpp(14,48): warning C4275: non dll-interface class 'spic::Component' used as base for dll-interface class 'spic::Animator'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Component.hpp(15): message : see declaration of 'spic::Component'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Animator.hpp(14): message : see declaration of 'spic::Animator'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Animator.hpp(68,50): warning C4251: 'spic::Animator::sprites': class 'std::vector<std::shared_ptr<spic::Sprite>,std::allocator<std::shared_ptr<spic::Sprite>>>' needs to have dll-interface to be used by clients of class 'spic::Animator'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Animator.hpp(32): message : see declaration of 'std::vector<std::shared_ptr<spic::Sprite>,std::allocator<std::shared_ptr<spic::Sprite>>>'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Animator.hpp(69,48): warning C4251: 'spic::Animator::imageFacade': class 'std::unique_ptr<spic::ImageFacade,std::default_delete<spic::ImageFacade>>' needs to have dll-interface to be used by clients of class 'spic::Animator'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Sprite.hpp(175): message : see declaration of 'std::unique_ptr<spic::ImageFacade,std::default_delete<spic::ImageFacade>>'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Sources\Animator.cpp(52,21): warning C4018: '<': signed/unsigned mismatch
+  AudioSource.cpp
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\BehaviourScript.hpp(11,55): warning C4275: non dll-interface class 'spic::Component' used as base for dll-interface class 'spic::BehaviourScript'
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Component.hpp(15): message : see declaration of 'spic::Component'
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\BehaviourScript.hpp(11): message : see declaration of 'spic::BehaviourScript'
@@ -13,10 +42,10 @@ C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Color.hpp(11): messag
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\AudioSource.hpp(20,51): warning C4275: non dll-interface class 'spic::Component' used as base for dll-interface class 'spic::AudioSource'
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Component.hpp(15): message : see declaration of 'spic::Component'
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\AudioSource.hpp(20): message : see declaration of 'spic::AudioSource'
-C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\AudioSource.hpp(120,25): warning C4251: 'spic::AudioSource::audioClip': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'spic::AudioSource'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\AudioSource.hpp(121,25): warning C4251: 'spic::AudioSource::audioClip': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'spic::AudioSource'
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\xstring(4905): message : see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
-C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\AudioSource.hpp(146,48): warning C4251: 'spic::AudioSource::soundFacade': class 'std::unique_ptr<spic::SoundFacade,std::default_delete<spic::SoundFacade>>' needs to have dll-interface to be used by clients of class 'spic::AudioSource'
-C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\AudioSource.hpp(146): message : see declaration of 'std::unique_ptr<spic::SoundFacade,std::default_delete<spic::SoundFacade>>'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\AudioSource.hpp(147,48): warning C4251: 'spic::AudioSource::soundFacade': class 'std::unique_ptr<spic::SoundFacade,std::default_delete<spic::SoundFacade>>' needs to have dll-interface to be used by clients of class 'spic::AudioSource'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\AudioSource.hpp(147): message : see declaration of 'std::unique_ptr<spic::SoundFacade,std::default_delete<spic::SoundFacade>>'
   BoxCollider.cpp
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\BehaviourScript.hpp(11,55): warning C4275: non dll-interface class 'spic::Component' used as base for dll-interface class 'spic::BehaviourScript'
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Component.hpp(15): message : see declaration of 'spic::Component'
@@ -83,9 +112,11 @@ C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Camera.hpp(39,21): wa
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\xstring(4905): message : see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Camera.hpp(40,15): warning C4251: 'spic::Camera::backgroundColor': class 'spic::Color' needs to have dll-interface to be used by clients of class 'spic::Camera'
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Color.hpp(11): message : see declaration of 'spic::Color'
-C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Sources\Engine.cpp(36,29): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Sources\Engine.cpp(132,19): warning C4244: 'initializing': conversion from 'uint32_t' to 'float', possible loss of data
-C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Sources\Engine.cpp(135,20): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Sources\Engine.cpp(12,71): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Sources\Engine.cpp(12,63): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Sources\Engine.cpp(35,29): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Sources\Engine.cpp(131,19): warning C4244: 'initializing': conversion from 'uint32_t' to 'float', possible loss of data
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Sources\Engine.cpp(134,20): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
   GameObject.cpp
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\BehaviourScript.hpp(11,55): warning C4275: non dll-interface class 'spic::Component' used as base for dll-interface class 'spic::BehaviourScript'
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Component.hpp(15): message : see declaration of 'spic::Component'
@@ -121,12 +152,12 @@ C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Color.hpp(11): messag
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Sprite.hpp(17,46): warning C4275: non dll-interface class 'spic::Component' used as base for dll-interface class 'spic::Sprite'
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Component.hpp(15): message : see declaration of 'spic::Component'
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Sprite.hpp(17): message : see declaration of 'spic::Sprite'
-C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Sprite.hpp(160,21): warning C4251: 'spic::Sprite::sprite': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'spic::Sprite'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Sprite.hpp(162,21): warning C4251: 'spic::Sprite::sprite': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'spic::Sprite'
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\xstring(4905): message : see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
-C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Sprite.hpp(161,15): warning C4251: 'spic::Sprite::color': class 'spic::Color' needs to have dll-interface to be used by clients of class 'spic::Sprite'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Sprite.hpp(163,15): warning C4251: 'spic::Sprite::color': class 'spic::Color' needs to have dll-interface to be used by clients of class 'spic::Sprite'
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Color.hpp(11): message : see declaration of 'spic::Color'
-C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Sprite.hpp(173,44): warning C4251: 'spic::Sprite::imageFacade': class 'std::unique_ptr<spic::ImageFacade,std::default_delete<spic::ImageFacade>>' needs to have dll-interface to be used by clients of class 'spic::Sprite'
-C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Sprite.hpp(173): message : see declaration of 'std::unique_ptr<spic::ImageFacade,std::default_delete<spic::ImageFacade>>'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Sprite.hpp(175,44): warning C4251: 'spic::Sprite::imageFacade': class 'std::unique_ptr<spic::ImageFacade,std::default_delete<spic::ImageFacade>>' needs to have dll-interface to be used by clients of class 'spic::Sprite'
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Sprite.hpp(175): message : see declaration of 'std::unique_ptr<spic::ImageFacade,std::default_delete<spic::ImageFacade>>'
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Sources\Sprite.cpp(33,129): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Sources\Sprite.cpp(33,50): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Sources\Sprite.cpp(37,60): warning C4244: '=': conversion from 'const double' to 'int', possible loss of data
@@ -188,12 +219,10 @@ C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\CameraFacade.cpp(2
   ImageFacade.cpp
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\ImageFacade.cpp(35,20): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\ImageFacade.cpp(36,20): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-  KeyFacade.cpp
   Generating Code...
-C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\KeyFacade.cpp(28): warning C4715: 'KeyFacade::PollEvent1': not all control paths return a value
-C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\KeyFacade.cpp(17): warning C4715: 'KeyFacade::PollEvent': not all control paths return a value
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Sources\Scene.cpp(63): warning C4715: 'spic::Scene::GetCameraByName': not all control paths return a value
   Compiling...
+  KeyFacade.cpp
   MouseFacade.cpp
   SceneFacade.cpp
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\SceneFacade.cpp(56,104): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
@@ -334,6 +363,8 @@ C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Headers\Tileson\tileson.hp
   SoundFacade.cpp
   Generating Code...
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\MouseFacade.cpp(24): warning C4715: 'MouseFacade::PollEvent': not all control paths return a value
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\KeyFacade.cpp(17): warning C4715: 'KeyFacade::PollEvent': not all control paths return a value
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\KeyFacade.cpp(28): warning C4715: 'KeyFacade::PollEvent1': not all control paths return a value
 Debug\Camera.obj : warning LNK4042: object specified more than once; extras ignored
 Debug\CameraFacade.obj : warning LNK4042: object specified more than once; extras ignored
 Debug\Color.obj : warning LNK4042: object specified more than once; extras ignored

@@ -80,6 +80,11 @@ void spic::Sprite::SetPlayerBool(bool value)
 	this->player = value;
 }
 
+void spic::Sprite::DestroyImage()
+{
+	imageFacade->DestroyImage();
+}
+
 void spic::Sprite::OnClick() {
 
 }

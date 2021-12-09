@@ -67,3 +67,8 @@ void spic::ImageFacade::setScale(double scale)
 {
 	this->scale = scale;
 }
+
+void spic::ImageFacade::DestroyImage()
+{
+	SDL_DestroyTexture(_texture);
+}

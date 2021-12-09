@@ -154,6 +154,8 @@ namespace spic {
          void OnClick();
 
          void SetPlayerBool(bool value);
+         void DestroyImage();
+         void SetRendered(bool rendered) { this->rendered = rendered; };
 
     private:
         Transform transform;
