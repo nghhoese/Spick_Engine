@@ -29,7 +29,12 @@ namespace spic {
              * @brief Get name.
              * @return name.
              */
-            const std::string& GetName() const { return name; }
+            SPIC_API const std::string& GetName() const { return name; }
+
+            /**
+             * @brief Set name.
+             */
+            SPIC_API const void SetName(const std::string& newName) { name = newName; }
 
             /**
              * @brief This function is called by the engine to update the scene on the engine.

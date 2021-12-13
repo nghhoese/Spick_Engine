@@ -102,6 +102,11 @@ SPIC_API std::shared_ptr<spic::Scene> spic::Engine::GetSceneByName(const std::st
 	return nullptr;
 }
 
+std::vector<std::shared_ptr<spic::Scene>> spic::Engine::GetScenes()
+{
+	return scenes;
+}
+
 SPIC_API int spic::Engine::GetFPS()
 {
 	return _fps;

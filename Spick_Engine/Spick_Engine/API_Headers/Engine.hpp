@@ -89,6 +89,11 @@ namespace spic {
         SPIC_API std::shared_ptr<spic::Scene> GetSceneByName(const std::string& sceneName);
 
         /**
+         * @brief Get all scenes.
+         */
+        SPIC_API std::vector<std::shared_ptr<spic::Scene>> GetScenes();
+
+        /**
         * @brief Return current FPS.
         */
         SPIC_API int GetFPS();
