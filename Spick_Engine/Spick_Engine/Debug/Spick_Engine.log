@@ -26,7 +26,7 @@ C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Animator.hpp(68,50): 
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Animator.hpp(32): message : see declaration of 'std::vector<std::shared_ptr<spic::Sprite>,std::allocator<std::shared_ptr<spic::Sprite>>>'
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Animator.hpp(69,48): warning C4251: 'spic::Animator::imageFacade': class 'std::unique_ptr<spic::ImageFacade,std::default_delete<spic::ImageFacade>>' needs to have dll-interface to be used by clients of class 'spic::Animator'
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Sprite.hpp(175): message : see declaration of 'std::unique_ptr<spic::ImageFacade,std::default_delete<spic::ImageFacade>>'
-C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Sources\Animator.cpp(52,21): warning C4018: '<': signed/unsigned mismatch
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Sources\Animator.cpp(58,21): warning C4018: '<': signed/unsigned mismatch
   AudioSource.cpp
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\BehaviourScript.hpp(11,55): warning C4275: non dll-interface class 'spic::Component' used as base for dll-interface class 'spic::BehaviourScript'
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Component.hpp(15): message : see declaration of 'spic::Component'

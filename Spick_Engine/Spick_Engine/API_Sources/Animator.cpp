@@ -15,7 +15,10 @@ void spic::Animator::Play(bool looping)
 {
 	spriteIndex = 0;
 	running = true;
-	GetGameObject()->GetComponent<Sprite>()->DestroyImage();
+	if (GetGameObject()->GetComponent<Sprite>()) {
+		GetGameObject()->GetComponent<Sprite>()->DestroyImage();
+
+	}
 }
 
 void spic::Animator::Stop()
@@ -36,6 +39,11 @@ void spic::Animator::OnAwake()
 }
 void spic::Animator::OnRender()
 {
+	if (!sprites.empty()) {
+		if (running) {
+			sprites[spriteIndex]->OnRender();
+		}
+	}
 }
 void spic::Animator::OnStart()
 {
@@ -45,19 +53,24 @@ void spic::Animator::OnUpdate()
 	if (!sprites.empty()) {
 		if (running) {
 			ticks++;
-			sprites[spriteIndex]->OnRender();
-			sprites[spriteIndex]->OnUpdate();
 			if (ticks > fps) {
 				ticks = 0;
 				if (spriteIndex < (sprites.size() - 1)) {
 					auto u = sprites;
+					sprites[spriteIndex]->DestroyImage();
+					sprites[spriteIndex]->SetRendered(false);
 					spriteIndex++;
 				}
 				else {
+					sprites[spriteIndex]->DestroyImage();
+					sprites[spriteIndex]->SetRendered(false);
+
+
 					spriteIndex = 0;
 				}
 
 			}
+			sprites[spriteIndex]->OnUpdate();
 		}
 	}
 
