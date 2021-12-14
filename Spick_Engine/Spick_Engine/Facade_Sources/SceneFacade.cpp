@@ -54,7 +54,7 @@ int WindowFacade::create_window(const std::string& title, float height, float wi
 		}
 
 		_window.reset(SDL_CreateWindow(title.c_str(), SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, width, height, 0));
-		SDL_SetWindowFullscreen(_window.get(), 0);
+		SDL_SetWindowFullscreen(_window.get(), SDL_WINDOW_BORDERLESS);
 
 
 		if (_window == NULL) {
