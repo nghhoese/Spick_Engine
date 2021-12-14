@@ -102,6 +102,11 @@ SPIC_API std::shared_ptr<spic::Scene> spic::Engine::GetSceneByName(const std::st
 	return nullptr;
 }
 
+std::vector<std::shared_ptr<spic::Scene>> spic::Engine::GetScenes()
+{
+	return scenes;
+}
+
 SPIC_API int spic::Engine::GetFPS()
 {
 	return _fps;
@@ -152,6 +157,25 @@ SPIC_API bool spic::Engine::getGameOver() {
 
 SPIC_API void spic::Engine::setGameOver(bool gameOverBool) {
 	gameOver = gameOverBool;
+}
+
+SPIC_API int spic::Engine::getCurrentLevel()
+{
+	return currentLevel;
+}
+
+SPIC_API void spic::Engine::setCurrentLevel(int currentLevelNumber) {
+	currentLevel = currentLevelNumber;
+}
+
+SPIC_API bool spic::Engine::getIsInLevelTransition()
+{
+	return isInLevelTransition;
+}
+
+SPIC_API void spic::Engine::setIsInLevelTransition(bool transitionBool)
+{
+	isInLevelTransition = transitionBool;
 }
 
 SPIC_API void spic::Engine::EndGameLoop() {

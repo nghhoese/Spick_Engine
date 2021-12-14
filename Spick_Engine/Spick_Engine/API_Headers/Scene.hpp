@@ -29,7 +29,12 @@ namespace spic {
              * @brief Get name.
              * @return name.
              */
-            const std::string& GetName() const { return name; }
+            SPIC_API const std::string& GetName() const { return name; }
+
+            /**
+             * @brief Set name.
+             */
+            SPIC_API const void SetName(const std::string& newName) { name = newName; }
 
             /**
              * @brief This function is called by the engine to update the scene on the engine.
@@ -106,11 +111,14 @@ namespace spic {
              */
             void SetDelay(const int ms) const;
 
+            SPIC_API std::shared_ptr<GameObject> SwitchGameObjectToScene(std::shared_ptr<GameObject> gameObject);
+
             /**
              * @brief Call to quit application
              */
 
             SPIC_API void Quit();
+
     private:
         std::string name;
         std::vector<std::shared_ptr<GameObject>> gameObjects;

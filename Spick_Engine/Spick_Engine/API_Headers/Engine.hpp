@@ -89,6 +89,11 @@ namespace spic {
         SPIC_API std::shared_ptr<spic::Scene> GetSceneByName(const std::string& sceneName);
 
         /**
+         * @brief Get all scenes.
+         */
+        SPIC_API std::vector<std::shared_ptr<spic::Scene>> GetScenes();
+
+        /**
         * @brief Return current FPS.
         */
         SPIC_API int GetFPS();
@@ -103,13 +108,44 @@ namespace spic {
         */
         SPIC_API std::pair<std::vector<std::pair<int, std::vector<std::vector<int>>>>, std::vector<std::vector<std::pair<std::string, std::any>>>> GetLevel(const std::filesystem::path& path);
 
+        /**
+         * @brief Get Gameover.
+         * @return Gameover.
+         */
         SPIC_API bool getGameOver();
 
-        SPIC_API void setGameOver(const bool jeoma);
+        /**
+        * @brief Set Game Over
+        */
+        SPIC_API void setGameOver(bool gameOverBool);
+
+        /**
+         * @brief Get CurrentLevel.
+         * @return CurrentLevel.
+         */
+        SPIC_API int getCurrentLevel();
+
+        /**
+        * @brief Set CurrentLevel
+        */
+        SPIC_API void setCurrentLevel(int currentLevelNumber);
+
+        /**
+         * @brief Get InLevelTransition.
+         * @return InLevelTransition.
+         */
+        SPIC_API bool getIsInLevelTransition();
+
+        /**
+        * @brief Set InLevelTransition
+        */
+        SPIC_API void setIsInLevelTransition(bool transitionBool);
+
         /**
         * @brief Ends the gameloop
         */
         SPIC_API void EndGameLoop();
+
 
         float TimeScale;
         float TargetFrameRate;
@@ -132,6 +168,9 @@ namespace spic {
         void CalculateFPS();
 
         bool gameOver = false;
+        bool cheatsEnabled = false;
+        bool isInLevelTransition = false;
+        int currentLevel = 1;
         float m_lastTime;
     };
 
