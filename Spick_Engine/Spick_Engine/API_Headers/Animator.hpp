@@ -65,6 +65,7 @@ namespace spic {
             int ticks;
             int spriteIndex;
             int fps;
+            bool loop = false;
             std::vector<std::shared_ptr<Sprite>> sprites;
             std::unique_ptr<spic::ImageFacade> imageFacade;
     };

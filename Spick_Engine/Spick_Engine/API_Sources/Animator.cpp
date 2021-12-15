@@ -14,6 +14,7 @@ spic::Animator::Animator()
 void spic::Animator::Play(bool looping)
 {
 	spriteIndex = 0;
+	loop = looping;
 	running = true;
 	if (GetGameObject()->GetComponent<Sprite>()) {
 		GetGameObject()->GetComponent<Sprite>()->DestroyImage();
@@ -64,7 +65,9 @@ void spic::Animator::OnUpdate()
 				else {
 					sprites[spriteIndex]->DestroyImage();
 					sprites[spriteIndex]->SetRendered(false);
-
+					if (!loop) {
+						Stop();
+					}
 
 					spriteIndex = 0;
 				}
