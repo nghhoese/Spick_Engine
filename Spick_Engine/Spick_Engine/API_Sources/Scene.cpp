@@ -6,6 +6,7 @@ using namespace spic;
 
 SPIC_API Scene::Scene(const std::string& name) {
     gameObjects = std::vector<std::shared_ptr<GameObject>>{};
+    gameObjectByKey = std::map<std::string, std::vector<std::shared_ptr<GameObject>>>();
     cameras = std::vector<std::shared_ptr<Camera>>{};
     this->name = name;
 
@@ -70,10 +71,9 @@ SPIC_API Camera& spic::Scene::GetCameraByName(const std::string& cameraName) con
 
 SPIC_API std::vector<std::shared_ptr<GameObject>> Scene::GetGameObjectsByName(const std::string& gameObjectName) {
     std::vector<std::shared_ptr<GameObject>> objects = std::vector<std::shared_ptr<GameObject>>{};
-    for (std::shared_ptr<GameObject> x : gameObjects) {
-        if (gameObjectName == x->GetName()) {
-            objects.push_back(x);
-       }
+    if (gameObjectByKey.count(gameObjectName) > 0)
+    {
+        objects = gameObjectByKey.find(gameObjectName)->second;
     }
     return objects;
 }
@@ -94,6 +94,17 @@ SPIC_API const std::vector<std::shared_ptr<GameObject>> Scene::GetGameObjects() 
 
 SPIC_API void Scene::AddGameObject(std::shared_ptr<GameObject> gameObject) {
     gameObjects.push_back(gameObject);
+    if (gameObjectByKey.count(gameObject->GetName()) > 0)
+    {
+        gameObjectByKey.find(gameObject->GetName())->second.push_back(gameObject);
+    }
+    else {
+        std::vector<std::shared_ptr<GameObject>> newList;
+        newList.push_back(gameObject);
+        gameObjectByKey.insert(make_pair(gameObject->GetName(), newList));
+    }
+
+
     std::shared_ptr<Scene> scene;
     scene.reset(this);
     gameObject->AddScene(scene);

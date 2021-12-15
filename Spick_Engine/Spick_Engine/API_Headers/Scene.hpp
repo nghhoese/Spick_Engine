@@ -122,6 +122,7 @@ namespace spic {
     private:
         std::string name;
         std::vector<std::shared_ptr<GameObject>> gameObjects;
+        std::map<std::string, std::vector<std::shared_ptr<GameObject>>> gameObjectByKey;
         std::vector<std::shared_ptr<Camera>> cameras;
         std::shared_ptr<WindowFacade> sceneFacade;
         std::shared_ptr<Camera> activeCamera;
