@@ -14,14 +14,20 @@ SPIC_API Scene::Scene(const std::string& name) {
 
 void Scene::Update() {
     for (std::shared_ptr<GameObject> x : gameObjects) {
-        x->Update();
+        if (x->IsActiveSelf()) {
+            x->Update();
+        }
+        
     }
 }
 
 void Scene::Render() {
     spic::WindowFacade::GetInstance()->ClearRender();
     for (std::shared_ptr<GameObject> x : gameObjects) {
-        x->Render();
+        if (x->IsActiveSelf()) {
+            x->Render();
+        }
+        
     }
     spic::WindowFacade::GetInstance()->Render();
 }
@@ -90,7 +96,8 @@ SPIC_API void Scene::AddGameObject(std::shared_ptr<GameObject> gameObject) {
     gameObjects.push_back(gameObject);
     std::shared_ptr<Scene> scene;
     scene.reset(this);
-    gameObject->SetScene(scene);
+    gameObject->AddScene(scene);
+    gameObject->SetActiveScene(scene);
 }
 
 void spic::Scene::SetDelay(const int ms) const
@@ -98,12 +105,13 @@ void spic::Scene::SetDelay(const int ms) const
     sceneFacade->SetDelay(ms);
 }
 
+SPIC_API std::shared_ptr<GameObject> Scene::SwitchGameObjectToScene(std::shared_ptr<GameObject> gameObject) {
+    remove(gameObjects.begin(), gameObjects.end(), gameObject);
+    return gameObject;
+}
+
 SPIC_API void spic::Scene::Quit() {
     sceneFacade->destroy();
 }
-
-
-
-
 
 // Template classes implementatie nog vullen in header file

@@ -9,6 +9,6 @@ private:
 public:
 	SDL_Rect sdl_rectangle;
 	void CreateRectangle(const double& x, const double& y, const double& width, const double& height);
-	void ConvertSDLToRectangle(spic::Rectangle* rectangle);
+	void ConvertToRectangle(spic::Rectangle* rectangle);
 	void UpdateCamera(const double& x, const double& y);
 };
