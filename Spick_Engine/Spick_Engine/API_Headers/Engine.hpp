@@ -142,6 +142,17 @@ namespace spic {
         SPIC_API void setIsInLevelTransition(bool transitionBool);
 
         /**
+         * @brief Get cheatsEnabled.
+         * @return cheatsEnabled.
+         */
+        SPIC_API bool getCheatsEnabled();
+
+        /**
+        * @brief Set cheatsEnabled
+        */
+        SPIC_API void setCheatsEnabled(bool cheatsBool);
+
+        /**
         * @brief Ends the gameloop
         */
         SPIC_API void EndGameLoop();

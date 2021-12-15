@@ -178,6 +178,16 @@ SPIC_API void spic::Engine::setIsInLevelTransition(bool transitionBool)
 	isInLevelTransition = transitionBool;
 }
 
+SPIC_API bool spic::Engine::getCheatsEnabled()
+{
+	return cheatsEnabled;
+}
+
+SPIC_API void spic::Engine::setCheatsEnabled(bool cheatsBool)
+{
+	cheatsEnabled = cheatsBool;
+}
+
 SPIC_API void spic::Engine::EndGameLoop() {
 	running = false;
 	playing = false;
