@@ -1,5 +1,6 @@
 #pragma once
 
+#define SDL_MAIN_HANDLED
 #include "../API_Headers/SpicHeader.hpp"
 #include "SceneFacade.hpp"
 #include <string>

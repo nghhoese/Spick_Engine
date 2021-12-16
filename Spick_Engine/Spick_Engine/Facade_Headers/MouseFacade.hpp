@@ -1,8 +1,10 @@
 #pragma once
 
+#define SDL_MAIN_HANDLED
 #include <SDL.h>
 #include "../API_Headers/MouseButton.hpp"
 #include <tuple>
+
 using namespace spic;
 
 class MouseFacade {

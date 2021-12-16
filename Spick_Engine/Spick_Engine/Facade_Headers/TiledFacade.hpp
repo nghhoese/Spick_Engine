@@ -1,4 +1,6 @@
 #pragma once
+
+#define SDL_MAIN_HANDLED
 #include <filesystem>
 #include <any>
 #include <vector>
