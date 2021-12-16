@@ -17,6 +17,11 @@ namespace spic {
         double y;
 
         /**
+        * @brief Sets the x and y of pointer with the given num.
+        */
+        void Set(double num) { x = num; y = num; }
+
+        /**
         * @brief Substract x and y with a point.
         */
         void Sub(Point num) { x = x - (num.x); y = y - (num.y); };
