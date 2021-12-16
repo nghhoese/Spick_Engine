@@ -66,7 +66,7 @@ namespace spic {
         private:
             double width;
             double height;
-            bool showBox = false;
+            bool showBox = true;
             bool player = false;
             std::unique_ptr<spic::RectangleFacade> rectangleFacade;
 

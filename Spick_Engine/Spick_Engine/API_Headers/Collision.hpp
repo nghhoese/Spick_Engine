@@ -4,5 +4,5 @@
 class SPIC_API Collision
 {
 public:
-	static  std::shared_ptr<spic::BoxCollider> AABB(spic::GameObject* obj1, std::string tag);
+	static  std::vector<std::shared_ptr<spic::BoxCollider>> AABB(spic::GameObject* obj1, std::string tag);
 };

@@ -2,9 +2,9 @@
 #include "../API_Headers/Scene.hpp"
 
 
-std::shared_ptr<spic::BoxCollider> Collision::AABB(spic::GameObject* obj1, std::string tag)
+std::vector<std::shared_ptr<spic::BoxCollider>> Collision::AABB(spic::GameObject* obj1, std::string tag)
 {
-   
+    std::vector<std::shared_ptr<spic::BoxCollider>> lijstje = {};
     std::shared_ptr<spic::BoxCollider> collider = std::dynamic_pointer_cast<spic::BoxCollider>(obj1->GetComponent <spic::BoxCollider>());
     if (collider != nullptr) {
         int obj1ColliderWidth = collider->Width();
@@ -23,13 +23,14 @@ std::shared_ptr<spic::BoxCollider> Collision::AABB(spic::GameObject* obj1, std::
                                 tranform->position.y + obj1ColliderWidth >= tranform2->position.y &&
                                 tranform2->position.y + obj2ColliderHeight >= tranform->position.y
                                 ) {
-                                return collider2;
+                                lijstje.push_back(collider2);
                             }                                         
                 }
             
 
         }
+        return lijstje;
     }
 
-    return nullptr;
+    return lijstje;
 }
