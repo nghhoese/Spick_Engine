@@ -7,6 +7,7 @@ spic::AudioSource::AudioSource()
 
 void spic::AudioSource::Play(bool looping)
 {
+	soundFacade->SetVolume(volume);
 	soundFacade->setPath(audioClip);
 	if (isMusic) {
 		isPlaying = true;

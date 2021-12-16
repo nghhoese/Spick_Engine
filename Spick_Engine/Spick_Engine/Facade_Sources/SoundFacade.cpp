@@ -25,6 +25,7 @@ void spic::SoundFacade::CreateSoundEffect()
 
 void spic::SoundFacade::PlayMusic()
 {
+	Mix_VolumeMusic(volume);
 	if (!Mix_PlayingMusic()) {
 		Mix_PlayMusic(Music, -1);
 	}
@@ -35,6 +36,7 @@ void spic::SoundFacade::PlayMusic()
 
 void spic::SoundFacade::PlaySoundEffect()
 {
+	Mix_VolumeChunk(SoundEffect, volume);
 	Mix_PlayChannel(-1, SoundEffect, 0);
 }
 
