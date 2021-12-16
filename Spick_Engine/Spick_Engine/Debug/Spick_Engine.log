@@ -125,10 +125,10 @@ C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\Collider.hpp(11): mes
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\BoxCollider.hpp(20): message : see declaration of 'spic::BoxCollider'
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\BoxCollider.hpp(71,52): warning C4251: 'spic::BoxCollider::rectangleFacade': class 'std::unique_ptr<spic::RectangleFacade,std::default_delete<spic::RectangleFacade>>' needs to have dll-interface to be used by clients of class 'spic::BoxCollider'
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Headers\BoxCollider.hpp(71): message : see declaration of 'std::unique_ptr<spic::RectangleFacade,std::default_delete<spic::RectangleFacade>>'
-C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Sources\Collision.cpp(8,31): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Sources\Collision.cpp(9,32): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Sources\Collision.cpp(16,53): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Sources\Collision.cpp(17,55): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Sources\Collision.cpp(10,31): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Sources\Collision.cpp(11,32): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Sources\Collision.cpp(18,53): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\API_Sources\Collision.cpp(19,55): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
   ButtonFacade.cpp
   CameraFacade.cpp
 C:\Spic\Spick_Engine\Spick_Engine\Spick_Engine\Facade_Sources\CameraFacade.cpp(18,26): warning C4244: '=': conversion from 'const double' to 'int', possible loss of data
