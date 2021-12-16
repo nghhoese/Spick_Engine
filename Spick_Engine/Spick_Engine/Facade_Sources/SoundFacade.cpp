@@ -1,5 +1,6 @@
 #include "../Facade_Headers/SoundFacade.hpp"
 #pragma warning(disable : 4996)
+
 spic::SoundFacade::SoundFacade()
 {
 }
@@ -30,7 +31,6 @@ void spic::SoundFacade::PlayMusic()
 	else if (Mix_PausedMusic()) {
 		Mix_ResumeMusic();
 	}
-	
 }
 
 void spic::SoundFacade::PlaySoundEffect()

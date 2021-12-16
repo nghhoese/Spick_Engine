@@ -15,8 +15,8 @@
 namespace spic {
 
     /**
-     * @brief A collider which represents a rectangular collision area.
-     */
+    * @brief A collider which represents a rectangular collision area.
+    */
     class SPIC_API BoxCollider : public Collider {
         public:
             BoxCollider();

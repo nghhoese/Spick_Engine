@@ -11,7 +11,6 @@ void CameraFacade::ConvertToRectangle(spic::Rectangle* rectangle)
 	rectangle->y = this->sdl_rectangle.y;
 	rectangle->width = this->sdl_rectangle.w;
 	rectangle->height = this->sdl_rectangle.h;
-
 }
 
 void CameraFacade::UpdateCamera(const double& x, const double& y)
@@ -19,4 +18,3 @@ void CameraFacade::UpdateCamera(const double& x, const double& y)
 	this->sdl_rectangle.x = x;
 	this->sdl_rectangle.y = y;
 }
-

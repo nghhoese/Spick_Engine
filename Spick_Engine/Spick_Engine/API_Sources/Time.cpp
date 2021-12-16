@@ -2,7 +2,6 @@
 
 using namespace spic;
 
-
 double Time::timeScale {1.0};
 std::chrono::steady_clock::time_point Time::applicationStart = std::chrono::steady_clock::now();
 uint32_t Time::frameStart {0};
@@ -32,6 +31,5 @@ SPIC_API float spic::Time::CalculateDeltaTime()
 		float duration = (float)GetTicks();
 		SetDeltaTime(duration - m_lastTime);
 		m_lastTime = duration;
-
 		return GetDeltaTime();
 }

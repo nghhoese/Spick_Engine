@@ -21,7 +21,6 @@ void spic::ImageFacade::Createtexture()
 
 void spic::ImageFacade::Render()
 {
-	//SDL_RenderCopy(renderer, _texture, NULL, &destR);
 	if (this->rotation < -361) {
 		this->rotation = 0;
 	}
@@ -36,9 +35,6 @@ void spic::ImageFacade::Render()
 		destR.h = size.y * scale;
 	}
 	SDL_RenderCopyEx(spic::WindowFacade::GetInstance()->_renderer.get(), _texture, NULL, &destR, this->rotation, NULL, SDL_FLIP_NONE);
-	
-
-
 }
 
 void spic::ImageFacade::setPosition(int x, int y)

@@ -6,10 +6,11 @@
 namespace spic {
 
     /**
-     * @brief A collider which represents a circular collision area.
-     */
+    * @brief A collider which represents a circular collision area.
+    */
     class CircleCollider : public Collider {
         public:
+
             /**
              * @brief Get the collider's radius
              * @return The radius

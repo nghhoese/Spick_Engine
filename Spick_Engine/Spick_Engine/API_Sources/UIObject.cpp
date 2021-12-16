@@ -5,5 +5,5 @@ SPIC_API spic::UIObject::UIObject() {
 }
 
 void spic::UIObject::Render() {
-	//nothing
+	
 }

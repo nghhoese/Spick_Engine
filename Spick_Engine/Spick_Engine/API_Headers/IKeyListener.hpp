@@ -8,6 +8,7 @@ namespace spic {
      */
     class IKeyListener {
         public:
+
             /**
              * @brief This method will be caled whenever a key is pressed.
              *        Override for implementing the desired behaviour.

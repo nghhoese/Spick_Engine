@@ -103,5 +103,3 @@ SPIC_API void GameObject::SetActiveScene(std::shared_ptr<spic::Scene> scene)
 		}
 	}
 }
-
-// Template classes implementatie nog vullen in header file

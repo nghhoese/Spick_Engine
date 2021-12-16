@@ -8,6 +8,7 @@ namespace spic {
      */
     class IMouseListener {
         public:
+
             /**
              * @brief Called whenever the mouse is moved.
              */

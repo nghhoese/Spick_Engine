@@ -9,8 +9,6 @@ SPIC_API Scene::Scene(const std::string& name) {
     gameObjectByKey = std::map<std::string, std::vector<std::shared_ptr<GameObject>>>();
     cameras = std::vector<std::shared_ptr<Camera>>{};
     this->name = name;
-
-
 }
 
 void Scene::Update() {
@@ -18,7 +16,6 @@ void Scene::Update() {
         if (x->IsActiveSelf()) {
             x->Update();
         }
-        
     }
 }
 
@@ -28,7 +25,6 @@ void Scene::Render() {
         if (x->IsActiveSelf()) {
             x->Render();
         }
-        
     }
     spic::WindowFacade::GetInstance()->Render();
 }
@@ -81,9 +77,9 @@ SPIC_API std::vector<std::shared_ptr<GameObject>> Scene::GetGameObjectsByName(co
 SPIC_API std::vector<std::shared_ptr<GameObject>> Scene::GetGameObjectsByTag(const std::string& gameObjectTag) {
     std::vector<std::shared_ptr<GameObject>> objects = std::vector<std::shared_ptr<GameObject>>{};
     for (std::shared_ptr<GameObject> x : gameObjects) {
-            if (std::count(x->GetTags().begin(), x->GetTags().end(), gameObjectTag)) {
-                objects.push_back(x);
-            }    
+        if (std::count(x->GetTags().begin(), x->GetTags().end(), gameObjectTag)) {
+            objects.push_back(x);
+        }    
     }
     return objects;
 }
@@ -103,8 +99,6 @@ SPIC_API void Scene::AddGameObject(std::shared_ptr<GameObject> gameObject) {
         newList.push_back(gameObject);
         gameObjectByKey.insert(make_pair(gameObject->GetName(), newList));
     }
-
-
     std::shared_ptr<Scene> scene;
     scene.reset(this);
     gameObject->AddScene(scene);
@@ -124,5 +118,3 @@ SPIC_API std::shared_ptr<GameObject> Scene::SwitchGameObjectToScene(std::shared_
 SPIC_API void spic::Scene::Quit() {
     sceneFacade->destroy();
 }
-
-// Template classes implementatie nog vullen in header file

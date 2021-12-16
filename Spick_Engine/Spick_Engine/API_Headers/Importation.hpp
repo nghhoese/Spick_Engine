@@ -8,11 +8,14 @@
 
 namespace spic {
 
+    /**
+    * @brief Instance of the importation class (Input).
+    */
     class Importation {
     public:
         /**
-         * @brief Default constructor.
-         */
+        * @brief Default constructor of Importation (Input).
+        */
         SPIC_API Importation();
 
         /**
@@ -33,7 +36,7 @@ namespace spic {
         /**
         * @brief Returns the value of the virtual axis identified by axisName.
         */
-        SPIC_API double GetAxis(); //TODO: GetAxis() navragen reinout of je parameters mag toevoegen
+        double GetAxis(); 
 
          /**
         * @brief Returns true while the user holds down the key identified by keycode.
@@ -65,6 +68,10 @@ namespace spic {
         */
         SPIC_API bool GetMouseButtonUp(MouseButton which);
 
+        /**
+        * @brief Returns the mouse position.
+        * @return the mouse position (Point).
+        */
         SPIC_API Point GetMousePosition();
        
     private:

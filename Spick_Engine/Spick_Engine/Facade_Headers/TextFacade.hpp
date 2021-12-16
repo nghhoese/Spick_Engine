@@ -9,9 +9,6 @@
 
 namespace spic {
 
-	/**
-	 * @brief Text represents an image with a text(string) in a font
-	 */
 	class TextFacade {
 	public:
 		SPIC_API TextFacade(std::string text, std::string font, int size, Color color, int x, int y);
@@ -30,6 +27,5 @@ namespace spic {
 		SDL_Color _color;
 		int _x;
 		int _y;
-
 	};
 }

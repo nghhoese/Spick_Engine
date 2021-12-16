@@ -15,6 +15,7 @@ KeyCode KeyFacade::PollEvent() {
 		}
 	}
 }
+
 KeyCode KeyFacade::PollEvent1() {
     if (SDL_PollEvent(&sdlEvent) != 0)
     {
@@ -32,10 +33,8 @@ bool KeyFacade::PollContinousEvent(const KeyCode& key)
     int keyValue = (int)key;
     SDL_PumpEvents();
     const Uint8* state = SDL_GetKeyboardState(&keyValue);
-
     SDL_Scancode code;
     code = (SDL_Scancode)key;
-
     if (state[code]){
         return true;
     }
@@ -49,7 +48,6 @@ bool KeyFacade::PollContinousEvent()
 {
     SDL_PumpEvents();
     const Uint8* state = SDL_GetKeyboardState(NULL);
-
     if (SDL_PollEvent(&sdlEvent) != 0) {
         if (sdlEvent.type == SDL_KEYDOWN) {
             return true;

@@ -12,29 +12,38 @@ namespace spic {
 
     public:
 
-        SPIC_API UIObject();
         /**
-         * @brief Get width.
-         * @return width.
-         */
+        * @brief Constructor.
+        */
+        SPIC_API UIObject();
+
+        /**
+        * @brief Get width.
+        * @return width.
+        */
         double GetWidth() const { return width; }
 
         /**
-         * @brief Set width.
-         */
+        * @brief Set width.
+        */
         void SetWidth(double width) { this->width = width; }
 
         /**
-         * @brief Get height.
-         * @return height.
-         */
+        * @brief Get height.
+        * @return height.
+        */
         double GetHeight() const { return height; }
 
         /**
-         * @brief Set height.
-         */
+        * @brief Set height.
+        */
         void setHeight(double height) { this->height = height; }
+
+        /**
+        * @brief Call render.
+        */
         virtual void Render();
+
     private:
         double width;
         double height;
