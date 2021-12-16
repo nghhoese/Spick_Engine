@@ -6,7 +6,6 @@ spic::Sprite::Sprite()
 	imageFacade = std::make_unique<spic::ImageFacade>();
 	imageFacade->setScale(1);
 	imageFacade->setRotation(1);
-	
 }
 
 void spic::Sprite::SetSprite(const std::string& sprite)
@@ -60,8 +59,6 @@ void spic::Sprite::OnUpdate()
 	}
 	imageFacade->setRotation(transform.rotation);
 	imageFacade->setScale(transform.scale);
-
-	
 }
 
 void spic::Sprite::OnRender()

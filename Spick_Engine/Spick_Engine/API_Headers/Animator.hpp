@@ -11,56 +11,74 @@ namespace spic {
     /**
      * @brief A component which can play animated sequences of sprites.
      */
-    class SPIC_API Animator : public Component {
+    class Animator : public Component {
         public:
+
             /**
-             * @brief Get fps.
-             * @return fps.
-             */
-            Animator();
-            const int GetFps() const { return fps; }
+            * @brief Constructor.
+            */
+            SPIC_API Animator();
+
+            /**
+            * @brief Get fps.
+            * @return fps.
+            */
+            SPIC_API const int GetFps() const { return fps; }
 
             /**
              * @brief Set fps.
              */
-            void SetFps(int fps) { this->fps = fps; }
+            SPIC_API void SetFps(int fps) { this->fps = fps; }
 
             /**
              * @brief Get sprites.
              * @return sprites.
              */
-            const std::vector<std::shared_ptr<Sprite>> GetSprites() const { return sprites; }
+            SPIC_API const std::vector<std::shared_ptr<Sprite>> GetSprites() const { return sprites; }
 
             /**
              * @brief Set sprites.
              */
-            void SetSprites(std::vector<std::shared_ptr<Sprite>> sprites) { this->sprites = sprites; }
+            SPIC_API void SetSprites(std::vector<std::shared_ptr<Sprite>> sprites) { this->sprites = sprites; }
 
             /**
              * @brief Start playing the image sequence.
              * @param looping If true, will automatically start again when done.
              */
-            void Play(bool looping);
+            SPIC_API void Play(bool looping);
 
             /**
              * @brief Stop playing the image sequence. Whatever sprite was displayed
              *        last will remain shown.
              */
-            void Stop();
-            void OnClick();
-            void OnAwake();
-            void OnRender();
+            SPIC_API void Stop();
 
             /**
-             * @brief Called right before first frame draw.
+            * @brief Called when clicked.
+            */
+            SPIC_API void OnClick();
+
+            /**
+            * @brief Called when component is created even if component is disabled. View as constructor.
+            */
+            SPIC_API void OnAwake();
+
+            /**
+             * @brief Called every frame draw after update.
              */
-            void OnStart();
-            void OnUpdate();
+            SPIC_API void OnRender();
+
+            /**
+            * @brief Called right before first frame draw.
+            */
+            SPIC_API void OnStart();
+
+            /**
+            * @brief Called every frame draw.
+            */
+            SPIC_API void OnUpdate();
 
         private:
-            /**
-             * @brief frames per second (playing speed)
-             */
             bool running = false;
             int ticks;
             int spriteIndex;

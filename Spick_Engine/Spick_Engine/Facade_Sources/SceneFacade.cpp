@@ -3,6 +3,7 @@
 #include "../Facade_Headers/Exceptions/GraphicsExceptions.hpp"
 
 using namespace spic;
+
 static WindowFacade* instance;
 
 WindowFacade* spic::WindowFacade::GetInstance()
@@ -15,15 +16,12 @@ WindowFacade* spic::WindowFacade::GetInstance()
 int WindowFacade::create_renderer() {
 	try {
 		_renderer.reset(SDL_CreateRenderer(_window.get(), -1, 0));
-
 		if (_renderer == NULL)
 		{
 			throw Exceptions::CannotCreateRenderer();
 		}
-
 		SDL_SetRenderDrawColor(_renderer.get(), 0, 0, 0, 255);
 		SDL_SetRenderDrawBlendMode(_renderer.get(), SDL_BLENDMODE_BLEND);
-
 		return 1;
 	}
 	catch (Exceptions::CannotCreateRenderer e) {
@@ -46,8 +44,7 @@ int WindowFacade::create_window(const std::string& title, float height, float wi
 		}
 		Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT,2,2048);
 		Mix_VolumeMusic(2);
-		
-		//Initialize SDL_ttf
+	
 		if (TTF_Init() == -1)
 		{
 			throw Exceptions::TTFInitFailed();
@@ -55,7 +52,6 @@ int WindowFacade::create_window(const std::string& title, float height, float wi
 
 		_window.reset(SDL_CreateWindow(title.c_str(), SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, width, height, 0));
 		SDL_SetWindowFullscreen(_window.get(), SDL_WINDOW_BORDERLESS);
-
 
 		if (_window == NULL) {
 			throw Exceptions::CannotCreateWindow();
@@ -79,7 +75,6 @@ int WindowFacade::create_window(const std::string& title, float height, float wi
 }
 
 void WindowFacade::destroy() {
-	//Quit SDL subsystems
 	Mix_Quit();
 	SDL_Quit();
 	TTF_Quit();

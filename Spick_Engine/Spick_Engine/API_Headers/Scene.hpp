@@ -14,86 +14,86 @@ namespace spic {
     class Camera;
 
     /**
-     * @brief Class representing a scene which can be rendered by the Camera.
-     */
+    * @brief Class representing a scene which can be rendered by the Camera.
+    */
     class Scene {
         public:
 
             /**
-             * @brief Constructor.
-             * @param name The name for the scene.
-             */
+            * @brief Constructor.
+            * @param name The name for the scene.
+            */
             SPIC_API Scene(const std::string& name);
 
             /**
-             * @brief Get name.
-             * @return name.
-             */
+            * @brief Get name.
+            * @return name.
+            */
             SPIC_API const std::string& GetName() const { return name; }
 
             /**
-             * @brief Set name.
-             */
+            * @brief Set name.
+            */
             SPIC_API const void SetName(const std::string& newName) { name = newName; }
 
             /**
-             * @brief This function is called by the engine to update the scene on the engine.
-             */
+            * @brief This function is called by the engine to update the scene on the engine.
+            */
             SPIC_API void Update();
 
             /**
-             * @brief This function is called by the engine to render the scene on the engine.
-             */
+            * @brief This function is called by the engine to render the scene on the engine.
+            */
             SPIC_API void Render();
 
             /**
-             * @brief This function is called by the engine to render the scene's UIOBjects on the engine.
-             */
+            * @brief This function is called by the engine to render the scene's UIOBjects on the engine.
+            */
             SPIC_API void RenderUIObject();
 
             /**
-             * @brief Add camera.
-             */
+            * @brief Add camera.
+            */
             SPIC_API void AddCamera(const Camera& camera);
 
             /**
-             * @brief Set active camera to use for update and rendering.
-             */
+            * @brief Set active camera to use for update and rendering.
+            */
             SPIC_API void SetActiveCamera(const Camera& camera);
 
             /**
-             * @brief Set active camera to use for update and rendering.
-             */
+            * @brief Set active camera to use for update and rendering.
+            */
             SPIC_API void SetActiveCamera(const std::string& cameraName);
 
             /**
-             * @brief Get active camera to use for update and rendering.
-             */
+            * @brief Get active camera to use for update and rendering.
+            */
             SPIC_API std::shared_ptr<Camera> GetActiveCamera() const;
 
             /**
-             * @brief Get camera by name.
-             */
+            * @brief Get camera by name.
+            */
             SPIC_API Camera& GetCameraByName(const std::string& cameraName) const;
 
             /**
-             * @brief Get game objects by name.
-             */
+            * @brief Get game objects by name.
+            */
             SPIC_API std::vector<std::shared_ptr<GameObject>> GetGameObjectsByName(const std::string& gameObjectName);
 
             /**
-             * @brief Get game objects by tag.
-             */
+            * @brief Get game objects by tag.
+            */
             SPIC_API std::vector<std::shared_ptr<GameObject>> GetGameObjectsByTag(const std::string& gameObjectTag);
 
             /**
-             * @brief Get game objects.
-             */
+            * @brief Get game objects.
+            */
             SPIC_API const std::vector<std::shared_ptr<GameObject>> GetGameObjects() const;
 
             /**
-             * @brief Get game objects by type.
-             */
+            * @brief Get game objects by type.
+            */
             template<class T>
             SPIC_API std::vector<std::shared_ptr<T>> GetGameObjectsByType() const
             {
@@ -101,22 +101,23 @@ namespace spic {
             }
 
             /**
-             * @brief Add game object.
-             */
+            * @brief Add game object.
+            */
             SPIC_API void AddGameObject(std::shared_ptr<GameObject> gameObject);
-            std::shared_ptr<WindowFacade> GetSceneFacade() { return sceneFacade; }
             
             /**
-             * @brief Set delay to limit the gamespeed to specific maxFPS
-             */
-            void SetDelay(const int ms) const;
+            * @brief Set delay to limit the gamespeed to specific maxFPS
+            */
+            SPIC_API void SetDelay(const int ms) const;
 
+            /**
+            * @brief Switch the gameObject to scene.
+            */
             SPIC_API std::shared_ptr<GameObject> SwitchGameObjectToScene(std::shared_ptr<GameObject> gameObject);
 
             /**
-             * @brief Call to quit application
-             */
-
+            * @brief Call to quit application
+            */
             SPIC_API void Quit();
 
     private:
@@ -126,6 +127,7 @@ namespace spic {
         std::vector<std::shared_ptr<Camera>> cameras;
         std::shared_ptr<WindowFacade> sceneFacade;
         std::shared_ptr<Camera> activeCamera;
+        std::shared_ptr<WindowFacade> GetSceneFacade() { return sceneFacade; }
     };
 
 }

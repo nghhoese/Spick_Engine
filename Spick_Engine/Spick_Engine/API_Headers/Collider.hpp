@@ -6,25 +6,25 @@
 namespace spic {
 
     /**
-     * @brief The base class for all colliders.
-     */
+    * @brief The base class for all colliders.
+    */
     class Collider : public Component {
 
         /**
-         * @brief Getter for isTrigger status.
-         * @return true if isTrigger, false otherwise.
-         */
+        * @brief Getter for isTrigger status.
+        * @return true if isTrigger, false otherwise.
+        */
         bool IsTrigger() const { return isTrigger; }
 
         /**
-         * @brief flag New isTrigger status.
-         */
+        * @brief flag New isTrigger status.
+        */
         void IsTrigger(bool flag) { isTrigger = flag; }
         
     private:
         /**
-         * @brief isTrigger status
-         */
+        * @brief isTrigger status
+        */
         bool isTrigger;
 
     };

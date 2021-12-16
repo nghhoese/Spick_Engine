@@ -10,8 +10,8 @@
 namespace spic {
 
     /**
-     * @brief Enumeration for different text alignments.
-     */
+    * @brief Enumeration for different text alignments.
+    */
     enum class Alignment {
         left,
         center,
@@ -19,71 +19,79 @@ namespace spic {
     };
 
     /**
-     * @brief Class representing a piece of text which can be rendered.
-     */
+    * @brief Class representing a piece of text which can be rendered.
+    */
     class Text : public UIObject {
 
     public:
 
-        SPIC_API Text(const std::string& text, const std::string& font, const int& size, const Color& color, int x, int y);
         /**
-         * @brief Get text.
-         * @return text.
-         */
+        * @brief Constructor
+        */
+        SPIC_API Text(const std::string& text, const std::string& font, const int& size, const Color& color, int x, int y);
+
+        /**
+        * @brief Get text.
+        * @return text.
+        */
         SPIC_API const std::string& GetText() const { return _text; }
 
         /**
-         * @brief Set text.
-         */
+        * @brief Set text.
+        */
         SPIC_API void SetText(const std::string& text) {
             this->_text = text; this->rendered = false;
         }
 
         /**
-         * @brief Get font.
-         * @return font.
-         */
+        * @brief Get font.
+        * @return font.
+        */
         const std::string& GetFont() const { return _font; }
 
         /**
-         * @brief Set font.
-         */
+        * @brief Set font.
+        */
         void SetFont(const std::string& font) { this->_font = font; }
 
         /**
-         * @brief Get size.
-         * @return size.
-         */
+        * @brief Get size.
+        * @return size.
+        */
         int GetSize() const { return _size; }
 
         /**
-         * @brief Set size.
-         */
+        * @brief Set size.
+        */
         void SetSize(int size) { this->_size = size; }
 
         /**
-         * @brief Get alignment.
-         * @return alignment.
-         */
+        * @brief Get alignment.
+        * @return alignment.
+        */
         const Alignment& GetAlignment() const { return _alignment; }
 
         /**
-         * @brief Set alignment.
-         */
+        * @brief Set alignment.
+        */
         void SetAlignment(const Alignment& alignment) { this->_alignment = alignment; }
 
         /**
-         * @brief Get color.
-         * @return color.
-         */
+        * @brief Get color.
+        * @return color.
+        */
         const Color& GetColor() const { return _color; }
 
         /**
-         * @brief Set color.
-         */
+        * @brief Set color.
+        */
         void SetColor(const Color& color) { this->_color = color; }
 
+        /**
+        * @brief Call render.
+        */
         void Render();
+
     private:
         std::string _text;
         std::string _font;

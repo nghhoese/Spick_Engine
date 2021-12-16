@@ -15,8 +15,8 @@ SPIC_API void spic::Engine::CreateNewWindow(const std::string& windowName, int w
 
 SPIC_API void spic::Engine::StartGameLoop()
 {
-	using namespace std::this_thread;     // sleep_for, sleep_until
-	using namespace std::chrono_literals; // ns, us, ms, s, h, etc.
+	using namespace std::this_thread;     
+	using namespace std::chrono_literals; 
 	using std::chrono::system_clock;
 	running = true;
 	playing = true;
@@ -31,7 +31,7 @@ SPIC_API void spic::Engine::StartGameLoop()
 		m_lastTime = time.CalculateDeltaTime();
 		accumulatedDelta += m_lastTime;
 		float TargetFrameRate = 17;
-		//timescale tickrate
+
 		TimeScale = time.TimeScale();
 		if (TimeScale == 0) {
 			playing = false;

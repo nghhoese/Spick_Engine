@@ -27,11 +27,8 @@ bool MouseFacade::PollContinousEvent()
 {
 	int x, y;
 	Uint32 buttons;
-
-	SDL_PumpEvents();  // make sure we have the latest mouse state.
-
+	SDL_PumpEvents();  
 	buttons = SDL_GetMouseState(&x, &y);
-
 	if (buttons)
 	{
 		if ((buttons & SDL_BUTTON_LMASK) != 0 || (buttons & SDL_BUTTON_RMASK) != 0 || (buttons & SDL_BUTTON_MMASK) != 0)
@@ -49,9 +46,7 @@ std::tuple<int, int> MouseFacade::PollMousePosition() const
 {
 	int x, y;
 	Uint32 buttons;
-
-	SDL_PumpEvents();  // make sure we have the latest mouse state.
-
+	SDL_PumpEvents();  
 	buttons = SDL_GetMouseState(&x, &y);
 	return std::make_tuple(x, y);
 }
@@ -72,11 +67,8 @@ bool MouseFacade::GetMouseButton(int which)
 {
 	int x, y;
 	Uint32 buttons;
-
-	SDL_PumpEvents();  // make sure we have the latest mouse state.
-
+	SDL_PumpEvents();  
 	buttons = SDL_GetMouseState(&x, &y);
-
 	if ((buttons & SDL_BUTTON_LMASK) != 0 && which == 1)
 	{
 		return true;

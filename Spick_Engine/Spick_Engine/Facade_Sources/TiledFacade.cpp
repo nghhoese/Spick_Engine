@@ -59,14 +59,12 @@ std::pair<std::vector<std::pair<int, std::vector<std::vector<int>>>>, std::vecto
     _retVal.second = objects;
 
     return _retVal;
-
 }
 
 std::vector<std::vector<int>> TiledFacade::ReadTiles(const std::vector<uint32_t>& tiles, int width)
 {
     std::vector<int> row = {};
     std::vector<std::vector<int>> rows = {};
-
     int curwidth = 0;
     for (uint32_t i : tiles) {
         row.push_back(--i);

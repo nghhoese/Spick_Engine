@@ -9,9 +9,9 @@ spic::Importation::Importation()
 {
 }
 
-SPIC_API bool spic::Importation::AnyKey() // werkt gedeeltelijk
+SPIC_API bool spic::Importation::AnyKey() 
 {
-	bool keyboard = keyfacade_ptr->PollContinousEvent(); // werkt niet continous
+	bool keyboard = keyfacade_ptr->PollContinousEvent(); 
 	bool mouse = mousefacade_ptr->PollContinousEvent();
 
 	if (keyboard || mouse)
@@ -24,7 +24,7 @@ SPIC_API bool spic::Importation::AnyKey() // werkt gedeeltelijk
 	}
 }
 
-SPIC_API bool spic::Importation::AnyKeyDown() // getest
+SPIC_API bool spic::Importation::AnyKeyDown() 
 {
 	 bool keyboard = keyfacade_ptr->AnyKeyPressed();
 	 bool mouse = mousefacade_ptr->AnyKeyPressed();
@@ -39,7 +39,7 @@ SPIC_API bool spic::Importation::AnyKeyDown() // getest
 	 }
 }
 
-SPIC_API const spic::Point spic::Importation::MousePosition() // getest
+SPIC_API const spic::Point spic::Importation::MousePosition() 
 {
 	Point point;
 
@@ -50,17 +50,17 @@ SPIC_API const spic::Point spic::Importation::MousePosition() // getest
 	return point;
 }
 
-SPIC_API double spic::Importation::GetAxis() // kan nog niet
+double spic::Importation::GetAxis() 
 {
 	return true;
 }
 
-SPIC_API bool spic::Importation::GetKey(KeyCode key) // Getest
+SPIC_API bool spic::Importation::GetKey(KeyCode key) 
 {
 	return keyfacade_ptr->PollContinousEvent(key);
 }
 
-SPIC_API bool spic::Importation::GetKeyDown(KeyCode key) // getest
+SPIC_API bool spic::Importation::GetKeyDown(KeyCode key) 
 {
 	KeyCode keycode = keyfacade_ptr->PollEvent();
 
@@ -72,7 +72,7 @@ SPIC_API bool spic::Importation::GetKeyDown(KeyCode key) // getest
 	}
 }
 
-SPIC_API bool spic::Importation::GetKeyUp(KeyCode key) // getest
+SPIC_API bool spic::Importation::GetKeyUp(KeyCode key) 
 {
 	KeyCode keycode = keyfacade_ptr->PollEvent1();
 
@@ -84,17 +84,17 @@ SPIC_API bool spic::Importation::GetKeyUp(KeyCode key) // getest
 	}
 }
 
-SPIC_API bool spic::Importation::GetMouseButton(MouseButton which) // getest
+SPIC_API bool spic::Importation::GetMouseButton(MouseButton which) 
 {
 	return mousefacade_ptr->GetMouseButton((int)which);
 }
 
-SPIC_API bool spic::Importation::GetMouseButtonDown(MouseButton which) // getest
+SPIC_API bool spic::Importation::GetMouseButtonDown(MouseButton which) 
 {
 	return mousefacade_ptr->GetMouseButtonDown((int)which);
 }
 
-SPIC_API bool spic::Importation::GetMouseButtonUp(MouseButton which) // getest
+SPIC_API bool spic::Importation::GetMouseButtonUp(MouseButton which) 
 {
 	return mousefacade_ptr->GetMouseButtonUp((int)which);
 }

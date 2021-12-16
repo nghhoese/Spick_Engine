@@ -8,14 +8,8 @@
 
 namespace spic {
 
-    /**
-     * @brief Color represents a red-green-blue color with alpha.
-     */
     class ImageFacade {
     public:
-        /**
-         * @brief Default constructor representing a white color.
-         */
         SPIC_API ImageFacade();
         void Createtexture();
         void Render();

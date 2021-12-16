@@ -13,6 +13,7 @@ namespace spic {
     class Image : public UIObject {
     
     public:
+
         /**
          * @brief Get sprite.
          * @return sprite.
@@ -38,7 +39,6 @@ namespace spic {
     private:
         Sprite sprite;
         Color color;
-
     };
 
 }

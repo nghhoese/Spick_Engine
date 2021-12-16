@@ -4,13 +4,14 @@
 #include "Point.hpp"
 
 namespace spic {
+
     /**
-     * @brief Instances of this class represent specific 2D transformations.
-     */
+    * @brief Instances of this class represent specific 2D transformations.
+    */
     struct SPIC_API Transform {
-        Point position; // Translation (shift)
-        double rotation; // Rotation, in radians
-        double scale; // Multiplication factor
+        Point position; 
+        double rotation;
+        double scale; 
     };
 }
 

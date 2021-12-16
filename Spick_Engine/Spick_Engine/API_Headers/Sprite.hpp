@@ -12,123 +12,124 @@
 namespace spic {
 
     /**
-     * @brief A component representing a sprite (small image)
-     */
+    * @brief A component representing a sprite (small image)
+    */
     class SPIC_API Sprite : public Component {
     public:
+
         /**
-         * @brief Constructor.
-         */
+        * @brief Constructor.
+        */
          Sprite();
 
         /**
-         * @brief Get sprite.
-         * @return sprite.
-         */
+        * @brief Get sprite.
+        * @return sprite.
+        */
         const std::string& GetSprite() const { return sprite; }
 
         /**
-         * @brief Set sprite.
-         */
+        * @brief Set sprite.
+        */
         void SetSprite(const std::string& sprite);
 
         /**
-         * @brief Get color.
-         * @return color.
-         */
+        * @brief Get color.
+        * @return color.
+        */
         const Color& GetColor() const { return color; }
 
         /**
-         * @brief Set color.
-         */
+        * @brief Set color.
+        */
         void SetColor(Color& color) { this->color = color; }
 
         /**
-         * @brief Get flipX.
-         * @return flipX.
-         */
+        * @brief Get flipX.
+        * @return flipX.
+        */
         const bool GetFlipX() const { return flipX; }
 
         /**
-         * @brief Set flipX.
-         */
+        * @brief Set flipX.
+        */
         void SetFlipX(bool flipX) { this->flipX = flipX; }
 
         /**
-         * @brief Get flipY.
-         * @return flipY.
-         */
+        * @brief Get flipY.
+        * @return flipY.
+        */
         const bool GetFlipY() const { return flipY; }
 
         /**
-         * @brief Set flipY.
-         */
+        * @brief Set flipY.
+        */
         void SetFlipY(bool flipY) { this->flipY = flipY; }
 
         /**
-         * @brief Get sortingLayer.
-         * @return sortingLayer.
-         */
+        * @brief Get sortingLayer.
+        * @return sortingLayer.
+        */
         const int GetSortingLayer() const { return sortingLayer; }
 
         /**
-         * @brief Set sortingLayer.
-         */
+        * @brief Set sortingLayer.
+        */
         void SetSortingLayer(int sortingLayer) { this->sortingLayer = sortingLayer; }
 
         /**
-         * @brief Get orderInLayer.
-         * @return orderInLayer.
-         */
+        * @brief Get orderInLayer.
+        * @return orderInLayer.
+        */
         const int GetOrderInLayer() const { return orderInLayer; }
 
         /**
-         * @brief Set orderInLayer.
-         */
+        * @brief Set orderInLayer.
+        */
         void SetOrderInLayer(int orderInLayer) { this->orderInLayer = orderInLayer; }
 
         /**
-         * @brief Get width.
-         * @return width.
-         */
+        * @brief Get width.
+        * @return width.
+        */
         const int GetWidth() const { return width; }
 
         /**
-         * @brief Set width.
-         */
+        * @brief Set width.
+        */
         void SetWidth(int width) { this->width = width; }
 
         /**
-         * @brief Get height.
-         * @return height.
-         */
+        * @brief Get height.
+        * @return height.
+        */
         const int GetHeight() const { return height; }
 
         /**
-         * @brief Set height.
-         */
+        * @brief Set height.
+        */
         void SetHeight(int height) { this->height = height; }
 
         /**
-         * @brief Get offsetX.
-         * @return offsetX.
-         */
+        * @brief Get offsetX.
+        * @return offsetX.
+        */
         const int GetOffsetX() const { return offsetX; }
 
         /**
-         * @brief Set offsetX.
-         */
+        * @brief Set offsetX.
+        */
         void SetOffsetX(int offsetX) { this->offsetX = offsetX; }
 
         /**
-         * @brief Get offsetY.
-         * @return offsetY.
-         */
+        * @brief Get offsetY.
+        * @return offsetY.
+        */
         const int GetOffsetY() const { return offsetY; }
 
         /**
-         * @brief Set offsetY.
-         */
+        * @brief Set offsetY.
+        */
         void SetOffsetY(int offsetY) { this->offsetY = offsetY; }
 
         /**
@@ -137,25 +138,44 @@ namespace spic {
         void OnAwake();
 
         /**
-         * @brief Called right before first frame draw.
-         */
+        * @brief Called right before first frame draw.
+        */
         void OnStart();
 
         /**
-         * @brief Called every frame draw.
-         */
+        * @brief Called every frame draw.
+        */
         void OnUpdate();
 
         /**
-         * @brief Called every frame draw after update.
-         */
-         void OnRender();
-         void setStill(bool still) { this->still = still; }
-         void OnClick();
+        * @brief Called every frame draw after update.
+        */
+        void OnRender();
 
-         void SetPlayerBool(bool value);
-         void DestroyImage();
-         void SetRendered(bool rendered) { this->rendered = rendered; };
+        /**
+        * @brief Set still.
+        */
+        void setStill(bool still) { this->still = still; }
+
+        /**
+        * @brief Called when clicked.
+        */
+        void OnClick();
+
+        /**
+        * @brief Set if sprite is main character/player
+        */
+        void SetPlayerBool(bool value);
+
+        /**
+        * @brief Destroy image
+        */
+        void DestroyImage();
+
+        /**
+        * @brief Set the renderer
+        */
+        void SetRendered(bool rendered) { this->rendered = rendered; };
 
     private:
         Transform transform;
