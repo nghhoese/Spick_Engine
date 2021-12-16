@@ -85,7 +85,7 @@ namespace spic {
         /**
         * @brief Set color.
         */
-        void SetColor(const Color& color) { this->_color = color; }
+        void SetColor(const Color& color) { this->_color = color; this->rendered = false; }
 
         /**
         * @brief Call render.
