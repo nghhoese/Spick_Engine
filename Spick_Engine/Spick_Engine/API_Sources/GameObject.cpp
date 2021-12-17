@@ -1,5 +1,7 @@
 #include "../API_Headers/GameObject.hpp"
 #include "../API_Headers/BehaviourScript.hpp"
+#include "../API_Headers/Scene.hpp"
+
 
 using namespace spic;
 std::vector<GameObject> GameObject::children;
@@ -20,6 +22,13 @@ SPIC_API void GameObject::SetScene(std::shared_ptr<Scene> _scene)
 SPIC_API std::shared_ptr<Scene> GameObject::getScene()
 {
 	return scene;
+}
+
+const void spic::GameObject::SetName(const std::string& newName)
+{
+	this->name = newName;
+	this->getScene();
+	
 }
 
 std::shared_ptr<GameObject> GameObject::Find(const std::string& name) {

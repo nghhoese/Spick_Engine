@@ -31,6 +31,9 @@ void spic::Sprite::OnUpdate()
 		if (player) {
 			imageFacade->setPosition(transform.position.x - GetGameObject()->getScene()->GetActiveCamera()->getX(), transform.position.y - GetGameObject()->getScene()->GetActiveCamera()->getY());
 		}
+		else if (still) {
+			imageFacade->setPosition(transform.position.x, transform.position.y);
+		}
 		else {
 			int x, y, w, h;
 			x = GetGameObject()->getScene()->GetActiveCamera()->getX();
@@ -69,17 +72,14 @@ void spic::Sprite::OnRender()
 
 		imageFacade->Createtexture();
 	}
-	imageFacade->Render();
+	if (rendering) {
+		imageFacade->Render();
+	}
 }
 
 void spic::Sprite::SetPlayerBool(bool value)
 {
 	this->player = value;
-}
-
-void spic::Sprite::DestroyImage()
-{
-	imageFacade->DestroyImage();
 }
 
 void spic::Sprite::OnClick() {

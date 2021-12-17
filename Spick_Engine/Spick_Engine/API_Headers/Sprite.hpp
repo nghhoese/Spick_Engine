@@ -170,8 +170,7 @@ namespace spic {
         /**
         * @brief Destroy image
         */
-        void DestroyImage();
-
+        void SetRendering(bool rendering) { this->rendering = rendering; };
         /**
         * @brief Set the renderer
         */
@@ -189,7 +188,8 @@ namespace spic {
         int height;
         int offsetX;
         int offsetY;
-        bool still = true;
+        bool rendering = true;
+        bool still = false;
         bool rendered = false;
         bool player = false;
         std::unique_ptr<spic::ImageFacade> imageFacade;

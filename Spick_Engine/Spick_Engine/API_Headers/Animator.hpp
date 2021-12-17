@@ -72,7 +72,7 @@ namespace spic {
             * @brief Called right before first frame draw.
             */
             SPIC_API void OnStart();
-
+            SPIC_API bool GetRunning() { return this->running; };
             /**
             * @brief Called every frame draw.
             */
