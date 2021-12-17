@@ -5,7 +5,8 @@
 
 spic::ImageFacade::ImageFacade()
 {
-	
+	destR.x = -100;
+	destR.y = -100;
 }
 
 void spic::ImageFacade::Createtexture()
