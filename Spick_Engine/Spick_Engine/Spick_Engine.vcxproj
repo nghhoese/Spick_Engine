@@ -179,6 +179,7 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="API_Headers\AI.hpp" />
     <ClInclude Include="API_Headers\Animator.hpp" />
     <ClInclude Include="API_Headers\AudioSource.hpp" />
     <ClInclude Include="API_Headers\BehaviourScript.hpp" />
@@ -226,6 +227,7 @@
     <ClInclude Include="Facade_Headers\SoundFacade.hpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="API_Sources\AI.cpp" />
     <ClCompile Include="API_Sources\Animator.cpp" />
     <ClCompile Include="API_Sources\AudioSource.cpp" />
     <ClCompile Include="API_Sources\BoxCollider.cpp" />

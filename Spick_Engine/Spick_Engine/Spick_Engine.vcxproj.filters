@@ -48,6 +48,7 @@
     <ClCompile Include="Facade_Sources\SoundFacade.cpp" />
     <ClCompile Include="API_Sources\AudioSource.cpp" />
     <ClCompile Include="API_Sources\Animator.cpp" />
+    <ClCompile Include="API_Sources\AI.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="API_Headers\Animator.hpp" />
@@ -95,6 +96,7 @@
     <ClInclude Include="Facade_Headers\RectangleFacade.hpp" />
     <ClInclude Include="API_Headers\Collision.hpp" />
     <ClInclude Include="Facade_Headers\SoundFacade.hpp" />
+    <ClInclude Include="API_Headers\AI.hpp" />
   </ItemGroup>
   <ItemGroup>
     <Font Include="Fonts\Capsmall.ttf" />

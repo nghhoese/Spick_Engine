@@ -12,8 +12,6 @@
 
 namespace spic {
 	
-	enum ButtonState {NORMAL=0, HOVER=1, PRESSED=2};
-	
 	class ButtonFacade {
 	public:
 		SPIC_API ButtonFacade(int x, int y, int w, int h, std::string asset);
