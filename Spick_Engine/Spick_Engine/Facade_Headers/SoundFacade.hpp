@@ -18,7 +18,9 @@ namespace spic {
         void PauseMusic();
         void StopMusic();
         void setPath(std::string path);
+        void SetVolume(int volume) { this->volume = volume; };
     private:
+        int volume = 30;
         Mix_Music* Music;
         Mix_Chunk* SoundEffect;
         std::string _path;
