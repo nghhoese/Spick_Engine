@@ -136,7 +136,7 @@ namespace spic {
             std::string audioClip;
             bool playOnAwake;
             bool loop;
-            double volume;
+            double volume = 30;
             int time;
             bool isPlaying = false;
             bool isMusic;
