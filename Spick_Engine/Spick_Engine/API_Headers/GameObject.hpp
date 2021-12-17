@@ -45,7 +45,7 @@ namespace spic {
             /**
             * @brief Set name.
             */
-            const void SetName(const std::string& newName);
+            SPIC_API const void SetName(const std::string& newName) { this->name = newName; };
 
             /**
             * @brief Get tag.

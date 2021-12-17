@@ -24,12 +24,6 @@ SPIC_API std::shared_ptr<Scene> GameObject::getScene()
 	return scene;
 }
 
-const void spic::GameObject::SetName(const std::string& newName)
-{
-	this->name = newName;
-	this->getScene();
-	
-}
 
 std::shared_ptr<GameObject> GameObject::Find(const std::string& name) {
 	for (GameObject c : children) {

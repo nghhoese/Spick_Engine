@@ -119,6 +119,7 @@ namespace spic {
             * @brief Call to quit application
             */
             SPIC_API void Quit();
+            std::map<std::string, std::vector<std::shared_ptr<GameObject>>> GetGameObjectsMap() { return this->gameObjectByKey; };
 
     private:
         std::string name;
