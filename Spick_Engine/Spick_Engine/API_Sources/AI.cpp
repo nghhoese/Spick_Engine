@@ -1,6 +1,6 @@
 #include "..\API_Headers\AI.hpp"
 
-spic::AI::AI(spic::GameObject persuerGameObject, spic::GameObject escapeeGameObject, double speed, bool wallAvoidanceActivated, bool forceActivated) : wandertheta(0), speed(speed), wallAvoidanceActivated(wallAvoidanceActivated), forceActivated(forceActivated)
+spic::AI::AI(spic::GameObject persuerGameObject, spic::GameObject escapeeGameObject, double speed, bool gameObjectAvoidanceActivated) : wandertheta(0), speed(speed), gameObjectAvoidanceActivated(gameObjectAvoidanceActivated)
 {
     persuer = std::make_unique<spic::GameObject>(persuerGameObject);
     escapee = std::make_unique<spic::GameObject>(escapeeGameObject);
@@ -30,9 +30,9 @@ spic::Point spic::AI::Wander()
     target.y = pos.y;
     target.Add(offset);
 
-    if (wallAvoidanceActivated)
+    if (gameObjectAvoidanceActivated)
     {
-        target = WallAvoidance(target);
+        target = GameObjectAvoidance(target);
     }
 
     sight = pos;
@@ -46,8 +46,8 @@ spic::Point spic::AI::Persue()
     prediction.x = cos(escapee->getTransform()->rotation);
     prediction.y = sin(escapee->getTransform()->rotation);
     target.Add(prediction);
-    auto targetWithWallAvoidance = WallAvoidance(target);
-    if (wallAvoidanceActivated)
+    auto targetWithWallAvoidance = GameObjectAvoidance(target);
+    if (gameObjectAvoidanceActivated)
     {
         if (targetWithWallAvoidance.x != target.x && targetWithWallAvoidance.y != target.y)
         {
@@ -70,36 +70,39 @@ spic::Point spic::AI::Seek(spic::Point target)
     return vel;
 }
 
-spic::Point spic::AI::WallAvoidance(spic::Point target)
+spic::Point spic::AI::GameObjectAvoidance(spic::Point target)
 {
-    auto temp = persuer.get();
-    auto wall = Collision::AABB(persuer.get(), "wall");
-
-    if (!wall.empty())
+    if (!collisionObjectName.empty())
     {
-        auto wallPos = wall[0]->GetGameObject()->getTransform()->position;
-        if (wallPos.y >= persuer->getTransform()->position.y)
-        {
-            target.y += (-1000);
-            target.x += -500;
-        }
-        else if (wallPos.y <= persuer->getTransform()->position.y)
-        {
-            target.y += 1000;
-            target.x += (-500);
-        }
+        auto collisionObject = Collision::AABB(persuer.get(), collisionObjectName);
 
-        if (wallPos.x >= persuer->getTransform()->position.x)
+        if (!collisionObject.empty())
         {
-            target.x += (-1000);
-            target.y += 500;
-        }
-        else if (wallPos.x <= persuer->getTransform()->position.x)
-        {
-            target.x += 1000;
-            target.y += (-500);
+            auto collisionObjectPos = collisionObject[0]->GetGameObject()->getTransform()->position;
+            if (collisionObjectPos.y >= persuer->getTransform()->position.y)
+            {
+                target.y += (-1000);
+                target.x += -500;
+            }
+            else if (collisionObjectPos.y <= persuer->getTransform()->position.y)
+            {
+                target.y += 1000;
+                target.x += (-500);
+            }
+
+            if (collisionObjectPos.x >= persuer->getTransform()->position.x)
+            {
+                target.x += (-1000);
+                target.y += 500;
+            }
+            else if (collisionObjectPos.x <= persuer->getTransform()->position.x)
+            {
+                target.x += 1000;
+                target.y += (-500);
+            }
         }
     }
+    
     return target;
 }
 
