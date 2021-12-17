@@ -30,7 +30,7 @@ SPIC_API void spic::Engine::StartGameLoop()
 	while (running) {
 		m_lastTime = time.CalculateDeltaTime();
 		accumulatedDelta += m_lastTime;
-		float TargetFrameRate = 17;
+		float TargetFrameRate = 30;
 
 		TimeScale = time.TimeScale();
 		if (TimeScale == 0) {
@@ -38,14 +38,16 @@ SPIC_API void spic::Engine::StartGameLoop()
 		}
 		else if (TimeScale < 1 && TimeScale > 0) {
 			playing = true;
-			TargetFrameRate = TargetFrameRate + ((10*(1 - TimeScale))*TargetFrameRate);
+			//TargetFrameRate = TargetFrameRate + ((10*(1 - TimeScale))*TargetFrameRate);
+			TargetFrameRate = 80;
 		}
 		else if (TimeScale == 1) {
 			playing = true;
 		}
 		else if (TimeScale > 1) {
 			playing = true;
-			TargetFrameRate = TargetFrameRate - (TargetFrameRate * (TimeScale - 1));
+			//TargetFrameRate = TargetFrameRate - (TargetFrameRate * (TimeScale - 1));
+			TargetFrameRate = 1;
 		}
 
 		//check update
