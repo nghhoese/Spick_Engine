@@ -72,13 +72,9 @@ void spic::Animator::OnUpdate()
 				ticks = 0;
 				if (spriteIndex < (sprites.size() - 1)) {
 					auto u = sprites;
-					//sprites[spriteIndex]->DestroyImage();
-					//sprites[spriteIndex]->SetRendered(false);
 					spriteIndex++;
 				}
 				else {
-					//sprites[spriteIndex]->DestroyImage();
-					//sprites[spriteIndex]->SetRendered(false);
 					if (!loop) {
 						Stop();
 					}
